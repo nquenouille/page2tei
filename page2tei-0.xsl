@@ -830,19 +830,19 @@
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
-            <div facs="#facs_{$numCurr}_{@id}">
+            <p facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
-            </div>
+            </p>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
             <xsl:text>
             </xsl:text>
-            <div facs="#facs_{$numCurr}_{@id}" type="{(@type,$custom?structure?type)[normalize-space() != ''][1]}">
+            <ab facs="#facs_{$numCurr}_{@id}" type="{(@type,$custom?structure?type)[normalize-space() != ''][1]}">
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-            </div>
+            </ab>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
@@ -1167,27 +1167,15 @@
                   <xsl:value-of select="map:get($custom, 'unit')" />
                </xsl:if>
             </xsl:variable>
-            <gap extent="{$extent}" reason="{$reason}" unit="{$unit}">
-               <xsl:call-template name="elem">
-                  <xsl:with-param name="elem" select="$elem"/>
-               </xsl:call-template>
-            </gap>
-         </xsl:when>
-         <xsl:when test="@type = 'abbrev'">
-            <choice>
-               <xsl:if test="$custom('continued')">
-                  <xsl:attribute name="continued" select="true()"/>
-               </xsl:if>
-               <expan>
-                  <xsl:value-of select="replace(map:get($custom, 'expansion'), '\\u0020', ' ')"/>
-               </expan>
-               <abbr>
-                  <xsl:call-template name="elem">
-                     <xsl:with-param name="elem" select="$elem"/>
-                  </xsl:call-template>
-               </abbr>
-            </choice>
-         </xsl:when>
+            <xsl:choose>
+               <xsl:when test="$custom?extent = '5'">
+                  <ellipsis><metamark/></ellipsis>
+               </xsl:when>
+               <xsl:otherwise>
+                  <gap extent="{$extent}" reason="{$reason}" unit="{$unit}" />
+               </xsl:otherwise>
+            </xsl:choose>
+            </xsl:when>
          <xsl:when test="@type = 'sic'">
             <choice>
                <corr>
