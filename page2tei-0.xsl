@@ -137,9 +137,9 @@
                </titleStmt>
                <xsl:text>
          </xsl:text>
-               <seriesStmt>
-                  <xsl:apply-templates select="mets:amdSec" mode="seriesStmt"/>
-               </seriesStmt>
+               <publicationStmt>
+                  <xsl:apply-templates select="mets:amdSec" mode="publicationStmt"/>
+               </publicationStmt>
                <xsl:text>
          </xsl:text>
                <sourceDesc>
@@ -248,9 +248,9 @@
    </xsl:template>
 
    <xd:doc>
-      <xd:desc>Contents for seriesStmt</xd:desc>
+      <xd:desc>Contents for publicationStmt</xd:desc>
    </xd:doc>
-   <xsl:template match="mets:amdSec" mode="seriesStmt">
+   <xsl:template match="mets:amdSec" mode="publicationStmt">
       <xsl:apply-templates select="descendant::trpDocMetadata//colList[1]/colName"/>
    </xsl:template>
 
@@ -326,12 +326,12 @@
 
    <xd:doc>
       <xd:desc>The name of the collection from which this document was exported. Will be used as
-         seriesStmt/title</xd:desc>
+         publicationStmt/publisher</xd:desc>
    </xd:doc>
    <xsl:template match="colName">
-      <title>
+      <publisher>
          <xsl:apply-templates/>
-      </title>
+      </publisher>
    </xsl:template>
 
    <xd:doc>
@@ -436,6 +436,65 @@
       mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
 
+   <!-- Create ulx, uly, lrx and lry by getting the coordinates's points, format and sort them and take the max and min values -->
+      <xsl:variable name="x-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-before(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="y-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-after(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+       <xsl:variable name="sortx">
+         <xsl:perform-sort select="tokenize($x-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="sorty">
+         <xsl:perform-sort select="tokenize($y-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="lrx">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+
+      <xsl:variable name="ulx">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+      
+      <xsl:variable name="lry">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="uly">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>
+      </xsl:variable>
+
       <xsl:variable name="renditionValue">
          <xsl:choose>
             <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
@@ -466,7 +525,7 @@
          </xsl:text>
          </xsl:otherwise>
       </xsl:choose>
-      <zone points="{p:Coords/@points}" rendition="{$renditionValue}">
+      <zone ulx="{$ulx}" uly="{$uly}" lrx="{$lrx}" lry="{$lry}" rendition="{$renditionValue}">
          <xsl:if test="$renditionValue != 'printspace'">
             <xsl:attribute name="xml:id">
                <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
@@ -504,10 +563,70 @@
    </xd:doc>
    <xsl:template match="p:Word" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
+
+   <!-- Create ulx, uly, lrx and lry by getting the coordinates's points, format and sort them and take the max and min values -->
+      <xsl:variable name="x-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-before(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="y-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-after(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+       <xsl:variable name="sortx">
+         <xsl:perform-sort select="tokenize($x-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="sorty">
+         <xsl:perform-sort select="tokenize($y-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="lrx">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+
+      <xsl:variable name="ulx">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+      
+      <xsl:variable name="lry">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="uly">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>
+      </xsl:variable>
+
       
       <xsl:text>
                </xsl:text>
-      <zone points="{p:Coords/@points}" type="word">
+      <zone ulx="{$ulx}" uly="{$uly}" lrx="{$lrx}" lry="{$lry}" type="word">
          <xsl:attribute name="xml:id">
             <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
          </xsl:attribute>
@@ -521,7 +640,67 @@
    <xsl:template match="p:TableRegion" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
 
-      <zone points="{p:Coords/@points}" rendition="Table">
+   <!-- Create ulx, uly, lrx and lry by getting the coordinates's points, format and sort them and take the max and min values -->
+      <xsl:variable name="x-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-before(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="y-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-after(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+       <xsl:variable name="sortx">
+         <xsl:perform-sort select="tokenize($x-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="sorty">
+         <xsl:perform-sort select="tokenize($y-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="lrx">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+
+      <xsl:variable name="ulx">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+      
+      <xsl:variable name="lry">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="uly">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>
+      </xsl:variable>
+
+
+      <zone ulx="{$ulx}" uly="{$uly}" lrx="{$lrx}" lry="{$lry}" rendition="Table">
          <xsl:attribute name="xml:id">
             <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
          </xsl:attribute>
@@ -651,19 +830,19 @@
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
-            <p facs="#facs_{$numCurr}_{@id}">
+            <div facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
-            </p>
+            </div>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
             <xsl:text>
             </xsl:text>
-            <ab facs="#facs_{$numCurr}_{@id}" type="{(@type,$custom?structure?type)[normalize-space() != ''][1]}">
+            <div facs="#facs_{$numCurr}_{@id}" type="{(@type,$custom?structure?type)[normalize-space() != ''][1]}">
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-            </ab>
+            </div>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
