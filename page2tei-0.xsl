@@ -1132,6 +1132,47 @@
                </xsl:call-template>
             </supplied>
          </xsl:when>
+         <xsl:when test="@type = 'add'">  
+            <xsl:variable name="place">
+               <xsl:if test="map:keys($custom) = 'place'">
+                  <xsl:value-of select="map:get($custom, 'place')" />
+               </xsl:if>
+            </xsl:variable>
+            <add place="{$place}">
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </add>
+         </xsl:when>
+         <xsl:when test="@type = 'del'">
+            <del rend="strikethrough">
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </del>
+         </xsl:when>
+         <xsl:when test="@type = 'missing'"> 
+            <xsl:variable name="extent">
+               <xsl:if test="map:keys($custom) = 'extent'">
+                  <xsl:value-of select="map:get($custom, 'extent')" />
+               </xsl:if>
+            </xsl:variable>
+            <xsl:variable name="reason">
+               <xsl:if test="map:keys($custom) = 'reason'">
+                  <xsl:value-of select="map:get($custom, 'reason')" />
+               </xsl:if>
+            </xsl:variable>
+            <xsl:variable name="unit">
+               <xsl:if test="map:keys($custom) = 'unit'">
+                  <xsl:value-of select="map:get($custom, 'unit')" />
+               </xsl:if>
+            </xsl:variable>
+            <gap extent="{$extent}" reason="{$reason}" unit="{$unit}">
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </gap>
+         </xsl:when>
          <xsl:when test="@type = 'abbrev'">
             <choice>
                <xsl:if test="$custom('continued')">
