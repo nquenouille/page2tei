@@ -839,15 +839,15 @@
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
-            <p facs="#facs_{$numCurr}_{@id}">
+            <ab facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
-            </p>
+            </ab>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
             <xsl:text>
             </xsl:text>
-            <ab facs="#facs_{$numCurr}_{@id}" type="{(@type,$custom?structure?type)[normalize-space() != ''][1]}">
+            <ab facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
