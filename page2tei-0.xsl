@@ -194,7 +194,7 @@
                >
                   <xsl:text>
          </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0">
+                  <div xmlns="http://www.tei-c.org/ns/1.0" type='original'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -227,10 +227,19 @@
          </xsl:text>
                   </div>
                </xsl:for-each-group>
-               <xsl:text>
+                  <xsl:text>
+         </xsl:text>
+                  <div type='commentary'>
+                     <xsl:text>
+         </xsl:text>
+                     <p/>
+                  <xsl:text>
+         </xsl:text>
+                  </div>
+         <xsl:text>
       </xsl:text>
-            </body>
-            <xsl:text>
+      </body>
+      <xsl:text>
    </xsl:text>
          </text>
          <xsl:text>
