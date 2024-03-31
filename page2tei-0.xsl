@@ -1336,7 +1336,8 @@
    </xd:doc>
    <xsl:template match="p:Metadata" mode="text"/>
 
-   <!-- Der Übersichtlichkeit halber wird folgender Code weggelassen 
+   <!-- Der Übersichtlichkeit halber wird folgender Code weggelassen -->
+   <!--
    <xd:doc>
       <xd:desc>TranskribusMetadata contains the link to the image on Transkribus’ servers; return a
          tei:graphic element with this URL so it can be evaluated during postprocessing</xd:desc>
@@ -1348,7 +1349,7 @@
          height="{following::p:Page/@imageHeight}px"/>
    </xsl:template>
    -->
-   
+
    <xd:doc>
       <xd:desc>Parse the content of an attribute such as @custom into a map.</xd:desc>
    </xd:doc>
