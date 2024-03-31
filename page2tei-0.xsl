@@ -424,7 +424,7 @@
       <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}" xml:id="facs_{$numCurr}">
          <xsl:text>
          </xsl:text>
-         <graphic url="{encode-for-uri(@imageFilename)}" width="{@imageWidth}px"
+         <graphic mimeType="image/jpg" url="{encode-for-uri(@imageFilename)}" width="{@imageWidth}px"
             height="{@imageHeight}px"/>
          <!-- include Transkribus image link as second graphic element for later evaluation -->
          <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata"/>
@@ -1064,6 +1064,7 @@
                $prepared/local:m[@pos = 's']
                [count(preceding-sibling::local:m[@pos = 's']) = count(preceding-sibling::local:m[@pos = 'e'])]"/>
          <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
+         <!-- Add <span-tag> to hyphen at the end of line -->
          <xsl:if test="substring($text/text(), string-length($text/text()), 1)='¬'">
             <xsl:variable name="hyphen" select="substring($text/text(), string-length($text/text()), 1)" />
             <span type="hyphen">-</span>            
@@ -1335,6 +1336,7 @@
    </xd:doc>
    <xsl:template match="p:Metadata" mode="text"/>
 
+   <!-- Der Übersichtlichkeit halber wird folgender Code weggelassen 
    <xd:doc>
       <xd:desc>TranskribusMetadata contains the link to the image on Transkribus’ servers; return a
          tei:graphic element with this URL so it can be evaluated during postprocessing</xd:desc>
@@ -1345,7 +1347,8 @@
       <graphic url="{@imgUrl}" width="{following::p:Page/@imageWidth}px"
          height="{following::p:Page/@imageHeight}px"/>
    </xsl:template>
-
+   -->
+   
    <xd:doc>
       <xd:desc>Parse the content of an attribute such as @custom into a map.</xd:desc>
    </xd:doc>
@@ -1366,7 +1369,7 @@
    </xsl:template>
 
    <xd:doc>
-      <xd:desc>Text nodes to be copied</xd:desc>
+      <xd:desc>Text nodes to be copied without the hyphens that are taken care of in a span-tag</xd:desc>
    </xd:doc>
    <xsl:template match="text()">
       <xsl:value-of select="replace(.,'¬', '')"/>
