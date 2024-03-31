@@ -1064,9 +1064,13 @@
                $prepared/local:m[@pos = 's']
                [count(preceding-sibling::local:m[@pos = 's']) = count(preceding-sibling::local:m[@pos = 'e'])]"/>
          <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
+         <xsl:if test="substring($text/text(), string-length($text/text()), 1)='¬'">
+            <xsl:variable name="hyphen" select="substring($text/text(), string-length($text/text()), 1)" />
+            <span type="hyphen">-</span>            
+         </xsl:if>
       </xsl:if>
    </xsl:template>
-
+   
    <xd:doc>
       <xd:desc>Starting milestones for (possibly nested) elements</xd:desc>
    </xd:doc>
@@ -1365,6 +1369,6 @@
       <xd:desc>Text nodes to be copied</xd:desc>
    </xd:doc>
    <xsl:template match="text()">
-      <xsl:value-of select="."/>
+      <xsl:value-of select="replace(.,'¬', '')"/>
    </xsl:template>
 </xsl:stylesheet>
