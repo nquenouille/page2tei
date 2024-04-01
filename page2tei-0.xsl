@@ -1373,6 +1373,13 @@
       <xd:desc>Text nodes to be copied without the hyphens that are taken care of in a span-tag</xd:desc>
    </xd:doc>
    <xsl:template match="text()">
-      <xsl:value-of select="replace(.,'¬', '')"/>
+      <xsl:choose>
+         <xsl:when test="contains(., '¬')">
+            <xsl:value-of select="replace(.,'¬', '')"/>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:value-of select="." />
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
 </xsl:stylesheet>
