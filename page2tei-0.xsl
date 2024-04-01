@@ -1374,7 +1374,7 @@
    <xsl:template match="text()">
       <xsl:choose>
          <xsl:when test="substring(., string-length(.)) = '¬'">
-            <xsl:value-of select="replace(., substring(., string-length(.)), '')"/>
+            <xsl:value-of select="replace(., '.$', '')"/>
          </xsl:when>
          <xsl:otherwise>
             <xsl:value-of select="." />
