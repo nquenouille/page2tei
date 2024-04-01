@@ -1065,8 +1065,7 @@
                [count(preceding-sibling::local:m[@pos = 's']) = count(preceding-sibling::local:m[@pos = 'e'])]"/>
          <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
          <!-- Add <span-tag> to hyphen at the end of line -->
-         <xsl:if test="substring($text/text(), string-length($text/text()), 1)='¬'">
-            <xsl:variable name="hyphen" select="substring($text/text(), string-length($text/text()), 1)" />
+         <xsl:if test="substring($text/text(), string-length($text/text()))='¬'">
             <span type="hyphen">-</span>            
          </xsl:if>
       </xsl:if>
@@ -1374,8 +1373,8 @@
    </xd:doc>
    <xsl:template match="text()">
       <xsl:choose>
-         <xsl:when test="contains(., '¬')">
-            <xsl:value-of select="replace(.,'¬', '')"/>
+         <xsl:when test="substring(., string-length(.)) = '¬'">
+            <xsl:value-of select="replace(., substring(., string-length(.)), '')"/>
          </xsl:when>
          <xsl:otherwise>
             <xsl:value-of select="." />
