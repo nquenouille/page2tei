@@ -322,9 +322,7 @@
          publicationStmt/publisher</xd:desc>
    </xd:doc>
    <xsl:template match="colName">
-      <publisher>
-         <xsl:apply-templates/>
-      </publisher>
+      <publisher>Forschungsportal BACH</publisher>
    </xsl:template>
 
    <xd:doc>
@@ -727,7 +725,7 @@
       <xsl:param name="numCurr" tunnel="true"/>
 
    <!-- Create ulx, uly, lrx and lry by getting the coordinates's points, format and sort them and take the max and min values -->
-     <xsl:variable name="x-string">
+      <xsl:variable name="x-string">
          <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
             <xsl:if test="position() > 1">,</xsl:if>
             <xsl:value-of select="substring-before(current(), ',')" />
@@ -828,7 +826,6 @@
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
-
 
       <zone ulx="{$ulx}" uly="{$uly}" lrx="{$lrx}" lry="{$lry}" rendition="Table">
          <xsl:attribute name="xml:id">
@@ -1003,9 +1000,134 @@
    </xd:doc>
    <xsl:template match="p:TableCell">
       <xsl:param name="numCurr" tunnel="true"/>
+
+      <!-- Create ulx, uly, w and h by getting the coordinates's points, format and sort them and take the max and min values -->
+      <xsl:variable name="x-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-before(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="y-string">
+         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+            <xsl:if test="position() > 1">,</xsl:if>
+            <xsl:value-of select="substring-after(current(), ',')" />
+         </xsl:for-each>
+      </xsl:variable>
+
+       <xsl:variable name="sortx">
+         <xsl:perform-sort select="tokenize($x-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="sorty">
+         <xsl:perform-sort select="tokenize($y-string, ',')">
+            <xsl:sort select="number(.)" order="descending"/>         
+         </xsl:perform-sort>
+      </xsl:variable>
+
+      <xsl:variable name="lrxb">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+
+      <xsl:variable name="lrx">
+         <xsl:choose>
+            <xsl:when test="$lrxb &lt; 0">
+               <xsl:value-of select="0"/>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:value-of select="$lrxb"/>
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+
+      <xsl:variable name="ulxb">
+         <xsl:for-each select="tokenize($sortx, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>        
+      </xsl:variable>
+      
+      <xsl:variable name="ulx">
+         <xsl:choose>
+            <xsl:when test="$ulxb &lt; 0">
+               <xsl:value-of select="0"/>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:value-of select="$ulxb"/>
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+
+      <xsl:variable name="lryb">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = 1">
+               <xsl:value-of select="." />
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="lry">
+         <xsl:choose>
+            <xsl:when test="$lryb &lt; 0">
+               <xsl:value-of select="0"/>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:value-of select="$lryb"/>
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+
+      <xsl:variable name="ulyb">
+         <xsl:for-each select="tokenize($sorty, ' ')">
+            <xsl:if test="position() = last()">
+               <xsl:value-of select="." />
+            </xsl:if>        
+         </xsl:for-each>
+      </xsl:variable>
+
+      <xsl:variable name="uly">
+         <xsl:choose>
+            <xsl:when test="$ulyb &lt; 0">
+               <xsl:value-of select="0"/>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:value-of select="$ulyb"/>
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+
+      <xsl:variable name="w">
+         <xsl:choose>
+            <xsl:when test="($lrx - $ulx) &lt; 0">
+               <xsl:value-of select="0" />
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:value-of select="($lrx - $ulx)" />
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+
+      <xsl:variable name="h">
+         <xsl:choose>
+            <xsl:when test="($lry - $uly) &lt; 0">
+               <xsl:value-of select="0" />
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:value-of select="($lry - $uly)" />
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
       <xsl:text>
           </xsl:text>
-      <cell facs="#facs_{$numCurr}_{@id}" n="{@col}">
+      <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
          <xsl:apply-templates select="@rowSpan | @colSpan"/>
          <xsl:attribute name="rend">
             <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])"/>
