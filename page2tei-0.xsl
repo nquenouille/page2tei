@@ -76,6 +76,9 @@
          <xd:p>Austrian Centre for Digital Humanities http://acdh.oeaw.ac.at | University and State
             Library Darmstadt https://ulb.tu-darmstadt.de</xd:p>
          <xd:p/>
+         <xd:p><xd:b>Adaptions (2024) for the TEI Publisher:</xd:b> Nadine Quenouille, quenouille@bach-leipzig.de</xd:p>
+         <xd:p>Forschungsportal BACH, Sächsische Akademie der Wissenschaften zu Leipzig</xd:p>
+         <xd:p/>
          <xd:p>This stylesheet, when applied to mets.xml of the PAGE output, will create (valid)
             TEI</xd:p>
          <xd:p>While this XSLT is designed to run on many different flavours of PAGE-XMLs described
