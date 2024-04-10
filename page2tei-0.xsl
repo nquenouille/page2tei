@@ -826,12 +826,15 @@
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
-
+      <xsl:text>
+         </xsl:text>
       <zone ulx="{$ulx}" uly="{$uly}" lrx="{$lrx}" lry="{$lry}" rendition="Table">
          <xsl:attribute name="xml:id">
             <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
          </xsl:attribute>
          <xsl:apply-templates select="p:TableCell//p:TextLine" mode="facsimile"/>
+      <xsl:text>
+         </xsl:text>
       </zone>
    </xsl:template>
 
