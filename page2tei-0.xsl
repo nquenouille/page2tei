@@ -76,9 +76,6 @@
          <xd:p>Austrian Centre for Digital Humanities http://acdh.oeaw.ac.at | University and State
             Library Darmstadt https://ulb.tu-darmstadt.de</xd:p>
          <xd:p/>
-         <xd:p><xd:b>Adaptions (2024) for the TEI Publisher:</xd:b> Nadine Quenouille, quenouille@bach-leipzig.de</xd:p>
-         <xd:p>Forschungsportal BACH, Sächsische Akademie der Wissenschaften zu Leipzig</xd:p>
-         <xd:p/>
          <xd:p>This stylesheet, when applied to mets.xml of the PAGE output, will create (valid)
             TEI</xd:p>
          <xd:p>While this XSLT is designed to run on many different flavours of PAGE-XMLs described
@@ -98,6 +95,11 @@
          <xd:p><xd:b>Contributor</xd:b> Till Grallert, github:@tillgrallert</xd:p>
          <xd:p>Orient-Institut Beirut</xd:p>
          <xd:p>Use tei:ab as fallback instead of tei:p</xd:p>
+         <xd:p><xd:b>Contributor for Customized Adaptions</xd:b> Nadine Quenouille, quenouille@bach-leipzig.de</xd:p>
+         <xd:p>Forschungsportal BACH, Sächsische Akademie der Wissenschaften zu Leipzig</xd:p>
+         <xd:p>Adaptions for TEI Publisher: Replace seriesStmt with PublicationStmt, add treat for tags add, del and missing, added div types 'original' and 'commentary', 
+            insert &lt;span type='hyphen'&gt;, add mimeType to graphic, encoding iiif coordinates for TextLines and Table cells, split facsimilia.</xd:p>
+         <xd:p/>
       </xd:desc>
    </xd:doc>
 
