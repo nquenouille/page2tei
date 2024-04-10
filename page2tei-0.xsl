@@ -163,24 +163,8 @@
             </profileDesc>
             <xsl:text>
    </xsl:text>
-         </teiHeader>
-         <xsl:text>
-   </xsl:text>
-         <facsimile>
-            <xsl:choose>
-               <xsl:when test="$bounding-rectangles">
-                  <xsl:variable name="facs">
-                     <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
-                  </xsl:variable>
-                  <xsl:apply-templates select="$facs" mode="bounding-rectangle" />
-               </xsl:when>
-               <xsl:otherwise>
-                  <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>
-               </xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>
-   </xsl:text>
-         </facsimile>
+         </teiHeader>        
+            <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>  
          <xsl:text>
    </xsl:text>
          <text>
@@ -419,20 +403,26 @@
       <xsl:variable name="type" select="substring-after(@imageFilename, '.')"/>
 
       <xsl:text>
+   </xsl:text>
+      <facsimile xml:id="facs_{$numCurr}">
+   <xsl:text>
       </xsl:text>
-      <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}" xml:id="facs_{$numCurr}">
-         <xsl:text>
+      <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}">
+      <xsl:text>
          </xsl:text>
          <graphic mimeType="image/jpg" url="{encode-for-uri(@imageFilename)}" width="{@imageWidth}px"
-            height="{@imageHeight}px"/>
+            height="{@imageHeight}px" rend="facstab"/>
          <!-- include Transkribus image link as second graphic element for later evaluation -->
-         <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata"/>
-         <xsl:apply-templates
+            <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata"/>
+            <xsl:apply-templates
             select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion"
             mode="facsimile"/>
          <xsl:text>
       </xsl:text>
       </surface>
+      <xsl:text>
+   </xsl:text>
+      </facsimile>
    </xsl:template>
 
    <xd:doc>
