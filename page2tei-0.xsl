@@ -965,19 +965,19 @@
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
-            <ab facs="#facs_{$numCurr}_{@id}">
+            <p facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
-            </ab>
+            </p>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
             <xsl:text>
             </xsl:text>
-            <ab facs="#facs_{$numCurr}_{@id}">
+            <p facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-            </ab>
+            </p>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
@@ -1441,6 +1441,7 @@
                $prepared/local:m[@pos = 's']
                [count(preceding-sibling::local:m[@pos = 's']) = count(preceding-sibling::local:m[@pos = 'e'])]"/>
          <!--[not(preceding-sibling::local:m[1][@pos='s'])]" />-->
+         
          <!-- Add <span-tag> to hyphen at the end of line -->
          <xsl:if test="substring($text/text(), string-length($text/text()))='¬'">
             <span type="hyphen">-</span>            
