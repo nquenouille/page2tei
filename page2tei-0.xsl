@@ -183,7 +183,7 @@
                >
                   <xsl:text>
          </xsl:text>
-                  <div1 xmlns="http://www.tei-c.org/ns/1.0" type='original'>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" type='original'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -214,17 +214,17 @@
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
-                  </div1>
+                  </div>
                </xsl:for-each-group>
                   <xsl:text>
          </xsl:text>
-                  <div1 type='commentary'>
+                  <div type='commentary'>
                      <xsl:text>
          </xsl:text>
                      <p/>
                   <xsl:text>
          </xsl:text>
-                  </div1>
+                  </div>
          <xsl:text>
       </xsl:text>
       </body>
@@ -965,19 +965,19 @@
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
-            <div2 facs="#facs_{$numCurr}_{@id}">
+            <p facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
-            </div2>
+            </p>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
             <xsl:text>
             </xsl:text>
-            <div2 facs="#facs_{$numCurr}_{@id}">
+            <p facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-            </div2>
+            </p>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
