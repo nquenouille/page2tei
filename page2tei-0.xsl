@@ -259,9 +259,9 @@
       <xsl:apply-templates select="descendant::trpDocMetadata/title"/>
       <xsl:apply-templates
          select="descendant::trpDocMetadata/author | descendant::trpDocMetadata/writer"/>
-      <idno type="Transkribus">
+      <!-- <idno type="Transkribus">
          <xsl:value-of select="descendant::trpDocMetadata/docId"/>
-      </idno>
+      </idno> -->
       <xsl:apply-templates select="descendant::trpDocMetadata/externalId"/>
       <xsl:apply-templates select="descendant::trpDocMetadata/desc"/>
    </xsl:template>
@@ -334,7 +334,7 @@
       <xd:desc>Transkribus meta data: external ID</xd:desc>
    </xd:doc>
    <xsl:template match="externalId">
-      <idno type="external">
+      <idno type="uuid">
          <xsl:value-of select="."/>
       </idno>
    </xsl:template>
