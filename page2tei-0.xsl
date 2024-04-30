@@ -850,7 +850,7 @@
    <!-- Templates for PAGE, text -->
    <xsl:template match="p:Page" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
-      <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
+      <pb facs="#facs_{$numCurr}" n="{$numCurr}"/>
       <xsl:apply-templates
          select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text">
          <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
