@@ -413,7 +413,7 @@
       <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}">
       <xsl:text>
          </xsl:text>
-         <graphic mimeType="image/tif" url="{encode-for-uri(@imageFilename)}" width="{@imageWidth}px"
+         <graphic url="{encode-for-uri(@imageFilename)}" width="{@imageWidth}px"
             height="{@imageHeight}px" rend="facstab"/>
          <!-- include Transkribus image link as second graphic element for later evaluation -->
             <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata"/>
