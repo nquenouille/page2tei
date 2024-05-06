@@ -404,7 +404,7 @@
 
       <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>
       <xsl:variable name="type" select="substring-after(@imageFilename, '.')"/>
-
+      <xsl:variable name="url" select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file/mets:FLocat" />
       <xsl:text>
    </xsl:text>
       <facsimile xml:id="facs_{$numCurr}">
@@ -1523,7 +1523,26 @@
                </xsl:call-template>
             </supplied>
          </xsl:when>
+         <xsl:when test="@type = 'Supplied'">
+            <supplied reason="">
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </supplied>
+         </xsl:when>
          <xsl:when test="@type = 'add'">  
+            <xsl:variable name="place">
+               <xsl:if test="map:keys($custom) = 'place'">
+                  <xsl:value-of select="map:get($custom, 'place')" />
+               </xsl:if>
+            </xsl:variable>
+            <add place="{$place}">
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </add>
+         </xsl:when>
+         <xsl:when test="@type = 'Add'">  
             <xsl:variable name="place">
                <xsl:if test="map:keys($custom) = 'place'">
                   <xsl:value-of select="map:get($custom, 'place')" />
@@ -1542,7 +1561,39 @@
                </xsl:call-template>
             </del>
          </xsl:when>
+          <xsl:when test="@type = 'Del'">
+            <del rend="strikethrough">
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </del>
+         </xsl:when>
          <xsl:when test="@type = 'missing'"> 
+            <xsl:variable name="extent">
+               <xsl:if test="map:keys($custom) = 'extent'">
+                  <xsl:value-of select="map:get($custom, 'extent')" />
+               </xsl:if>
+            </xsl:variable>
+            <xsl:variable name="reason">
+               <xsl:if test="map:keys($custom) = 'reason'">
+                  <xsl:value-of select="map:get($custom, 'reason')" />
+               </xsl:if>
+            </xsl:variable>
+            <xsl:variable name="unit">
+               <xsl:if test="map:keys($custom) = 'unit'">
+                  <xsl:value-of select="map:get($custom, 'unit')" />
+               </xsl:if>
+            </xsl:variable>
+            <xsl:choose>
+               <xsl:when test="$custom?extent = '5'">
+                  <ellipsis><metamark/></ellipsis>
+               </xsl:when>
+               <xsl:otherwise>
+                  <gap extent="{$extent}" reason="{$reason}" unit="{$unit}" />
+               </xsl:otherwise>
+            </xsl:choose>
+            </xsl:when>
+            <xsl:when test="@type = 'Missing'"> 
             <xsl:variable name="extent">
                <xsl:if test="map:keys($custom) = 'extent'">
                   <xsl:value-of select="map:get($custom, 'extent')" />
