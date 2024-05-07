@@ -169,7 +169,7 @@
             <xsl:text>
    </xsl:text>
          </teiHeader>        
-            <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="facsimile"/>  
+            <xsl:apply-templates select="mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file" mode="facsimile"/>  
          <xsl:text>
    </xsl:text>
          <text>
@@ -366,12 +366,14 @@
       <xd:desc>Create tei:facsimile with @xml:id</xd:desc>
    </xd:doc>
    <xsl:template match="mets:file" mode="facsimile">
-      <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, /)"/>
+      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), /)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
+      <xsl:variable name="imgurl" select="mets:FLocat/@xlink:href"/>
 
       <xsl:apply-templates select="$file//p:Page" mode="facsimile">
          <xsl:with-param name="imageName" select="substring-after(mets:FLocat/@xlink:href, '/')" tunnel="true"/>
          <xsl:with-param name="numCurr" select="$numCurr" tunnel="true"/>
+         <xsl:with-param name="imgurl" select="$imgurl" tunnel="true"/>
       </xsl:apply-templates>
    </xsl:template>
 
@@ -379,11 +381,13 @@
       <xd:desc>Apply by-page</xd:desc>
    </xd:doc>
    <xsl:template match="mets:file" mode="text">
-      <xsl:variable name="file" select="document(mets:FLocat/@xlink:href, .)"/>
+      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), .)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
+      <xsl:variable name="imgurl" select="mets:FLocat/@xlink:href"/>
 
       <xsl:apply-templates select="$file//p:Page" mode="text">
          <xsl:with-param name="numCurr" select="$numCurr" tunnel="true"/>
+         <xsl:with-param name="imgurl" select="$imgurl" tunnel="true"/>
       </xsl:apply-templates>
    </xsl:template>
 
@@ -401,10 +405,11 @@
    </xd:doc>
    <xsl:template match="p:Page" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
+      <xsl:param name="imgurl" tunnel="true"/>
 
       <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>
       <xsl:variable name="type" select="substring-after(@imageFilename, '.')"/>
-      <xsl:variable name="url" select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file/mets:FLocat" />
+
       <xsl:text>
    </xsl:text>
       <facsimile xml:id="facs_{$numCurr}">
@@ -413,7 +418,7 @@
       <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}">
       <xsl:text>
          </xsl:text>
-         <graphic url="{encode-for-uri(@imageFilename)}" width="{@imageWidth}px"
+         <graphic url="{$imgurl}" width="{@imageWidth}px"
             height="{@imageHeight}px" rend="facstab"/>
          <!-- include Transkribus image link as second graphic element for later evaluation -->
             <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata"/>
@@ -1523,26 +1528,7 @@
                </xsl:call-template>
             </supplied>
          </xsl:when>
-         <xsl:when test="@type = 'Supplied'">
-            <supplied reason="">
-               <xsl:call-template name="elem">
-                  <xsl:with-param name="elem" select="$elem"/>
-               </xsl:call-template>
-            </supplied>
-         </xsl:when>
          <xsl:when test="@type = 'add'">  
-            <xsl:variable name="place">
-               <xsl:if test="map:keys($custom) = 'place'">
-                  <xsl:value-of select="map:get($custom, 'place')" />
-               </xsl:if>
-            </xsl:variable>
-            <add place="{$place}">
-               <xsl:call-template name="elem">
-                  <xsl:with-param name="elem" select="$elem"/>
-               </xsl:call-template>
-            </add>
-         </xsl:when>
-         <xsl:when test="@type = 'Add'">  
             <xsl:variable name="place">
                <xsl:if test="map:keys($custom) = 'place'">
                   <xsl:value-of select="map:get($custom, 'place')" />
@@ -1561,39 +1547,7 @@
                </xsl:call-template>
             </del>
          </xsl:when>
-          <xsl:when test="@type = 'Del'">
-            <del rend="strikethrough">
-               <xsl:call-template name="elem">
-                  <xsl:with-param name="elem" select="$elem"/>
-               </xsl:call-template>
-            </del>
-         </xsl:when>
          <xsl:when test="@type = 'missing'"> 
-            <xsl:variable name="extent">
-               <xsl:if test="map:keys($custom) = 'extent'">
-                  <xsl:value-of select="map:get($custom, 'extent')" />
-               </xsl:if>
-            </xsl:variable>
-            <xsl:variable name="reason">
-               <xsl:if test="map:keys($custom) = 'reason'">
-                  <xsl:value-of select="map:get($custom, 'reason')" />
-               </xsl:if>
-            </xsl:variable>
-            <xsl:variable name="unit">
-               <xsl:if test="map:keys($custom) = 'unit'">
-                  <xsl:value-of select="map:get($custom, 'unit')" />
-               </xsl:if>
-            </xsl:variable>
-            <xsl:choose>
-               <xsl:when test="$custom?extent = '5'">
-                  <ellipsis><metamark/></ellipsis>
-               </xsl:when>
-               <xsl:otherwise>
-                  <gap extent="{$extent}" reason="{$reason}" unit="{$unit}" />
-               </xsl:otherwise>
-            </xsl:choose>
-            </xsl:when>
-            <xsl:when test="@type = 'Missing'"> 
             <xsl:variable name="extent">
                <xsl:if test="map:keys($custom) = 'extent'">
                   <xsl:value-of select="map:get($custom, 'extent')" />
