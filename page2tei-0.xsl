@@ -970,19 +970,21 @@
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
-            <ab facs="#facs_{$numCurr}_{@id}">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <p>
                <xsl:apply-templates select="p:TextLine"/>
-            </ab>
+            </p>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
             <xsl:text>
             </xsl:text>
-            <ab facs="#facs_{$numCurr}_{@id}">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <p>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-            </ab>
+            </p>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
@@ -1541,6 +1543,13 @@
             </add>
          </xsl:when>
          <xsl:when test="@type = 'del'">
+            <del rend="strikethrough">
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </del>
+         </xsl:when>
+         <xsl:when test="@type = 'Del'">
             <del rend="strikethrough">
                <xsl:call-template name="elem">
                   <xsl:with-param name="elem" select="$elem"/>
