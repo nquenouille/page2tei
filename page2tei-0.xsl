@@ -1651,10 +1651,18 @@
                   <xsl:value-of select="map:get($custom, 'rend')" />
                </xsl:if>
            </xsl:variable>
+           <xsl:variable name="cause">
+               <xsl:if test="map:keys($custom) = 'cause'">
+                  <xsl:value-of select="map:get($custom, 'cause')" />
+               </xsl:if>
+           </xsl:variable>
             <xsl:variable name="elName" select="'del'"/>
             <xsl:element name="{$elName}">
                <xsl:if test="$rend">
                   <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
+               </xsl:if>
+               <xsl:if test="$cause">
+                  <xsl:attribute name="cause"><xsl:value-of select="map:get($custom, 'cause')"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom('continued')">
                   <xsl:attribute name="continued" select="true()"/>
