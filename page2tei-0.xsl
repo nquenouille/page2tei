@@ -1542,22 +1542,12 @@
             </hi>
          </xsl:when>
          <xsl:when test="@type = 'supplied'">
-         <xsl:variable name="resp">
-               <xsl:if test="map:keys($custom) = 'resp'">
-                  <xsl:value-of select="map:get($custom, 'resp')" />
-               </xsl:if>
-           </xsl:variable>
-           <xsl:variable name="reason">
-               <xsl:if test="map:keys($custom) = 'reason'">
-                  <xsl:value-of select="map:get($custom, 'reason')" />
-               </xsl:if>
-           </xsl:variable>
             <xsl:variable name="elName" select="'supplied'"/>
             <xsl:element name="{$elName}">
-               <xsl:if test="$resp">
+               <xsl:if test="map:keys($custom) = 'resp'">
                   <xsl:attribute name="resp"><xsl:value-of select="map:get($custom, 'resp')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="$reason">
+               <xsl:if test="map:keys($custom) = 'reason'">
                   <xsl:attribute name="reason"><xsl:value-of select="map:get($custom, 'reason')"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom('continued')">
@@ -1575,38 +1565,18 @@
             </xsl:element>
          </xsl:when>
          <xsl:when test="@type = 'add'">
-         <xsl:variable name="xmlid">
-               <xsl:if test="map:keys($custom) = 'xmlid'">
-                  <xsl:value-of select="map:get($custom, 'xmlid')" />
-               </xsl:if>
-           </xsl:variable>
-           <xsl:variable name="place">
-               <xsl:if test="map:keys($custom) = 'place'">
-                  <xsl:value-of select="map:get($custom, 'place')" />
-               </xsl:if>
-           </xsl:variable>
-           <xsl:variable name="hand">
-               <xsl:if test="map:keys($custom) = 'hand'">
-                  <xsl:value-of select="map:get($custom, 'hand')" />
-               </xsl:if>
-           </xsl:variable>
-           <xsl:variable name="type">
-               <xsl:if test="map:keys($custom) = 'type'">
-                  <xsl:value-of select="map:get($custom, 'type')" />
-               </xsl:if>
-           </xsl:variable>
             <xsl:variable name="elName" select="'add'"/>
             <xsl:element name="{$elName}">
-               <xsl:if test="$xmlid">
+               <xsl:if test="map:keys($custom) = 'xmlid'">
                   <xsl:attribute name="xml:id"><xsl:value-of select="map:get($custom, 'xmlid')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="$place">
+               <xsl:if test="map:keys($custom) = 'place'">
                   <xsl:attribute name="place"><xsl:value-of select="map:get($custom, 'place')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="$hand">
+               <xsl:if test="map:keys($custom) = 'hand'">
                   <xsl:attribute name="hand"><xsl:value-of select="map:get($custom, 'hand')"/></xsl:attribute>
                </xsl:if>
-                <xsl:if test="$type">
+                <xsl:if test="map:keys($custom) = 'type'">
                   <xsl:attribute name="type"><xsl:value-of select="map:get($custom, 'type')"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom('continued')">
@@ -1624,44 +1594,32 @@
             </xsl:element>
          </xsl:when>
          <xsl:when test="@type = 'unclear'">
-         <xsl:variable name="reason">
+         <xsl:variable name="elName" select="'unclear'"/>
+            <xsl:element name="{$elName}">
                <xsl:if test="map:keys($custom) = 'reason'">
-                  <xsl:value-of select="map:get($custom, 'reason')" />
+                  <xsl:attribute name="reason"><xsl:value-of select="map:get($custom, 'reason')"/></xsl:attribute>
                </xsl:if>
-           </xsl:variable>
-         <xsl:choose>
-            <xsl:when test="contains($elem, '¬')">
-                  <unclear reason="{$reason}">                     
-                     <xsl:value-of select="replace($elem, '¬', '')"/>              
+               <xsl:if test="$custom('continued')">
+                  <xsl:attribute name="continued" select="true()"/>
+               </xsl:if>    
+               <xsl:if test="contains($elem, '¬')">
+                  <xsl:value-of select="replace($elem, '¬', '')"/>              
                      <span type="hyphen">-</span>
-                  </unclear>
-               </xsl:when>
-               <xsl:otherwise>
-                  <unclear reason="{$reason}">
-                     <xsl:call-template name="elem">
-                        <xsl:with-param name="elem" select="$elem"/>
-                     </xsl:call-template>
-                  </unclear>
-               </xsl:otherwise>
-            </xsl:choose>
+               </xsl:if> 
+               <xsl:if test="not(contains($elem, '¬'))">          
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+               </xsl:if>
+            </xsl:element>
          </xsl:when>
          <xsl:when test="@type = 'del'">
-         <xsl:variable name="rend">
-               <xsl:if test="map:keys($custom) = 'rend'">
-                  <xsl:value-of select="map:get($custom, 'rend')" />
-               </xsl:if>
-           </xsl:variable>
-           <xsl:variable name="cause">
-               <xsl:if test="map:keys($custom) = 'cause'">
-                  <xsl:value-of select="map:get($custom, 'cause')" />
-               </xsl:if>
-           </xsl:variable>
             <xsl:variable name="elName" select="'del'"/>
             <xsl:element name="{$elName}">
-               <xsl:if test="$rend">
+               <xsl:if test="map:keys($custom) = 'rend'">
                   <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="$cause">
+               <xsl:if test="map:keys($custom) = 'cause'">
                   <xsl:attribute name="cause"><xsl:value-of select="map:get($custom, 'cause')"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom('continued')">
@@ -1679,14 +1637,9 @@
             </xsl:element>
          </xsl:when>
          <xsl:when test="@type = 'Del'">
-         <xsl:variable name="rend">
-               <xsl:if test="map:keys($custom) = 'rend'">
-                  <xsl:value-of select="map:get($custom, 'rend')" />
-               </xsl:if>
-           </xsl:variable>
             <xsl:variable name="elName" select="'del'"/>
             <xsl:element name="{$elName}">
-               <xsl:if test="$rend">
+               <xsl:if test="map:keys($custom) = 'rend'">
                   <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom('continued')">
@@ -1716,31 +1669,30 @@
            </xsl:variable>
            <anchor type="{$type}" xml:id="{$xmlid}"/>
          </xsl:when>
-         <xsl:when test="@type = 'missing'"> 
-            <xsl:variable name="extent">
-               <xsl:if test="map:keys($custom) = 'extent'">
-                  <xsl:value-of select="map:get($custom, 'extent')" />
-               </xsl:if>
-            </xsl:variable>
-            <xsl:variable name="reason">
-               <xsl:if test="map:keys($custom) = 'reason'">
-                  <xsl:value-of select="map:get($custom, 'reason')" />
-               </xsl:if>
-            </xsl:variable>
-            <xsl:variable name="unit">
-               <xsl:if test="map:keys($custom) = 'unit'">
-                  <xsl:value-of select="map:get($custom, 'unit')" />
-               </xsl:if>
-            </xsl:variable>
+         <xsl:when test="@type = 'missing'">
             <xsl:choose>
                <xsl:when test="$custom?extent = '5'">
                   <ellipsis><metamark/></ellipsis>
                </xsl:when>
                <xsl:otherwise>
-                  <gap extent="{$extent}" reason="{$reason}" unit="{$unit}" />
+               <xsl:variable name="elName" select="'gap'"/>
+               <xsl:element name="{$elName}">
+                  <xsl:if test="map:keys($custom) = 'unit'">
+                     <xsl:attribute name="unit"><xsl:value-of select="map:get($custom, 'unit')"/></xsl:attribute>
+                  </xsl:if>
+                  <xsl:if test="map:keys($custom) = 'reason'">
+                     <xsl:attribute name="reason"><xsl:value-of select="map:get($custom, 'reason')"/></xsl:attribute>
+                  </xsl:if>
+                  <xsl:if test="map:keys($custom) = 'extent'">
+                     <xsl:attribute name="extent"><xsl:value-of select="map:get($custom, 'extent')"/></xsl:attribute>
+                  </xsl:if>
+                  <xsl:call-template name="elem">
+                     <xsl:with-param name="elem" select="$elem"/>
+                  </xsl:call-template>
+               </xsl:element>
                </xsl:otherwise>
             </xsl:choose>
-            </xsl:when>
+         </xsl:when>
          <xsl:when test="@type = 'sic'">
             <choice>
                <corr>
