@@ -1544,6 +1544,7 @@
          <xsl:when test="@type = 'supplied'">
             <xsl:variable name="elName" select="'supplied'"/>
             <xsl:element name="{$elName}">
+               <xsl:attribute name="extent"><xsl:value-of select="'1 character'"/></xsl:attribute>
                <xsl:if test="map:keys($custom) = 'resp'">
                   <xsl:attribute name="resp"><xsl:value-of select="map:get($custom, 'resp')"/></xsl:attribute>
                </xsl:if>
