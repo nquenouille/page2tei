@@ -1642,6 +1642,9 @@
                <xsl:if test="map:keys($custom) = 'rend'">
                   <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
                </xsl:if>
+               <xsl:if test="map:keys($custom) = 'cause'">
+                  <xsl:attribute name="cause"><xsl:value-of select="map:get($custom, 'cause')"/></xsl:attribute>
+               </xsl:if>
                <xsl:if test="$custom('continued')">
                   <xsl:attribute name="continued" select="true()"/>
                </xsl:if>    
