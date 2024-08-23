@@ -98,7 +98,8 @@
          <xd:p><xd:b>Contributor for Customized Adaptions</xd:b> Nadine Quenouille, quenouille@bach-leipzig.de</xd:p>
          <xd:p>Forschungsportal BACH, Sächsische Akademie der Wissenschaften zu Leipzig</xd:p>
          <xd:p>Adaptions for TEI Publisher: Replace seriesStmt with PublicationStmt, add treat for tags add, del and missing, added div types 'original' and 'commentary', 
-            insert &lt;span type='hyphen'&gt;, add mimeType to graphic, encoding iiif coordinates for TextLines and Table cells, split facsimilia.</xd:p>
+            insert &lt;span type='hyphen'&gt;, add mimeType to graphic, encoding iiif coordinates for TextLines and Table cells, gave the table cells a head, add some tags 
+            and attributes, fix continued tags, split facsimilia.</xd:p>
          <xd:p/>
       </xd:desc>
    </xd:doc>
@@ -1623,6 +1624,9 @@
                <xsl:if test="map:keys($custom) = 'cause'">
                   <xsl:attribute name="cause"><xsl:value-of select="map:get($custom, 'cause')"/></xsl:attribute>
                </xsl:if>
+               <xsl:if test="map:keys($custom) = 'hand'">
+                  <xsl:attribute name="hand"><xsl:value-of select="map:get($custom, 'hand')"/></xsl:attribute>
+               </xsl:if>
                <xsl:if test="$custom('continued')">
                   <xsl:attribute name="continued" select="true()"/>
                </xsl:if>    
@@ -1645,6 +1649,9 @@
                </xsl:if>
                <xsl:if test="map:keys($custom) = 'cause'">
                   <xsl:attribute name="cause"><xsl:value-of select="map:get($custom, 'cause')"/></xsl:attribute>
+               </xsl:if>
+               <xsl:if test="map:keys($custom) = 'hand'">
+                  <xsl:attribute name="hand"><xsl:value-of select="map:get($custom, 'hand')"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom('continued')">
                   <xsl:attribute name="continued" select="true()"/>
