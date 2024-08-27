@@ -120,9 +120,25 @@
       <xd:desc>helper: gather page contents</xd:desc>
    </xd:doc>
    <xsl:variable name="make_div">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
       </div>
+   </xsl:if>
+   </xsl:variable>
+   <xsl:variable name="make_div_front">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='front']//mets:area/@FILEID">
+      <div>
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+      </div>
+   </xsl:if>
+   </xsl:variable>
+   <xsl:variable name="make_div_back">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='back']//mets:area/@FILEID">
+      <div>
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
+      </div>
+   </xsl:if>
    </xsl:variable>
    
    <xd:doc>
@@ -176,6 +192,61 @@
          <text>
             <xsl:text>
       </xsl:text>
+      <xsl:if test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
+      <front>
+         <xsl:for-each-group
+                     select="$make_div_front//*[local-name() = 'div']/*"
+                     group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
+                        | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
+               >
+                  <xsl:text>
+         </xsl:text>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" type='original_front'>
+                     <xsl:variable name="combined">
+                        <xsl:choose>
+                           <xsl:when test="$combine">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combining">
+                        <xsl:apply-templates select="$combined" mode="continued" />
+                     </xsl:variable>                     
+                     <xsl:variable name="tokenized">
+                        <xsl:choose>
+                           <xsl:when test="$tokenize">
+                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="$combining" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:for-each select="$tokenized/*">
+                        <xsl:text>
+            </xsl:text>
+                        <xsl:sequence select="." />
+            </xsl:for-each>
+                        <xsl:text>
+         </xsl:text>
+                  </div>
+               </xsl:for-each-group>
+                  <xsl:text>
+         </xsl:text>
+                  <div type='commentary_front'>
+                     <xsl:text>
+         </xsl:text>
+                     <p/>
+                  <xsl:text>
+         </xsl:text>
+                  </div>
+         <xsl:text>
+      </xsl:text>
+      </front>
+      </xsl:if>
             <body>
                <xsl:for-each-group
                      select="$make_div//*[local-name() = 'div']/*"
@@ -229,6 +300,63 @@
          <xsl:text>
       </xsl:text>
       </body>
+      <xsl:text>
+         </xsl:text>
+      <xsl:if test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']">
+      <back>
+         <xsl:for-each-group
+                     select="$make_div_back//*[local-name() = 'div']/*"
+                     group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
+                        | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
+               >
+                  <xsl:text>
+         </xsl:text>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" type='original_back'>
+                     <xsl:variable name="combined">
+                        <xsl:choose>
+                           <xsl:when test="$combine">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combining">
+                        <xsl:apply-templates select="$combined" mode="continued" />
+                     </xsl:variable>                     
+                     <xsl:variable name="tokenized">
+                        <xsl:choose>
+                           <xsl:when test="$tokenize">
+                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="$combining" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:for-each select="$tokenized/*">
+                        <xsl:text>
+            </xsl:text>
+                        <xsl:sequence select="." />
+            </xsl:for-each>
+                        <xsl:text>
+         </xsl:text>
+                  </div>
+               </xsl:for-each-group>
+                  <xsl:text>
+         </xsl:text>
+                  <div type='commentary_back'>
+                     <xsl:text>
+         </xsl:text>
+                     <p/>
+                  <xsl:text>
+         </xsl:text>
+                  </div>
+         <xsl:text>
+      </xsl:text>
+      </back>
+      </xsl:if>
       <xsl:text>
    </xsl:text>
          </text>
