@@ -120,9 +120,9 @@
       <xd:desc>helper: gather page contents</xd:desc>
    </xd:doc>
    <xsl:variable name="make_div">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID and //mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID and @ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:if>
    </xsl:variable>
