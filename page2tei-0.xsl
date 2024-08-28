@@ -120,11 +120,28 @@
       <xd:desc>helper: gather page contents</xd:desc>
    </xd:doc>
    <xsl:variable name="make_div">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID and //mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID">
+   <xsl:choose>
+   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back'] and //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
       <div>
          <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID and @ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
       </div>
-   </xsl:if>
+   </xsl:when>
+   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
+      <div>
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+      </div>
+   </xsl:when>
+   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']">
+      <div>
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
+      </div>
+   </xsl:when>
+   <xsl:otherwise>
+      <div>
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="text" />
+      </div>
+   </xsl:otherwise>
+   </xsl:choose>
    </xsl:variable>
    <xsl:variable name="make_div_front">
    <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='front']//mets:area/@FILEID">
@@ -247,6 +264,8 @@
       </xsl:text>
       </front>
       </xsl:if>
+       <xsl:text>
+      </xsl:text>
             <body>
                <xsl:for-each-group
                      select="$make_div//*[local-name() = 'div']/*"
@@ -1137,6 +1156,11 @@
                      <xsl:apply-templates select="current-group()"/>
                   </head>
                </xsl:when>
+               <xsl:when test="@custom='structure {type:subheading;}'">
+                  <row n="{@row}" role="subheading">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
                <xsl:otherwise>
                <row n="{@row}">
                   <xsl:apply-templates select="current-group()"/>
@@ -1280,11 +1304,26 @@
       </xsl:variable>
       <xsl:text>
           </xsl:text>
-      <xsl:choose>
-         <xsl:when test="@custom='structure {type:heading;}'">
+     
+         <xsl:if test="@custom='structure {type:heading;}'">
             <xsl:apply-templates select="p:TextLine"/>
-         </xsl:when>
-         <xsl:otherwise>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:subheading;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'subheading'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@topBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="not(@custom='structure {type:heading;}') and not(@custom='structure {type:subheading;}')">
          <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="rend">
@@ -1295,8 +1334,7 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
          </cell>
-         </xsl:otherwise>
-      </xsl:choose>
+         </xsl:if>
    </xsl:template>
    <xd:doc>
       <xd:desc>rowspan -> rows</xd:desc>
