@@ -32,6 +32,7 @@
    <xsl:param name="combine" select="false()"/>
    <xsl:include href="combine-continued.xsl" />
 
+
    <xd:doc>
       <xd:desc>If false(), region types that correspond to valid TEI elements will be returned as
          this element; types that do not correspond to a TEI element will be returned as
@@ -285,8 +286,18 @@
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
+                     <xsl:variable name="combines">
+                        <xsl:choose>
+                           <xsl:when test="$combined">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
                      <xsl:variable name="combining">
-                        <xsl:apply-templates select="$combined" mode="continued" />
+                        <xsl:apply-templates select="$combines" mode="continued" />
                      </xsl:variable>                     
                      <xsl:variable name="tokenized">
                         <xsl:choose>

@@ -22,8 +22,9 @@
             if the continuation happens across region borders).</xd:p>
       </xd:desc>
    </xd:doc>
-   <xsl:template match="tei:*[count(tei:*[@continued = 'true']) gt 1]" mode="continued">
-      <xsl:copy>
+
+   <xsl:template name="recursive" match="//tei:*[count(tei:*[@continued = 'true']) gt 1]" mode="continued">
+     <xsl:copy>
          <xsl:apply-templates select="@*" mode="continued" />
          <xsl:for-each-group select="node()"
                group-starting-with="tei:*[
@@ -31,7 +32,7 @@
                   and normalize-space() != ''
                   and (normalize-space(preceding::text()[1]) != '' or preceding::text()[1][not(preceding-sibling::*)])
                ]">
-            
+
             <xsl:choose>
                <xsl:when test="current-group()[1][@continued eq 'true' and tei:abbr]">
                   <!-- we assume there is exactly 2 choice with one lb in between, so no multi-line abbreviations:
@@ -63,7 +64,7 @@
                   />
                   <xsl:variable name="last" select="index-of(current-group(), $final)[1]"/>
                   <xsl:element name="{local-name()}">
-                     <xsl:apply-templates select="@*" mode="continued" />
+                     <xsl:apply-templates select="@*[name() != 'continued']" mode="continued" />
                      <xsl:apply-templates select="current-group()[position() le $last]" mode="rs-continued" />
                   </xsl:element>
                   <xsl:apply-templates select="current-group()[position() gt $last]" mode="continued" />
@@ -75,7 +76,7 @@
          </xsl:for-each-group>
       </xsl:copy>
    </xsl:template>
-   
+
    <xd:doc>
       <xd:desc>lb will be returned unaltered</xd:desc>
    </xd:doc>
@@ -91,12 +92,7 @@
    <xsl:template match="*" mode="rs-continued">
       <xsl:apply-templates select="node()" mode="continued" />
    </xsl:template>
-   
-   <xd:doc>
-      <xd:desc>Remove @continued</xd:desc>
-   </xd:doc>
-   <xsl:template match="@continued" mode="continued"/>
-   
+
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
