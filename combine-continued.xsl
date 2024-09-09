@@ -23,7 +23,7 @@
       </xd:desc>
    </xd:doc>
 
-   <xsl:template name="recursive" match="//tei:*[count(tei:*[@continued = 'true']) gt 1]" mode="continued">
+   <xsl:template match="tei:*[count(tei:*[@continued = 'true']) gt 1]" mode="continued">
      <xsl:copy>
          <xsl:apply-templates select="@*" mode="continued" />
          <xsl:for-each-group select="node()"
@@ -59,7 +59,7 @@
                                  and @continued = 'true'
                                  and node()
                               ][last()],
-                           current-group()[4]
+                           current-group()[position() = 4]
                         )[1]"
                   />
                   <xsl:variable name="last" select="index-of(current-group(), $final)[1]"/>
