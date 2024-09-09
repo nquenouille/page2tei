@@ -86,6 +86,9 @@
       </lb>
    </xsl:template>
    
+   <xd:doc>
+      <xd:description>If there is a hyphen (¬) at the end of the line, replace with <span type='hyphen'>-</span>'</xd:description>
+   </xd:doc>
    <xsl:template match="*/text()" mode="continued">
             <xsl:choose>
          <xsl:when test="substring(., string-length(.)) = '¬'">
@@ -97,6 +100,7 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
+   
    <xd:doc>
       <xd:desc>For continued rs, only return the content</xd:desc>
    </xd:doc>
