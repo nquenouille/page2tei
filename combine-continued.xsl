@@ -86,6 +86,17 @@
       </lb>
    </xsl:template>
    
+   <xsl:template match="*/text()" mode="continued">
+            <xsl:choose>
+         <xsl:when test="substring(., string-length(.)) = '¬'">
+            <xsl:value-of select="replace(., '.$', '')"/>
+            <span type="hyphen">-</span>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:value-of select="." />
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
    <xd:doc>
       <xd:desc>For continued rs, only return the content</xd:desc>
    </xd:doc>
