@@ -122,39 +122,39 @@
    </xd:doc>
    <xsl:variable name="make_div">
    <xsl:choose>
-   <xsl:when test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK'] and //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']">
+   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back'] and //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID and @ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID and @ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:when>
-   <xsl:when test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']">
+   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:when>
-   <xsl:when test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']">
+   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:when>
    <xsl:otherwise>
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="text" />
       </div>
    </xsl:otherwise>
    </xsl:choose>
    </xsl:variable>
    <xsl:variable name="make_div_front">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file/@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='front']//mets:area/@FILEID">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:if>
    </xsl:variable>
    <xsl:variable name="make_div_back">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file/@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='back']//mets:area/@FILEID">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:if>
    </xsl:variable>
@@ -1791,9 +1791,7 @@
          <xsl:when test="@type = 'del'">
             <xsl:variable name="elName" select="'del'"/>
             <xsl:element name="{$elName}">
-               <xsl:if test="map:keys($custom) = 'rend'">
-                  <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
-               </xsl:if>
+               <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
                <xsl:if test="map:keys($custom) = 'cause'">
                   <xsl:attribute name="cause"><xsl:value-of select="map:get($custom, 'cause')"/></xsl:attribute>
                </xsl:if>
@@ -1812,9 +1810,7 @@
          <xsl:when test="@type = 'Del'">
             <xsl:variable name="elName" select="'del'"/>
             <xsl:element name="{$elName}">
-               <xsl:if test="map:keys($custom) = 'rend'">
-                  <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
-               </xsl:if>
+               <xsl:attribute name="rend"><xsl:value-of select="'strikethrough'"/></xsl:attribute>
                <xsl:if test="map:keys($custom) = 'cause'">
                   <xsl:attribute name="cause"><xsl:value-of select="map:get($custom, 'cause')"/></xsl:attribute>
                </xsl:if>
@@ -1833,10 +1829,10 @@
            <xsl:variable name="elName" select="'anchor'"/>
             <xsl:element name="{$elName}">
                <xsl:if test="map:keys($custom) = 'xmlid'">
-                  <xsl:attribute name="xml:id"><xsl:value-of select="map:get($custom, 'xmlid')"/></xsl:attribute>
+                  <xsl:attribute name="xml:id"><xsl:value-of select="concat('a',map:get($custom, 'xmlid'))"/></xsl:attribute>
                </xsl:if>
                 <xsl:if test="map:keys($custom) = 'type'">
-                  <xsl:attribute name="type"><xsl:value-of select="map:get($custom, 'type')"/></xsl:attribute>
+                  <xsl:attribute name="type"><xsl:value-of select="'add'"/></xsl:attribute>
                </xsl:if>
             </xsl:element>
          </xsl:when>
