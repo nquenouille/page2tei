@@ -122,39 +122,39 @@
    </xd:doc>
    <xsl:variable name="make_div">
    <xsl:choose>
-   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back'] and //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
+   <xsl:when test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK'] and //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID and @ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID and @ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:when>
-   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
+   <xsl:when test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:when>
-   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']">
+   <xsl:when test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID != //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:when>
    <xsl:otherwise>
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file" mode="text" />
       </div>
    </xsl:otherwise>
    </xsl:choose>
    </xsl:variable>
    <xsl:variable name="make_div_front">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='front']//mets:area/@FILEID">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file/@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:if>
    </xsl:variable>
    <xsl:variable name="make_div_back">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='back']//mets:area/@FILEID">
+   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file/@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[@ID = //mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']/mets:fptr[1]/mets:area/@FILEID]" mode="text" />
       </div>
    </xsl:if>
    </xsl:variable>
@@ -210,7 +210,7 @@
          <text>
             <xsl:text>
       </xsl:text>
-      <xsl:if test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
+      <xsl:if test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']">
       <front>
          <xsl:for-each-group
                      select="$make_div_front//*[local-name() = 'div']/*"
@@ -342,7 +342,7 @@
       </body>
       <xsl:text>
          </xsl:text>
-      <xsl:if test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']">
+      <xsl:if test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']">
       <back>
          <xsl:for-each-group
                      select="$make_div_back//*[local-name() = 'div']/*"
@@ -547,12 +547,12 @@
    <xsl:template match="mets:file" mode="facsimile">
       <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), /)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
-      <xsl:variable name="imgurl" select="mets:FLocat/@xlink:href"/>
+      <xsl:variable name="imageurl" select="mets:FLocat/@xlink:href"/>
 
       <xsl:apply-templates select="$file//p:Page" mode="facsimile">
          <xsl:with-param name="imageName" select="substring-after(mets:FLocat/@xlink:href, '/')" tunnel="true"/>
          <xsl:with-param name="numCurr" select="$numCurr" tunnel="true"/>
-         <xsl:with-param name="imgurl" select="$imgurl" tunnel="true"/>
+         <xsl:with-param name="imageurl" select="$imageurl" tunnel="true"/>
       </xsl:apply-templates>
    </xsl:template>
 
@@ -562,7 +562,7 @@
    <xsl:template match="mets:file" mode="text">
       <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), .)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
-      <xsl:variable name="imgurl" select="mets:FLocat/@xlink:href"/>
+      <xsl:variable name="imgurl" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
 
       <xsl:apply-templates select="$file//p:Page" mode="text">
          <xsl:with-param name="numCurr" select="$numCurr" tunnel="true"/>
@@ -584,7 +584,7 @@
    </xd:doc>
    <xsl:template match="p:Page" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
-      <xsl:param name="imgurl" tunnel="true"/>
+      <xsl:param name="imageurl" tunnel="true"/>
 
       <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>
       <xsl:variable name="type" select="substring-after(@imageFilename, '.')"/>
@@ -597,7 +597,7 @@
       <surface ulx="0" uly="0" lrx="{@imageWidth}" lry="{@imageHeight}">
       <xsl:text>
          </xsl:text>
-         <graphic url="{$imgurl}" width="{@imageWidth}px"
+         <graphic url="{$imageurl}" width="{@imageWidth}px"
             height="{@imageHeight}px" rend="facstab"/>
          <!-- include Transkribus image link as second graphic element for later evaluation -->
             <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata"/>
@@ -1395,6 +1395,7 @@
    </xd:doc>
    <xsl:template match="p:TextLine">
       <xsl:param name="numCurr" tunnel="true"/>
+      <xsl:param name="imgurl" tunnel="true"/>
 
       <xsl:if test="p:Baseline or $withoutBaseline">
          <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
@@ -1647,7 +1648,7 @@
          <xsl:text>
                </xsl:text>
          <!-- Encode iiif coords for TEI Publisher -->
-         <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}">
+         <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}">
             <xsl:if test="@custom">
                <xsl:variable name="pos"
                   select="xs:integer(substring-before(substring-after(@custom, 'index:'), ';')) + 1"/>
