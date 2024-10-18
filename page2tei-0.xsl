@@ -120,41 +120,101 @@
    <xd:doc>
       <xd:desc>helper: gather page contents</xd:desc>
    </xd:doc>
+
+   <!-- create image url -->
+   <xsl:variable name="imgurl_front" select="//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href"/>
+   <xsl:variable name="imgurl_back" select="//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href"/>
+
+   <!-- create link to the first file and get the regionType-->
+   <xsl:variable name="file_front" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), /)"/>
+   <xsl:variable name="custom_front" as="map(*)">
+      <xsl:apply-templates select="$file_front//p:TextRegion[1]/@custom" />
+   </xsl:variable>
+   <xsl:variable name="regionType_front" as="xs:string*">
+      <xsl:if test="$file_front//p:TextRegion[1]/@custom">
+         <xsl:value-of select="(@type, $custom_front?structure?type)" />
+      </xsl:if>
+   </xsl:variable>
+
+   <!-- create link to the last file and get the regionType-->
+   <xsl:variable name="file_back" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), /)"/>
+   <xsl:variable name="custom_back" as="map(*)">
+      <xsl:apply-templates select="$file_back//p:TextRegion[last()]/@custom"/>
+   </xsl:variable>
+   <xsl:variable name="regionType_back" as="xs:string*">
+      <xsl:if test="$file_back//p:TextRegion[last()]/@custom">
+         <xsl:value-of select="(@type, $custom_back?structure?type)" />
+      </xsl:if>
+   </xsl:variable>
+      
+   <!-- create div for the body, differentiate if there is also a front and/or a back matter -->
    <xsl:variable name="make_div">
    <xsl:choose>
-   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back'] and //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
+   <xsl:when test="$regionType_front='front' and $regionType_back='back'">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID and @ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="$file_front//p:TextRegion[position() != 1]" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+         </xsl:apply-templates>
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != 1][position() != last()]" mode="text"/>
+         <xsl:apply-templates select="$file_back//p:TextRegion[position() != last()]" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+         </xsl:apply-templates>
       </div>
    </xsl:when>
-   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']">
+   <xsl:when test="$regionType_front='front'">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="$file_front//p:TextRegion[position() != 1]" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+         </xsl:apply-templates>
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != 1]" mode="text"/>
       </div>
    </xsl:when>
-   <xsl:when test="//mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']">
+   <xsl:when test="$regionType_back='back'">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID != //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != last()]" mode="text"/>
+         <xsl:apply-templates select="$file_back//p:TextRegion[position() != last()]" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>            
+         </xsl:apply-templates>
       </div>
    </xsl:when>
    <xsl:otherwise>
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file" mode="text" />
+         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file" mode="text" />
       </div>
    </xsl:otherwise>
    </xsl:choose>
    </xsl:variable>
+
+   <!-- create div for the front matter -->
    <xsl:variable name="make_div_front">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='front']//mets:area/@FILEID">
+   <xsl:if test="$regionType_front='front'">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='front']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="$file_front//p:TextRegion[1]" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+         </xsl:apply-templates>
       </div>
    </xsl:if>
    </xsl:variable>
+
+   <!-- create div for the back matter -->
    <xsl:variable name="make_div_back">
-   <xsl:if test="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file/@ID = //mets:structMap[@TYPE='LOGICAL']//mets:div[@TYPE='back']//mets:area/@FILEID">
+   <xsl:if test="$regionType_back='back'">
       <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'PAGEXML']/mets:file[@ID = //mets:structMap[@TYPE='LOGICAL']/mets:div[@TYPE='DOCUMENT']/mets:div[@TYPE='back']//mets:area/@FILEID]" mode="text" />
+         <xsl:apply-templates select="$file_back//p:TextRegion[last()]" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+         </xsl:apply-templates>
       </div>
    </xsl:if>
    </xsl:variable>
@@ -210,7 +270,7 @@
          <text>
             <xsl:text>
       </xsl:text>
-      <xsl:if test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='FRONT']">
+      <xsl:if test="$regionType_front = 'front'">
       <front>
          <xsl:for-each-group
                      select="$make_div_front//*[local-name() = 'div']/*"
@@ -342,7 +402,7 @@
       </body>
       <xsl:text>
          </xsl:text>
-      <xsl:if test="//mets:structMap[@TYPE='MANUSCRIPT']//mets:div[@TYPE='BACK']">
+      <xsl:if test="$regionType_back = 'back'">
       <back>
          <xsl:for-each-group
                      select="$make_div_back//*[local-name() = 'div']/*"
@@ -1063,6 +1123,7 @@
       </xsl:variable>
       <xsl:variable name="regionType" as="xs:string*" select="(@type, $custom?structure?type)" />
 
+      <xsl:variable name="number" select="//ancestor::p:Metadata//p:TranskribusMetadata/@pageNr"/>
       <xsl:choose>
          <xsl:when test="not(p:TextLine or $withoutTextline)"/>
          <xsl:when test="'heading' = $regionType">
@@ -1150,6 +1211,28 @@
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <p>
+               <xsl:apply-templates select="p:TextLine"/>
+            </p>
+         </xsl:when>
+         <xsl:when test="'front' = $regionType">
+          <xsl:text>
+            </xsl:text>
+            <pb facs="#facs_{$number}" n="{$number}"/>
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$number}_{@id}" />
+            <p>
+               <xsl:apply-templates select="p:TextLine"/>
+            </p>
+         </xsl:when>
+         <xsl:when test="'back' = $regionType">
+            <xsl:text>
+            </xsl:text>
+            <pb facs="#facs_{$number}" n="{$number}"/>
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$number}_{@id}" />
             <p>
                <xsl:apply-templates select="p:TextLine"/>
             </p>
@@ -1829,7 +1912,7 @@
            <xsl:variable name="elName" select="'anchor'"/>
             <xsl:element name="{$elName}">
                <xsl:if test="map:keys($custom) = 'xmlid'">
-                  <xsl:attribute name="xml:id"><xsl:value-of select="concat('a',map:get($custom, 'xmlid'))"/></xsl:attribute>
+                  <xsl:attribute name="xml:id"><xsl:value-of select="map:get($custom, 'xmlid')"/></xsl:attribute>
                </xsl:if>
                 <xsl:if test="map:keys($custom) = 'type'">
                   <xsl:attribute name="type"><xsl:value-of select="'add'"/></xsl:attribute>
