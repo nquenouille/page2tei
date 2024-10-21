@@ -1207,6 +1207,14 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
+          <xsl:when test="'hidden' = $regionType">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <p type='hidden'>
+               <xsl:apply-templates select="p:TextLine"/>
+            </p>
+         </xsl:when>
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
