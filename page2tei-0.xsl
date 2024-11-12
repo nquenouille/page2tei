@@ -1283,6 +1283,46 @@
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-left-in;}'">
+                  <row n="{@row}" rend="'cbr-li'">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-left-out;}'">
+                  <row n="{@row}" rend="'cbr-lo'">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-right-in;}'">
+                  <row n="{@row}" rend="cbr-ri">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+                <xsl:when test="@custom='structure {type:curly-bracket-right-out;}'">
+                  <row n="{@row}" rend="cbr-ro">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-above-in;}'">
+                  <row n="{@row}" rend="cbr-ai">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-above-out;}'">
+                  <row n="{@row}" rend="cbr-ao">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-underneath-in;}'">
+                  <row n="{@row}" rend="cbr-ui">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+                <xsl:when test="@custom='structure {type:curly-bracket-underneath-out;}'">
+                  <row n="{@row}" rend="cbr-uo">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
                <xsl:otherwise>
                <row n="{@row}">
                   <xsl:apply-templates select="current-group()"/>
@@ -1445,7 +1485,103 @@
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
-         <xsl:if test="not(@custom='structure {type:heading;}') and not(@custom='structure {type:subheading;}')">
+         <xsl:if test="@custom='structure {type:curly-bracket-left-in;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-left-in'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-li'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:curly-bracket-left-out;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-left-out'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-lo'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:curly-bracket-right-in;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-right-in'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-ri'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:curly-bracket-right-out;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-right-out'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-ro'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:curly-bracket-above-in;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-above-in'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-ai'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:curly-bracket-above-out;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-above-out'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-ao'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:curly-bracket-underneath-in;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-underneath-in'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-ui'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="@custom='structure {type:curly-bracket-underneath-out;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'curly-bracket-underneath-out'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="'cbr-uo'"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:if>
+         <xsl:if test="not(@custom='structure {type:heading;}') and not(@custom='structure {type:subheading;}') and not(@custom='structure {type:curly-bracket-left-in;}') and not(@custom='structure {type:curly-bracket-left-out;}') and not(@custom='structure {type:curly-bracket-right-in;}') and not(@custom='structure {type:curly-bracket-right-out;}') and not(@custom='structure {type:curly-bracket-above-in;}') and not(@custom='structure {type:curly-bracket-above-out;}') and not(@custom='structure {type:curly-bracket-underneath-in;}') and not(@custom='structure {type:curly-bracket-underneath-out;}')">
          <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="rend">
