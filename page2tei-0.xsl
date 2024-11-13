@@ -1304,7 +1304,7 @@
                   </row>
                </xsl:when>
                <xsl:when test="@custom='structure {type:curly-bracket-top-in;}'">
-                  <row n="{@row}" rend="cbr-ai">
+                  <row n="{@row}" rend="cbr-ti">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
@@ -1314,7 +1314,7 @@
                   </row>
                </xsl:when>
                <xsl:when test="@custom='structure {type:curly-bracket-bottom-in;}'">
-                  <row n="{@row}" rend="cbr-ui">
+                  <row n="{@row}" rend="cbr-bi">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
@@ -1540,7 +1540,7 @@
                <xsl:value-of select="'curly-bracket-top-in'"/>
             </xsl:attribute>
             <xsl:attribute name="rend">
-               <xsl:value-of select="'cbr-ai'"/>
+               <xsl:value-of select="'cbr-ti'"/>
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
@@ -1564,7 +1564,7 @@
                <xsl:value-of select="'curly-bracket-bottom-in'"/>
             </xsl:attribute>
             <xsl:attribute name="rend">
-               <xsl:value-of select="'cbr-ui'"/>
+               <xsl:value-of select="'cbr-bi'"/>
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
