@@ -57,7 +57,10 @@
                            current-group()[
                                  position() gt 1
                                  and @continued = 'true'
-                                 and node()
+                                 and node() 
+                                 and preceding-sibling::node()[1]/@continued = 'true'      
+                                 and @offset = 'true'                          
+                                 and (if(@xml:id) then @xml:id eq preceding::node()[1]/@xml:id else())
                               ][last()],
                            current-group()[position() = 4]
                         )[1]"
@@ -85,7 +88,7 @@
          <xsl:sequence select="@*" />
       </lb>
    </xsl:template>
-   
+
    <xd:doc>
       <xd:description>If there is a hyphen (¬) at the end of the line, replace with <span type='hyphen'>-</span>'</xd:description>
    </xd:doc>
