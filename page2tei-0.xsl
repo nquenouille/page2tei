@@ -1673,7 +1673,7 @@
                   <xsl:if test="substring-after(., 'length:') => substring-before(';') != '0'">
                      <xsl:element name="local:m">
                         <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
-                        <xsl:attribute name="o" select="substring-after(., '{')"/>
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
                         <xsl:attribute name="pos">e</xsl:attribute>
                      </xsl:element>
                   </xsl:if>
@@ -1686,7 +1686,7 @@
                   <xsl:sort select="substring(., 1, 3)" order="ascending"/>
                   <xsl:element name="local:m">
                      <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
-                     <xsl:attribute name="o" select="substring-after(., '{')"/>
+                     <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
                      <xsl:attribute name="pos">s</xsl:attribute>
                   </xsl:element>
                </xsl:for-each>
@@ -1698,7 +1698,7 @@
                   <xsl:if test="substring-after(., 'length:') => substring-before(';') = '0'">
                      <xsl:element name="local:m">
                         <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
-                        <xsl:attribute name="o" select="substring-after(., '{')"/>
+                        <xsl:attribute name="o" select="substring-after(., 'offset:')"/>
                         <xsl:attribute name="pos">e</xsl:attribute>
                      </xsl:element>
                   </xsl:if>
@@ -1975,9 +1975,6 @@
                 <xsl:if test="map:keys($custom) = 'type'">
                   <xsl:attribute name="type"><xsl:value-of select="map:get($custom, 'type')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="$custom?offset = '0'">
-                  <xsl:attribute name="offset" select="true()"/>
-               </xsl:if>
                <xsl:if test="$custom?continued">
                   <xsl:attribute name="continued" select="true()"/>
                </xsl:if>             
@@ -1996,9 +1993,6 @@
                <xsl:if test="map:keys($custom) = 'reason'">
                   <xsl:attribute name="reason"><xsl:value-of select="map:get($custom, 'reason')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="$custom?offset = '0'">
-                  <xsl:attribute name="offset" select="true()"/>
-               </xsl:if>
                <xsl:if test="$custom?continued">
                   <xsl:attribute name="continued" select="true()"/>
                </xsl:if>            
@@ -2012,9 +2006,6 @@
             <xsl:element name="{$elName}">
                <xsl:if test="map:keys($custom) = 'reason'">
                   <xsl:attribute name="reason"><xsl:value-of select="map:get($custom, 'reason')"/></xsl:attribute>
-               </xsl:if>
-               <xsl:if test="$custom?offset = '0'">
-                  <xsl:attribute name="offset" select="true()"/>
                </xsl:if>
                <xsl:if test="$custom?continued">
                   <xsl:attribute name="continued" select="true()"/>
@@ -2034,9 +2025,6 @@
                <xsl:if test="map:keys($custom) = 'hand'">
                   <xsl:attribute name="hand"><xsl:value-of select="map:get($custom, 'hand')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="$custom?offset = '0'">
-                  <xsl:attribute name="offset" select="true()"/>
-               </xsl:if>
                <xsl:if test="$custom?continued">
                   <xsl:attribute name="continued" select="true()"/>
                </xsl:if>                
@@ -2055,9 +2043,6 @@
                </xsl:if>
                <xsl:if test="map:keys($custom) = 'hand'">
                   <xsl:attribute name="hand"><xsl:value-of select="map:get($custom, 'hand')"/></xsl:attribute>
-               </xsl:if>
-               <xsl:if test="$custom?offset = '0'">
-                  <xsl:attribute name="offset" select="true()"/>
                </xsl:if>
                <xsl:if test="$custom?continued">
                   <xsl:attribute name="continued" select="true()"/>

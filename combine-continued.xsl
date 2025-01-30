@@ -57,10 +57,7 @@
                            current-group()[
                                  position() gt 1
                                  and @continued = 'true'
-                                 and node() 
-                                 and preceding-sibling::node()[1]/@continued = 'true'      
-                                 and @offset = 'true'                          
-                                 and (if(@xml:id) then @xml:id eq preceding::node()[1]/@xml:id else())
+                                 and node()
                               ][last()],
                            current-group()[position() = 4]
                         )[1]"
