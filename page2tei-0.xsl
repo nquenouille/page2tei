@@ -2030,8 +2030,7 @@
                </xsl:if>                
                <xsl:call-template name="elem">
                   <xsl:with-param name="elem" select="$elem"/>
-               </xsl:call-template>
-               
+               </xsl:call-template>               
             </xsl:element>
          </xsl:when>
          <xsl:when test="@type = 'Del'">
