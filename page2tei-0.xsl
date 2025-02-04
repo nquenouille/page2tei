@@ -1267,7 +1267,9 @@
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:text>
       </xsl:text>
-      <table facs="#facs_{$numCurr}_{@id}">
+      <xsl:choose>
+      <xsl:when test="./p:TableCell/@custom='structure {type:normal-text;}'">
+      <table facs="#facs_{$numCurr}_{@id}" rend='normal-text'>
          <xsl:for-each-group select="p:TableCell" group-by="@row">
             <xsl:sort select="@col"/>
             <xsl:text>
@@ -1331,6 +1333,74 @@
             </xsl:choose>
          </xsl:for-each-group>
       </table>
+      </xsl:when>
+      <xsl:otherwise>
+         <table facs="#facs_{$numCurr}_{@id}">
+         <xsl:for-each-group select="p:TableCell" group-by="@row">
+            <xsl:sort select="@col"/>
+            <xsl:text>
+        </xsl:text>
+            <xsl:choose>
+               <xsl:when test="@custom='structure {type:heading;}'">
+                  <head>
+                     <xsl:apply-templates select="current-group()"/>
+                  </head>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:subheading;}'">
+                  <row n="{@row}" role="subheading">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-left-in;}'">
+                  <row n="{@row}" rend="'cbr-li'">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-left-out;}'">
+                  <row n="{@row}" rend="'cbr-lo'">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-right-in;}'">
+                  <row n="{@row}" rend="cbr-ri">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+                <xsl:when test="@custom='structure {type:curly-bracket-right-out;}'">
+                  <row n="{@row}" rend="cbr-ro">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-top-in;}'">
+                  <row n="{@row}" rend="cbr-ti">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-top-out;}'">
+                  <row n="{@row}" rend="cbr-ao">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:when test="@custom='structure {type:curly-bracket-bottom-in;}'">
+                  <row n="{@row}" rend="cbr-bi">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+                <xsl:when test="@custom='structure {type:curly-bracket-bottom-out;}'">
+                  <row n="{@row}" rend="cbr-uo">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:when>
+               <xsl:otherwise>
+               <row n="{@row}">
+                  <xsl:apply-templates select="current-group()"/>
+               </row>
+               </xsl:otherwise>
+            </xsl:choose>
+         </xsl:for-each-group>
+      </table>
+      </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
 
    <xd:doc>
