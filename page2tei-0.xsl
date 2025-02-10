@@ -126,7 +126,7 @@
    <xsl:variable name="imgurl_back" select="//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href"/>
 
    <!-- create link to the first file and get the regionType-->
-   <xsl:variable name="file_front" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), /)"/>
+   <xsl:variable name="file_front" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), /)"/>
    <xsl:variable name="custom_front" as="map(*)">
       <xsl:apply-templates select="$file_front//p:TextRegion[1]/@custom" />
    </xsl:variable>
@@ -137,7 +137,7 @@
    </xsl:variable>
 
    <!-- create link to the last file and get the regionType-->
-   <xsl:variable name="file_back" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), /)"/>
+   <xsl:variable name="file_back" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), /)"/>
    <xsl:variable name="custom_back" as="map(*)">
       <xsl:apply-templates select="$file_back//p:TextRegion[last()]/@custom"/>
    </xsl:variable>
@@ -605,7 +605,7 @@
       <xd:desc>Create tei:facsimile with @xml:id</xd:desc>
    </xd:doc>
    <xsl:template match="mets:file" mode="facsimile">
-      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), /)"/>
+      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), /)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
       <xsl:variable name="imageurl" select="mets:FLocat/@xlink:href"/>
 
@@ -620,7 +620,7 @@
       <xd:desc>Apply by-page</xd:desc>
    </xd:doc>
    <xsl:template match="mets:file" mode="text">
-      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], 'tif', 'xml'), .)"/>
+      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), .)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
       <xsl:variable name="imgurl" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
 
@@ -1215,6 +1215,260 @@
                <xsl:apply-templates select="p:TextLine"/>
             </p>
          </xsl:when>
+         <!-- text block with another one side by side containing a curly bracket that should be displayed as grid -->
+         <xsl:when test="'textblock' = $regionType or 'curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType">
+            <xsl:variable name="customAttr" select="following::p:TextRegion[1]/@custom" />
+            <xsl:variable name="preCustomAttr" select="preceding::p:TextRegion[1]/@custom" />
+            <xsl:text>
+            </xsl:text>
+            <xsl:choose>            
+            <xsl:when test="'textblock' = $regionType and following::p:TextRegion[1][contains($customAttr, 'curly-bracket-')]">
+            <ab rend="container">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />            
+            <xsl:text>
+            </xsl:text>            
+            <ab rend="textblock">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            <xsl:choose>            
+            <xsl:when test="contains($customAttr, 'curly-bracket-left-in')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-li">        
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($customAttr, 'curly-bracket-left-out')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-lo">       
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($customAttr, 'curly-bracket-right-in')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-ri">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($customAttr, 'curly-bracket-right-out')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-ro">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($customAttr, 'curly-bracket-top-in')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-ti">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($customAttr, 'curly-bracket-top-out')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-to">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($customAttr, 'curly-bracket-bottom-in')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-bi">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($customAttr, 'curly-bracket-bottom-out')">
+            <xsl:for-each select="following::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-bo">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            
+            </xsl:choose>            
+            </ab>            
+         </xsl:when>
+          <xsl:when test="'textblock' = $regionType and preceding::p:TextRegion[1][contains($preCustomAttr, 'curly-bracket-')]">
+            <ab rend="container">
+            <xsl:text>
+            </xsl:text>
+            <xsl:choose>            
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-left-in')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-li">        
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-left-out')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-lo">       
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-right-in')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-ri">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-right-out')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-ro">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-top-in')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-ti">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-top-out')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-to">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-bottom-in')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-bi">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($preCustomAttr, 'curly-bracket-bottom-out')">
+            <xsl:for-each select="preceding::p:TextRegion[1]">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <xsl:text>
+            </xsl:text>
+            <ab rend="tb cbr-bo">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+               <xsl:text>
+            </xsl:text>
+            </xsl:for-each>
+            </xsl:when>
+            
+            </xsl:choose> 
+            <xsl:text> 
+            </xsl:text>         
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />            
+            <xsl:text>
+            </xsl:text>            
+            <ab rend="textblock">
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+            <xsl:text>
+            </xsl:text>
+            </ab>
+            <xsl:text>
+            </xsl:text>
+          </xsl:when>
+          <xsl:when test="'textblock' = $regionType and not(preceding::p:TextRegion[1][contains($preCustomAttr, 'curly-bracket-')] or following::p:TextRegion[1][contains($customAttr, 'curly-bracket-')])">">  
+            <ab>
+               <xsl:apply-templates select="p:TextLine"/>
+            </ab>
+            <xsl:text>
+            </xsl:text>
+            </xsl:when>
+         <xsl:when test="('curly-bracket-left-in' or 'curly-bracket-left-out' or 'curly-bracket-right-in' or 'curly-bracket-right-out' or 'curly-bracket-top-in' or 'curly-bracket-top-out' or 'curly-bracket-bottom-in' or 'curly-bracket-bottom-out' = $regionType) and not(preceding::p:TextRegion[1][contains($preCustomAttr, 'textblock')] or following::p:TextRegion[1][contains($customAttr, 'textblock')])">
+            <p>
+               <xsl:apply-templates select="p:TextLine"/>
+            </p>
+            <xsl:text>
+            </xsl:text>
+            </xsl:when>
+         
+         </xsl:choose>
+         </xsl:when>
          <xsl:when test="'paragraph' = $regionType">
             <xsl:text>
             </xsl:text>
@@ -1267,9 +1521,7 @@
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:text>
       </xsl:text>
-      <xsl:choose>
-      <xsl:when test="./p:TableCell/@custom='structure {type:normal-text;}'">
-      <table facs="#facs_{$numCurr}_{@id}" rend='normal-text'>
+      <table facs="#facs_{$numCurr}_{@id}">
          <xsl:for-each-group select="p:TableCell" group-by="@row">
             <xsl:sort select="@col"/>
             <xsl:text>
@@ -1296,32 +1548,32 @@
                   </row>
                </xsl:when>
                <xsl:when test="@custom='structure {type:curly-bracket-right-in;}'">
-                  <row n="{@row}" rend="cbr-ri">
+                  <row n="{@row}" rend="'cbr-ri'">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
                 <xsl:when test="@custom='structure {type:curly-bracket-right-out;}'">
-                  <row n="{@row}" rend="cbr-ro">
+                  <row n="{@row}" rend="'cbr-ro'">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
                <xsl:when test="@custom='structure {type:curly-bracket-top-in;}'">
-                  <row n="{@row}" rend="cbr-ti">
+                  <row n="{@row}" rend="'cbr-ti'">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
                <xsl:when test="@custom='structure {type:curly-bracket-top-out;}'">
-                  <row n="{@row}" rend="cbr-ao">
+                  <row n="{@row}" rend="'cbr-to'">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
                <xsl:when test="@custom='structure {type:curly-bracket-bottom-in;}'">
-                  <row n="{@row}" rend="cbr-bi">
+                  <row n="{@row}" rend="'cbr-bi'">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
                 <xsl:when test="@custom='structure {type:curly-bracket-bottom-out;}'">
-                  <row n="{@row}" rend="cbr-uo">
+                  <row n="{@row}" rend="'cbr-bo'">
                      <xsl:apply-templates select="current-group()"/>
                   </row>
                </xsl:when>
@@ -1333,74 +1585,6 @@
             </xsl:choose>
          </xsl:for-each-group>
       </table>
-      </xsl:when>
-      <xsl:otherwise>
-         <table facs="#facs_{$numCurr}_{@id}">
-         <xsl:for-each-group select="p:TableCell" group-by="@row">
-            <xsl:sort select="@col"/>
-            <xsl:text>
-        </xsl:text>
-            <xsl:choose>
-               <xsl:when test="@custom='structure {type:heading;}'">
-                  <head>
-                     <xsl:apply-templates select="current-group()"/>
-                  </head>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:subheading;}'">
-                  <row n="{@row}" role="subheading">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-left-in;}'">
-                  <row n="{@row}" rend="'cbr-li'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-left-out;}'">
-                  <row n="{@row}" rend="'cbr-lo'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-right-in;}'">
-                  <row n="{@row}" rend="cbr-ri">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-                <xsl:when test="@custom='structure {type:curly-bracket-right-out;}'">
-                  <row n="{@row}" rend="cbr-ro">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-top-in;}'">
-                  <row n="{@row}" rend="cbr-ti">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-top-out;}'">
-                  <row n="{@row}" rend="cbr-ao">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-bottom-in;}'">
-                  <row n="{@row}" rend="cbr-bi">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-                <xsl:when test="@custom='structure {type:curly-bracket-bottom-out;}'">
-                  <row n="{@row}" rend="cbr-uo">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:otherwise>
-               <row n="{@row}">
-                  <xsl:apply-templates select="current-group()"/>
-               </row>
-               </xsl:otherwise>
-            </xsl:choose>
-         </xsl:for-each-group>
-      </table>
-      </xsl:otherwise>
-      </xsl:choose>
    </xsl:template>
 
    <xd:doc>
@@ -1622,7 +1806,7 @@
                <xsl:value-of select="'curly-bracket-top-out'"/>
             </xsl:attribute>
             <xsl:attribute name="rend">
-               <xsl:value-of select="'cbr-ao'"/>
+               <xsl:value-of select="'cbr-to'"/>
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
@@ -1646,7 +1830,7 @@
                <xsl:value-of select="'curly-bracket-bottom-out'"/>
             </xsl:attribute>
             <xsl:attribute name="rend">
-               <xsl:value-of select="'cbr-uo'"/>
+               <xsl:value-of select="'cbr-bo'"/>
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
