@@ -1,0 +1,24 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Get saxon
+        run: |
+          curl https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-5/SaxonHE12-5J.zip -o SaxonHE12-5J.zip
+          unzip SaxonHE12-5J.zip
+      - name: ls3yi test
+        run: |
+          java -jar SaxonHE12-5J/saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/ls3yi/mets.xml -o:test/ls3yi/ls3yi_test.xml
+          diff test/ls3yi/ls3yi_test.xml test/ls3yi/mets.xml

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-02-04T09:41:47.867+01:00</Created>
+        <LastChange>2025-02-11T10:43:11.617+01:00</LastChange>
+        <TranskribusMetadata pageNr="1" status="DONE"/>
+    </Metadata>
+    <Page imageFilename="d_arska_bachiana_353_01_6_00001.tif" imageWidth="2867" imageHeight="3019">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1739266991617" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="196,122 196,2281 2801,2281 2801,122"/>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:0;} add {offset:0; length:6;place:above; type:addition; xmlid:add1-1;}">
+                <Coords points="1468,269 1569,258 1600,236 1630,244 1664,222 1720,250 1788,216 1909,224 1827,123 1796,129 1782,115 1733,129 1647,101 1583,121 1541,90 1473,107"/>
+                <Baseline points="1482,223 1508,225 1535,225 1562,223 1589,223 1616,222 1643,221 1669,219 1696,217 1723,217 1750,216 1777,215 1804,214 1884,214"/>
+                <TextEquiv>
+                    <Unicode>No 75.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:1;}">
+                <Coords points="416,460 1569,390 1751,469 2293,362 2495,435 2784,407 2787,306 2534,224 1849,295 1740,233 1358,300 539,253"/>
+                <Baseline points="456,435 660,428 772,423 884,420 996,417 1109,407 1221,399 1333,392 1445,387 1557,381 1670,375 1782,372 1894,369 2006,372 2118,369 2231,362 2343,360 2455,361 2567,363 2679,363 2792,366"/>
+                <TextEquiv>
+                    <Unicode>Vermöge des aus dem Hochgräffl. Schwartburg.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:2;}">
+                <Coords points="528,609 2256,587 2742,514 2776,405 1984,424 1875,442 1569,441 533,483"/>
+                <Baseline points="542,590 652,584 762,581 873,578 983,567 1094,563 1204,553 1314,548 1425,544 1535,534 1646,527 1756,522 1866,519 1977,516 2087,513 2198,510 2308,507 2418,503 2529,498 2639,493 2750,489"/>
+                <TextEquiv>
+                    <Unicode>Consistorio allhier ergangenen Rescripts, sindt</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:3;}">
+                <Coords points="530,744 685,797 979,718 1372,760 1602,688 2174,693 2461,726 2773,691 2783,563 536,623"/>
+                <Baseline points="545,736 655,730 766,726 877,721 987,716 1098,707 1209,701 1319,696 1430,691 1541,684 1652,679 1762,675 1873,671 1984,665 2094,662 2205,659 2316,653 2426,650 2537,644 2648,640 2786,639"/>
+                <TextEquiv>
+                    <Unicode>wegen des Orginisten in der neuen Kirchen, Hn.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:4;}">
+                <Coords points="511,931 996,862 1122,943 1333,839 2281,836 2394,780 2604,780 2694,856 2759,730 2674,671 2455,746 2296,688 1922,752 1490,713 1193,800 985,721 805,796 539,749"/>
+                <Baseline points="548,880 658,871 769,866 884,862 990,852 1100,847 1211,841 1321,838 1432,832 1542,821 1653,816 1764,811 1874,804 1985,800 2095,790 2206,785 2316,781 2427,776 2537,772 2648,770 2759,775"/>
+                <TextEquiv>
+                    <Unicode>Johann Sebastian Bachs, mir endes benannten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:5;}">
+                <Coords points="519,1033 895,1078 1580,951 1900,1016 2046,926 2767,949 2747,833 1737,805 1125,915 1047,892 525,940"/>
+                <Baseline points="536,1011 646,1008 757,1007 868,999 978,995 1089,976 1200,974 1310,970 1421,963 1532,955 1643,944 1753,940 1864,932 1975,929 2085,923 2196,916 2307,912 2417,909 2528,906 2639,906 2750,906"/>
+                <TextEquiv>
+                    <Unicode>vor jährl. Kost, bette undt stuben von Aug.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:6;}">
+                <Coords points="567,1238 845,1198 929,1252 1072,1159 1288,1193 1625,1097 1976,1097 2068,1162 2228,1072 2784,1117 2759,999 2576,940 1858,1011 1703,957 1275,1047 1002,1024 575,1080"/>
+                <Baseline points="587,1157 695,1158 804,1153 913,1148 1022,1141 1130,1134 1239,1130 1348,1122 1457,1109 1565,1099 1674,1092 1783,1088 1892,1082 2000,1076 2109,1069 2218,1060 2327,1056 2435,1054 2544,1053 2653,1056 2762,1059"/>
+                <TextEquiv>
+                    <Unicode>1706. biß 1707. aus denen Hospitals intraden</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:7;}">
+                <Coords points="544,1350 2063,1224 2441,1277 2812,1212 2812,1109 2195,1123 550,1232"/>
+                <Baseline points="563,1315 674,1306 786,1303 898,1299 1010,1291 1122,1282 1234,1273 1346,1266 1458,1255 1570,1251 1682,1246 1793,1238 1905,1229 2017,1226 2129,1220 2241,1213 2353,1208 2465,1204 2577,1202 2689,1196 2812,1194"/>
+                <TextEquiv>
+                    <Unicode>allhier durch dero Verwalter Dreißig Thaler</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:8;}">
+                <Coords points="553,1518 1087,1430 1367,1473 1692,1372 2068,1428 2290,1355 2677,1381 2767,1361 2775,1204 2481,1277 2166,1235 561,1353"/>
+                <Baseline points="572,1455 682,1442 792,1435 902,1428 1013,1421 1123,1408 1233,1400 1343,1393 1454,1384 1564,1378 1674,1374 1784,1367 1895,1359 2005,1360 2115,1356 2225,1349 2336,1345 2446,1343 2556,1339 2666,1337 2777,1333"/>
+                <TextEquiv>
+                    <Unicode>geliefert undt bezahlet worden, welches durch</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:9;}">
+                <Coords points="572,1625 2346,1487 2531,1569 2725,1527 2733,1364 2203,1383 2113,1448 1841,1372 1367,1473 1089,1417 729,1497 578,1510"/>
+                <Baseline points="587,1581 694,1575 801,1570 909,1562 1016,1555 1124,1548 1231,1543 1338,1534 1446,1526 1553,1516 1661,1512 1768,1505 1875,1502 1983,1493 2090,1486 2198,1482 2305,1477 2412,1474 2520,1474 2627,1473 2735,1467"/>
+                <TextEquiv>
+                    <Unicode>dießen Quittungs schein bekennet wirdt, So</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:10;}">
+                <Coords points="556,1788 775,1804 1195,1723 1487,1785 1723,1726 1807,1774 1936,1712 2046,1729 2057,1574 1830,1546 1594,1564 1431,1529 1061,1619 845,1577 688,1667 564,1636"/>
+                <Baseline points="575,1736 649,1728 723,1717 797,1710 871,1708 945,1700 1019,1692 1094,1688 1168,1682 1242,1683 1316,1678 1390,1673 1464,1670 1538,1662 1613,1658 1687,1657 1761,1653 1835,1646 1909,1638 1983,1634 2058,1631"/>
+                <TextEquiv>
+                    <Unicode>geschehen den 1. Augusti 1707.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:11;}">
+                <Coords points="1455,1928 1698,1877 1804,1922 1872,1875 2251,1905 2729,2067 2724,1971 2735,1743 2147,1698 1768,1776 1546,1726"/>
+                <Baseline points="1488,1875 1611,1874 1668,1870 1725,1866 1782,1864 1839,1864 1896,1861 1953,1861 2010,1859 2067,1858 2124,1855 2180,1853 2237,1852 2294,1852 2351,1852 2408,1852 2465,1852 2522,1846 2579,1849 2636,1852 2716,1851"/>
+                <TextEquiv>
+                    <Unicode>Martin Feldhauß mpp.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:12;} add {offset:0; length:10;place:below; type:addition; xmlid:add1-2;}">
+                <Coords points="567,2043 634,2074 679,2054 735,2079 830,2109 884,2057 926,2043 1096,2083 1077,1832 915,1818 833,1872 775,1847 713,1872 645,1824 617,1847 564,1821"/>
+                <Baseline points="581,1962 607,1962 633,1962 660,1962 686,1962 712,1962 739,1962 765,1962 791,1960 818,1960 844,1962 870,1963 897,1965 923,1965 949,1967 976,1972 1021,1971 1054,1968"/>
+                <TextEquiv>
+                    <Unicode>34 f. 6 g.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>
