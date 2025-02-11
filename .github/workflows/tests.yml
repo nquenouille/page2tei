@@ -3,7 +3,7 @@ name: Tests
 on: [push, pull_request]
 
 jobs:
-  linting:
+  tests:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -16,7 +16,7 @@ jobs:
           java-version: '21'
       - name: Get saxon
         run: |
-          curl https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-5/SaxonHE12-5J.zip -o SaxonHE12-5J.zip
+          curl https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-5/SaxonHE12-5J.zip -o SaxonHE12-5J.zip -v
           unzip SaxonHE12-5J.zip
       - name: ls3yi test
         run: |
