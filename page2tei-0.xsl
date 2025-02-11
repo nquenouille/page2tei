@@ -229,6 +229,8 @@
       <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
    </xd:doc>
    <xsl:template match="/mets:mets">
+      <xsl:text>
+   </xsl:text>
       <TEI>
          <xsl:text>
    </xsl:text>
