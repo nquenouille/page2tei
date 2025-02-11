@@ -21,4 +21,4 @@ jobs:
       - name: ls3yi test
         run: |
           java -jar SaxonHE12-5J/saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/ls3yi/mets.xml -o:test/ls3yi/ls3yi_test.xml
-          diff test/ls3yi/ls3yi_test.xml test/ls3yi/mets.xml
+          diff -q test/ls3yi/ls3yi_test.xml test/ls3yi/ls3yi.xml
