@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -45,21 +45,19 @@
                 <pb facs="#facs_1" n="1"/>
                 <milestone unit="section" facs="#facs_1_tr_1"/>
                 <p>
-                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/1468,90,441,179" n="N001"/>
-                    <add xml:id="add1-1" place="above" type="addition">No 75.</add>
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/1468,90,441,179" n="N001"/><add xml:id="add1-1" place="above" type="addition">No 75.</add>
                     <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/416,224,2371,245" n="N002"/>Vermöge des aus dem Hochgräffl. Schwartburg.
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/528,405,2248,204" n="N003"/>Consistorio allhier ergangenen Rescripts, sindt
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/530,563,2253,234" n="N004"/>wegen des Orginisten in der neuen Kirchen, Hn.
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/511,671,2248,272" n="N005"/>Johann Sebastian Bachs, mir endes benannten
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/519,805,2248,273" n="N006"/>vor jährl. Kost, bette undt stuben von Aug.
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/567,940,2217,312" n="N007"/>1706. biß 1707. aus denen Hospitals intraden
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/544,1109,2268,241" n="N008"/>allhier durch dero Verwalter Dreißig Thaler
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/553,1204,2222,314" n="N009"/>geliefert undt bezahlet worden, welches durch
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/572,1364,2161,261" n="N010"/>dießen Quittungs schein bekennet wirdt, So
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/556,1529,1501,275" n="N011"/>geschehen den 1. Augusti 1707.
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/1455,1698,1280,369" n="N012"/>Martin Feldhauß mpp.
-               <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/564,1818,532,291" n="N013"/>
-                    <add xml:id="add1-2" place="below" type="addition">34 f. 6 g.</add>
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/528,405,2248,204" n="N003"/>Consistorio allhier ergangenen Rescripts, sindt
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/530,563,2253,234" n="N004"/>wegen des Orginisten in der neuen Kirchen, Hn.
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/511,671,2248,272" n="N005"/>Johann Sebastian Bachs, mir endes benannten
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/519,805,2248,273" n="N006"/>vor jährl. Kost, bette undt stuben von Aug.
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/567,940,2217,312" n="N007"/>1706. biß 1707. aus denen Hospitals intraden
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/544,1109,2268,241" n="N008"/>allhier durch dero Verwalter Dreißig Thaler
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/553,1204,2222,314" n="N009"/>geliefert undt bezahlet worden, welches durch
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/572,1364,2161,261" n="N010"/>dießen Quittungs schein bekennet wirdt, So
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/556,1529,1501,275" n="N011"/>geschehen den 1. Augusti 1707.
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/1455,1698,1280,369" n="N012"/>Martin Feldhauß mpp.
+                    <lb facs="iiif:fpb%2FD-ARska%2Fnhfib%2Fd_arska_bachiana_353_01_6_00001.tif/564,1818,532,291" n="N013"/><add xml:id="add1-2" place="below" type="addition">34 f. 6 g.</add>
                 </p>
                 <pb facs="#facs_2" n="2"/>
             </div>
