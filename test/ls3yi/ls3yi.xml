@@ -1,6 +1,18 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Quittung für Martin Feldhaus in Arnstadt für Kost und Wohnung von Johann Sebastian Bach (24)</title>
+            </titleStmt>
+            <publicationStmt/>
+            <sourceDesc>
+                <bibl>
+                    <title type="main">Quittung für Martin Feldhaus in Arnstadt für Kost und Wohnung von Johann Sebastian Bach (24)</title><idno type="uuid">ls3yi</idno></bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+        </profileDesc>
     </teiHeader>
     <facsimile xml:id="facs_1">
         <surface ulx="0" uly="0" lrx="2867" lry="3019">

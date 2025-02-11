@@ -16,7 +16,7 @@ jobs:
           java-version: '21'
       - name: Get saxon
         run: |
-          curl -L https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-5/SaxonHE12-5J.zip -o SaxonHE12-5J.zip -v
+          curl -L https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-5/SaxonHE12-5J.zip -o SaxonHE12-5J.zip
           unzip SaxonHE12-5J.zip
       - name: ls3yi test
         run: |
