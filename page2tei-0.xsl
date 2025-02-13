@@ -342,9 +342,9 @@
          <xsl:text>
       </xsl:text>
       </front>
-      </xsl:if>
-       <xsl:text>
+      <xsl:text>
       </xsl:text>
+      </xsl:if>       
             <body>
                <xsl:for-each-group
                      select="$make_div//*[local-name() = 'div']/*"
@@ -408,9 +408,9 @@
          <xsl:text>
       </xsl:text>
       </body>
+      <xsl:if test="$regionType_back = 'back'">
       <xsl:text>
          </xsl:text>
-      <xsl:if test="$regionType_back = 'back'">
       <back>
          <xsl:for-each-group
                      select="$make_div_back//*[local-name() = 'div']/*"
