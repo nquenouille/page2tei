@@ -28,5 +28,5 @@ jobs:
           diff -w --normal test/8cd62_testament_textblock_cbr-li/testament_textblock_cbr-li_test.xml test/8cd62_testament_textblock_cbr-li/8cd62.xml
       - name: ifowu schuelerverz tables test
         run: |
-          java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/ifowu_schuelerverz_tables/mets.xml -o:test/8cd62_testament_textblock_cbr-li/testament_textblock_cbr-li_test.xml
+          java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/ifowu_schuelerverz_tables/mets.xml -o:test/ifowu_schuelerverz_tables/ifowu_schuelerverz_tables_test.xml
           diff -w --normal test/ifowu_schuelerverz_tables/ifowu_schuelerverz_tables_test.xml test/ifowu_schuelerverz_tables/ifowu.xml
