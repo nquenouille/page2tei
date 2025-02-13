@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+         <title type="main">Testament von Johann Christian Bach (50)</title>
+         </titleStmt>
+         <publicationStmt/>
+         <sourceDesc>
+            <bibl>
+                  <title type="main">Testament von Johann Christian Bach (50)</title><idno type="uuid">8cd62</idno></bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+      </profileDesc>
+   </teiHeader>
+   <facsimile xml:id="facs_1">
+      <surface ulx="0" uly="0" lrx="4714" lry="5668">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif" width="4714px" height="5668px" rend="facstab"/>
+         <zone ulx="76" uly="710" lrx="4672" lry="3477" rendition="TextRegion" xml:id="facs_1_tr_1">
+            <zone ulx="683" uly="489" lrx="4567" lry="898" rendition="Line" xml:id="facs_1_tr_1_tl_1"/>
+            <zone ulx="221" uly="855" lrx="4249" lry="1140" rendition="Line" xml:id="facs_1_tr_1_tl_2"/>
+            <zone ulx="274" uly="974" lrx="4491" lry="1312" rendition="Line" xml:id="facs_1_tr_1_tl_3"/>
+            <zone ulx="280" uly="1130" lrx="4238" lry="1554" rendition="Line" xml:id="facs_1_tr_1_tl_4"/>
+            <zone ulx="420" uly="1361" lrx="4271" lry="1657" rendition="Line" xml:id="facs_1_tr_1_tl_5"/>
+            <zone ulx="377" uly="1490" lrx="4513" lry="1861" rendition="Line" xml:id="facs_1_tr_1_tl_6"/>
+            <zone ulx="366" uly="1737" lrx="4335" lry="2012" rendition="Line" xml:id="facs_1_tr_1_tl_7"/>
+            <zone ulx="328" uly="1936" lrx="4384" lry="2195" rendition="Line" xml:id="facs_1_tr_1_tl_8"/>
+            <zone ulx="312" uly="2087" lrx="4610" lry="2458" rendition="Line" xml:id="facs_1_tr_1_tl_9"/>
+            <zone ulx="307" uly="2351" lrx="4346" lry="2662" rendition="Line" xml:id="facs_1_tr_1_tl_10"/>
+            <zone ulx="355" uly="2480" lrx="4561" lry="2867" rendition="Line" xml:id="facs_1_tr_1_tl_11"/>
+            <zone ulx="307" uly="2684" lrx="4540" lry="2996" rendition="Line" xml:id="facs_1_tr_1_tl_12"/>
+            <zone ulx="296" uly="2813" lrx="4615" lry="3184" rendition="Line" xml:id="facs_1_tr_1_tl_13"/>
+            <zone ulx="269" uly="3077" lrx="4599" lry="3276" rendition="Line" xml:id="facs_1_tr_1_tl_14"/>
+            <zone ulx="274" uly="3249" lrx="2205" lry="3571" rendition="Line" xml:id="facs_1_tr_1_tl_15"/>
+         </zone>
+         <zone ulx="148" uly="3539" lrx="2649" lry="4814" rendition="TextRegion" xml:id="facs_1_r" subtype="textblock">
+            <zone ulx="145" uly="3394" lrx="2340" lry="3679" rendition="Line" xml:id="facs_1_tr_1_tl_16"/>
+            <zone ulx="102" uly="3604" lrx="2442" lry="3873" rendition="Line" xml:id="facs_1_tr_1_tl_17"/>
+            <zone ulx="151" uly="3754" lrx="2302" lry="4029" rendition="Line" xml:id="facs_1_tr_1_tl_19"/>
+            <zone ulx="124" uly="3905" lrx="2313" lry="4126" rendition="Line" xml:id="facs_1_tr_1_tl_20"/>
+            <zone ulx="124" uly="4045" lrx="2216" lry="4249" rendition="Line" xml:id="facs_1_tr_1_tl_21"/>
+            <zone ulx="167" uly="4195" lrx="2372" lry="4437" rendition="Line" xml:id="facs_1_tr_1_tl_22"/>
+            <zone ulx="156" uly="4351" lrx="2415" lry="4540" rendition="Line" xml:id="facs_1_tr_1_tl_23"/>
+            <zone ulx="172" uly="4464" lrx="2270" lry="4658" rendition="Line" xml:id="facs_1_tr_1_tl_24"/>
+            <zone ulx="151" uly="4593" lrx="1764" lry="4857" rendition="Line" xml:id="facs_1_tr_1_tl_25"/>
+         </zone>
+         <zone ulx="2616" uly="3501" lrx="3891" lry="4188" rendition="TextRegion" xml:id="facs_1_r_80" subtype="curly-bracket-left-in">
+            <zone ulx="2738" uly="3615" lrx="3754" lry="3937" rendition="Line" xml:id="facs_1_tr_1_tl_18"/>
+         </zone>
+         <zone ulx="187" uly="4852" lrx="2000" lry="5512" rendition="TextRegion" xml:id="facs_1_r_81">
+            <zone ulx="199" uly="4755" lrx="1528" lry="5115" rendition="Line" xml:id="facs_1_tr_1_tl_26"/>
+            <zone ulx="199" uly="5029" lrx="1409" lry="5314" rendition="Line" xml:id="facs_1_tr_1_tl_27"/>
+            <zone ulx="285" uly="5228" lrx="1775" lry="5567" rendition="Line" xml:id="facs_1_tr_1_tl_28"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_2">
+      <surface ulx="0" uly="0" lrx="4772" lry="5748">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif" width="4772px" height="5748px" rend="facstab"/>
+         <zone ulx="155" uly="103" lrx="4655" lry="3822" rendition="TextRegion" xml:id="facs_2_tr_1">
+            <zone ulx="1525" uly="0" lrx="3072" lry="378" rendition="Line" xml:id="facs_2_l"/>
+            <zone ulx="192" uly="263" lrx="4591" lry="620" rendition="Line" xml:id="facs_2_tr_1_tl_3"/>
+            <zone ulx="154" uly="477" lrx="4514" lry="932" rendition="Line" xml:id="facs_2_tr_1_tl_4"/>
+            <zone ulx="148" uly="746" lrx="987" lry="993" rendition="Line" xml:id="facs_2_tr_1_tl_5"/>
+            <zone ulx="1975" uly="713" lrx="3148" lry="1146" rendition="Line" xml:id="facs_2_tr_1_tl_6"/>
+            <zone ulx="472" uly="1152" lrx="1218" lry="1739" rendition="Line" xml:id="facs_2_tr_1_tl_8"/>
+            <zone ulx="2112" uly="1102" lrx="3593" lry="1569" rendition="Line" xml:id="facs_2_tr_1_tl_7"/>
+            <zone ulx="2605" uly="1459" lrx="3291" lry="1832" rendition="Line" xml:id="facs_2_tr_1_tl_9"/>
+            <zone ulx="121" uly="1986" lrx="3137" lry="2430" rendition="Line" xml:id="facs_2_tr_1_tl_10"/>
+            <zone ulx="735" uly="2463" lrx="4470" lry="2962" rendition="Line" xml:id="facs_2_tr_1_tl_11"/>
+            <zone ulx="719" uly="2803" lrx="4361" lry="3159" rendition="Line" xml:id="facs_2_tr_1_tl_12"/>
+            <zone ulx="686" uly="3055" lrx="4520" lry="3324" rendition="Line" xml:id="facs_2_tr_1_tl_13"/>
+            <zone ulx="642" uly="3187" lrx="4640" lry="3439" rendition="Line" xml:id="facs_2_tr_1_tl_14"/>
+            <zone ulx="675" uly="3362" lrx="4536" lry="3757" rendition="Line" xml:id="facs_2_tr_1_tl_15"/>
+            <zone ulx="675" uly="3593" lrx="1689" lry="3872" rendition="Line" xml:id="facs_2_tr_1_tl_16"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_3">
+      <surface ulx="0" uly="0" lrx="4789" lry="5731">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00003.tif" width="4789px" height="5731px" rend="facstab"/>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_4">
+      <surface ulx="0" uly="0" lrx="4751" lry="5734">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif" width="4751px" height="5734px" rend="facstab"/>
+         <zone ulx="1582" uly="257" lrx="3589" lry="1822" rendition="TextRegion" xml:id="facs_4_tr_2">
+            <zone ulx="1657" uly="156" lrx="1982" lry="436" rendition="Line" xml:id="facs_4_tr_2_tl_2"/>
+            <zone ulx="3174" uly="174" lrx="3574" lry="392" rendition="Line" xml:id="facs_4_tr_2_tl_1"/>
+            <zone ulx="1592" uly="370" lrx="3586" lry="729" rendition="Line" xml:id="facs_4_tr_2_tl_3"/>
+            <zone ulx="2165" uly="692" lrx="2949" lry="987" rendition="Line" xml:id="facs_4_tr_2_tl_4"/>
+            <zone ulx="3088" uly="962" lrx="3546" lry="1457" rendition="Line" xml:id="facs_4_tr_2_tl_5"/>
+            <zone ulx="3168" uly="1330" lrx="3593" lry="1721" rendition="Line" xml:id="facs_4_l"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="original">
+            <pb facs="#facs_1" n="1"/>
+            <milestone unit="section" facs="#facs_1_tr_1"/>
+            <p>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/683,489,3884,409" n="N001"/>This is the last Will and Testament of me John
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/221,855,4028,285" n="N002"/>Christian Bach of the Parish of Saint Mary la
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/274,974,4217,338" n="N003"/>bonne in the County of Middlesex Music-Master
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/280,1130,3958,424" n="N004"/>to her most gracious Majesty Queen Charlotte
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/420,1361,3851,296" n="N005"/>I Give devise and bequeath unto my Dear Wife
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/377,1490,4136,371" n="N006"/>Cecilia Bach late Cecilia Grassi All my Real and
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/366,1737,3969,275" n="N007"/>Personal Estate whatsoever and wheresoever
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/328,1936,4056,259" n="N008"/>To hold to her, her Heirs Executors Administrators
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/312,2087,4298,371" n="N009"/>and Assigns for ever but subject nevertheless to the
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/307,2351,4039,311" n="N010"/>Payment of my Debts and Funeral Expenses
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/355,2480,4206,387" n="N011"/>and of this my said Will I do appoint my said
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/307,2684,4233,312" n="N012"/>Dear Wife Cecilia Sole Executrix In Witness
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/296,2813,4319,371" n="N013"/>whereof I the said John Christian Bach the Testator
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/269,3077,4330,199" n="N014"/>have hereunto set my hand and Seal this Fourteenth
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/274,3249,1931,322" n="N015"/>Day of November 1781
+            </p>
+            <ab rend="container">
+            <milestone unit="section" facs="#facs_1_r"/>
+            <ab rend="textblock">
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/145,3394,2195,285" n="N001"/>Signed Sealed Published and
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/102,3604,2340,269" n="N002"/>Declared by the said John Chris<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/151,3754,2151,275" n="N003"/>tian Bach as &amp; for his last
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/124,3905,2189,221" n="N004"/>Will and Testament in the
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/124,4045,2092,204" n="N005"/>Presence of Us who in his
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/167,4195,2205,242" n="N006"/>Presence &amp; at his request and in
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/156,4351,2259,189" n="N007"/>the Presence of each other have
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/172,4464,2098,194" n="N008"/>subscribed our Names as
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/151,4593,1613,264" n="N009"/>Witnesses thereto</ab>
+            <milestone unit="section" facs="#facs_1_r_80"/>
+            <ab rend="tb cbr-li">
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/2738,3615,1016,322" n="N001"/>JCBach</ab>
+            </ab>
+            <milestone unit="section" facs="#facs_1_r_81"/>
+            <p>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/199,4755,1329,360" n="N001"/>Mary Zoffany
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/199,5029,1210,285" n="N002"/>Francis Mecci
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/285,5228,1490,339" n="N003"/>Augus Greenland
+            </p>
+            <pb facs="#facs_2" n="2"/>
+            <milestone unit="section" facs="#facs_2_tr_1"/>
+            <p>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/1525,0,1547,378" n="N001"/>20<hi style="vertical-align: superscript;">th</hi> February 1782.
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/192,263,4399,357" n="N002"/>Cecilia Bach Widow the Relict of the Testator
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/154,477,4360,455" n="N003"/>and sole Executrix within named was duly sworn
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/148,746,839,247" n="N004"/>as usual.
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/1975,713,1173,433" n="N005"/>Before Me
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/472,1152,746,587" n="N006"/>Bishop
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/2112,1102,1481,467" n="N007"/>And. Colbee Ducarel
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/2605,1459,686,373" n="N008"/>Surrogate
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/121,1986,3016,444" n="N009"/>Testator died 1.<hi style="vertical-align: superscript;">st</hi> January 1782
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/735,2463,3735,499" n="N010"/>Proved at London the 20<hi style="vertical-align: superscript;">th</hi> day of February 1782
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/719,2803,3642,356" n="N011"/>before the Worshipful Andrew Colbee Ducarel
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/686,3055,3834,269" n="N012"/>Doctor of Laws and Surrogate by the Oath of Cecilia
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/642,3187,3998,252" n="N013"/>Bach Widow the Relict and Sole Extrix. to whom
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/675,3362,3861,395" n="N014"/>Adinon. was Granted having been first Sworn
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/675,3593,1014,279" n="N015"/>duly to Adm.<hi style="vertical-align: superscript;">n</hi>
+            </p>
+            <pb facs="#facs_3" n="3"/>
+            <pb facs="#facs_4" n="4"/>
+            <milestone unit="section" facs="#facs_4_tr_2"/>
+            <p>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/1657,156,325,280" n="N001"/>Will
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/3174,174,400,218" n="N002"/>Midde
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/1592,370,1994,359" n="N003"/>John Christian Bach
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/2165,692,784,295" n="N004"/>Feb.y 1782
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/3088,962,458,495" n="N005"/><add xml:id="add4-1" place="below" type="addition">Reg</add>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/3168,1330,425,391" n="N006"/><add xml:id="add4-2" place="below" type="addition">Ex<hi style="vertical-align: superscript;">d.</hi></add>
+            </p>
+         </div>
+         <div type="commentary">
+         <p/>
+         </div>
+      </body>
+   </text>
+</TEI>
