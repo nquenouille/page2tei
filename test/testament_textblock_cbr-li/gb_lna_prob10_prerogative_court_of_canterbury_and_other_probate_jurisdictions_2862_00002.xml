@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-02-03T15:40:12.830+01:00</Created>
+        <LastChange>2025-02-10T11:53:30.992+01:00</LastChange>
+        <TranskribusMetadata pageNr="2" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="gb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif" imageWidth="4772" imageHeight="5748">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1739184810992" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="155,103 155,3822 4655,3822 4655,103"/>
+            <TextLine id="l" custom="readingOrder {index:0;} textStyle {offset:2; length:2;superscript:true;}">
+                <Coords points="1525,291 1547,110 1876,0 1925,0 2852,110 3072,170 3072,340 2501,378 1898,335 1552,302"/>
+                <Baseline points="1563,238 1589,234 1616,230 1643,226 1669,220 1696,215 1723,209 1749,208 1776,208 1803,208 1829,206 1856,201 1883,196 1910,191 1927,238 1984,238 2042,240 2100,244 2158,247 2216,251 2274,255 2332,256 2390,257 2448,261 2506,262 2563,262 2621,262 2679,260 2737,256 2795,252 2853,252 2911,256 2969,256 3027,258 3085,262"/>
+                <TextEquiv>
+                    <Unicode>20th February 1782.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:1;}">
+                <Coords points="192,581 1640,466 4591,620 4591,296 4426,263 192,318"/>
+                <Baseline points="220,531 439,528 658,514 878,501 1097,501 1316,473 1536,449 1755,448 1974,463 2194,477 2413,489 2632,495 2852,493 3071,484 3290,477 3510,467 3729,478 3948,497 4168,508 4387,522 4607,537"/>
+                <TextEquiv>
+                    <Unicode>Cecilia Bach Widow the Relict of the Testator</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:2;}">
+                <Coords points="159,812 1788,675 1964,812 3192,740 3905,932 4514,801 4514,642 1525,477 154,636"/>
+                <Baseline points="191,710 407,710 624,705 840,704 1057,694 1274,679 1490,653 1707,656 1924,670 2140,689 2357,699 2574,710 2790,716 3007,713 3224,710 3440,704 3657,708 3874,729 4090,743 4307,758 4524,758"/>
+                <TextEquiv>
+                    <Unicode>and sole Executrix within named was duly sworn</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:3;}">
+                <Coords points="148,927 389,916 576,949 631,911 724,993 878,916 982,921 987,768 894,768 790,823 713,779 527,823 395,746 318,795 148,806"/>
+                <Baseline points="179,901 219,901 260,901 301,902 342,905 383,906 424,903 464,901 505,904 546,907 587,904 628,902 669,901 710,901 750,900 791,897 832,894 873,891 914,889 955,889 996,889"/>
+                <TextEquiv>
+                    <Unicode>as usual.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:4;}">
+                <Coords points="1991,1053 2243,1146 2391,1070 2534,1119 2611,1070 2693,1119 2891,1070 3148,1102 3137,806 2792,828 2605,740 2551,768 2375,713 1975,801"/>
+                <Baseline points="2017,1014 2074,1014 2131,1014 2188,1014 2246,1017 2303,1022 2360,1030 2418,1035 2475,1039 2532,1043 2590,1046 2647,1050 2704,1054 2761,1056 2819,1056 2876,1056 2933,1056 2991,1056 3048,1056 3105,1056 3163,1056"/>
+                <TextEquiv>
+                    <Unicode>Before Me</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_8" custom="readingOrder {index:5;}">
+                <Coords points="472,1662 554,1678 658,1635 686,1667 746,1613 949,1739 1075,1678 1108,1706 1196,1678 1218,1262 1048,1234 965,1294 784,1273 494,1152"/>
+                <Baseline points="507,1545 542,1547 578,1550 614,1552 650,1555 686,1557 721,1557 757,1557 793,1556 829,1553 865,1551 900,1549 936,1546 972,1544 1008,1541 1044,1539 1079,1535 1115,1530 1151,1527 1187,1524 1223,1522"/>
+                <TextEquiv>
+                    <Unicode>Bishop</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_7" custom="readingOrder {index:6;}">
+                <Coords points="2139,1410 2397,1492 2627,1432 3159,1464 3379,1569 3593,1552 3554,1262 3373,1311 2913,1141 2841,1185 2353,1102 2112,1212"/>
+                <Baseline points="2160,1301 2231,1315 2303,1330 2374,1341 2446,1350 2518,1360 2589,1374 2661,1389 2733,1401 2804,1410 2876,1420 2948,1430 3019,1439 3091,1444 3163,1446 3234,1456 3306,1466 3378,1475 3449,1485 3521,1494 3593,1504"/>
+                <TextEquiv>
+                    <Unicode>And. Colbee Ducarel</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:7;}">
+                <Coords points="2638,1744 2671,1733 2797,1832 2869,1832 2880,1810 2945,1821 3039,1739 3291,1733 3264,1475 3105,1552 2973,1464 2605,1459"/>
+                <Baseline points="2656,1641 2688,1647 2720,1654 2752,1659 2784,1662 2817,1664 2849,1667 2881,1671 2913,1676 2945,1680 2978,1684 3010,1688 3042,1691 3074,1693 3106,1695 3139,1700 3171,1704 3203,1708 3235,1710 3267,1712 3300,1713"/>
+                <TextEquiv>
+                    <Unicode>Surrogate</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:8;} textStyle {offset:16; length:2;superscript:true;}">
+                <Coords points="126,2380 905,2331 1196,2430 1755,2315 2073,2419 3137,2408 3132,2018 2775,2117 2084,1986 1903,2062 121,2029"/>
+                <Baseline points="155,2315 304,2321 454,2329 604,2333 754,2327 904,2327 1053,2327 1203,2323 1353,2313 1503,2298 1653,2302 1802,2305 1952,2316 2102,2332 2252,2342 2402,2350 2551,2350 2701,2342 2851,2338 3001,2333 3151,2321"/>
+                <TextEquiv>
+                    <Unicode>Testator died 1.st January 1782</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:9;} textStyle {offset:23; length:2;superscript:true;}">
+                <Coords points="740,2830 3883,2841 4191,2962 4470,2858 4470,2704 3296,2572 2594,2699 1580,2534 1388,2649 735,2463"/>
+                <Baseline points="769,2799 954,2799 1140,2798 1325,2798 1511,2795 1697,2803 1882,2799 2068,2799 2254,2808 2439,2811 2625,2817 2811,2822 2996,2829 3182,2835 3368,2835 3553,2829 3739,2829 3925,2830 4110,2835 4296,2835 4482,2841"/>
+                <TextEquiv>
+                    <Unicode>Proved at London the 20th day of February 1782</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:10;}">
+                <Coords points="719,3072 2013,3126 2167,3039 2320,3159 2649,3028 3143,3121 4361,3072 4361,2918 1607,2803 719,2951"/>
+                <Baseline points="746,3044 927,3032 1108,3032 1290,3029 1471,3017 1653,3020 1834,3026 2016,3024 2197,3022 2379,3020 2560,3020 2741,3014 2923,3019 3104,3020 3286,3031 3467,3026 3649,3026 3830,3032 4012,3038 4193,3038 4375,3032"/>
+                <TextEquiv>
+                    <Unicode>before the Worshipful Andrew Colbee Ducarel</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:11;}">
+                <Coords points="686,3296 856,3203 1135,3324 1437,3187 3439,3181 4520,3302 4520,3055 686,3105"/>
+                <Baseline points="716,3187 907,3187 1098,3179 1289,3175 1480,3172 1671,3169 1862,3175 2053,3181 2244,3181 2435,3181 2626,3187 2817,3184 3008,3177 3199,3175 3390,3174 3581,3169 3772,3175 3963,3177 4154,3187 4345,3193 4536,3199"/>
+                <TextEquiv>
+                    <Unicode>Doctor of Laws and Surrogate by the Oath of Cecilia</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:12;}">
+                <Coords points="642,3439 4640,3434 4640,3275 1794,3192 1640,3296 1470,3187 1262,3313 856,3198 642,3302"/>
+                <Baseline points="674,3384 873,3384 1072,3378 1271,3377 1470,3372 1669,3368 1868,3371 2067,3361 2266,3366 2465,3372 2664,3378 2863,3378 3062,3371 3261,3361 3460,3350 3659,3348 3858,3343 4057,3344 4256,3351 4455,3359 4655,3366"/>
+                <TextEquiv>
+                    <Unicode>Bach Widow the Relict and Sole Extrix. to whom</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:13;}">
+                <Coords points="675,3582 1470,3604 1843,3757 2128,3587 2430,3719 2655,3631 3631,3757 4388,3543 4536,3615 4536,3477 4234,3362 3368,3362 2885,3516 2298,3390 1360,3532 1163,3417 675,3434"/>
+                <Baseline points="704,3575 895,3569 1087,3575 1279,3578 1471,3587 1663,3587 1855,3581 2047,3575 2239,3575 2431,3572 2623,3575 2814,3575 3006,3570 3198,3569 3390,3563 3582,3561 3774,3548 3966,3545 4158,3541 4350,3539 4542,3533"/>
+                <TextEquiv>
+                    <Unicode>Adinon. was Granted having been first Sworn</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:14;} textStyle {offset:12; length:1;superscript:true;}">
+                <Coords points="680,3823 828,3801 894,3867 1015,3872 1311,3774 1410,3856 1454,3818 1689,3845 1684,3626 1624,3648 1410,3598 1360,3642 1201,3615 1092,3658 1015,3604 812,3648 675,3593"/>
+                <Baseline points="704,3760 753,3757 803,3754 853,3754 903,3754 953,3754 1003,3754 1052,3754 1102,3754 1152,3754 1202,3757 1252,3760 1302,3760 1352,3760 1401,3760 1451,3762 1501,3765 1551,3769 1601,3772 1651,3775 1701,3778"/>
+                <TextEquiv>
+                    <Unicode>duly to Adm.n</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

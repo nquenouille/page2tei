@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2025-02-03T15:40:22.081+01:00</Created>
+        <LastChange>2025-02-12T16:29:04.612+01:00</LastChange>
+        <TranskribusMetadata pageNr="4" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="gb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif" imageWidth="4751" imageHeight="5734">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1739374144612" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_2"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_2" custom="readingOrder {index:0;}">
+            <Coords points="1606,257 1582,1660 3571,1822 3589,257"/>
+            <TextLine id="tr_2_tl_2" custom="readingOrder {index:0;}">
+                <Coords points="1659,382 1828,372 1982,436 1977,203 1939,198 1912,216 1828,166 1788,181 1746,156 1657,191"/>
+                <Baseline points="1672,364 1697,362 1723,361 1749,359 1775,358 1801,358 1827,358 1853,358 1879,360 1905,362 1931,363 1957,366 1983,370"/>
+                <TextEquiv>
+                    <Unicode>Will</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_1" custom="readingOrder {index:1;}">
+                <Coords points="3174,379 3219,365 3269,392 3333,360 3455,392 3477,370 3571,387 3574,233 3529,233 3437,176 3393,174 3239,288 3177,285"/>
+                <Baseline points="3189,358 3214,358 3240,358 3266,358 3292,358 3318,357 3344,356 3370,354 3395,352 3421,352 3447,352 3473,352 3499,352 3525,352 3551,352 3577,352"/>
+                <TextEquiv>
+                    <Unicode>Midde</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_3" custom="readingOrder {index:2;}">
+                <Coords points="1592,680 1949,717 2195,657 2775,727 3293,645 3586,729 3586,424 3326,446 3239,389 3140,454 2969,370 2549,556 2393,449 2165,498 2024,409 1788,412 1592,506"/>
+                <Baseline points="1606,639 1705,639 1804,639 1903,645 2002,645 2101,647 2200,651 2300,655 2399,665 2498,663 2597,668 2696,662 2795,663 2894,667 2994,660 3093,651 3192,645 3291,637 3390,628 3489,622 3589,615"/>
+                <TextEquiv>
+                    <Unicode>John Christian Bach</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_4" custom="readingOrder {index:3;}">
+                <Coords points="2170,895 2311,890 2478,987 2554,940 2631,960 2765,883 2904,920 2949,905 2944,724 2869,756 2753,722 2678,749 2455,692 2363,732 2165,737"/>
+                <Baseline points="2180,836 2218,839 2257,841 2296,846 2335,851 2374,855 2412,858 2451,860 2490,860 2529,860 2568,864 2606,869 2645,871 2684,868 2723,866 2762,866 2800,866 2839,864 2878,861 2917,860 2956,860"/>
+                <TextEquiv>
+                    <Unicode>Feb.y 1782</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_5" custom="readingOrder {index:4;} add {offset:0; length:3;place:below; type:addition; xmlid:add4-1;}">
+                <Coords points="3088,1317 3140,1342 3163,1457 3277,1376 3353,1282 3467,1245 3546,964 3353,962 3145,1071 3102,1066"/>
+                <Baseline points="3105,1212 3130,1216 3155,1217 3181,1215 3206,1214 3232,1212 3257,1210 3282,1209 3308,1207 3333,1205 3359,1203 3384,1202 3410,1200"/>
+                <TextEquiv>
+                    <Unicode>Reg</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l" custom="readingOrder {index:5;} add {offset:0; length:4;place:below; type:addition; xmlid:add4-2;} textStyle {offset:2; length:2;superscript:true;}">
+                <Coords points="3168,1671 3415,1721 3542,1643 3593,1500 3480,1330 3184,1443"/>
+                <Baseline points="3168,1671 3295,1673 3441,1653 3532,1583"/>
+                <TextEquiv>
+                    <Unicode>Exd.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

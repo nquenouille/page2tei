@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus</Creator>
+        <Created>2025-02-03T15:43:02.364+01:00</Created>
+        <LastChange>2025-02-03T16:21:58.012+01:00</LastChange>
+        <TranskribusMetadata pageNr="3" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="gb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00003.tif" imageWidth="4789" imageHeight="5731"/>
+</PcGts>
