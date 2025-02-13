@@ -40,7 +40,6 @@
         </surface>
     </facsimile>
     <text>
-
         <body>
             <div type="original">
                 <pb facs="#facs_1" n="1"/>
@@ -66,6 +65,5 @@
                 <p/>
             </div>
         </body>
-
     </text>
 </TEI>
