@@ -251,10 +251,8 @@
             </xsl:text>
                   <bibl>
                      <xsl:text>
-         </xsl:text>
+                  </xsl:text>
                      <xsl:apply-templates select="mets:amdSec" mode="sourceDesc"/>
-                     <xsl:text>
-         </xsl:text>
                   </bibl>
                   <xsl:text>
          </xsl:text>
