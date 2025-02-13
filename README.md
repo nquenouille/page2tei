@@ -1,6 +1,8 @@
 # page2tei
 PAGE2TEI was created and is maintained by Dario Kampkaspar and is licensed under the MIT license.
 
+![Tests](https://github.com/nquenouille/page2tei/actions/workflows/tests.yml/badge.svg)
+
 ## How to use
 Apply page2tei-0.xsl to the METS File:
 

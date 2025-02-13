@@ -2,7 +2,6 @@
    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
    xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
    xmlns:p="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
-   xmlns:pc="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"
    xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:map="http://www.w3.org/2005/xpath-functions/map" xmlns:local="local"
    xmlns:xstring="https://github.com/dariok/XStringUtils" exclude-result-prefixes="#all"
@@ -14,11 +13,6 @@
       'Spanish': 'es', 'Ancient Greek': 'grc' }"/>
 
    <xsl:include href="combine-hi.xsl" />
-   
-   <xd:doc>
-      <xd:desc>Page XML parameter 'PAGEXML' with which ID and USE definition is referenced in the mets:fileGrp to the PAGE xml files.</xd:desc>
-   </xd:doc>
-   <xsl:param name="PAGEXML" select="'PAGEXML'" />
 
    <xd:doc>
       <xd:desc>Whether to create `rs type="..."` for person/place/org (default) or `persName` etc.
@@ -229,8 +223,6 @@
       <xd:desc>Entry point: start at the top of METS.xml</xd:desc>
    </xd:doc>
    <xsl:template match="/mets:mets">
-      <xsl:text>
-   </xsl:text>
       <TEI>
          <xsl:text>
    </xsl:text>
@@ -242,8 +234,6 @@
          </xsl:text>
                <titleStmt>
                   <xsl:apply-templates select="mets:amdSec" mode="titleStmt"/>
-                  <xsl:text>
-         </xsl:text>
                </titleStmt>
                <xsl:text>
          </xsl:text>
@@ -530,8 +520,6 @@
       </xd:desc>
    </xd:doc>
    <xsl:template match="title">
-      <xsl:text>
-            </xsl:text>
       <title>
          <xsl:if test="position() = 1">
             <xsl:attribute name="type">main</xsl:attribute>
@@ -545,8 +533,6 @@
          titleStmt/author</xd:desc>
    </xd:doc>
    <xsl:template match="author">
-      <xsl:text>
-            </xsl:text>
       <author>
          <xsl:apply-templates/>
       </author>
@@ -557,8 +543,6 @@
          titleStmt/respStmt</xd:desc>
    </xd:doc>
    <xsl:template match="writer">
-      <xsl:text>
-            </xsl:text>
       <respStmt>
          <resp>Writer</resp>
          <name>
@@ -566,16 +550,6 @@
          </name>
       </respStmt>
    </xsl:template>
-
-    <xd:doc>
-        <xd:desc>The uploader of the current document. Will be used as titleStmt/principal</xd:desc>
-    </xd:doc>
-    <xsl:template match="uploader">
-        <respStmt>
-            <resp>Uploader</resp>
-            <xsl:apply-templates/>
-        </respStmt>
-    </xsl:template>
 
    <xd:doc>
       <xd:desc>The description as given in Transkribus meta data. Will be used in
@@ -650,7 +624,7 @@
       <xsl:variable name="numCurr" select="@SEQ"/>
       <xsl:variable name="imgurl" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
 
-      <xsl:apply-templates select="$file//p:Page | $file//pc:Page" mode="text">
+      <xsl:apply-templates select="$file//p:Page" mode="text">
          <xsl:with-param name="numCurr" select="$numCurr" tunnel="true"/>
          <xsl:with-param name="imgurl" select="$imgurl" tunnel="true"/>
       </xsl:apply-templates>
@@ -668,11 +642,11 @@
          <xd:p>Numerus currens of the parent facsimile</xd:p>
       </xd:param>
    </xd:doc>
-   <xsl:template match="p:Page | pc:Page" mode="facsimile">
+   <xsl:template match="p:Page" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:param name="imageurl" tunnel="true"/>
 
-<!--      <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>-->
+      <xsl:variable name="coords" select="tokenize(p:PrintSpace/p:Coords/@points, ' ')"/>
       <xsl:variable name="type" select="substring-after(@imageFilename, '.')"/>
 
       <xsl:text>
@@ -686,12 +660,9 @@
          <graphic url="{$imageurl}" width="{@imageWidth}px"
             height="{@imageHeight}px" rend="facstab"/>
          <!-- include Transkribus image link as second graphic element for later evaluation -->
-               <xsl:apply-templates
-            select="preceding-sibling::p:Metadata/*:TranskribusMetadata,
-                    preceding-sibling::pc:Metadata/*:TranskribusMetadata"/>
-         <xsl:apply-templates
-            select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion
-                  | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TableRegion"
+            <xsl:apply-templates select="preceding-sibling::p:Metadata/*:TranskribusMetadata"/>
+            <xsl:apply-templates
+            select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion"
             mode="facsimile"/>
          <xsl:text>
       </xsl:text>
@@ -706,8 +677,7 @@
       <xd:param name="numCurr">Numerus currens of the current page</xd:param>
    </xd:doc>
    <xsl:template
-      match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine
-           | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TextLine"
+      match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine"
       mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
 
@@ -835,7 +805,7 @@
       </xsl:variable>
 
       <xsl:choose>
-         <xsl:when test="self::p:TextLine or self::pc:TextLine">
+         <xsl:when test="self::p:TextLine">
             <xsl:text>
             </xsl:text>
          </xsl:when>
@@ -859,9 +829,9 @@
             <xsl:attribute name="subtype"
                select="substring-after(substring-before(map:get($custom, 'structure'), ';'), ':')"/>
          </xsl:if>
-         <xsl:apply-templates select="p:TextLine | pc:TextLine" mode="facsimile"/>
+         <xsl:apply-templates select="p:TextLine" mode="facsimile"/>
          <xsl:if test="$word-coordinates">
-            <xsl:apply-templates select="p:Word | pc:Word" mode="facsimile" />
+            <xsl:apply-templates select="p:Word" mode="facsimile" />
          </xsl:if>
          <xsl:choose>
             <xsl:when test="self::p:TextLine and p:Word and $word-coordinates">
@@ -869,14 +839,6 @@
             </xsl:text>
             </xsl:when>
             <xsl:when test="self::p:TextRegion">
-               <xsl:text>
-         </xsl:text>
-            </xsl:when>
-            <xsl:when test="self::pc:TextLine and pc:Word and $word-coordinates">
-               <xsl:text>
-            </xsl:text>
-            </xsl:when>
-            <xsl:when test="self::pc:TextRegion">
                <xsl:text>
          </xsl:text>
             </xsl:when>
@@ -888,7 +850,7 @@
       <xd:desc>create a zone for each word within facsimile/surface</xd:desc>
       <xd:param name="numCurr">Numerus currens of the current page</xd:param>
    </xd:doc>
-   <xsl:template match="p:Word | pc:Word" mode="facsimile">
+   <xsl:template match="p:Word" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
 
    <!-- Create ulx, uly, lrx and lry by getting the coordinates's points, format and sort them and take the max and min values -->
@@ -1008,7 +970,7 @@
       <xd:desc>Create the zone for a table</xd:desc>
       <xd:param name="numCurr">Numerus currens of the current page</xd:param>
    </xd:doc>
-   <xsl:template match="p:TableRegion | pc:TableRegion" mode="facsimile">
+   <xsl:template match="p:TableRegion" mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
 
    <!-- Create ulx, uly, lrx and lry by getting the coordinates's points, format and sort them and take the max and min values -->
@@ -1119,7 +1081,7 @@
          <xsl:attribute name="xml:id">
             <xsl:value-of select="'facs_' || $numCurr || '_' || @id"/>
          </xsl:attribute>
-         <xsl:apply-templates select="p:TableCell//p:TextLine | pc:TableCell//pc:TextLine" mode="facsimile"/>
+         <xsl:apply-templates select="p:TableCell//p:TextLine" mode="facsimile"/>
       <xsl:text>
          </xsl:text>
       </zone>
@@ -1130,12 +1092,11 @@
       <xd:param name="numCurr">Numerus currens of the current page</xd:param>
    </xd:doc>
    <!-- Templates for PAGE, text -->
-   <xsl:template match="p:Page | pc:Page" mode="text">
+   <xsl:template match="p:Page" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
       <pb facs="#facs_{$numCurr}" n="{$numCurr}"/>
       <xsl:apply-templates
-         select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion
-               | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TableRegion" mode="text">
+         select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text">
          <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
             as="xs:double"/>
       </xsl:apply-templates>
@@ -1153,7 +1114,7 @@
       <xd:param name="numCurr"/>
       <xd:param name="center"/>
    </xd:doc>
-   <xsl:template match="p:TextRegion | pc:TextRegion" mode="text">
+   <xsl:template match="p:TextRegion" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:param name="center" tunnel="true" as="xs:double"/>
       
@@ -1164,78 +1125,78 @@
 
       <xsl:variable name="number" select="//ancestor::p:Metadata//p:TranskribusMetadata/@pageNr"/>
       <xsl:choose>
-         <xsl:when test="not(p:TextLine or pc:TextLine or $withoutTextline)"/>
+         <xsl:when test="not(p:TextLine or $withoutTextline)"/>
          <xsl:when test="'heading' = $regionType">
             <head facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </head>
          </xsl:when>
          <xsl:when test="'caption' = $regionType and not($ab)">
             <figure>
                <head facs="#facs_{$numCurr}_{@id}">
-                  <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine"/>
                </head>
             </figure>
          </xsl:when>
          <xsl:when test="'header' = $regionType and not($ab)">
             <fw type="header" place="top" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
          <xsl:when test="'catch-word' = $regionType and not($ab)">
             <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
          <xsl:when test="'signature-mark' = $regionType and not($ab)">
             <fw place="bottom" type="sig" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab)">
             <xsl:variable name="side">
                <xsl:choose>
-                  <xsl:when test="number(substring-before((p:Coords/@points, pc:Coords/@points), ',')) gt $center"
+                  <xsl:when test="number(substring-before(p:Coords/@points, ',')) gt $center"
                      >margin-right</xsl:when>
                   <xsl:otherwise>margin-left</xsl:otherwise>
                </xsl:choose>
             </xsl:variable>
             <note place="{$side}" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
          <xsl:when test="'footnote' = $regionType and not($ab)">
             <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
          <xsl:when test="'footnote-continued' = $regionType and not($ab)">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
          <xsl:when test="'endnote' = $regionType and not($ab)">
             <note type="endnote" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </note>
          </xsl:when>
          <xsl:when test="'footer' = $regionType and not($ab)">
             <fw type="footer" place="bottom" facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
          <xsl:when test="'page-number' = $regionType and not($ab)">
             <fw type="page-number" facs="#facs_{$numCurr}_{@id}">
                <xsl:attribute name="place">
                   <xsl:variable name="verticalPosition"
-                     select="(p:Coords/@points, pc:Coords/@points) => substring-before(' ') => substring-after(',') => number()"/>
+                     select="p:Coords/@points => substring-before(' ') => substring-after(',') => number()"/>
                   <xsl:choose>
                      <xsl:when
-                        test="$verticalPosition div number(../@imageHeight) lt .33">
+                        test="$verticalPosition div number(parent::p:Page/@imageHeight) lt .33">
                         <xsl:text>top</xsl:text>
                      </xsl:when>
                      <xsl:when
-                        test="$verticalPosition div number(../@imageHeight) lt .66">
+                        test="$verticalPosition div number(parent::p:Page/@imageHeight) lt .66">
                         <xsl:text>centre</xsl:text>
                      </xsl:when>
                      <xsl:otherwise>
@@ -1243,7 +1204,7 @@
                      </xsl:otherwise>
                   </xsl:choose>
                </xsl:attribute>
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
           <xsl:when test="'hidden' = $regionType">
@@ -1543,7 +1504,7 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <p>
-               <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+               <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
             </p>
@@ -1555,12 +1516,12 @@
       <xd:desc>create a table</xd:desc>
       <xd:param name="numCurr"/>
    </xd:doc>
-   <xsl:template match="p:TableRegion | pc:TableRegion" mode="text">
+   <xsl:template match="p:TableRegion" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:text>
       </xsl:text>
       <table facs="#facs_{$numCurr}_{@id}">
-         <xsl:for-each-group select="p:TableCell | pc:TableCell" group-by="@row">
+         <xsl:for-each-group select="p:TableCell" group-by="@row">
             <xsl:sort select="@col"/>
             <xsl:text>
         </xsl:text>
@@ -1629,7 +1590,7 @@
       <xd:desc>create table cells</xd:desc>
       <xd:param name="numCurr"/>
    </xd:doc>
-   <xsl:template match="p:TableCell | pc:TableCell">
+   <xsl:template match="p:TableCell">
       <xsl:param name="numCurr" tunnel="true"/>
 
       <!-- Create ulx, uly, w and h by getting the coordinates's points, format and sort them and take the max and min values -->
@@ -1760,7 +1721,7 @@
           </xsl:text>
      
          <xsl:if test="@custom='structure {type:heading;}'">
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
          </xsl:if>
          <xsl:if test="@custom='structure {type:subheading;}'">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
@@ -1774,7 +1735,7 @@
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-left-in;}'">
@@ -1786,7 +1747,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-li'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-left-out;}'">
@@ -1798,7 +1759,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-lo'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-right-in;}'">
@@ -1810,7 +1771,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-ri'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-right-out;}'">
@@ -1822,7 +1783,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-ro'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-top-in;}'">
@@ -1834,7 +1795,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-ti'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-top-out;}'">
@@ -1846,7 +1807,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-to'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-bottom-in;}'">
@@ -1858,7 +1819,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-bi'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:curly-bracket-bottom-out;}'">
@@ -1870,7 +1831,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-bo'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
             </cell>
          </xsl:if>
          <xsl:if test="not(@custom='structure {type:heading;}') and not(@custom='structure {type:subheading;}') and not(@custom='structure {type:curly-bracket-left-in;}') and not(@custom='structure {type:curly-bracket-left-out;}') and not(@custom='structure {type:curly-bracket-right-in;}') and not(@custom='structure {type:curly-bracket-right-out;}') and not(@custom='structure {type:curly-bracket-top-in;}') and not(@custom='structure {type:curly-bracket-top-out;}') and not(@custom='structure {type:curly-bracket-bottom-in;}') and not(@custom='structure {type:curly-bracket-bottom-out;}')">
@@ -1882,7 +1843,7 @@
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
+            <xsl:apply-templates select="p:TextLine"/>
          </cell>
          </xsl:if>
    </xsl:template>
@@ -1908,31 +1869,16 @@
    </xsl:template>
 
    <xd:doc>
-      <xd:desc>create a figure for graphics
-         – Provided by github:@liladude in https://github.com/dariok/page2tei/issues/25#issuecomment-1543625106
-         – Reported by github:@giorgiaagostini</xd:desc>
-      <xd:param name="numCurr"/>
-   </xd:doc>
-   <xsl:template match="p:GraphicRegion" mode="text">
-      <xsl:param name="numCurr" tunnel="true" />
-      <xsl:text>
-      </xsl:text>
-      <figure facs="#facs_{$numCurr}_{@id}">
-         <graphic xml:id="#facs_{$numCurr}_{@id}" />
-      </figure>
-   </xsl:template>
-
-   <xd:doc>
       <xd:desc>Converts one line of PAGE to one line of TEI</xd:desc>
       <xd:param name="numCurr">Numerus currens, to be tunneled through from the page
          level</xd:param>
    </xd:doc>
-   <xsl:template match="p:TextLine | pc:TextLine">
+   <xsl:template match="p:TextLine">
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:param name="imgurl" tunnel="true"/>
 
-      <xsl:if test="p:Baseline or pc:Baseline or $withoutBaseline">
-         <xsl:variable name="text" select="p:TextEquiv/p:Unicode, pc:TextEquiv/pc:Unicode"/>
+      <xsl:if test="p:Baseline or $withoutBaseline">
+         <xsl:variable name="text" select="p:TextEquiv/p:Unicode"/>
          <xsl:variable name="custom" as="text()*">
             <xsl:for-each select="tokenize(@custom, '\}')">
                <xsl:variable name="content" select="substring-after(., '{') => normalize-space()"/>
@@ -2233,9 +2179,6 @@
                <xsl:if test="$custom?italic = 'true'">
                   <xsl:text>font-style: italic;</xsl:text>
                </xsl:if>
-               <xsl:if test="$custom?bold = 'true'">
-                  <xsl:text>font-weight: bold;</xsl:text>
-               </xsl:if>
                <xsl:if test="$custom?underlined = 'true'">
                   <xsl:text>text-decoration: underline;</xsl:text>
                </xsl:if>
@@ -2253,9 +2196,6 @@
                </xsl:if>
                <xsl:if test="$custom?superscript = 'true'">
                   <xsl:text>vertical-align: superscript;</xsl:text>
-               </xsl:if>
-               <xsl:if test="$custom?subscript = 'true'">
-                  <xsl:text>vertical-align: subscript;</xsl:text>
                </xsl:if>
                <xsl:if test="$custom?smallCaps = 'true'">
                   <xsl:text>font-variant-caps: small-caps;</xsl:text>
@@ -2542,7 +2482,7 @@
    <xd:doc>
       <xd:desc>Leave out possibly unwanted parts</xd:desc>
    </xd:doc>
-   <xsl:template match="p:Metadata | pc:Metadata" mode="text"/>
+   <xsl:template match="p:Metadata" mode="text"/>
 
    <!-- Der Übersichtlichkeit halber wird folgender Code weggelassen -->
    <!--
@@ -2550,7 +2490,7 @@
       <xd:desc>TranskribusMetadata contains the link to the image on Transkribus’ servers; return a
          tei:graphic element with this URL so it can be evaluated during postprocessing</xd:desc>
    </xd:doc>
-   <xsl:template match="*:TranskribusMetadata[@imgUrl]">
+   <xsl:template match="*:TranskribusMetadata">
       <xsl:text>
          </xsl:text>
       <graphic url="{@imgUrl}" width="{following::p:Page/@imageWidth}px"
@@ -2568,7 +2508,7 @@
                <xsl:map>
                   <xsl:for-each
                      select="tokenize(substring-after(., '{'), ';')[normalize-space() != '']">
-                     <xsl:map-entry key="normalize-space(substring-before(., ':'))" select="normalize-space(substring-after(., ':'))"
+                     <xsl:map-entry key="substring-before(., ':')" select="substring-after(., ':')"
                      />
                   </xsl:for-each>
                </xsl:map>
