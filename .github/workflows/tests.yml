@@ -25,4 +25,4 @@ jobs:
       - name: textblock + cbr-li test
         run: |
           java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/testament_textblock_cbr-li/mets.xml -o:test/testament_textblock_cbr-li/testament_textblock_cbr-li_test.xml
-          diff -w --normal test/ls3yi/ls3yi_test.xml test/ls3yi/ls3yi.xml
+          diff -w --normal test/testament_textblock_cbr-li/testament_textblock_cbr-li_test.xml test/testament_textblock_cbr-li/testament_textblock_cbr-li.xml
