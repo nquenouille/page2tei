@@ -139,10 +139,10 @@
    <!-- create link to the last file and get the regionType-->
    <xsl:variable name="file_back" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), /)"/>
    <xsl:variable name="custom_back" as="map(*)">
-      <xsl:apply-templates select="$file_back//p:TextRegion[last()]/@custom"/>
+      <xsl:apply-templates select="$file_back//p:TextRegion[1]/@custom"/>
    </xsl:variable>
    <xsl:variable name="regionType_back" as="xs:string*">
-      <xsl:if test="$file_back//p:TextRegion[last()]/@custom">
+      <xsl:if test="$file_back//p:TextRegion[1]/@custom">
          <xsl:value-of select="(@type, $custom_back?structure?type)" />
       </xsl:if>
    </xsl:variable>
@@ -158,7 +158,7 @@
             as="xs:double"/>
          </xsl:apply-templates>
          <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != 1][position() != last()]" mode="text"/>
-         <xsl:apply-templates select="$file_back//p:TextRegion[position() != last()]" mode="text">
+         <xsl:apply-templates select="$file_back//p:TextRegion[not($regionType_back='back' or 'marginalia_back')]" mode="text">
             <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
             <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
             as="xs:double"/>
@@ -178,7 +178,7 @@
    <xsl:when test="$regionType_back='back'">
       <div>
          <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != last()]" mode="text"/>
-         <xsl:apply-templates select="$file_back//p:TextRegion[position() != last()]" mode="text">
+         <xsl:apply-templates select="$file_back//p:TextRegion[not($regionType_back='back' or 'marginalia_back')]" mode="text">
             <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
             <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
             as="xs:double"/>            
@@ -197,7 +197,18 @@
    <xsl:variable name="make_div_front">
    <xsl:if test="$regionType_front='front'">
       <div>
-         <xsl:apply-templates select="$file_front//p:TextRegion[1]" mode="text">
+         <xsl:apply-templates select="$file_front//p:TextRegion[$regionType_front='front']" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+         </xsl:apply-templates>
+      </div>
+   </xsl:if>
+   </xsl:variable>
+   <xsl:variable name="make_marginalia_front">
+   <xsl:if test="$regionType_front='front'">
+      <div>
+         <xsl:apply-templates select="$file_front//p:TextRegion[2]" mode="text">
             <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
             <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
             as="xs:double"/>
@@ -208,6 +219,17 @@
 
    <!-- create div for the back matter -->
    <xsl:variable name="make_div_back">
+   <xsl:if test="$regionType_back='back'">
+      <div>
+         <xsl:apply-templates select="$file_back//p:TextRegion[$regionType_back='back']" mode="text">
+            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
+            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+         </xsl:apply-templates>
+      </div>
+   </xsl:if>
+   </xsl:variable>
+    <xsl:variable name="make_marginalia_back">
    <xsl:if test="$regionType_back='back'">
       <div>
          <xsl:apply-templates select="$file_back//p:TextRegion[last()]" mode="text">
@@ -281,7 +303,7 @@
       <xsl:if test="$regionType_front = 'front'">
       <front>
          <xsl:for-each-group
-                     select="$make_div_front//*[local-name() = 'div']/*"
+                     select="$make_div_front//*[local-name() = 'div']/*[not(contains(@type, 'margin_front'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -339,6 +361,58 @@
                   <xsl:text>
          </xsl:text>
                   </div>
+                  <xsl:text>
+         </xsl:text>
+                  <xsl:for-each-group
+                     select="$make_marginalia_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]"
+                     group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
+                        | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
+               >
+                  <xsl:text>
+         </xsl:text>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" type='marginalia_front'>
+                     <xsl:variable name="combined">
+                        <xsl:choose>
+                           <xsl:when test="$combine">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combines">
+                        <xsl:choose>
+                           <xsl:when test="$combined">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combining">
+                        <xsl:apply-templates select="$combines" mode="continued" />
+                     </xsl:variable>                     
+                     <xsl:variable name="tokenized">
+                        <xsl:choose>
+                           <xsl:when test="$tokenize">
+                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="$combining" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:for-each select="$tokenized/*">
+                        <xsl:text>
+            </xsl:text>
+                        <xsl:sequence select="." />
+            </xsl:for-each>
+                        <xsl:text>
+         </xsl:text>
+                  </div>
+               </xsl:for-each-group>
          <xsl:text>
       </xsl:text>
       </front>
@@ -347,7 +421,7 @@
       </xsl:if>       
             <body>
                <xsl:for-each-group
-                     select="$make_div//*[local-name() = 'div']/*"
+                     select="$make_div//*[local-name() = 'div']/*[not(contains(@type, 'margin_body'))][not(contains(@type, 'margin_front'))][not(contains(@type, 'margin_back'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -405,6 +479,58 @@
                   <xsl:text>
          </xsl:text>
                   </div>
+                  <xsl:text>
+         </xsl:text>
+                  <xsl:for-each-group
+                     select="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_body')]"
+                     group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
+                        | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
+               >
+                  <xsl:text>
+         </xsl:text>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" type='marginalia'>
+                     <xsl:variable name="combined">
+                        <xsl:choose>
+                           <xsl:when test="$combine">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combines">
+                        <xsl:choose>
+                           <xsl:when test="$combined">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combining">
+                        <xsl:apply-templates select="$combines" mode="continued" />
+                     </xsl:variable>                     
+                     <xsl:variable name="tokenized">
+                        <xsl:choose>
+                           <xsl:when test="$tokenize">
+                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="$combining" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:for-each select="$tokenized/*">
+                        <xsl:text>
+            </xsl:text>
+                        <xsl:sequence select="." />
+            </xsl:for-each>
+                        <xsl:text>
+         </xsl:text>
+                  </div>
+               </xsl:for-each-group>
          <xsl:text>
       </xsl:text>
       </body>
@@ -413,7 +539,7 @@
          </xsl:text>
       <back>
          <xsl:for-each-group
-                     select="$make_div_back//*[local-name() = 'div']/*"
+                     select="$make_div_back//*[local-name() = 'div']/*[not(contains(@type, 'margin_back'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -471,6 +597,58 @@
                   <xsl:text>
          </xsl:text>
                   </div>
+                  <xsl:text>
+         </xsl:text>
+                  <xsl:for-each-group
+                     select="$make_marginalia_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]"
+                     group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
+                        | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
+               >
+                  <xsl:text>
+         </xsl:text>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" type='marginalia_back'>
+                     <xsl:variable name="combined">
+                        <xsl:choose>
+                           <xsl:when test="$combine">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combines">
+                        <xsl:choose>
+                           <xsl:when test="$combined">
+                              <xsl:apply-templates select="current-group()" mode="continued" />
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="current-group()" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="combining">
+                        <xsl:apply-templates select="$combines" mode="continued" />
+                     </xsl:variable>                     
+                     <xsl:variable name="tokenized">
+                        <xsl:choose>
+                           <xsl:when test="$tokenize">
+                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                           </xsl:when>
+                           <xsl:otherwise>
+                              <xsl:copy-of select="$combining" />
+                           </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:variable>
+                     <xsl:for-each select="$tokenized/*">
+                        <xsl:text>
+            </xsl:text>
+                        <xsl:sequence select="." />
+            </xsl:for-each>
+                        <xsl:text>
+         </xsl:text>
+                  </div>
+               </xsl:for-each-group>
          <xsl:text>
       </xsl:text>
       </back>
@@ -1161,22 +1339,47 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'marginalia' = $regionType and not($ab)">
-            <xsl:variable name="side">
+         <xsl:when test="'marginalia_front' = $regionType and not($ab)">
+               <xsl:variable name="side">
                <xsl:choose>
-                  <xsl:when test="number(substring-before(p:Coords/@points, ',')) gt $center"
+                  <xsl:when test="number(substring-before((p:Coords/@points), ',')) gt $center"
                      >margin-right</xsl:when>
                   <xsl:otherwise>margin-left</xsl:otherwise>
                </xsl:choose>
             </xsl:variable>
-            <note place="{$side}" facs="#facs_{$numCurr}_{@id}">
+               <ab type='margin_front'>
                <xsl:apply-templates select="p:TextLine"/>
-            </note>
+               <xsl:text>
+            </xsl:text>
+               </ab>
          </xsl:when>
-         <xsl:when test="'footnote' = $regionType and not($ab)">
-            <note place="foot" n="[footnote reference]" facs="#facs_{$numCurr}_{@id}">
+         <xsl:when test="'marginalia' = $regionType and not($ab)">
+               <xsl:variable name="side">
+               <xsl:choose>
+                  <xsl:when test="number(substring-before((p:Coords/@points), ',')) gt $center"
+                     >margin-right</xsl:when>
+                  <xsl:otherwise>margin-left</xsl:otherwise>
+               </xsl:choose>
+            </xsl:variable>
+               <ab type='margin_body'>
                <xsl:apply-templates select="p:TextLine"/>
-            </note>
+               <xsl:text>
+            </xsl:text>
+               </ab>
+         </xsl:when>
+         <xsl:when test="'marginalia_back' = $regionType and not($ab)">
+               <xsl:variable name="side">
+               <xsl:choose>
+                  <xsl:when test="number(substring-before((p:Coords/@points), ',')) gt $center"
+                     >margin-right</xsl:when>
+                  <xsl:otherwise>margin-left</xsl:otherwise>
+               </xsl:choose>
+            </xsl:variable>
+               <ab type='margin_back'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+               </ab>
          </xsl:when>
          <xsl:when test="'footnote-continued' = $regionType and not($ab)">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}">
@@ -2320,6 +2523,24 @@
                 <xsl:if test="map:keys($custom) = 'type'">
                   <xsl:attribute name="type"><xsl:value-of select="'add'"/></xsl:attribute>
                </xsl:if>
+            </xsl:element>
+         </xsl:when>
+         <xsl:when test="@type = 'note'">
+         <xsl:variable name="elName" select="'note'"/>
+            <xsl:element name="{$elName}">
+               <xsl:if test="map:keys($custom) = 'target'">
+                  <xsl:attribute name="target"><xsl:value-of select="map:get($custom, 'target')"/></xsl:attribute>
+               </xsl:if>
+               <xsl:if test="map:keys($custom) = 'place'">
+                  <xsl:attribute name="place"><xsl:value-of select="map:get($custom, 'place')"/></xsl:attribute>
+               </xsl:if>
+                  <xsl:attribute name="type"><xsl:value-of select="'marginalia'"/></xsl:attribute>
+               <xsl:if test="$custom?continued">
+                  <xsl:attribute name="continued" select="true()"/>
+               </xsl:if>           
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>               
             </xsl:element>
          </xsl:when>
          <xsl:when test="@type = 'missing'">
