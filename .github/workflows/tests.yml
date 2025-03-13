@@ -30,3 +30,7 @@ jobs:
         run: |
           java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/ifowu_schuelerverz_tables/mets.xml -o:test/ifowu_schuelerverz_tables/ifowu_schuelerverz_tables_test.xml
           diff -w --normal test/ifowu_schuelerverz_tables/ifowu_schuelerverz_tables_test.xml test/ifowu_schuelerverz_tables/ifowu.xml
+      - name: marginalia (front, body, back) test
+        run: |
+          java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/marginalia/mets.xml -o:test/marginalia/marginalia.xml
+          diff -w --normal test/marginalia/marginalia_test.xml test/marginalia/marginalia.xml

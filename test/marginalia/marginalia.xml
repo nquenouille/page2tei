@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+         <title type="main">Einwände gegen Bachs Empfehlung für Georg Gottfried Wagner - Copy</title>
+         </titleStmt>
+         <publicationStmt><publisher>Forschungsportal BACH</publisher></publicationStmt>
+         <sourceDesc>
+            <bibl>
+                  <title type="main">Einwände gegen Bachs Empfehlung für Georg Gottfried Wagner - Copy</title></bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+      </profileDesc>
+   </teiHeader>
+   <facsimile xml:id="facs_1">
+      <surface ulx="0" uly="0" lrx="1995" lry="3013">
+         <graphic url="0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif" width="1995px" height="3013px" rend="facstab"/>
+         <zone ulx="673" uly="73" lrx="1686" lry="2622" rendition="TextRegion" xml:id="facs_1_tr_3" subtype="front">
+            <zone ulx="978" uly="78" lrx="1490" lry="209" rendition="Line" xml:id="facs_1_tr_3_tl_2"/>
+            <zone ulx="1092" uly="158" lrx="1278" lry="248" rendition="Line" xml:id="facs_1_line_1715077333715_99"/>
+            <zone ulx="930" uly="253" lrx="1637" lry="439" rendition="Line" xml:id="facs_1_tr_3_tl_3"/>
+            <zone ulx="1064" uly="375" lrx="1397" lry="466" rendition="Line" xml:id="facs_1_tr_3_tl_4"/>
+            <zone ulx="878" uly="510" lrx="1671" lry="726" rendition="Line" xml:id="facs_1_tr_3_tl_6"/>
+            <zone ulx="874" uly="685" lrx="1681" lry="794" rendition="Line" xml:id="facs_1_tr_3_tl_7"/>
+            <zone ulx="870" uly="758" lrx="1679" lry="865" rendition="Line" xml:id="facs_1_tr_3_tl_8"/>
+            <zone ulx="875" uly="834" lrx="1667" lry="944" rendition="Line" xml:id="facs_1_tr_3_tl_9"/>
+            <zone ulx="866" uly="906" lrx="1662" lry="1027" rendition="Line" xml:id="facs_1_tr_3_tl_10"/>
+            <zone ulx="848" uly="994" lrx="1684" lry="1110" rendition="Line" xml:id="facs_1_tr_3_tl_11"/>
+            <zone ulx="866" uly="1061" lrx="1648" lry="1194" rendition="Line" xml:id="facs_1_tr_3_tl_12"/>
+            <zone ulx="859" uly="1144" lrx="1679" lry="1290" rendition="Line" xml:id="facs_1_tr_3_tl_13"/>
+            <zone ulx="754" uly="1238" lrx="1672" lry="1382" rendition="Line" xml:id="facs_1_tr_3_tl_14"/>
+            <zone ulx="862" uly="1325" lrx="1627" lry="1455" rendition="Line" xml:id="facs_1_tr_3_tl_15"/>
+            <zone ulx="862" uly="1392" lrx="1664" lry="1532" rendition="Line" xml:id="facs_1_tr_3_tl_16"/>
+            <zone ulx="669" uly="1500" lrx="1583" lry="1626" rendition="Line" xml:id="facs_1_tr_3_tl_17"/>
+            <zone ulx="853" uly="1593" lrx="1641" lry="1707" rendition="Line" xml:id="facs_1_tr_3_tl_19"/>
+            <zone ulx="850" uly="1674" lrx="1632" lry="1784" rendition="Line" xml:id="facs_1_tr_3_tl_20"/>
+            <zone ulx="848" uly="1752" lrx="1632" lry="1847" rendition="Line" xml:id="facs_1_tr_3_tl_21"/>
+            <zone ulx="827" uly="1807" lrx="1655" lry="1934" rendition="Line" xml:id="facs_1_tr_3_tl_22"/>
+            <zone ulx="837" uly="1896" lrx="1616" lry="2013" rendition="Line" xml:id="facs_1_tr_3_tl_23"/>
+            <zone ulx="810" uly="1981" lrx="1647" lry="2123" rendition="Line" xml:id="facs_1_tr_3_tl_24"/>
+            <zone ulx="834" uly="2061" lrx="1598" lry="2192" rendition="Line" xml:id="facs_1_tr_3_tl_25"/>
+            <zone ulx="837" uly="2141" lrx="1614" lry="2268" rendition="Line" xml:id="facs_1_tr_3_tl_26"/>
+            <zone ulx="840" uly="2205" lrx="1654" lry="2343" rendition="Line" xml:id="facs_1_tr_3_tl_27"/>
+            <zone ulx="825" uly="2270" lrx="1615" lry="2411" rendition="Line" xml:id="facs_1_tr_3_tl_28"/>
+            <zone ulx="819" uly="2352" lrx="1643" lry="2483" rendition="Line" xml:id="facs_1_tr_3_tl_29"/>
+            <zone ulx="824" uly="2438" lrx="1629" lry="2554" rendition="Line" xml:id="facs_1_tr_3_tl_30"/>
+            <zone ulx="824" uly="2497" lrx="1606" lry="2625" rendition="Line" xml:id="facs_1_tr_3_tl_31"/>
+         </zone>
+         <zone ulx="180" uly="167" lrx="796" lry="545" rendition="TextRegion" xml:id="facs_1_tr_2" subtype="marginalia_front">
+            <zone ulx="357" uly="104" lrx="442" lry="209" rendition="Line" xml:id="facs_1_tr_2_tl_1"/>
+            <zone ulx="197" uly="171" lrx="793" lry="305" rendition="Line" xml:id="facs_1_tr_2_tl_2"/>
+            <zone ulx="335" uly="281" lrx="642" lry="323" rendition="Line" xml:id="facs_1_l"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_2">
+      <surface ulx="0" uly="0" lrx="2108" lry="3074">
+         <graphic url="0002_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00160.tif" width="2108px" height="3074px" rend="facstab"/>
+         <zone ulx="1023" uly="280" lrx="2050" lry="2828" rendition="TextRegion" xml:id="facs_2_tr_2">
+            <zone ulx="1185" uly="220" lrx="2017" lry="386" rendition="Line" xml:id="facs_2_tr_2_tl_1"/>
+            <zone ulx="1189" uly="312" lrx="2049" lry="450" rendition="Line" xml:id="facs_2_tr_2_tl_2"/>
+            <zone ulx="1174" uly="403" lrx="2052" lry="540" rendition="Line" xml:id="facs_2_tr_2_tl_4"/>
+            <zone ulx="1589" uly="402" lrx="2038" lry="460" rendition="Line" xml:id="facs_2_l"/>
+            <zone ulx="1155" uly="472" lrx="1989" lry="612" rendition="Line" xml:id="facs_2_tr_2_tl_5"/>
+            <zone ulx="1181" uly="555" lrx="2005" lry="709" rendition="Line" xml:id="facs_2_tr_2_tl_7"/>
+            <zone ulx="1164" uly="628" lrx="1998" lry="802" rendition="Line" xml:id="facs_2_tr_2_tl_8"/>
+            <zone ulx="1182" uly="711" lrx="2049" lry="857" rendition="Line" xml:id="facs_2_tr_2_tl_9"/>
+            <zone ulx="1183" uly="775" lrx="2035" lry="901" rendition="Line" xml:id="facs_2_tr_2_tl_10"/>
+            <zone ulx="1187" uly="867" lrx="2010" lry="995" rendition="Line" xml:id="facs_2_tr_2_tl_11"/>
+            <zone ulx="1185" uly="939" lrx="2005" lry="1060" rendition="Line" xml:id="facs_2_tr_2_tl_12"/>
+            <zone ulx="1180" uly="1022" lrx="2005" lry="1163" rendition="Line" xml:id="facs_2_tr_2_tl_13"/>
+            <zone ulx="1189" uly="1089" lrx="2015" lry="1223" rendition="Line" xml:id="facs_2_tr_2_tl_15"/>
+            <zone ulx="1633" uly="1087" lrx="1830" lry="1128" rendition="Line" xml:id="facs_2_l_17"/>
+            <zone ulx="1144" uly="1168" lrx="2035" lry="1316" rendition="Line" xml:id="facs_2_tr_2_tl_16"/>
+            <zone ulx="1074" uly="1240" lrx="2010" lry="1397" rendition="Line" xml:id="facs_2_tr_2_tl_17"/>
+            <zone ulx="1169" uly="1322" lrx="2035" lry="1475" rendition="Line" xml:id="facs_2_tr_2_tl_18"/>
+            <zone ulx="1180" uly="1384" lrx="2016" lry="1524" rendition="Line" xml:id="facs_2_tr_2_tl_19"/>
+            <zone ulx="1149" uly="1480" lrx="2015" lry="1604" rendition="Line" xml:id="facs_2_tr_2_tl_20"/>
+            <zone ulx="1144" uly="1546" lrx="2003" lry="1676" rendition="Line" xml:id="facs_2_tr_2_tl_21"/>
+            <zone ulx="1142" uly="1632" lrx="2006" lry="1758" rendition="Line" xml:id="facs_2_tr_2_tl_22"/>
+            <zone ulx="1162" uly="1705" lrx="2030" lry="1831" rendition="Line" xml:id="facs_2_tr_2_tl_23"/>
+            <zone ulx="1177" uly="1771" lrx="2007" lry="1901" rendition="Line" xml:id="facs_2_tr_2_tl_24"/>
+            <zone ulx="1148" uly="1847" lrx="2028" lry="1983" rendition="Line" xml:id="facs_2_tr_2_tl_25"/>
+            <zone ulx="1159" uly="1931" lrx="1987" lry="2065" rendition="Line" xml:id="facs_2_tr_2_tl_26"/>
+            <zone ulx="1187" uly="1997" lrx="2012" lry="2132" rendition="Line" xml:id="facs_2_tr_2_tl_27"/>
+            <zone ulx="1225" uly="2079" lrx="2030" lry="2185" rendition="Line" xml:id="facs_2_tr_2_tl_28"/>
+            <zone ulx="1200" uly="2169" lrx="2038" lry="2282" rendition="Line" xml:id="facs_2_tr_2_tl_30"/>
+            <zone ulx="1341" uly="2162" lrx="1656" lry="2197" rendition="Line" xml:id="facs_2_l_27"/>
+            <zone ulx="1213" uly="2223" lrx="2026" lry="2335" rendition="Line" xml:id="facs_2_tr_2_tl_31"/>
+            <zone ulx="1210" uly="2314" lrx="2054" lry="2417" rendition="Line" xml:id="facs_2_tr_2_tl_33"/>
+            <zone ulx="1228" uly="2354" lrx="2032" lry="2467" rendition="Line" xml:id="facs_2_tr_2_tl_34"/>
+            <zone ulx="1204" uly="2429" lrx="2025" lry="2576" rendition="Line" xml:id="facs_2_tr_2_tl_35"/>
+            <zone ulx="996" uly="2484" lrx="2032" lry="2650" rendition="Line" xml:id="facs_2_tr_2_tl_36"/>
+            <zone ulx="1212" uly="2556" lrx="2038" lry="2679" rendition="Line" xml:id="facs_2_tr_2_tl_38"/>
+            <zone ulx="1212" uly="2603" lrx="2016" lry="2761" rendition="Line" xml:id="facs_2_tr_2_tl_39"/>
+            <zone ulx="1203" uly="2666" lrx="2064" lry="2844" rendition="Line" xml:id="facs_2_tr_2_tl_40"/>
+         </zone>
+         <zone ulx="390" uly="1353" lrx="1034" lry="1632" rendition="TextRegion" xml:id="facs_2_r" subtype="marginalia">
+            <zone ulx="447" uly="1351" lrx="993" lry="1479" rendition="Line" xml:id="facs_2_tr_1_tl_1"/>
+            <zone ulx="488" uly="1434" lrx="1008" lry="1515" rendition="Line" xml:id="facs_2_tr_1_tl_3"/>
+            <zone ulx="517" uly="1485" lrx="768" lry="1581" rendition="Line" xml:id="facs_2_tr_1_tl_4"/>
+         </zone>
+         <zone ulx="343" uly="2179" lrx="1120" lry="2552" rendition="TextRegion" xml:id="facs_2_r_38" subtype="marginalia">
+            <zone ulx="447" uly="2227" lrx="1087" lry="2330" rendition="Line" xml:id="facs_2_tr_1_tl_5"/>
+            <zone ulx="509" uly="2300" lrx="1118" lry="2385" rendition="Line" xml:id="facs_2_tr_1_tl_6"/>
+            <zone ulx="515" uly="2365" lrx="1017" lry="2456" rendition="Line" xml:id="facs_2_tr_1_tl_7"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_3">
+      <surface ulx="0" uly="0" lrx="1884" lry="3070">
+         <graphic url="0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif" width="1884px" height="3070px" rend="facstab"/>
+         <zone ulx="714" uly="234" lrx="1736" lry="2532" rendition="TextRegion" xml:id="facs_3_tr_3" subtype="back">
+            <zone ulx="892" uly="157" lrx="1702" lry="305" rendition="Line" xml:id="facs_3_tr_3_tl_1"/>
+            <zone ulx="707" uly="275" lrx="1718" lry="401" rendition="Line" xml:id="facs_3_tr_3_tl_3"/>
+            <zone ulx="905" uly="359" lrx="1702" lry="454" rendition="Line" xml:id="facs_3_tr_3_tl_6"/>
+            <zone ulx="907" uly="421" lrx="1695" lry="540" rendition="Line" xml:id="facs_3_tr_3_tl_8"/>
+            <zone ulx="896" uly="482" lrx="1666" lry="616" rendition="Line" xml:id="facs_3_tr_3_tl_9"/>
+            <zone ulx="715" uly="565" lrx="1707" lry="719" rendition="Line" xml:id="facs_3_tr_3_tl_10"/>
+            <zone ulx="898" uly="629" lrx="1736" lry="766" rendition="Line" xml:id="facs_3_tr_3_tl_11"/>
+            <zone ulx="900" uly="716" lrx="1721" lry="835" rendition="Line" xml:id="facs_3_tr_3_tl_12"/>
+            <zone ulx="894" uly="786" lrx="1705" lry="903" rendition="Line" xml:id="facs_3_tr_3_tl_13"/>
+            <zone ulx="866" uly="845" lrx="1735" lry="992" rendition="Line" xml:id="facs_3_tr_3_tl_16"/>
+            <zone ulx="903" uly="925" lrx="1709" lry="1088" rendition="Line" xml:id="facs_3_tr_3_tl_18"/>
+            <zone ulx="902" uly="1002" lrx="1687" lry="1162" rendition="Line" xml:id="facs_3_tr_3_tl_19"/>
+            <zone ulx="892" uly="1098" lrx="1671" lry="1219" rendition="Line" xml:id="facs_3_tr_3_tl_20"/>
+            <zone ulx="903" uly="1168" lrx="1695" lry="1301" rendition="Line" xml:id="facs_3_tr_3_tl_22"/>
+            <zone ulx="891" uly="1230" lrx="1681" lry="1373" rendition="Line" xml:id="facs_3_tr_3_tl_23"/>
+            <zone ulx="898" uly="1373" lrx="1678" lry="1533" rendition="Line" xml:id="facs_3_tr_3_tl_26"/>
+            <zone ulx="898" uly="1431" lrx="1717" lry="1594" rendition="Line" xml:id="facs_3_tr_3_tl_27"/>
+            <zone ulx="892" uly="1528" lrx="1688" lry="1662" rendition="Line" xml:id="facs_3_tr_3_tl_28"/>
+            <zone ulx="896" uly="1607" lrx="1688" lry="1759" rendition="Line" xml:id="facs_3_tr_3_tl_30"/>
+            <zone ulx="889" uly="1687" lrx="1666" lry="1824" rendition="Line" xml:id="facs_3_tr_3_tl_31"/>
+            <zone ulx="883" uly="1756" lrx="1701" lry="1908" rendition="Line" xml:id="facs_3_tr_3_tl_32"/>
+            <zone ulx="879" uly="1813" lrx="1707" lry="1982" rendition="Line" xml:id="facs_3_tr_3_tl_33"/>
+            <zone ulx="882" uly="1883" lrx="1671" lry="2043" rendition="Line" xml:id="facs_3_tr_3_tl_34"/>
+            <zone ulx="889" uly="1942" lrx="1730" lry="2134" rendition="Line" xml:id="facs_3_tr_3_tl_35"/>
+            <zone ulx="881" uly="2036" lrx="1677" lry="2216" rendition="Line" xml:id="facs_3_tr_3_tl_36"/>
+            <zone ulx="879" uly="2118" lrx="1680" lry="2261" rendition="Line" xml:id="facs_3_tr_3_tl_37"/>
+            <zone ulx="882" uly="2198" lrx="1654" lry="2345" rendition="Line" xml:id="facs_3_tr_3_tl_38"/>
+            <zone ulx="879" uly="2254" lrx="1695" lry="2437" rendition="Line" xml:id="facs_3_tr_3_tl_39"/>
+            <zone ulx="887" uly="2381" lrx="1687" lry="2539" rendition="Line" xml:id="facs_3_tr_3_tl_40"/>
+         </zone>
+         <zone ulx="95" uly="1363" lrx="703" lry="1491" rendition="TextRegion" xml:id="facs_3_r" subtype="marginalia_back">
+            <zone ulx="107" uly="1431" lrx="811" lry="1490" rendition="Line" xml:id="facs_3_l"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <front>
+         <div type="original_front">
+            <pb facs="#facs_" n=""/>
+            <milestone unit="section" facs="#facs__tr_3"/>
+            <p>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/978,78,512,131" n="N001"/>1<anchor xml:id="m1-1"/>g. StP. Cämmerey bez.
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/1092,158,186,90" n="N002"/>P. P.
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/930,253,707,186" n="N003"/>Insonders hochgeehrteste Herren
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/1064,375,333,91" n="N004"/>und Patroni,
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/878,510,793,216" n="N005"/>Ew. HochEhrw. Magnific. und Hoch<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/874,685,807,109" n="N006"/>Edl. Herrl. sollen in schuldigster
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/870,758,809,107" n="N007"/>Submission nicht verhalten, welcher<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/875,834,792,110" n="N008"/>gestallt, alß der Cantor bey allhie<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/866,906,796,121" n="N009"/>siger StadtSchulen, Victorinus Irmisch,
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/848,994,836,116" n="N010"/>den 8. Junij lezthin, dieses Zeitliche
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/866,1061,782,133" n="N011"/>geseegnet, wir als patroni hie<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/859,1144,820,146" n="N012"/>siger Kirchen und Schulen unßere<add xml:id="add1" place="inspace" hand="Autor" type="correction">unß eine</add>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/754,1238,918,144" n="N013"/><del rend="strikethrough" hand="Autor">größeste</del><add xml:id="add2" place="inspace" hand="Autor" type="correction">der größesten</add> Sorge mit seyn laßen,
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/862,1325,765,130" n="N014"/>solches dadurch vacant-gewor<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/862,1392,802,140" n="N015"/>dene Cantorat mit einem<del rend="strikethrough" hand="Autor"> andern</del><add xml:id="add3" place="inspace" hand="Autor" type="correction">ander<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/669,1500,914,126" n="N016"/>weiten</add> tüchtigen Subjecto zuersezen.
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/853,1593,788,114" n="N017"/>zu welchen Ende wir dann auch
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/850,1674,782,110" n="N018"/>nicht nur umb recommendation
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/848,1752,784,95" n="N019"/>ein- und des andern qvalificirten
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/827,1807,828,127" n="N020"/>Subjecti, bey dem berühmten Dire<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/837,1896,779,117" n="N021"/>ctore Musices, Herrn Johann Sebastian
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/810,1981,837,142" n="N022"/>Bachen zu Leipzig, angesuchet, sondern
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/834,2061,764,131" n="N023"/>auch hier und da umb solche
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/837,2141,777,127" n="N024"/>Personen, welche sowohl in Dirigi<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/840,2205,814,138" n="N025"/>rung der Music in der Kirchen und
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/825,2270,790,141" n="N026"/>sonsten, als auch bey hiesiger Stadt<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/819,2352,824,131" n="N027"/>Schule, soviel tertiam et class quar<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/824,2438,805,116" n="N028"/>tam Classem concerniret in humanio<span type="hyphen">-</span>
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/824,2497,782,128" n="N029"/>ribus et primis Elementis nüzliche</p>
+         </div>
+         <div type="commentary_front">
+         <p/>
+         </div>
+         <div type="marginalia_front">
+            <ab type="margin_front">
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/357,104,85,105" n="N001"/><note target="m1-1" place="margin-left" type="marginalia">An
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/197,171,596,134" n="N002"/>das HochLöbl. Consistorium
+               <lb facs="iiif:0001_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00159.tif/335,281,307,42" n="N003"/>zu Leipzig p.</note>
+            </ab>
+         </div>
+      </front>
+      <body>
+         <div type="original">
+            <pb facs="#facs_2" n="2"/>
+            <milestone unit="section" facs="#facs_2_tr_2"/>
+            <p>
+               <lb facs="iiif:/1185,220,832,166" n="N001"/>Dienste leisten <unclear reason="illegible"> </unclear><add xml:id="add4" place="inspace" hand="Autor" type="correction">möchten</add>, behörige Nach<span type="hyphen">-</span>
+               <lb facs="iiif:/1189,312,860,138" n="N002"/>frage gehalten. Gleich wie <del rend="strikethrough" hand="Autor">wir</del>
+               <lb facs="iiif:/1174,403,878,137" n="N003"/>nun hierauf, von denenjenigen,<anchor xml:id="a1" type="add"/>
+               <lb facs="iiif:/1589,402,449,58" n="N004"/><add xml:id="ta1" place="above" hand="Autor" type="correction">unterschiedliche Subjecta</add>
+               <lb facs="iiif:/1155,472,834,140" n="N005"/>so sich schrifftlich darumb beworben
+               <lb facs="iiif:/1181,555,824,154" n="N006"/>auch gedachter Herr Cantor zu Leip<span type="hyphen">-</span>
+               <lb facs="iiif:/1164,628,834,174" n="N007"/>zig Herr Bach unterm 26.sten Sept.
+               <lb facs="iiif:/1182,711,867,146" n="N008"/>jüngsthin Herrn Georg Gottfried Wagnern
+               <lb facs="iiif:/1183,775,852,126" n="N009"/>SS. Theol. Studios. aus Wurzen ge<span type="hyphen">-</span>
+               <lb facs="iiif:/1187,867,823,128" n="N010"/>bürtig, wie dieser sowohl in huma<span type="hyphen">-</span>
+               <lb facs="iiif:/1185,939,820,121" n="N011"/>nioribus, als besonders in Musi<span type="hyphen">-</span>
+               <lb facs="iiif:/1180,1022,825,141" n="N012"/>cis sehr wohl versiret sey, als
+               <lb facs="iiif:/1189,1089,826,134" n="N013"/>ein habiles Subjectum <anchor xml:id="a2" type="add"/> recommendiret,
+               <lb facs="iiif:/1633,1087,197,41" n="N014"/><add xml:id="ta2" place="above" hand="Autor" type="addition">insonderheit</add>
+               <lb facs="iiif:/1144,1168,891,148" n="N015"/>auch<anchor xml:id="m2-1"/> sogar Ihro HochEhrwürdige<add xml:id="add5" place="inspace" hand="Autor" type="correction">HochEhrwürd.</add> Magnif.
+               <lb facs="iiif:/1074,1240,936,157" n="N016"/>Tit. Herr Superint. ihres Orths D. Salo<span type="hyphen">-</span>
+               <lb facs="iiif:/1169,1322,866,153" n="N017"/>mon Deyling, <anchor xml:id="a3" type="add"/> daß dieser H. Wagner
+               <lb facs="iiif:/1180,1384,836,140" n="N018"/>auf der Thomas-Schule zu Leipzig
+               <lb facs="iiif:/1149,1480,866,124" n="N019"/>Sieben Jahr gelebet, und allda seine
+               <lb facs="iiif:/1144,1546,859,130" n="N020"/>Fundamenta durch Gottes Gnade in
+               <lb facs="iiif:/1142,1632,864,126" n="N021"/>Literis und Musicis geleget, auch
+               <lb facs="iiif:/1162,1705,868,126" n="N022"/>nach der Zeit auf hiesiger gedachter
+               <lb facs="iiif:/1177,1771,830,130" n="N023"/>Universitaet Leipzig die Collegia
+               <lb facs="iiif:/1148,1847,880,136" n="N024"/>Theologica und Philosophica fleißig
+               <lb facs="iiif:/1159,1931,828,134" n="N025"/>freqventiret, auch<add xml:id="add6" place="inspace" hand="Autor" type="correction">und</add> in Musicis ver<span type="hyphen">-</span>
+               <lb facs="iiif:/1187,1997,825,135" n="N026"/>schiedene Proben abgeleget habe,
+               <lb facs="iiif:/1225,2079,805,106" n="N027"/><del rend="strikethrough" hand="Autor">solcher halben dem</del> Selbsten glaub<span type="hyphen">-</span>
+               <lb facs="iiif:/1200,2169,838,113" n="N028"/>würdig <anchor xml:id="m2-2" type="marginalia"/> attestiret und ihn zu<add xml:id="add7" place="inspace" hand="Autor" type="correction">auch</add> zu
+               <lb facs="iiif:/1341,2162,315,35" n="N029"/><add xml:id="ta4" place="above" hand="Autor" type="addition">und wohlbedachtig</add>
+               <lb facs="iiif:/1213,2223,813,112" n="N030"/>diesen verledigten Cantorat <anchor xml:id="a5" type="add"/> vor
+               <lb facs="iiif:/1210,2314,844,103" n="N031"/>anderen wohlbedachtig gleichfalls
+               <lb facs="iiif:/1228,2354,804,113" n="N032"/>recommendiert, vor qvalificirt und
+               <lb facs="iiif:/1204,2429,821,147" n="N033"/>darzu tüchtig zu seyn erachtet; <del rend="strikethrough" hand="Autor">Also</del>
+               <lb facs="iiif:/996,2484,1036,166" n="N034"/><add xml:id="add8" place="margin-left" hand="Autor" type="addition">hierüber</add> nur erwehnter H. Wagner
+               <lb facs="iiif:/1212,2556,826,123" n="N035"/><del rend="strikethrough" hand="Autor">auch</del> unterm 19. Octobr a. c. in
+               <lb facs="iiif:/1212,2603,804,158" n="N036"/>einem geschickten lateinischen Schreiben
+               <lb facs="iiif:/1203,2666,861,178" n="N037"/>selbsten umb das Cantorat angehalten; Also
+            </p>
+         </div>
+         <div type="commentary">
+         <p/>
+         </div>
+         <div type="marginalia">
+            <ab type="margin_body">
+               <lb facs="iiif:/447,1351,546,128" n="N001"/><note target="m2-1" place="margin-left" type="marginalia">als welchen hiesiger Kirchen
+               <lb facs="iiif:/488,1434,520,81" n="N002"/>und Schulen Zustandt gar
+               <lb facs="iiif:/517,1485,251,96" n="N003"/>wohl bekandt,</note>
+            </ab>
+            <ab type="margin_body">
+               <lb facs="iiif:/447,2227,640,103" n="N001"/><note target="m2-2" place="margin-left" type="marginalia">als welchen hiesiger Kirchen
+               <lb facs="iiif:/509,2300,609,85" n="N002"/>und Schulen Zustandt mehr
+               <lb facs="iiif:/515,2365,502,91" n="N003"/>als zu wohl bekandt,</note>
+            </ab>
+         </div>
+      </body>
+         <back>
+         <div type="original_back">
+            <pb facs="#facs_" n=""/>
+            <milestone unit="section" facs="#facs__tr_3"/>
+            <p>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/892,157,810,148" n="N001"/>haben wir sowohl zwey von denen
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/707,275,1011,126" n="N002"/>anderen Competenten, als auch in specie <add place="above">\dem/</add> com<span type="hyphen">-</span>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/905,359,797,95" n="N003"/>mendation Wagnern ver einer <del rend="strikethrough">ge<span type="hyphen">-</span>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/907,421,788,119" n="N004"/>wißen Gastmusis</del> <add place="above">\respective/</add> den 20. 21. und
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/896,482,770,134" n="N005"/>23sten post Trinitat: mit Ihrer
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/715,565,992,154" n="N006"/>Gast¬Music in allhiesiger Kirche gehöret
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/898,629,838,137" n="N007"/>und, weiln <add place="above">\mag/</add> unter diesen dreyen Musicis
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/900,716,821,119" n="N008"/>vielerwehnten Wagnern, als welcher
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/894,786,811,117" n="N009"/>insonderheit die ihme vorgegebene
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/866,845,869,147" n="N010"/>Themata <del rend="strikethrough">von anderen</del> <add place="above">\nicht alleine/</add> <del rend="strikethrough">aufs beste</del> <add place="above">\<del rend="strikethrough">sehr</del> wohl/</add> com<span type="hyphen">-</span>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/903,925,806,163" n="N011"/>poniret, <del rend="strikethrough">auch(?)</del> <add place="above">\<del rend="strikethrough">sondern</del> so thane(?) Musik/</add> vor anderen wohl dici<span type="hyphen">-</span>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/902,1002,785,160" n="N012"/>giret, mithin pro dignissimo gehal<span type="hyphen">-</span>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/892,1098,779,121" n="N013"/>ten, <del rend="strikethrough">Ihnen</del> \Ihn/sondern, <del rend="strikethrough">also ihme</del> von
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/903,1168,792,133" n="N014"/>allhiesigen Herrn Superintendenten
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/891,1230,790,143" n="N015"/>M. Hermannen <add place="above">\Ihme/</add> Kirche und Chor<anchor xml:id="m3-1"/>  <add place="above">\gewöhnl. maßen/</add>, <del rend="strikethrough">an</del>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/898,1373,780,160" n="N016"/>Probe mündlich ersucheten welche
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/898,1431,819,163" n="N017"/>Probe¬Music er auch gestriges Tages,
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/892,1528,796,134" n="N018"/>als Domin: II. Adventus gebührend
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/896,1607,792,152" n="N019"/>abgeleget hat. Und nachdeme
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/889,1687,777,137" n="N020"/>wir, nach hiesiges Orthes herge<span type="hyphen">-</span>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/883,1756,818,152" n="N021"/>brachter Observanz unß, vermöge
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/879,1813,828,169" n="N022"/>unßers habenden juris patronatus
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/882,1883,789,160" n="N023"/>anheute zusammen gesezet, die
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/889,1942,841,192" n="N024"/>3. <del rend="strikethrough">Suß</del> Subjecta nehml. <del rend="strikethrough">Johann</del> <add place="above">\Georg/</add> Gottfried
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/881,2036,796,180" n="N025"/>Wagnern, Johann Gottfried Grünern
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/879,2118,801,143" n="N026"/>und Carl Ludwig Westflocken
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/882,2198,772,147" n="N027"/>als welche allerseits obangeführ<span type="hyphen">-</span>
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/879,2254,816,183" n="N028"/>ter maßen sich in der Music würkl.
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/887,2381,800,158" n="N029"/>sich hören laßen, denominiret</p>
+         </div>
+         <div type="commentary_back">
+         <p/>
+         </div>
+         <div type="marginalia_back">
+            <ab type="margin_back">
+               <lb facs="iiif:0003_d_plsta_rep_i_kap_iv_sekt_i_d_nr_1_00161.tif/107,1431,704,59" n="N001"/><note target="m3-1" place="margin-left" type="marginalia">auf unser beschehes ansuchen, eröffnet worden zu Ablegung einer</note>
+            </ab>
+         </div>
+      </back>
+   </text>
+</TEI>
