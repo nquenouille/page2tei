@@ -2522,7 +2522,12 @@
                   <xsl:attribute name="xml:id"><xsl:value-of select="map:get($custom, 'xmlid')"/></xsl:attribute>
                </xsl:if>
                 <xsl:if test="map:keys($custom) = 'type'">
-                  <xsl:attribute name="type"><xsl:value-of select="'add'"/></xsl:attribute>
+                  <xsl:attribute name="type">
+                     <xsl:choose>
+                        <xsl:when test="contains($custom('xmlid'), 'a')"><xsl:value-of select="'add'"/></xsl:when>
+                        <xsl:otherwise><xsl:value-of select="'marginalia'"/></xsl:otherwise>
+                     </xsl:choose>
+                  </xsl:attribute>
                </xsl:if>
             </xsl:element>
          </xsl:when>
