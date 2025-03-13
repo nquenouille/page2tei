@@ -229,7 +229,8 @@
       </div>
    </xsl:if>
    </xsl:variable>
-    <xsl:variable name="make_marginalia_back">
+
+   <xsl:variable name="make_marginalia_back">
    <xsl:if test="$regionType_back='back'">
       <div>
          <xsl:apply-templates select="$file_back//p:TextRegion[last()]" mode="text">
@@ -363,6 +364,7 @@
                   </div>
                   <xsl:text>
          </xsl:text>
+            <xsl:if test="$make_marginalia_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]">
                   <xsl:for-each-group
                      select="$make_marginalia_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
@@ -413,6 +415,7 @@
          </xsl:text>
                   </div>
                </xsl:for-each-group>
+            </xsl:if>
          <xsl:text>
       </xsl:text>
       </front>
@@ -481,6 +484,7 @@
                   </div>
                   <xsl:text>
          </xsl:text>
+         <xsl:if test="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_body')]">
                   <xsl:for-each-group
                      select="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_body')]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
@@ -531,6 +535,7 @@
          </xsl:text>
                   </div>
                </xsl:for-each-group>
+            </xsl:if>
          <xsl:text>
       </xsl:text>
       </body>
@@ -599,6 +604,7 @@
                   </div>
                   <xsl:text>
          </xsl:text>
+         <xsl:if test="$make_marginalia_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]">
                   <xsl:for-each-group
                      select="$make_marginalia_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
@@ -649,6 +655,7 @@
          </xsl:text>
                   </div>
                </xsl:for-each-group>
+            </xsl:if>
          <xsl:text>
       </xsl:text>
       </back>
