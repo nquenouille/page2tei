@@ -362,8 +362,6 @@
                   <xsl:text>
          </xsl:text>
                   </div>
-                  <xsl:text>
-         </xsl:text>
             <xsl:if test="$make_marginalia_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]">
                   <xsl:for-each-group
                      select="$make_marginalia_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]"
@@ -482,8 +480,6 @@
                   <xsl:text>
          </xsl:text>
                   </div>
-                  <xsl:text>
-         </xsl:text>
          <xsl:if test="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_body')]">
                   <xsl:for-each-group
                      select="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_body')]"
@@ -602,8 +598,6 @@
                   <xsl:text>
          </xsl:text>
                   </div>
-                  <xsl:text>
-         </xsl:text>
          <xsl:if test="$make_marginalia_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]">
                   <xsl:for-each-group
                      select="$make_marginalia_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]"
