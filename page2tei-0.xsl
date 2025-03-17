@@ -1318,46 +1318,25 @@
             </fw>
          </xsl:when>
          <xsl:when test="'marginalia_front' = $regionType and not($ab)">
-               <xsl:variable name="side">
-               <xsl:choose>
-                  <xsl:when test="number(substring-before((p:Coords/@points), ',')) gt $center"
-                     >margin-right</xsl:when>
-                  <xsl:otherwise>margin-left</xsl:otherwise>
-               </xsl:choose>
-            </xsl:variable>
-               <ab type='margin_front'>
+            <ab type='margin_front'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-               </ab>
+            </ab>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab)">
-               <xsl:variable name="side">
-               <xsl:choose>
-                  <xsl:when test="number(substring-before((p:Coords/@points), ',')) gt $center"
-                     >margin-right</xsl:when>
-                  <xsl:otherwise>margin-left</xsl:otherwise>
-               </xsl:choose>
-            </xsl:variable>
-               <ab type='margin_body'>
+            <ab type='margin_body'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-               </ab>
+            </ab>
          </xsl:when>
          <xsl:when test="'marginalia_back' = $regionType and not($ab)">
-               <xsl:variable name="side">
-               <xsl:choose>
-                  <xsl:when test="number(substring-before((p:Coords/@points), ',')) gt $center"
-                     >margin-right</xsl:when>
-                  <xsl:otherwise>margin-left</xsl:otherwise>
-               </xsl:choose>
-            </xsl:variable>
-               <ab type='margin_back'>
+            <ab type='margin_back'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
-               </ab>
+            </ab>
          </xsl:when>
          <xsl:when test="'footnote-continued' = $regionType and not($ab)">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}">
@@ -1373,6 +1352,13 @@
             <fw type="footer" place="bottom" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
+         </xsl:when>
+         <xsl:when test="'addition' = $regionType and not($ab)">
+            <ab type='addition'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
          </xsl:when>
          <xsl:when test="'page-number' = $regionType and not($ab)">
             <fw type="page-number" facs="#facs_{$numCurr}_{@id}">
