@@ -205,35 +205,12 @@
       </div>
    </xsl:if>
    </xsl:variable>
-   <xsl:variable name="make_marginalia_front">
-   <xsl:if test="$regionType_front='front'">
-      <div>
-         <xsl:apply-templates select="$file_front//p:TextRegion[2]" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>
-         </xsl:apply-templates>
-      </div>
-   </xsl:if>
-   </xsl:variable>
 
    <!-- create div for the back matter -->
    <xsl:variable name="make_div_back">
    <xsl:if test="$regionType_back='back'">
       <div>
          <xsl:apply-templates select="$file_back//p:TextRegion[$regionType_back='back']" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>
-         </xsl:apply-templates>
-      </div>
-   </xsl:if>
-   </xsl:variable>
-
-   <xsl:variable name="make_marginalia_back">
-   <xsl:if test="$regionType_back='back'">
-      <div>
-         <xsl:apply-templates select="$file_back//p:TextRegion[last()]" mode="text">
             <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
             <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
             as="xs:double"/>
@@ -362,9 +339,9 @@
                   <xsl:text>
          </xsl:text>
                   </div>
-            <xsl:if test="$make_marginalia_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]">
+            <xsl:if test="$make_div_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]">
                   <xsl:for-each-group
-                     select="$make_marginalia_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]"
+                     select="$make_div_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -598,9 +575,9 @@
                   <xsl:text>
          </xsl:text>
                   </div>
-         <xsl:if test="$make_marginalia_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]">
+         <xsl:if test="$make_div_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]">
                   <xsl:for-each-group
-                     select="$make_marginalia_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]"
+                     select="$make_div_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
