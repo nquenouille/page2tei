@@ -341,7 +341,7 @@
                   </div>
             <xsl:if test="$make_div_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]">
                   <xsl:for-each-group
-                     select="$make_div_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]"
+                     select="$make_div_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')][not(contains(@type, 'margin_bottom_back'))][not(contains(@type, 'margin_top_back'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -399,7 +399,7 @@
       </xsl:if>       
             <body>
                <xsl:for-each-group
-                     select="$make_div//*[local-name() = 'div']/*[not(contains(@type, 'margin_body'))][not(contains(@type, 'margin_front'))][not(contains(@type, 'margin_back'))]"
+                     select="$make_div//*[local-name() = 'div']/*[not(contains(@type, 'margin_body'))][not(contains(@type, 'margin_front'))][not(contains(@type, 'margin_back'))][not(contains(@type, 'margin_bottom_front'))][not(contains(@type, 'margin_bottom_back'))][not(contains(@type, 'margin_top_front'))][not(contains(@type, 'margin_top_back'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -517,7 +517,7 @@
          </xsl:text>
       <back>
          <xsl:for-each-group
-                     select="$make_div_back//*[local-name() = 'div']/*[not(contains(@type, 'margin_back'))]"
+                     select="$make_div_back//*[local-name() = 'div']/*[not(contains(@type, 'margin_back'))][not(contains(@type, 'margin_bottom_front'))][not(contains(@type, 'margin_top_front'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -1317,21 +1317,63 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'marginalia_front' = $regionType and not($ab)">
+         <xsl:when test="'marginalia_front' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
+            <ab type='margin_bottom_front'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+         </xsl:when>
+         <xsl:when test="'marginalia_front' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
+            <ab type='margin_top_front'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+         </xsl:when>
+         <xsl:when test="'marginalia_front' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
             <ab type='margin_front'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
             </ab>
          </xsl:when>
-         <xsl:when test="'marginalia' = $regionType and not($ab)">
+         <xsl:when test="'marginalia' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
+            <ab type='margin_bottom'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+         </xsl:when>
+         <xsl:when test="'marginalia' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
+            <ab type='margin_top'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+         </xsl:when>
+         <xsl:when test="'marginalia' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
             <ab type='margin_body'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
             </ab>
          </xsl:when>
-         <xsl:when test="'marginalia_back' = $regionType and not($ab)">
+         <xsl:when test="'marginalia_back' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
+            <ab type='margin_bottom_back'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+         </xsl:when>
+          <xsl:when test="'marginalia_back' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
+            <ab type='margin_top_back'>
+               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+         </xsl:when>
+         <xsl:when test="'marginalia_back' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
             <ab type='margin_back'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
