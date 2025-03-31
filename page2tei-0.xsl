@@ -1428,9 +1428,9 @@
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
-            <p type='hidden'>
+            <ab type='hidden'>
                <xsl:apply-templates select="p:TextLine"/>
-            </p>
+            </ab>
          </xsl:when>
          <!-- text block with another one side by side containing a curly bracket that should be displayed as grid -->
          <xsl:when test="'textblock' = $regionType or 'curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType">
