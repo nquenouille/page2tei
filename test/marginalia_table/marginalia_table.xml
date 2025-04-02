@@ -289,6 +289,7 @@
          <ab>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00020.tif/693,3492,1848,292" n="N001"/><note target="m2-1" place="bottom" type="marginalia">(L. S.) Martha Catharina Lemmerhirtin.</note>
             </ab>
+         <pb facs="#facs_3" n="3"/>
          <milestone unit="section" facs="#facs_3_r"/>
          <p>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00021.tif/555,698,1738,240" n="N001"/>und Treüe erwießen, so ich nicht un<span type="hyphen">-</span>
@@ -312,6 +313,7 @@
          <ab>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00021.tif/493,3559,1702,306" n="N001"/><note target="m3-1" place="bottom" type="marginalia">(L. S) Martha Catharina Lenderhirtin</note>
             </ab>
+         <pb facs="#facs_4" n="4"/>
          <milestone unit="section" facs="#facs_4_r"/>
          <p>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00022.tif/913,692,1745,288" n="N001"/>verzinset werden sollen, mit allen zubehör
@@ -422,6 +424,7 @@
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00025.tif/459,1814,613,203" n="N008"/>Anno. 1720.
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00025.tif/413,1965,1750,301" n="N009"/>L. S. Martha Catharina Lemmerhirtin.
             </p>
+         <pb facs="#facs_8" n="8"/>
          </div>
          <div type="commentary">
          <p/>
