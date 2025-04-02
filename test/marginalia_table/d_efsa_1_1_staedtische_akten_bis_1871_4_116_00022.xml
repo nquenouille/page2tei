@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2024-10-31T14:09:08.460+01:00</Created>
+        <LastChange>2025-03-20T15:31:15.864+01:00</LastChange>
+        <TranskribusMetadata pageNr="4" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="d_efsa_1_1_staedtische_akten_bis_1871_4_116_00022.tif" imageWidth="2738" imageHeight="4407">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1742481075864" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r"/>
+                <RegionRefIndexed index="2" regionRef="r_1"/>
+                <RegionRefIndexed index="3" regionRef="r_885"/>
+                <RegionRefIndexed index="4" regionRef="r_2"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion id="r" custom="readingOrder {index:0;} structure {type:paragraph;}">
+            <Coords points="774,2164 803,684 2683,680 2683,2201"/>
+            <TextLine id="l_2" custom="readingOrder {index:0;}">
+                <Coords points="913,918 1080,946 1409,916 1543,980 2438,876 2646,905 2658,709 2480,692 1731,714 1543,786 1259,742 918,809"/>
+                <Baseline points="928,895 1012,886 1097,880 1182,877 1267,875 1352,869 1436,868 1521,864 1606,859 1691,858 1776,853 1860,847 1945,847 2030,842 2115,841 2200,837 2284,835 2369,832 2454,831 2539,833 2624,833"/>
+                <TextEquiv>
+                    <Unicode>verzinset werden sollen, mit allen zubehör</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_3" custom="readingOrder {index:1;}">
+                <Coords points="920,1091 1276,1108 2024,1024 2255,1079 2357,1048 2654,1083 2662,915 2220,887 1950,946 1894,905 1752,989 1531,997 1396,915 1187,966 928,915"/>
+                <Baseline points="937,1068 1019,1058 1101,1053 1183,1050 1265,1048 1347,1049 1429,1047 1511,1047 1593,1039 1675,1036 1758,1031 1840,1026 1922,1020 2004,1015 2086,1009 2168,1006 2250,1000 2332,997 2414,999 2496,997 2579,1012"/>
+                <TextEquiv>
+                    <Unicode>und dießen onere des darauff hafftenden</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_4" custom="readingOrder {index:2;}">
+                <Coords points="880,1122 1823,1068 2021,1036 2201,1052 2290,1103 2372,1065 2629,1083 2622,1238 2546,1238 2346,1224 2072,1271 1861,1187 1403,1215 1304,1292 1145,1271 880,1335"/>
+                <Baseline points="946,1227 1027,1219 1108,1214 1189,1212 1270,1206 1352,1204 1433,1198 1514,1194 1595,1191 1676,1188 1758,1182 1839,1179 1920,1172 2001,1165 2082,1161 2164,1155 2245,1155 2326,1155 2407,1155 2488,1158 2605,1163"/>
+                <TextEquiv>
+                    <Unicode>Capitals, hiermit Erb- und Eigenthümlich.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_5" custom="readingOrder {index:3;} anchor {offset:0; length:1;xmlid:m4-1;}">
+                <Coords points="817,1480 887,1399 920,1363 1021,1310 1111,1248 1431,1215 1859,1187 2304,1231 2593,1292 2604,1398 817,1602"/>
+                <Baseline points="922,1439 1002,1436 1082,1431 1162,1425 1242,1422 1322,1417 1402,1415 1482,1410 1562,1404 1642,1398 1722,1394 1802,1386 1882,1382 1962,1379 2042,1377 2122,1382 2202,1379 2282,1377 2362,1375 2442,1371 2522,1370"/>
+                <TextEquiv>
+                    <Unicode> Ferner laße ich es zwar 4) bey denen</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_6" custom="readingOrder {index:4;}">
+                <Coords points="915,1648 1379,1613 1556,1629 1602,1670 1698,1569 2225,1588 2308,1549 2671,1554 2673,1450 1808,1428 1676,1474 920,1548"/>
+                <Baseline points="931,1603 1016,1595 1102,1588 1188,1582 1273,1575 1359,1574 1445,1569 1530,1564 1616,1558 1702,1555 1788,1546 1873,1543 1959,1540 2045,1534 2130,1531 2216,1527 2302,1521 2387,1518 2473,1516 2559,1517 2645,1522"/>
+                <TextEquiv>
+                    <Unicode>an meine nechste Freünde in vorgemeldeten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_7" custom="readingOrder {index:5;}">
+                <Coords points="910,1764 1340,1803 1642,1709 1846,1775 1932,1719 2248,1742 2650,1724 2659,1596 2307,1561 2225,1589 1700,1570 1602,1669 1563,1636 1452,1656 1370,1596 913,1709"/>
+                <Baseline points="925,1758 1010,1746 1095,1743 1180,1736 1265,1726 1350,1721 1435,1718 1520,1713 1605,1706 1690,1704 1776,1695 1861,1701 1946,1692 2031,1695 2116,1685 2201,1680 2286,1675 2371,1675 2456,1673 2541,1678 2627,1686"/>
+                <TextEquiv>
+                    <Unicode>am 1. Augusti Ao. 1707. auf gerichteten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_8" custom="readingOrder {index:6;}">
+                <Coords points="751,1998 929,1993 1010,1939 1306,1933 1650,1945 1732,1900 2056,1921 2191,1897 2654,1866 2639,1751 2174,1782 2092,1739 1841,1818 1660,1714 1470,1826 1414,1785 1333,1818 1081,1780 759,1873"/>
+                <Baseline points="907,1916 993,1910 1079,1909 1165,1902 1251,1897 1337,1895 1423,1892 1510,1887 1596,1884 1682,1881 1768,1879 1854,1875 1940,1869 2026,1861 2113,1854 2199,1850 2285,1848 2371,1845 2457,1845 2543,1842 2630,1848"/>
+                <TextEquiv>
+                    <Unicode>Testamento Reciproco beschiedenen Ein</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_9" custom="readingOrder {index:7;}">
+                <Coords points="857,2170 1004,2058 1164,2085 1281,2120 1647,2091 1674,2061 2108,2037 2152,2003 2300,2035 2664,2031 2666,1934 2469,1906 2290,1893 2077,1927 1965,1914 1760,1906 1437,1938 925,1942"/>
+                <Baseline points="937,2051 1022,2042 1107,2039 1192,2031 1277,2028 1362,2024 1447,2024 1532,2021 1617,2018 1702,2018 1788,2018 1873,2015 1958,2010 2043,2004 2128,1999 2213,1997 2298,1997 2383,1997 2468,1998 2553,2000 2639,2003"/>
+                <TextEquiv>
+                    <Unicode>hundert Gülden Legat-Geldern; Ich will aber</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_10" custom="readingOrder {index:8;}">
+                <Coords points="890,2215 1632,2156 1899,2194 2007,2170 2166,2202 2382,2146 2546,2190 2551,2075 2400,2092 2250,2009 2179,2062 1683,2058 1643,2089 1252,2104 1000,2057 893,2161"/>
+                <Baseline points="904,2191 985,2185 1066,2182 1147,2178 1228,2170 1310,2168 1391,2165 1472,2160 1553,2157 1634,2152 1716,2152 1797,2151 1878,2149 1959,2148 2040,2140 2122,2137 2203,2137 2284,2137 2365,2134 2446,2134 2528,2134"/>
+                <TextEquiv>
+                    <Unicode>und verordne nunmehro, daß hiervon</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode/>
+            </TextEquiv>
+        </TextRegion>
+        <TableRegion id="t" custom="readingOrder {index:1;}">
+            <Coords points="565,2201 565,2942 2679,2942 2679,2201"/>
+            <TableCell row="0" col="0" rowSpan="1" colSpan="1" id="c_157">
+                <Coords points="565,2201 565,2351 2103,2351 2103,2201"/>
+                <TextLine id="l_17" custom="readingOrder {index:0;}">
+                    <Coords points="2121,2341 1690,2338 1627,2395 1625,2352 1332,2348 1175,2402 992,2362 774,2434 776,2256 1169,2184 2121,2200"/>
+                    <Baseline points="844,2343 934,2334 1024,2331 1114,2326 1204,2322 1295,2320 1385,2317 1475,2314 1565,2315 1655,2314 1746,2308 1836,2318 1926,2316 2016,2316 2106,2316 2121,2316"/>
+                    <TextEquiv>
+                        <Unicode>Frau Magdalena Hochin</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="0" col="1" rowSpan="1" colSpan="1" id="c_158">
+                <Coords points="2103,2201 2103,2351 2679,2351 2679,2201"/>
+                <TextLine id="l_16" custom="readingOrder {index:0;}">
+                    <Coords points="2121,2200 2695,2209 2665,2356 2438,2326 2346,2383 2328,2348 2148,2390 2138,2341 2121,2341"/>
+                    <Baseline points="2121,2316 2197,2313 2287,2310 2377,2310 2467,2310 2557,2308 2648,2310"/>
+                    <TextEquiv>
+                        <Unicode>zwanzig Gülden</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="0" rowSpan="1" colSpan="1" id="c_159">
+                <Coords points="565,2351 565,2481 2103,2481 2103,2351"/>
+                <TextLine id="l_18" custom="readingOrder {index:0;}">
+                    <Coords points="2066,2495 1963,2457 1734,2481 1310,2496 1308,2463 1091,2507 1039,2481 750,2543 714,2567 707,2420 807,2397 809,2430 988,2357 1172,2402 1293,2353 1458,2365 1469,2429 1489,2433 1604,2348 1628,2356 1623,2396 1691,2334 2066,2340"/>
+                    <Baseline points="736,2513 807,2512 875,2474 1130,2458 1218,2447 1305,2443 1393,2438 1480,2439 1568,2439 1655,2435 1743,2430 1830,2428 1918,2424 2005,2424 2066,2425"/>
+                    <TextEquiv>
+                        <Unicode>H. Albrecht Wilhelm Rudolph.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="1" rowSpan="1" colSpan="1" id="c_160">
+                <Coords points="2103,2351 2103,2481 2679,2481 2679,2351"/>
+                <TextLine id="l_11" custom="readingOrder {index:0;}">
+                    <Coords points="2066,2340 2143,2341 2148,2391 2332,2358 2346,2387 2443,2332 2660,2353 2659,2465 2541,2437 2417,2467 2332,2470 2294,2480 2146,2456 2079,2500 2066,2495"/>
+                    <Baseline points="2066,2425 2093,2425 2180,2421 2268,2421 2355,2421 2443,2420 2530,2418 2618,2427"/>
+                    <TextEquiv>
+                        <Unicode>zwanzig Gülden</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="0" rowSpan="1" colSpan="1" id="c_161">
+                <Coords points="565,2481 565,2641 2356,2641 2103,2481"/>
+                <TextLine id="l_19" custom="readingOrder {index:0;}">
+                    <Coords points="2065,2608 2062,2610 1383,2617 1302,2642 853,2658 773,2718 711,2699 630,2740 634,2578 1047,2478 1107,2509 1492,2472 1844,2478 1948,2446 2062,2502 2065,2500"/>
+                    <Baseline points="672,2662 745,2655 851,2615 1088,2588 1177,2588 1266,2585 1355,2579 1444,2579 1533,2579 1622,2573 1712,2569 1801,2558 1890,2552 1979,2549 2065,2546"/>
+                    <TextEquiv>
+                        <Unicode>H. Joh. Egidij Bachs lezter Ehe Kinder</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="1" rowSpan="1" colSpan="1" id="c_162">
+                <Coords points="2103,2481 2356,2641 2679,2641 2679,2481"/>
+                <TextLine id="l_12" custom="readingOrder {index:0;}">
+                    <Coords points="2065,2500 2151,2446 2313,2478 2558,2437 2651,2485 2649,2578 2178,2599 2114,2570 2065,2608"/>
+                    <Baseline points="2065,2546 2068,2546 2157,2540 2246,2537 2335,2537 2424,2537 2513,2534 2603,2534"/>
+                    <TextEquiv>
+                        <Unicode>zwanzig Gülden</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="0" rowSpan="1" colSpan="1" id="c_163">
+                <Coords points="565,2641 565,2771 2361,2768 2356,2641"/>
+                <TextLine id="l_20" custom="readingOrder {index:0;}">
+                    <Coords points="2351,2739 2192,2743 2126,2792 1993,2748 1717,2758 1630,2802 1131,2759 969,2824 917,2785 685,2846 704,2758 853,2664 1333,2637 2078,2603 2125,2567 2224,2617 2351,2609"/>
+                    <Baseline points="707,2776 804,2767 902,2762 999,2755 1097,2752 1194,2749 1292,2747 1389,2743 1487,2737 1584,2734 1682,2730 1779,2722 1877,2717 1974,2714 2072,2708 2169,2705 2267,2701 2351,2698"/>
+                    <TextEquiv>
+                        <Unicode>Fr. Catharina Laurenzin gebohrne Syringin</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="1" rowSpan="1" colSpan="1" id="c_164">
+                <Coords points="2356,2641 2361,2768 2679,2771 2679,2641"/>
+                <TextLine id="l_13" custom="readingOrder {index:0;}">
+                    <Coords points="2351,2609 2669,2589 2674,2760 2444,2737 2351,2739"/>
+                    <Baseline points="2351,2698 2364,2698 2462,2698 2559,2700 2657,2699"/>
+                    <TextEquiv>
+                        <Unicode>20. Gülden.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="0" rowSpan="1" colSpan="1" id="c_165">
+                <Coords points="565,2771 565,2942 2103,2942 2361,2768"/>
+                <TextLine id="l_24" custom="readingOrder {index:0;}">
+                    <Coords points="2113,2923 1864,2911 1442,2957 1411,2922 605,2954 608,2898 685,2868 908,2791 1015,2837 1131,2759 1602,2804 1983,2736 2113,2767"/>
+                    <Baseline points="612,2914 713,2905 815,2905 916,2897 1018,2893 1120,2887 1221,2887 1323,2886 1425,2881 1526,2878 1628,2877 1730,2870 1831,2864 1933,2854 2035,2851 2113,2851"/>
+                    <TextEquiv>
+                        <Unicode>und Mstr. Georg Balthasar Syrings Kinder</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="1" rowSpan="1" colSpan="1" id="c_166">
+                <Coords points="2361,2768 2103,2942 2679,2942 2679,2771"/>
+                <TextLine id="l_14" custom="readingOrder {index:0;}">
+                    <Coords points="2113,2767 2144,2775 2199,2739 2668,2751 2661,2888 2136,2924 2113,2923"/>
+                    <Baseline points="2113,2851 2136,2851 2238,2839 2340,2831 2441,2830 2543,2827 2645,2830"/>
+                    <TextEquiv>
+                        <Unicode>zwanzig Gülden</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+        </TableRegion>
+        <TextRegion id="r_1" custom="readingOrder {index:2;} structure {type:paragraph;}">
+            <Coords points="818,3581 791,2912 2683,2926 2683,3581"/>
+            <TextLine id="l_15" custom="readingOrder {index:0;}">
+                <Coords points="836,3130 949,3054 1122,3051 1218,3097 1302,3036 1393,3099 1609,3071 1846,3082 1976,3049 2181,3084 2474,3008 2594,3036 2597,2898 2253,2962 2075,2898 1988,2954 1964,2925 1886,2904 1708,2938 1442,2957 1419,2928 993,2944 842,2982"/>
+                <Baseline points="853,3051 939,3045 1025,3042 1111,3036 1198,3030 1284,3024 1370,3019 1457,3015 1543,3015 1629,3010 1716,3007 1802,3005 1888,3000 1974,3002 2061,3001 2147,3000 2233,2997 2320,2991 2406,2994 2492,2997 2579,3015"/>
+                <TextEquiv>
+                    <Unicode>zu vermächtnißen also bald nach geendigten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_26" custom="readingOrder {index:1;}">
+                <Coords points="836,3235 1297,3186 1383,3226 1585,3184 1762,3216 1884,3176 2014,3239 2395,3195 2543,3228 2669,3178 2671,3084 2456,3015 2361,3054 1395,3100 1302,3039 1232,3085 897,3087 839,3186"/>
+                <Baseline points="859,3209 948,3200 1037,3194 1127,3188 1216,3182 1306,3176 1395,3173 1485,3173 1574,3167 1664,3164 1753,3158 1842,3158 1932,3155 2021,3155 2111,3158 2200,3158 2290,3158 2379,3155 2469,3152 2558,3155 2648,3158"/>
+                <TextEquiv>
+                    <Unicode>Trauer Monathe von meinen gesamten Nachlaße</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_27" custom="readingOrder {index:2;}">
+                <Coords points="849,3450 932,3441 1010,3373 1073,3358 1118,3402 1266,3400 1594,3336 2009,3404 2118,3356 2276,3427 2458,3352 2605,3370 2639,3254 2430,3200 2265,3282 2148,3211 2003,3244 1866,3181 1666,3187 1584,3221 1238,3244 1170,3193 1055,3233 857,3239"/>
+                <Baseline points="865,3364 952,3356 1039,3350 1127,3342 1214,3336 1301,3332 1389,3330 1476,3327 1563,3323 1651,3315 1738,3317 1825,3311 1913,3308 2000,3308 2087,3308 2175,3308 2262,3309 2349,3310 2437,3302 2524,3305 2612,3308"/>
+                <TextEquiv>
+                    <Unicode>empfangen, haben, und behalten sollen; Ingleichen</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_28" custom="readingOrder {index:3;} anchor {offset:0; length:1;xmlid:m4-2;}">
+                <Coords points="797,3529 861,3425 1061,3353 2459,3346 2677,3386 2672,3579 1139,3603 831,3585"/>
+                <Baseline points="847,3520 935,3519 1024,3513 1113,3507 1201,3501 1290,3502 1379,3496 1467,3498 1556,3493 1645,3491 1734,3497 1822,3496 1911,3496 2000,3490 2088,3484 2177,3478 2266,3475 2354,3475 2443,3475 2532,3481 2621,3490"/>
+                <TextEquiv>
+                    <Unicode> Legire ich 5) einen jeden meiner zur zeit</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode/>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_885" custom="readingOrder {index:3;} structure {type:marginalia;}">
+            <Coords points="496,1243 783,1243 783,3604 496,3604"/>
+            <TextLine id="l_25" custom="readingOrder {index:0;} note {offset:0; length:2;place:margin-left; target:m4-1;}">
+                <Coords points="573,1482 725,1482 732,1361 634,1372"/>
+                <Baseline points="573,1482 725,1482"/>
+                <TextEquiv>
+                    <Unicode>4.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_42" custom="readingOrder {index:1;} note {offset:0; length:2;place:margin-left; target:m4-2;}">
+                <Coords points="604,3550 707,3550 723,3441 614,3464"/>
+                <Baseline points="604,3550 707,3550"/>
+                <TextEquiv>
+                    <Unicode>5.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode/>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_2" custom="readingOrder {index:4;} structure {type:marginalia;}">
+            <Coords points="2683,3581 2683,3749 825,3752 818,3581"/>
+            <TextLine id="l_29" custom="readingOrder {index:0;} note {offset:0; length:35;place:bottom; target:m4-1;}">
+                <Coords points="994,3737 1533,3811 1823,3692 1978,3768 2108,3699 2253,3750 2600,3685 2603,3576 2406,3583 2199,3526 1960,3621 1767,3554 1681,3593 1444,3539 1314,3603 1096,3595 997,3659"/>
+                <Baseline points="1009,3711 1087,3700 1165,3695 1244,3687 1322,3684 1400,3673 1479,3670 1557,3671 1635,3672 1714,3672 1792,3674 1870,3669 1949,3666 2027,3665 2105,3662 2184,3660 2262,3660 2340,3663 2419,3664 2497,3669 2576,3675"/>
+                <TextEquiv>
+                    <Unicode>(L S) Martha Catharina Lemmerhirtin</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode/>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

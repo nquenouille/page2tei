@@ -121,102 +121,11 @@
       <xd:desc>helper: gather page contents</xd:desc>
    </xd:doc>
 
-   <!-- create image url -->
-   <xsl:variable name="imgurl_front" select="//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href"/>
-   <xsl:variable name="imgurl_back" select="//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href"/>
-
-   <!-- create link to the first file and get the regionType-->
-   <xsl:variable name="file_front" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[1]/mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), /)"/>
-   <xsl:variable name="custom_front" as="map(*)">
-      <xsl:apply-templates select="$file_front//p:TextRegion[1]/@custom" />
-   </xsl:variable>
-   <xsl:variable name="regionType_front" as="xs:string*">
-      <xsl:if test="$file_front//p:TextRegion[1]/@custom">
-         <xsl:value-of select="(@type, $custom_front?structure?type)" />
-      </xsl:if>
-   </xsl:variable>
-
-   <!-- create link to the last file and get the regionType-->
-   <xsl:variable name="file_back" select="document(replace(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(//mets:fileGrp[@ID='IMG']/mets:file[last()]/mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), /)"/>
-   <xsl:variable name="custom_back" as="map(*)">
-      <xsl:apply-templates select="$file_back//p:TextRegion[1]/@custom"/>
-   </xsl:variable>
-   <xsl:variable name="regionType_back" as="xs:string*">
-      <xsl:if test="$file_back//p:TextRegion[1]/@custom">
-         <xsl:value-of select="(@type, $custom_back?structure?type)" />
-      </xsl:if>
-   </xsl:variable>
-      
-   <!-- create div for the body, differentiate if there is also a front and/or a back matter -->
+   <!-- create div for the front, body and back -->
    <xsl:variable name="make_div">
-   <xsl:choose>
-   <xsl:when test="$regionType_front='front' and $regionType_back='back'">
-      <div>
-         <xsl:apply-templates select="$file_front//p:TextRegion[position() != 1]" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>
-         </xsl:apply-templates>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != 1][position() != last()]" mode="text"/>
-         <xsl:apply-templates select="$file_back//p:TextRegion[not($regionType_back='back' or 'marginalia_back')]" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>
-         </xsl:apply-templates>
-      </div>
-   </xsl:when>
-   <xsl:when test="$regionType_front='front'">
-      <div>
-         <xsl:apply-templates select="$file_front//p:TextRegion[position() != 1]" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>
-         </xsl:apply-templates>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != 1]" mode="text"/>
-      </div>
-   </xsl:when>
-   <xsl:when test="$regionType_back='back'">
-      <div>
-         <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file[position() != last()]" mode="text"/>
-         <xsl:apply-templates select="$file_back//p:TextRegion[not($regionType_back='back' or 'marginalia_back')]" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>            
-         </xsl:apply-templates>
-      </div>
-   </xsl:when>
-   <xsl:otherwise>
       <div>
          <xsl:apply-templates select="//mets:fileSec//mets:fileGrp[@ID = 'IMG']/mets:file" mode="text" />
       </div>
-   </xsl:otherwise>
-   </xsl:choose>
-   </xsl:variable>
-
-   <!-- create div for the front matter -->
-   <xsl:variable name="make_div_front">
-   <xsl:if test="$regionType_front='front'">
-      <div>
-         <xsl:apply-templates select="$file_front//p:TextRegion[$regionType_front='front']" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_front" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>
-         </xsl:apply-templates>
-      </div>
-   </xsl:if>
-   </xsl:variable>
-
-   <!-- create div for the back matter -->
-   <xsl:variable name="make_div_back">
-   <xsl:if test="$regionType_back='back'">
-      <div>
-         <xsl:apply-templates select="$file_back//p:TextRegion[$regionType_back='back']" mode="text">
-            <xsl:with-param name="imgurl" select="$imgurl_back" tunnel="true"/>
-            <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
-            as="xs:double"/>
-         </xsl:apply-templates>
-      </div>
-   </xsl:if>
    </xsl:variable>
    
    <xd:doc>
@@ -278,16 +187,16 @@
          <text>
             <xsl:text>
       </xsl:text>
-      <xsl:if test="$regionType_front = 'front'">
+      <xsl:if test="$make_div//*[local-name() = 'div']/*[contains(@type, 'front')]">
       <front>
          <xsl:for-each-group
-                     select="$make_div_front//*[local-name() = 'div']/*[not(contains(@type, 'margin_front'))]"
+                     select="$make_div//*[local-name() = 'div']/*[contains(@type, 'front')][not(contains(@type, 'margin_front'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
                   <xsl:text>
          </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0" type='original_front'>
+              <div xmlns="http://www.tei-c.org/ns/1.0" type='original_front'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -324,7 +233,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:sequence select="." />
+                        <xsl:apply-templates select="." mode="remove-type" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -339,9 +248,9 @@
                   <xsl:text>
          </xsl:text>
                   </div>
-            <xsl:if test="$make_div_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')]">
+            <xsl:if test="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_front')]">
                   <xsl:for-each-group
-                     select="$make_div_front//*[local-name() = 'div']/*[contains(@type, 'margin_front')][not(contains(@type, 'margin_bottom_back'))][not(contains(@type, 'margin_top_back'))]"
+                     select="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_front')][not(contains(@type, 'margin_bottom_back'))][not(contains(@type, 'margin_top_back'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -384,7 +293,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:sequence select="." />
+                        <xsl:apply-templates select="." mode="remove-type" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -399,7 +308,7 @@
       </xsl:if>       
             <body>
                <xsl:for-each-group
-                     select="$make_div//*[local-name() = 'div']/*[not(contains(@type, 'margin_body'))][not(contains(@type, 'margin_front'))][not(contains(@type, 'margin_back'))][not(contains(@type, 'margin_bottom_front'))][not(contains(@type, 'margin_bottom_back'))][not(contains(@type, 'margin_top_front'))][not(contains(@type, 'margin_top_back'))]"
+                     select="$make_div//*[local-name() = 'div']/*[not(contains(@type, 'front'))][not(contains(@type, 'back'))][not(contains(@type, 'margin_body'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -441,8 +350,8 @@
                      </xsl:variable>
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
-            </xsl:text>
-                        <xsl:sequence select="." />
+         </xsl:text>
+                        <xsl:apply-templates select="." mode="remove-type" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -499,10 +408,11 @@
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
+                     
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:sequence select="." />
+                        <xsl:apply-templates select="." mode="remove-type" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -512,12 +422,12 @@
          <xsl:text>
       </xsl:text>
       </body>
-      <xsl:if test="$regionType_back = 'back'">
+      <xsl:if test="$make_div//*[local-name() = 'div']/*[contains(@type, 'back')]">
       <xsl:text>
          </xsl:text>
       <back>
          <xsl:for-each-group
-                     select="$make_div_back//*[local-name() = 'div']/*[not(contains(@type, 'margin_back'))][not(contains(@type, 'margin_bottom_front'))][not(contains(@type, 'margin_top_front'))]"
+                     select="$make_div//*[local-name() = 'div']/*[contains(@type, 'back')][not(contains(@type, 'margin_back'))]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -560,7 +470,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:sequence select="." />
+                         <xsl:apply-templates select="." mode="remove-type" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -575,9 +485,9 @@
                   <xsl:text>
          </xsl:text>
                   </div>
-         <xsl:if test="$make_div_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]">
+         <xsl:if test="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_back')]">
                   <xsl:for-each-group
-                     select="$make_div_back//*[local-name() = 'div']/*[contains(@type, 'margin_back')]"
+                     select="$make_div//*[local-name() = 'div']/*[contains(@type, 'margin_back')]"
                      group-starting-with="*[local-name() = 'pb' and following-sibling::*[1][local-name() = 'head']]
                         | *[local-name() = 'head' and not(preceding-sibling::*[1][local-name() = 'pb'])]"
                >
@@ -620,7 +530,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:sequence select="." />
+                        <xsl:apply-templates select="." mode="remove-type" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -1258,7 +1168,7 @@
    <!-- Templates for PAGE, text -->
    <xsl:template match="p:Page" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
-      <pb facs="#facs_{$numCurr}" n="{$numCurr}"/>
+      <!-- <pb facs="#facs_{$numCurr}" n="{$numCurr}"/> -->
       <xsl:apply-templates
          select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text">
          <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
@@ -1696,27 +1606,30 @@
          <xsl:when test="'front' = $regionType">
           <xsl:text>
             </xsl:text>
-            <pb facs="#facs_{$number}" n="{$number}"/>
+            <pb facs="#facs_{$number}" n="{$number}" type="front"/>
             <xsl:text>
             </xsl:text>
-            <milestone unit="section" facs="#facs_{$number}_{@id}" />
-            <p>
+            <milestone unit="section" facs="#facs_{$number}_{@id}" type="front"/>
+            <p type="front">
                <xsl:apply-templates select="p:TextLine"/>
             </p>
          </xsl:when>
          <xsl:when test="'back' = $regionType">
             <xsl:text>
             </xsl:text>
-            <pb facs="#facs_{$number}" n="{$number}"/>
+            <pb facs="#facs_{$number}" n="{$number}" type="back"/>
             <xsl:text>
             </xsl:text>
-            <milestone unit="section" facs="#facs_{$number}_{@id}" />
-            <p>
+            <milestone unit="section" facs="#facs_{$number}_{@id}" type="back"/>
+            <p type="back">
                <xsl:apply-templates select="p:TextLine"/>
             </p>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
+         <xsl:text>
+            </xsl:text>
+            <pb facs="#facs_{$number}" n="{$number}" />
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
@@ -2771,4 +2684,59 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
+   <xsl:template match="tei:ab[contains(@type, 'margin_')]" mode="remove-type">
+   <ab>
+      <!-- Copy content without type-attribute -->
+      <xsl:for-each select="@*">
+         <!-- Kopiere alle Attribute, außer 'type' -->
+         <xsl:if test="local-name() != 'type'">
+            <xsl:copy />
+         </xsl:if>
+      </xsl:for-each>
+      <xsl:copy-of select="node()"/>
+   </ab>
+</xsl:template>
+<xsl:template match="tei:p" mode="remove-type">
+   <p>
+     <xsl:for-each select="@*">
+         <!-- Kopiere alle Attribute, außer 'type' -->
+         <xsl:if test="local-name() != 'type'">
+            <xsl:copy />
+         </xsl:if>
+      </xsl:for-each>
+      
+      <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
+      <xsl:copy-of select="node()"/>
+   </p>
+</xsl:template>
+<xsl:template match="tei:pb" mode="remove-type">
+   <pb>
+      <xsl:for-each select="@*">
+         <!-- Kopiere alle Attribute, außer 'type' -->
+         <xsl:if test="local-name() != 'type'">
+            <xsl:copy />
+         </xsl:if>
+      </xsl:for-each>
+      
+      <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
+      <xsl:copy-of select="node()"/>
+   </pb>
+</xsl:template>
+
+<xsl:template match="tei:milestone" mode="remove-type">
+   <milestone>
+      <xsl:for-each select="@*">
+         <!-- Kopiere alle Attribute, außer 'type' -->
+         <xsl:if test="local-name() != 'type'">
+            <xsl:copy />
+         </xsl:if>
+      </xsl:for-each>
+      
+      <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
+      <xsl:copy-of select="node()"/>
+   </milestone>
+</xsl:template>
+<xsl:template match="tei:*" mode="remove-type">
+    <xsl:copy-of select="."/>
+</xsl:template>
 </xsl:stylesheet>

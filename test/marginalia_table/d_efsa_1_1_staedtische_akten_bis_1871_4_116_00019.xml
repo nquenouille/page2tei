@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2024-10-31T14:08:52.853+01:00</Created>
+        <LastChange>2025-03-20T15:35:08.016+01:00</LastChange>
+        <TranskribusMetadata pageNr="1" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="d_efsa_1_1_staedtische_akten_bis_1871_4_116_00019.tif" imageWidth="2738" imageHeight="4407">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1742481308017" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="r"/>
+                <RegionRefIndexed index="1" regionRef="r_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion id="r" custom="readingOrder {index:0;}">
+            <Coords points="394,3573 394,412 2305,412 2305,3573"/>
+            <TextLine id="l" custom="readingOrder {index:0;}">
+                <Coords points="1298,526 1319,531 1331,543 1350,529 1357,536 1383,514 1445,506 1440,323 1397,328 1371,319 1359,326 1322,323"/>
+                <Baseline points="1316,492 1344,486 1373,484 1401,481 1430,477"/>
+                <TextEquiv>
+                    <Unicode>B.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_1" custom="readingOrder {index:1;}">
+                <Coords points="436,717 953,687 1163,628 1466,666 1586,621 1834,703 2108,700 2144,549 1612,481 1333,545 1208,498 1133,557 878,477 443,532"/>
+                <Baseline points="627,638 701,630 775,630 849,629 923,629 997,627 1071,624 1145,622 1219,618 1293,620 1367,617 1441,615 1515,616 1589,614 1663,615 1737,614 1811,619 1885,618 1959,621 2033,621 2107,627"/>
+                <TextEquiv>
+                    <Unicode>Im Nahmen des dreyeinigen Gottes.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_2" custom="readingOrder {index:2;}">
+                <Coords points="1041,843 1095,850 1149,817 1175,828 1194,817 1237,821 1265,835 1330,824 1330,647 1218,640 1194,654 1175,637 1142,635 1076,682 1041,687"/>
+                <Baseline points="1053,785 1078,785 1104,785 1130,785 1155,785 1181,785 1207,785 1232,785 1258,785 1284,786 1310,788"/>
+                <TextEquiv>
+                    <Unicode>Amen.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_3" custom="readingOrder {index:3;}">
+                <Coords points="279,1174 529,1113 822,1115 1022,1156 1182,1123 2079,1138 2202,1114 2202,977 1846,984 1753,932 1593,1055 1399,989 1248,1024 1109,923 885,1008 514,887 277,966"/>
+                <Baseline points="429,1098 516,1089 604,1087 691,1083 779,1083 866,1082 954,1081 1041,1083 1129,1083 1216,1083 1304,1086 1391,1086 1479,1087 1566,1089 1654,1089 1741,1089 1829,1092 1916,1093 2004,1095 2091,1095 2179,1101"/>
+                <TextEquiv>
+                    <Unicode>Ich Martha Catharina Lemmerhirtin, Wittib</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_4" custom="readingOrder {index:4;}">
+                <Coords points="396,1270 691,1303 1029,1246 1100,1268 1313,1249 1995,1308 2083,1257 2229,1272 2227,1197 2048,1161 1808,1176 1635,1149 1595,1145 1428,1143 1224,1124 1032,1163 883,1121 519,1142 394,1182"/>
+                <Baseline points="406,1218 496,1218 587,1218 678,1222 769,1224 859,1224 950,1230 1041,1231 1132,1230 1222,1231 1313,1234 1404,1236 1495,1234 1585,1236 1676,1233 1767,1233 1858,1233 1948,1236 2039,1240 2130,1247 2221,1257"/>
+                <TextEquiv>
+                    <Unicode>allhier, bekenne hiermit, daß nachdem ich mit</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_5" custom="readingOrder {index:5;}">
+                <Coords points="380,1359 924,1368 966,1430 1223,1419 1480,1366 1923,1406 2084,1435 2195,1401 2192,1267 1973,1331 1723,1274 1604,1294 1308,1257 1001,1260 920,1287 588,1272 380,1307"/>
+                <Baseline points="394,1355 487,1349 581,1349 674,1349 768,1351 862,1349 955,1351 1049,1352 1143,1352 1236,1349 1330,1352 1423,1352 1517,1352 1611,1352 1704,1353 1798,1358 1892,1362 1985,1367 2079,1378 2173,1388"/>
+                <TextEquiv>
+                    <Unicode>meinen in Gott ruhenden Ehemanne Hn.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_6" custom="readingOrder {index:6;}">
+                <Coords points="387,1532 925,1508 1068,1516 1087,1557 1425,1542 1710,1575 1797,1521 2023,1512 2059,1556 2229,1548 2224,1408 2107,1428 2021,1424 1626,1388 1423,1454 1317,1414 885,1468 936,1375 576,1371 387,1402"/>
+                <Baseline points="400,1507 491,1498 582,1498 673,1501 764,1501 856,1500 947,1498 1038,1501 1129,1501 1220,1499 1312,1498 1403,1496 1494,1501 1585,1497 1676,1496 1768,1498 1859,1498 1950,1498 2041,1503 2132,1512 2224,1534"/>
+                <TextEquiv>
+                    <Unicode>Tobias Lemmerhirten ehemahligen Raths-</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_7" custom="readingOrder {index:7;}">
+                <Coords points="413,1683 1210,1645 1352,1704 1990,1675 1992,1737 2250,1678 2235,1550 2103,1561 2013,1514 1709,1575 1375,1541 1088,1563 1063,1519 415,1547"/>
+                <Baseline points="426,1630 518,1630 610,1633 702,1636 794,1639 886,1638 978,1636 1070,1633 1162,1634 1254,1633 1346,1636 1438,1638 1530,1641 1622,1644 1714,1643 1806,1639 1898,1642 1990,1639 2082,1645 2174,1654 2238,1670"/>
+                <TextEquiv>
+                    <Unicode>Verwandten, und Kürschnern seel. hierselbst</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_8" custom="readingOrder {index:8;}">
+                <Coords points="413,1812 680,1827 885,1855 1002,1813 1580,1797 2272,1853 2266,1727 1985,1735 1986,1677 1387,1707 1240,1664 411,1680"/>
+                <Baseline points="426,1785 518,1776 610,1779 702,1782 794,1779 886,1776 978,1778 1070,1774 1162,1776 1254,1776 1346,1780 1438,1779 1530,1782 1622,1782 1714,1784 1806,1788 1898,1794 1990,1794 2082,1800 2174,1809 2266,1830"/>
+                <TextEquiv>
+                    <Unicode>am 1ten Augusti Ao. 1707. ein Testamentum</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_9" custom="readingOrder {index:9;}">
+                <Coords points="408,1959 558,1983 838,1938 1067,1980 1159,1951 1699,1950 1810,2004 2255,2019 2255,1868 1572,1799 1104,1796 905,1844 404,1798"/>
+                <Baseline points="420,1919 510,1919 601,1919 691,1919 782,1919 872,1919 963,1919 1053,1916 1144,1916 1234,1916 1325,1916 1415,1919 1506,1919 1596,1919 1687,1919 1777,1920 1868,1926 1958,1929 2049,1936 2139,1942 2230,1946"/>
+                <TextEquiv>
+                    <Unicode>Reciprocum auffgerichtet, und nach deßen seel.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_10" custom="readingOrder {index:10;}">
+                <Coords points="422,2152 798,2065 1265,2138 1352,2070 2204,2089 2217,2110 2242,1996 2110,1989 1897,2025 1627,1984 1205,1953 1073,1976 591,1976 422,1989"/>
+                <Baseline points="435,2069 523,2069 611,2069 700,2066 788,2063 877,2063 965,2063 1053,2063 1142,2063 1230,2063 1319,2061 1407,2058 1495,2057 1584,2055 1672,2054 1761,2053 1849,2056 1937,2059 2026,2065 2114,2072 2203,2072"/>
+                <TextEquiv>
+                    <Unicode>Absterben alle und jede darinnen verord¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_11" custom="readingOrder {index:11;}">
+                <Coords points="413,2235 564,2216 689,2296 819,2230 1480,2253 1837,2245 2209,2255 2284,2278 2287,2186 2204,2090 1560,2094 1336,2155 885,2060 415,2178"/>
+                <Baseline points="429,2206 521,2203 613,2203 705,2200 797,2196 889,2194 981,2194 1074,2192 1166,2191 1258,2191 1350,2188 1442,2185 1534,2182 1626,2185 1719,2185 1811,2185 1903,2185 1995,2188 2087,2191 2179,2203 2272,2221"/>
+                <TextEquiv>
+                    <Unicode>nete Legata nach und nach völlig abgeführet,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_12" custom="readingOrder {index:12;}">
+                <Coords points="411,2360 654,2410 1159,2386 1286,2454 1574,2369 1659,2438 1850,2355 1954,2417 2256,2362 2242,2259 1882,2237 1760,2259 1572,2235 1484,2264 933,2218 687,2301 625,2244 411,2280"/>
+                <Baseline points="423,2355 514,2356 605,2359 696,2356 788,2352 879,2348 970,2346 1061,2346 1153,2346 1244,2344 1335,2345 1426,2345 1518,2343 1609,2340 1700,2340 1791,2340 1883,2340 1974,2337 2065,2337 2156,2346 2248,2352"/>
+                <TextEquiv>
+                    <Unicode>also, daß es damit seine gute Richtig¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_13" custom="readingOrder {index:13;}">
+                <Coords points="411,2523 900,2562 988,2516 1080,2546 1076,2582 1141,2541 1163,2562 2251,2556 2251,2426 2217,2375 1634,2444 1601,2379 1285,2452 1216,2414 589,2398 411,2410"/>
+                <Baseline points="423,2499 518,2514 614,2517 710,2517 805,2512 901,2509 997,2508 1093,2508 1188,2502 1284,2500 1380,2503 1476,2502 1571,2502 1667,2502 1763,2499 1859,2502 1954,2499 2050,2499 2146,2500 2242,2517"/>
+                <TextEquiv>
+                    <Unicode>keit erlanget, Ich mir nunmehro mit guten</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_15" custom="readingOrder {index:14;} add {offset:0; length:8;place:above; xmlid:ta1-1; type:addition;}">
+                <Coords points="892,2608 935,2609 994,2608 1036,2636 1079,2620 1104,2634 1151,2622 1154,2555 1135,2550 1083,2578 1041,2523 984,2513 943,2542 900,2582"/>
+                <Baseline points="900,2600 915,2599 936,2599 962,2598 989,2597 1016,2597 1042,2597 1069,2597 1095,2597 1122,2597 1149,2597"/>
+                <TextEquiv>
+                    <Unicode>festigl.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_14" custom="readingOrder {index:15;} anchor {offset:11; length:1;xmlid:a1-1;}">
+                <Coords points="434,2716 672,2710 965,2773 1076,2700 1186,2705 1329,2709 1580,2736 2231,2707 2241,2579 1270,2572 1132,2633 1044,2636 887,2615 910,2563 434,2532"/>
+                <Baseline points="447,2681 535,2676 624,2675 712,2675 801,2674 889,2672 978,2673 1066,2672 1155,2669 1243,2669 1332,2667 1421,2669 1509,2666 1598,2669 1686,2669 1775,2669 1863,2666 1952,2666 2040,2666 2129,2669 2218,2672"/>
+                <TextEquiv>
+                    <Unicode>Vorbedacht   vorgenommen habe, gegenwärtige</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_16" custom="readingOrder {index:16;}">
+                <Coords points="365,2948 830,2892 1263,2933 1666,2844 2044,2839 2221,2926 2317,2879 2302,2702 2148,2761 1952,2705 1805,2768 1625,2732 1368,2719 965,2750 835,2733 368,2763"/>
+                <Baseline points="418,2851 512,2848 606,2847 701,2845 795,2844 889,2842 984,2842 1078,2839 1172,2836 1267,2839 1361,2836 1455,2836 1550,2836 1644,2836 1738,2836 1833,2836 1927,2836 2021,2834 2116,2833 2210,2836 2305,2851"/>
+                <TextEquiv>
+                    <Unicode>Disposition, und letzte Willens Verordnung</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_17" custom="readingOrder {index:17;} supplied {offset:35; length:1;reason:omitted-in-original; resp:fpb-4cugq;}">
+                <Coords points="470,3063 2284,3034 2287,2924 1869,2855 1600,2877 1428,2952 1020,2905 880,2913 470,2933"/>
+                <Baseline points="480,3015 569,3021 658,3015 748,3012 837,3009 927,3012 1016,3012 1106,3006 1195,3003 1285,3000 1374,3000 1463,3000 1553,2997 1642,2997 1732,2997 1821,2994 1911,2994 2000,2994 2090,2994 2179,2991 2269,2994"/>
+                <TextEquiv>
+                    <Unicode>sowohl uber mein eigenes und in mei¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_18" custom="readingOrder {index:18;}">
+                <Coords points="441,3219 2264,3205 2267,3096 2086,3030 2004,3087 1887,3042 1749,3027 1581,3070 913,3046 444,3120"/>
+                <Baseline points="456,3179 546,3173 636,3167 727,3163 817,3159 907,3158 998,3158 1088,3155 1178,3152 1269,3152 1359,3147 1449,3144 1540,3141 1630,3141 1720,3141 1811,3138 1901,3141 1991,3147 2082,3149 2172,3152 2263,3152"/>
+                <TextEquiv>
+                    <Unicode>nen Wittbenstande durch Gottes Seegen</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_19" custom="readingOrder {index:19;}">
+                <Coords points="434,3394 1699,3373 1737,3440 1937,3348 2245,3351 2250,3194 1863,3208 1175,3228 1036,3259 859,3207 644,3313 437,3311"/>
+                <Baseline points="447,3356 534,3350 621,3347 709,3341 796,3341 883,3338 971,3338 1058,3338 1145,3335 1233,3330 1320,3332 1407,3329 1495,3326 1582,3325 1669,3319 1757,3313 1844,3310 1931,3314 2019,3317 2106,3320 2194,3332"/>
+                <TextEquiv>
+                    <Unicode>erworbenes, als auch über meines seel.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_20" custom="readingOrder {index:20;} supplied {offset:38; length:1;reason:omitted-in-original; resp:fpb-4cugq;}">
+                <Coords points="434,3578 1010,3545 1126,3592 1456,3531 2294,3572 2294,3385 1890,3369 1755,3440 1437,3382 1222,3439 1116,3377 998,3415 835,3368 437,3413"/>
+                <Baseline points="450,3499 542,3502 634,3502 726,3499 818,3496 910,3496 1002,3490 1094,3487 1186,3486 1278,3484 1370,3484 1462,3481 1554,3481 1646,3481 1738,3478 1830,3478 1922,3481 2014,3484 2106,3490 2198,3502 2290,3523"/>
+                <TextEquiv>
+                    <Unicode>Ehemannes durch obvermeldetes Testamen¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode/>
+            </TextEquiv>
+        </TextRegion>
+        <TextRegion id="r_1" custom="readingOrder {index:1;} structure {type:marginalia;}">
+            <Coords points="2305,3573 2305,3770 394,3770 394,3573"/>
+            <TextLine id="l_21" custom="readingOrder {index:0;} note {offset:0; length:38;place:bottom; target:m1-1;}">
+                <Coords points="479,3795 649,3778 951,3770 1074,3778 1435,3777 1853,3800 2243,3782 2245,3676 2136,3630 1803,3578 1546,3641 1423,3559 1296,3613 1015,3547 791,3623 484,3601"/>
+                <Baseline points="495,3738 581,3737 667,3735 754,3729 840,3726 927,3720 1013,3717 1100,3711 1186,3714 1273,3714 1359,3713 1445,3714 1532,3712 1618,3710 1705,3707 1791,3704 1878,3705 1964,3706 2051,3711 2137,3714 2224,3723"/>
+                <TextEquiv>
+                    <Unicode>(L. S.) Martha Catharina Lemmerhirtin.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode/>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

@@ -34,3 +34,7 @@ jobs:
         run: |
           java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/marginalia/mets.xml -o:test/marginalia/marginalia_test.xml
           diff -w --normal test/marginalia/marginalia_test.xml test/marginalia/marginalia.xml
+      - name: marginalia (bottom and left) and table test
+        run: |
+          java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/marginalia_table/mets.xml -o:test/marginalia_table/marginalia_table_test.xml
+          diff -w --normal test/marginalia_table/marginalia_table_test.xml test/marginalia_table/marginalia_table.xml
