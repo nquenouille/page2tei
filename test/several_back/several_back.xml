@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+         <title type="main">Eingabe von Johann Sebastian Bach (24), Johann Schneider und Johann Matthias Gesner an das Leipziger Konsistorium wegen vorenthaltener Akzidenzien</title>
+         </titleStmt>
+         <publicationStmt/>
+         <sourceDesc>
+            <bibl>
+                  <title type="main">Eingabe von Johann Sebastian Bach (24), Johann Schneider und Johann Matthias Gesner an das Leipziger Konsistorium wegen vorenthaltener Akzidenzien</title><idno type="uuid">2fzup</idno></bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+      </profileDesc>
+   </teiHeader>
+   <facsimile xml:id="facs_1">
+      <surface ulx="0" uly="0" lrx="1903" lry="2846">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif" width="1903px" height="2846px" rend="facstab"/>
+         <zone ulx="162" uly="148" lrx="1548" lry="2334" rendition="TextRegion" xml:id="facs_1_r_69">
+            <zone ulx="380" uly="185" lrx="1207" lry="347" rendition="Line" xml:id="facs_1_l_1"/>
+            <zone ulx="769" uly="302" lrx="980" lry="371" rendition="Line" xml:id="facs_1_l_2"/>
+            <zone ulx="219" uly="404" lrx="583" lry="544" rendition="Line" xml:id="facs_1_l"/>
+            <zone ulx="302" uly="515" lrx="731" lry="640" rendition="Line" xml:id="facs_1_l_22"/>
+            <zone ulx="275" uly="614" lrx="961" lry="735" rendition="Line" xml:id="facs_1_l_23"/>
+            <zone ulx="269" uly="686" lrx="1123" lry="815" rendition="Line" xml:id="facs_1_l_24"/>
+            <zone ulx="241" uly="788" lrx="991" lry="915" rendition="Line" xml:id="facs_1_l_25"/>
+            <zone ulx="930" uly="1034" lrx="1266" lry="1145" rendition="Line" xml:id="facs_1_l_26"/>
+            <zone ulx="247" uly="1073" lrx="1523" lry="1303" rendition="Line" xml:id="facs_1_l_27"/>
+            <zone ulx="280" uly="1217" lrx="1529" lry="1388" rendition="Line" xml:id="facs_1_l_28"/>
+            <zone ulx="311" uly="1306" lrx="1520" lry="1447" rendition="Line" xml:id="facs_1_l_29"/>
+            <zone ulx="271" uly="1397" lrx="1467" lry="1532" rendition="Line" xml:id="facs_1_l_30"/>
+            <zone ulx="289" uly="1480" lrx="1486" lry="1595" rendition="Line" xml:id="facs_1_l_31"/>
+            <zone ulx="234" uly="1561" lrx="1513" lry="1721" rendition="Line" xml:id="facs_1_l_32"/>
+            <zone ulx="309" uly="1665" lrx="1509" lry="1787" rendition="Line" xml:id="facs_1_l_33"/>
+            <zone ulx="269" uly="1752" lrx="1510" lry="1884" rendition="Line" xml:id="facs_1_l_34"/>
+            <zone ulx="294" uly="1828" lrx="1499" lry="1956" rendition="Line" xml:id="facs_1_l_35"/>
+            <zone ulx="222" uly="1914" lrx="1480" lry="2042" rendition="Line" xml:id="facs_1_l_36"/>
+            <zone ulx="331" uly="1995" lrx="1508" lry="2121" rendition="Line" xml:id="facs_1_l_37"/>
+            <zone ulx="319" uly="2081" lrx="1466" lry="2190" rendition="Line" xml:id="facs_1_l_38"/>
+            <zone ulx="264" uly="2153" lrx="1461" lry="2304" rendition="Line" xml:id="facs_1_l_39"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_2">
+      <surface ulx="0" uly="0" lrx="1961" lry="2817">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif" width="1961px" height="2817px" rend="facstab"/>
+         <zone ulx="518" uly="242" lrx="1883" lry="2323" rendition="TextRegion" xml:id="facs_2_tr_1">
+            <zone ulx="647" uly="259" lrx="1857" lry="386" rendition="Line" xml:id="facs_2_tr_1_tl_1"/>
+            <zone ulx="653" uly="342" lrx="1854" lry="492" rendition="Line" xml:id="facs_2_tr_1_tl_2"/>
+            <zone ulx="656" uly="412" lrx="1874" lry="563" rendition="Line" xml:id="facs_2_tr_1_tl_3"/>
+            <zone ulx="610" uly="521" lrx="1817" lry="647" rendition="Line" xml:id="facs_2_tr_1_tl_4"/>
+            <zone ulx="665" uly="607" lrx="1859" lry="719" rendition="Line" xml:id="facs_2_tr_1_tl_6"/>
+            <zone ulx="647" uly="684" lrx="1849" lry="817" rendition="Line" xml:id="facs_2_l"/>
+            <zone ulx="634" uly="770" lrx="1868" lry="910" rendition="Line" xml:id="facs_2_tr_1_tl_10"/>
+            <zone ulx="653" uly="848" lrx="1851" lry="988" rendition="Line" xml:id="facs_2_tr_1_tl_11"/>
+            <zone ulx="667" uly="953" lrx="1851" lry="1067" rendition="Line" xml:id="facs_2_tr_1_tl_12"/>
+            <zone ulx="677" uly="1033" lrx="1867" lry="1179" rendition="Line" xml:id="facs_2_l_4204"/>
+            <zone ulx="675" uly="1129" lrx="1862" lry="1256" rendition="Line" xml:id="facs_2_tr_1_tl_16"/>
+            <zone ulx="699" uly="1226" lrx="1866" lry="1343" rendition="Line" xml:id="facs_2_tr_1_tl_17"/>
+            <zone ulx="683" uly="1294" lrx="1855" lry="1408" rendition="Line" xml:id="facs_2_tr_1_tl_18"/>
+            <zone ulx="670" uly="1366" lrx="1793" lry="1500" rendition="Line" xml:id="facs_2_tr_1_tl_20"/>
+            <zone ulx="649" uly="1472" lrx="1866" lry="1583" rendition="Line" xml:id="facs_2_tr_1_tl_21"/>
+            <zone ulx="706" uly="1535" lrx="1839" lry="1678" rendition="Line" xml:id="facs_2_tr_1_tl_22"/>
+            <zone ulx="691" uly="1610" lrx="1872" lry="1744" rendition="Line" xml:id="facs_2_tr_1_tl_23"/>
+            <zone ulx="627" uly="1707" lrx="1880" lry="1861" rendition="Line" xml:id="facs_2_tr_1_tl_24"/>
+            <zone ulx="712" uly="1788" lrx="1863" lry="1921" rendition="Line" xml:id="facs_2_tr_1_tl_25"/>
+            <zone ulx="658" uly="1878" lrx="1866" lry="2014" rendition="Line" xml:id="facs_2_tr_1_tl_26"/>
+            <zone ulx="701" uly="1948" lrx="1874" lry="2103" rendition="Line" xml:id="facs_2_tr_1_tl_27"/>
+            <zone ulx="706" uly="2038" lrx="1854" lry="2159" rendition="Line" xml:id="facs_2_l_9870"/>
+            <zone ulx="641" uly="2117" lrx="1874" lry="2242" rendition="Line" xml:id="facs_2_tr_1_tl_30"/>
+            <zone ulx="635" uly="2190" lrx="1850" lry="2316" rendition="Line" xml:id="facs_2_tr_1_tl_31"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_3">
+      <surface ulx="0" uly="0" lrx="1925" lry="2846">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif" width="1925px" height="2846px" rend="facstab"/>
+         <zone ulx="280" uly="265" lrx="1609" lry="2305" rendition="TextRegion" xml:id="facs_3_tr_1">
+            <zone ulx="331" uly="305" lrx="1575" lry="428" rendition="Line" xml:id="facs_3_tr_1_tl_2"/>
+            <zone ulx="379" uly="395" lrx="1585" lry="520" rendition="Line" xml:id="facs_3_l_289"/>
+            <zone ulx="380" uly="479" lrx="1578" lry="605" rendition="Line" xml:id="facs_3_tr_1_tl_6"/>
+            <zone ulx="372" uly="578" lrx="1544" lry="712" rendition="Line" xml:id="facs_3_tr_1_tl_7"/>
+            <zone ulx="383" uly="651" lrx="1562" lry="798" rendition="Line" xml:id="facs_3_tr_1_tl_8"/>
+            <zone ulx="408" uly="735" lrx="1583" lry="900" rendition="Line" xml:id="facs_3_l_562"/>
+            <zone ulx="375" uly="832" lrx="1538" lry="978" rendition="Line" xml:id="facs_3_tr_1_tl_11"/>
+            <zone ulx="400" uly="916" lrx="1566" lry="1067" rendition="Line" xml:id="facs_3_tr_1_tl_12"/>
+            <zone ulx="387" uly="1016" lrx="1537" lry="1167" rendition="Line" xml:id="facs_3_tr_1_tl_13"/>
+            <zone ulx="399" uly="1100" lrx="1572" lry="1228" rendition="Line" xml:id="facs_3_tr_1_tl_14"/>
+            <zone ulx="414" uly="1166" lrx="1572" lry="1325" rendition="Line" xml:id="facs_3_l_1037"/>
+            <zone ulx="400" uly="1266" lrx="1548" lry="1383" rendition="Line" xml:id="facs_3_l_1197"/>
+            <zone ulx="331" uly="1360" lrx="1502" lry="1465" rendition="Line" xml:id="facs_3_tr_1_tl_21"/>
+            <zone ulx="317" uly="1437" lrx="1506" lry="1579" rendition="Line" xml:id="facs_3_l_1327"/>
+            <zone ulx="371" uly="1507" lrx="1552" lry="1648" rendition="Line" xml:id="facs_3_tr_1_tl_24"/>
+            <zone ulx="340" uly="1615" lrx="1563" lry="1726" rendition="Line" xml:id="facs_3_tr_1_tl_25"/>
+            <zone ulx="339" uly="1689" lrx="1480" lry="1818" rendition="Line" xml:id="facs_3_tr_1_tl_26"/>
+            <zone ulx="385" uly="1779" lrx="1537" lry="1915" rendition="Line" xml:id="facs_3_l_1695"/>
+            <zone ulx="388" uly="1862" lrx="1575" lry="2001" rendition="Line" xml:id="facs_3_tr_1_tl_30"/>
+            <zone ulx="378" uly="1956" lrx="1550" lry="2080" rendition="Line" xml:id="facs_3_tr_1_tl_31"/>
+            <zone ulx="316" uly="2048" lrx="1535" lry="2211" rendition="Line" xml:id="facs_3_tr_1_tl_32"/>
+            <zone ulx="348" uly="2145" lrx="1586" lry="2296" rendition="Line" xml:id="facs_3_l_1961"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_4">
+      <surface ulx="0" uly="0" lrx="1961" lry="2817">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif" width="1961px" height="2817px" rend="facstab"/>
+         <zone ulx="453" uly="259" lrx="1860" lry="2378" rendition="TextRegion" xml:id="facs_4_tr_1">
+            <zone ulx="560" uly="263" lrx="1848" lry="430" rendition="Line" xml:id="facs_4_tr_1_tl_1"/>
+            <zone ulx="623" uly="367" lrx="1827" lry="538" rendition="Line" xml:id="facs_4_tr_1_tl_2"/>
+            <zone ulx="634" uly="460" lrx="1861" lry="602" rendition="Line" xml:id="facs_4_tr_1_tl_3"/>
+            <zone ulx="639" uly="571" lrx="1834" lry="693" rendition="Line" xml:id="facs_4_l"/>
+            <zone ulx="644" uly="639" lrx="1850" lry="777" rendition="Line" xml:id="facs_4_tr_1_tl_6"/>
+            <zone ulx="650" uly="734" lrx="1848" lry="884" rendition="Line" xml:id="facs_4_tr_1_tl_7"/>
+            <zone ulx="642" uly="806" lrx="1853" lry="964" rendition="Line" xml:id="facs_4_tr_1_tl_8"/>
+            <zone ulx="642" uly="908" lrx="1848" lry="1058" rendition="Line" xml:id="facs_4_tr_1_tl_9"/>
+            <zone ulx="644" uly="1006" lrx="1847" lry="1119" rendition="Line" xml:id="facs_4_tr_1_tl_10"/>
+            <zone ulx="673" uly="1099" lrx="1830" lry="1217" rendition="Line" xml:id="facs_4_tr_1_tl_11"/>
+            <zone ulx="688" uly="1185" lrx="1856" lry="1309" rendition="Line" xml:id="facs_4_tr_1_tl_12"/>
+            <zone ulx="696" uly="1283" lrx="1819" lry="1402" rendition="Line" xml:id="facs_4_l_2530"/>
+            <zone ulx="697" uly="1345" lrx="1855" lry="1487" rendition="Line" xml:id="facs_4_tr_1_tl_15"/>
+            <zone ulx="663" uly="1422" lrx="1831" lry="1594" rendition="Line" xml:id="facs_4_l_3759"/>
+            <zone ulx="633" uly="1518" lrx="1837" lry="1664" rendition="Line" xml:id="facs_4_tr_1_tl_18"/>
+            <zone ulx="674" uly="1609" lrx="1847" lry="1744" rendition="Line" xml:id="facs_4_tr_1_tl_19"/>
+            <zone ulx="635" uly="1689" lrx="1834" lry="1823" rendition="Line" xml:id="facs_4_tr_1_tl_20"/>
+            <zone ulx="615" uly="1769" lrx="1847" lry="1927" rendition="Line" xml:id="facs_4_tr_1_tl_21"/>
+            <zone ulx="665" uly="1862" lrx="1837" lry="2002" rendition="Line" xml:id="facs_4_l_7927"/>
+            <zone ulx="554" uly="1951" lrx="1859" lry="2153" rendition="Line" xml:id="facs_4_l_9328"/>
+            <zone ulx="642" uly="2038" lrx="1845" lry="2195" rendition="Line" xml:id="facs_4_l_11101"/>
+            <zone ulx="655" uly="2120" lrx="1863" lry="2261" rendition="Line" xml:id="facs_4_tr_1_tl_30"/>
+            <zone ulx="670" uly="2203" lrx="1850" lry="2361" rendition="Line" xml:id="facs_4_tr_1_tl_31"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_5">
+      <surface ulx="0" uly="0" lrx="1925" lry="2846">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif" width="1925px" height="2846px" rend="facstab"/>
+         <zone ulx="268" uly="207" lrx="1626" lry="2534" rendition="TextRegion" xml:id="facs_5_tr_1">
+            <zone ulx="436" uly="289" lrx="1578" lry="442" rendition="Line" xml:id="facs_5_tr_1_tl_3"/>
+            <zone ulx="399" uly="416" lrx="1581" lry="549" rendition="Line" xml:id="facs_5_tr_1_tl_4"/>
+            <zone ulx="443" uly="494" lrx="1509" lry="633" rendition="Line" xml:id="facs_5_tr_1_tl_5"/>
+            <zone ulx="345" uly="567" lrx="1598" lry="719" rendition="Line" xml:id="facs_5_l_2185"/>
+            <zone ulx="271" uly="645" lrx="1598" lry="870" rendition="Line" xml:id="facs_5_tr_1_tl_9"/>
+            <zone ulx="411" uly="757" lrx="1576" lry="887" rendition="Line" xml:id="facs_5_tr_1_tl_10"/>
+            <zone ulx="416" uly="840" lrx="1565" lry="981" rendition="Line" xml:id="facs_5_tr_1_tl_11"/>
+            <zone ulx="341" uly="918" lrx="618" lry="1080" rendition="Line" xml:id="facs_5_tr_1_tl_12"/>
+            <zone ulx="785" uly="1085" lrx="1308" lry="1213" rendition="Line" xml:id="facs_5_tr_1_tl_13"/>
+            <zone ulx="746" uly="1824" lrx="1562" lry="1975" rendition="Line" xml:id="facs_5_tr_1_tl_14"/>
+            <zone ulx="726" uly="1939" lrx="1259" lry="2086" rendition="Line" xml:id="facs_5_tr_1_tl_15"/>
+            <zone ulx="611" uly="2050" lrx="1560" lry="2191" rendition="Line" xml:id="facs_5_tr_1_tl_16"/>
+            <zone ulx="781" uly="2127" lrx="1468" lry="2220" rendition="Line" xml:id="facs_5_tr_1_tl_18"/>
+            <zone ulx="717" uly="2180" lrx="1185" lry="2323" rendition="Line" xml:id="facs_5_tr_1_tl_19"/>
+            <zone ulx="1012" uly="2238" lrx="1563" lry="2374" rendition="Line" xml:id="facs_5_tr_1_tl_20"/>
+            <zone ulx="496" uly="2324" lrx="1502" lry="2436" rendition="Line" xml:id="facs_5_l_8714"/>
+            <zone ulx="841" uly="2409" lrx="1442" lry="2539" rendition="Line" xml:id="facs_5_tr_1_tl_23"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_6">
+      <surface ulx="0" uly="0" lrx="1961" lry="2817">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif" width="1961px" height="2817px" rend="facstab"/>
+         <zone ulx="443" uly="218" lrx="1872" lry="2439" rendition="TextRegion" xml:id="facs_6_tr_1" subtype="back">
+            <zone ulx="1021" uly="255" lrx="1203" lry="389" rendition="Line" xml:id="facs_6_l_15"/>
+            <zone ulx="549" uly="349" lrx="1838" lry="516" rendition="Line" xml:id="facs_6_l"/>
+            <zone ulx="576" uly="458" lrx="1838" lry="617" rendition="Line" xml:id="facs_6_tr_1_tl_4"/>
+            <zone ulx="592" uly="548" lrx="1828" lry="711" rendition="Line" xml:id="facs_6_tr_1_tl_5"/>
+            <zone ulx="581" uly="633" lrx="1758" lry="817" rendition="Line" xml:id="facs_6_tr_1_tl_6"/>
+            <zone ulx="1014" uly="729" lrx="1519" lry="927" rendition="Line" xml:id="facs_6_tr_1_tl_7"/>
+            <zone ulx="568" uly="844" lrx="1858" lry="1019" rendition="Line" xml:id="facs_6_tr_1_tl_8"/>
+            <zone ulx="647" uly="979" lrx="1726" lry="1097" rendition="Line" xml:id="facs_6_tr_1_tl_9"/>
+            <zone ulx="554" uly="1021" lrx="1854" lry="1205" rendition="Line" xml:id="facs_6_l_4119"/>
+            <zone ulx="573" uly="1127" lrx="1865" lry="1292" rendition="Line" xml:id="facs_6_tr_1_tl_12"/>
+            <zone ulx="661" uly="1227" lrx="1837" lry="1361" rendition="Line" xml:id="facs_6_l_4805"/>
+            <zone ulx="616" uly="1297" lrx="1846" lry="1446" rendition="Line" xml:id="facs_6_tr_1_tl_17"/>
+            <zone ulx="650" uly="1382" lrx="1860" lry="1484" rendition="Line" xml:id="facs_6_tr_1_tl_18"/>
+            <zone ulx="656" uly="1473" lrx="1879" lry="1619" rendition="Line" xml:id="facs_6_l_2035"/>
+            <zone ulx="550" uly="1562" lrx="1862" lry="1725" rendition="Line" xml:id="facs_6_l_2171"/>
+            <zone ulx="681" uly="1646" lrx="1866" lry="1764" rendition="Line" xml:id="facs_6_l_3943"/>
+            <zone ulx="683" uly="1725" lrx="1859" lry="1833" rendition="Line" xml:id="facs_6_tr_1_tl_25"/>
+            <zone ulx="654" uly="1799" lrx="1872" lry="1931" rendition="Line" xml:id="facs_6_l_5425"/>
+            <zone ulx="659" uly="1892" lrx="1859" lry="2006" rendition="Line" xml:id="facs_6_l_5556"/>
+            <zone ulx="696" uly="1969" lrx="1863" lry="2110" rendition="Line" xml:id="facs_6_tr_1_tl_30"/>
+            <zone ulx="561" uly="2047" lrx="1862" lry="2220" rendition="Line" xml:id="facs_6_tr_1_tl_31"/>
+            <zone ulx="560" uly="2126" lrx="1852" lry="2286" rendition="Line" xml:id="facs_6_tr_1_tl_32"/>
+            <zone ulx="703" uly="2214" lrx="1865" lry="2339" rendition="Line" xml:id="facs_6_l_8037"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_7">
+      <surface ulx="0" uly="0" lrx="1925" lry="2846">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif" width="1925px" height="2846px" rend="facstab"/>
+         <zone ulx="284" uly="188" lrx="1613" lry="2270" rendition="TextRegion" xml:id="facs_7_tr_1" subtype="back">
+            <zone ulx="318" uly="295" lrx="1560" lry="476" rendition="Line" xml:id="facs_7_l"/>
+            <zone ulx="375" uly="411" lrx="1578" lry="565" rendition="Line" xml:id="facs_7_l_1371"/>
+            <zone ulx="306" uly="490" lrx="1533" lry="659" rendition="Line" xml:id="facs_7_tr_1_tl_6"/>
+            <zone ulx="322" uly="577" lrx="1565" lry="753" rendition="Line" xml:id="facs_7_l_2929"/>
+            <zone ulx="304" uly="668" lrx="1525" lry="861" rendition="Line" xml:id="facs_7_tr_1_tl_11"/>
+            <zone ulx="361" uly="745" lrx="1553" lry="922" rendition="Line" xml:id="facs_7_l_5860"/>
+            <zone ulx="323" uly="846" lrx="1427" lry="1016" rendition="Line" xml:id="facs_7_tr_1_tl_16"/>
+            <zone ulx="360" uly="965" lrx="1594" lry="1092" rendition="Line" xml:id="facs_7_tr_1_tl_17"/>
+            <zone ulx="370" uly="1031" lrx="1560" lry="1179" rendition="Line" xml:id="facs_7_l_8114"/>
+            <zone ulx="384" uly="1137" lrx="1420" lry="1260" rendition="Line" xml:id="facs_7_tr_1_tl_21"/>
+            <zone ulx="372" uly="1217" lrx="1544" lry="1364" rendition="Line" xml:id="facs_7_l_9935"/>
+            <zone ulx="364" uly="1307" lrx="1534" lry="1430" rendition="Line" xml:id="facs_7_tr_1_tl_24"/>
+            <zone ulx="367" uly="1380" lrx="1512" lry="1534" rendition="Line" xml:id="facs_7_tr_1_tl_25"/>
+            <zone ulx="372" uly="1475" lrx="1507" lry="1606" rendition="Line" xml:id="facs_7_l_12042"/>
+            <zone ulx="378" uly="1561" lrx="1542" lry="1706" rendition="Line" xml:id="facs_7_l_13076"/>
+            <zone ulx="390" uly="1659" lrx="1558" lry="1782" rendition="Line" xml:id="facs_7_tr_1_tl_30"/>
+            <zone ulx="319" uly="1735" lrx="1497" lry="1880" rendition="Line" xml:id="facs_7_l_15117"/>
+            <zone ulx="683" uly="1901" lrx="1534" lry="2072" rendition="Line" xml:id="facs_7_tr_1_tl_33"/>
+            <zone ulx="730" uly="2039" lrx="1551" lry="2218" rendition="Line" xml:id="facs_7_l_16203"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_8">
+      <surface ulx="0" uly="0" lrx="1961" lry="2817">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00208.tif" width="1961px" height="2817px" rend="facstab"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="original">
+         <pb facs="#facs_1" n="1"/>
+         <milestone unit="section" facs="#facs_1_r_69"/>
+         <p>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/380,185,827,162" n="N001"/>Einkom. den 23. Sept.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/769,302,211,69" n="N002"/>1733.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/219,404,364,140" n="N003"/>An das
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/302,515,429,125" n="N004"/>Chur- und
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/275,614,686,121" n="N005"/>Fürstl. Sächß.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/269,686,854,129" n="N006"/>Consistorium all<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/241,788,750,127" n="N007"/>hier zu Leipzig.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/930,1034,336,111" n="N008"/>P. P.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/247,1073,1276,230" n="N009"/>Ew. HochEdelgeb. Magnif.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/280,1217,1249,171" n="N010"/>HochEhrwd. auch HochEdl. Herrl.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/311,1306,1209,141" n="N011"/>können wir hierdurch gehorsamst
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/271,1397,1196,135" n="N012"/>zu hinterbringen nicht un<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/289,1480,1197,115" n="N013"/>terlaßen, was maßen der
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/234,1561,1279,160" n="N014"/>hiesige Kauff- und Handels-
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/309,1665,1200,122" n="N015"/>Mann, HE. Johann Friedrich
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/269,1752,1241,132" n="N016"/>Eitelwein auf erhaltnen Gnä<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/294,1828,1205,128" n="N017"/>digsten Befehl, ohne Aufgeboth
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/222,1914,1258,128" n="N018"/>sich mit seiner Verlobten,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/331,1995,1177,126" n="N019"/>der Jfr. Sieberin, trauen zu
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/319,2081,1147,109" n="N020"/>laßen, die Erlaubniß er<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00201.tif/264,2153,1197,151" n="N021"/>halten, da nun auf Produ<span type="hyphen">-</span>
+            </p>
+         <pb facs="#facs_2" n="2"/>
+         <milestone unit="section" facs="#facs_2_tr_1"/>
+         <p>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/647,259,1210,127" n="N001"/>ction obangezogenen gnädigsten
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/653,342,1201,150" n="N002"/>Befehls, Se. HochEhrwd. Magnif.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/656,412,1218,151" n="N003"/>der Herr Superintendens all<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/610,521,1207,126" n="N004"/>hier, D. Salomon Deyling, des
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/665,607,1194,112" n="N005"/>Bräutigams Verlangen an
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/647,684,1202,133" n="N006"/>den Pfarr zu Plausig der
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/634,770,1234,140" n="N007"/>Trauung halber Verordnung
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/653,848,1198,140" n="N008"/>ergehen zu laßen, deferiret;
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/667,953,1184,114" n="N009"/>So haben wir wegen unsrer
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/677,1033,1190,146" n="N010"/>Gebühren uns bey H. Eitelwei<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/675,1129,1187,127" n="N011"/>nen gemeldet hätten auch
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/699,1226,1167,117" n="N012"/>gewiß geglaubet, es wür<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/683,1294,1172,114" n="N013"/>de derselbe sich hierunter
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/670,1366,1123,134" n="N014"/>der Billigkeit bescheiden.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/649,1472,1217,111" n="N015"/>Nachdem wir aber nicht son<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/706,1535,1133,143" n="N016"/>der Befremdung erfahren
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/691,1610,1181,134" n="N017"/>müßen, daß Herr Eitel<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/627,1707,1253,154" n="N018"/>wein, unter dem wiederrecht<supplied resp="hdv-svt54" reason="ommitted-in-original"><span type="hyphen">-</span></supplied>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/712,1788,1151,133" n="N019"/>lichen unstatthafften Vor<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/658,1878,1208,136" n="N020"/>wande: Er gäbe Niemanden
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/701,1948,1173,155" n="N021"/>nichts, sich der schuldigen Zah<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/706,2038,1148,121" n="N022"/>lung entbrechen, auch keine
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/641,2117,1233,125" n="N023"/>Vorstellung gelten laßen will,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00202.tif/635,2190,1215,126" n="N024"/>Wir hergegen dabey um
+            </p>
+         <pb facs="#facs_3" n="3"/>
+         <milestone unit="section" facs="#facs_3_tr_1"/>
+         <p>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/331,305,1244,123" n="N001"/>willen nicht aquiesciren kön<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/379,395,1206,125" n="N002"/>nen, weil 1) diese Gebühren uns
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/380,479,1198,126" n="N003"/>zugleich Salarii loco ausgema<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/372,578,1172,134" n="N004"/>chet worden 2) in dergleichen
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/383,651,1179,147" n="N005"/>Fällen es jederzeit also gehal<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/408,735,1175,165" n="N006"/>ten zu werden pfleget, daß
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/375,832,1163,146" n="N007"/>derjenige, so sich außerhalb
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/400,916,1166,151" n="N008"/>Leipzig trauen laßen will,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/387,1016,1150,151" n="N009"/>dennoch das gewöhnliche Hono<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/399,1100,1173,128" n="N010"/>rarium an die Kirchen-Bedien<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/414,1166,1158,159" n="N011"/>ten und Schüler zu bezah<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/400,1266,1148,117" n="N012"/>len verbunden ist, auch 3)
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/331,1360,1171,105" n="N013"/>wie aus dem Adjecto Sub A
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/317,1437,1189,142" n="N014"/>zu ersehen, von der hohen
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/371,1507,1181,141" n="N015"/>Landes Obrigkeit verordnet
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/340,1615,1223,111" n="N016"/>worden, nichts destoweni<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/339,1689,1141,129" n="N017"/>ger in loco domicilii, die
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/385,1779,1152,136" n="N018"/>ordentlichen Gebühren zu
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/388,1862,1187,139" n="N019"/>entrichten, und besonders
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/378,1956,1172,124" n="N020"/>4) da Braut und Bräuti<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/316,2048,1219,163" n="N021"/>gam hieselbst wohnhafft
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00203.tif/348,2145,1238,151" n="N022"/>selbige uns nicht zu ent<span type="hyphen">-</span>
+            </p>
+         <pb facs="#facs_4" n="4"/>
+         <milestone unit="section" facs="#facs_4_tr_1"/>
+         <p>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/560,263,1288,167" n="N001"/>ziehen sind, auch endlich 5) pro<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/623,367,1204,171" n="N002"/>pter consequentiam, derglei<supplied resp="fpb-svt54" reason="ommitted-in-original"><span type="hyphen">-</span></supplied>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/634,460,1227,142" n="N003"/>chen eigenmächtiger Abbruch
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/639,571,1195,122" n="N004"/>nicht zu erdulden stehet, im<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/644,639,1206,138" n="N005"/>maßen 6) per ordin. Elect.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/650,734,1198,150" n="N006"/>Eccles. Artic. gen. 20 § und
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/642,806,1211,158" n="N007"/>nachdem it. Artic. 22. § ult.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/642,908,1206,150" n="N008"/>ausdrückl. enthalten, daß
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/644,1006,1203,113" n="N009"/>denen Kirchen- und Schuldie<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/673,1099,1157,118" n="N010"/>nern an ihren Einkünfften
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/688,1185,1168,124" n="N011"/>nichts entzogen werden soll;
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/696,1283,1123,119" n="N012"/>Alß wenden wir uns zu
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/697,1345,1158,142" n="N013"/>Ew. HochEdelgeb. Magnif.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/663,1422,1168,172" n="N014"/>HochEhrwd. auch HochEdl. Herrl.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/633,1518,1204,146" n="N015"/>gerechtliebenden Gütigkeit,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/674,1609,1173,135" n="N016"/>demüthigst bittende, Dieselben
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/635,1689,1199,134" n="N017"/>geruhen uns bey denen zu un<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/615,1769,1232,158" n="N018"/>serm Unterhalt ausgesezten
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/665,1862,1172,140" n="N019"/>Einkünfften kräfftigst zu
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/554,1951,1305,202" n="N020"/>schützen, und HE. Eitelweinen
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/642,2038,1203,157" n="N021"/>durch den Rath zu Leipzig
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/655,2120,1208,141" n="N022"/>auferlegen zu laßen, daß
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00204.tif/670,2203,1180,158" n="N023"/>er die gewöhnl. Gebühren
+            </p>
+         <pb facs="#facs_5" n="5"/>
+         <milestone unit="section" facs="#facs_5_tr_1"/>
+         <p>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/436,289,1142,153" n="N001"/>ohne fernern Anstandt an uns
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/399,416,1182,133" n="N002"/>entrichten, auch alle verursach<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/443,494,1066,139" n="N003"/>te Unkosten erstatten müße.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/345,567,1253,152" n="N004"/>Wir deveneriren diese hohe Ver<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/271,645,1327,225" n="N005"/>fügung mit unterthäni<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/411,757,1165,130" n="N006"/>gen Dancke, und verharren
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/416,840,1149,141" n="N007"/>mit der devotesten Submis<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/341,918,277,162" n="N008"/>sion
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/785,1085,523,128" n="N009"/>P. P.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/746,1824,816,151" n="N010"/>unterthänig-gehor<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/726,1939,533,147" n="N011"/>samste
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/611,2050,949,141" n="N012"/>Joh. Sebast. Bach Dir. Mus.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/781,2127,687,93" n="N013"/>u. Cant. zu S. Thomae.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/717,2180,468,143" n="N014"/>Joh. Schneider
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/1012,2238,551,136" n="N015"/>Org. zu S. Nicol.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/496,2324,1006,112" n="N016"/>M. Joh. Matthias Gesner wegen der
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00205.tif/841,2409,601,130" n="N017"/>Thomas-Schüler.
+            </p>
+         <pb facs="#facs_8" n="8"/>
+         </div>
+         <div type="commentary">
+         <p/>
+         </div>
+      </body>
+         <back>
+         <div type="original_back">
+            <pb facs="#facs_6" n="6"/>
+            <milestone unit="section" facs="#facs_6_tr_1"/>
+            <p>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/1021,255,182,134" n="N001"/>A.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/549,349,1289,167" n="N002"/>Vor Gottes Gnaden, Friedrich Augu<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/576,458,1262,159" n="N003"/>stus, König in Pohlen, Herzog
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/592,548,1236,163" n="N004"/>zu Sachsen, Jülich, Cleve, Berg,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/581,633,1177,184" n="N005"/>Engern und Westphalen p.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/1014,729,505,198" n="N006"/>Churfürst p.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/568,844,1290,175" n="N007"/>Würdiger, Hochgelahrter, Lieber, An<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/647,979,1079,118" n="N008"/>dächtiger, und Getreuer;
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/554,1021,1300,184" n="N009"/>Was unsers Ober-Hoff-Gerichts-As<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/573,1127,1292,165" n="N010"/>sessor, wie auch Professor Pande<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/661,1227,1176,134" n="N011"/>ctarum Publicus zu Leipzig,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/616,1297,1230,149" n="N012"/>D. Carl Otto Rechenberg wegen
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/650,1382,1210,102" n="N013"/>der Proclamation und Trau<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/656,1473,1223,146" n="N014"/>ung, mit seiner Verlobten, Chri<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/550,1562,1312,163" n="N015"/>stianen Sophien, verwittbeter
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/681,1646,1185,118" n="N016"/>von Seelen, in Unterthänig<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/683,1725,1176,108" n="N017"/>keit suchet und bittet, das
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/654,1799,1218,132" n="N018"/>zeiget die beyfuge mit meh<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/659,1892,1200,114" n="N019"/>rern. Nun wir dann, wofern
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/696,1969,1167,141" n="N020"/>beyde ihre Ledigkeit, und daß
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/561,2047,1301,173" n="N021"/>sie anderweit, der Ehe halber,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/560,2126,1292,160" n="N022"/>sich nicht verbindl. einge<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00206.tif/703,2214,1162,125" n="N023"/>laßen, vor auch, vermittelß</p>
+            <pb facs="#facs_7" n="7"/>
+            <milestone unit="section" facs="#facs_7_tr_1"/>
+            <p>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/318,295,1242,181" n="N001"/>HandGelöbnißes, an Eydes statt
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/375,411,1203,154" n="N002"/>bestärcket, auch sonst kein er<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/306,490,1227,169" n="N003"/>heblich Bedenken vorhanden in
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/322,577,1243,176" n="N004"/>Gnaden geschehen laßen, daß sie
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/304,668,1221,193" n="N005"/>ohn vorheriges Aufgeboth
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/361,745,1192,177" n="N006"/>in der Kirche Zu Hohenheyda,
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/323,846,1104,170" n="N007"/>jedoch, daß sie in Leipzig
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/360,965,1234,127" n="N008"/>nichts destoweniger die ordent<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/370,1031,1190,148" n="N009"/>lichen Gebühren entrichten ge<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/384,1137,1036,123" n="N010"/>trauet werden mögen.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/372,1217,1172,147" n="N011"/>Also ist unser Begehren hier<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/364,1307,1170,123" n="N012"/>mit, ihr wollet auf ange<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/367,1380,1145,154" n="N013"/>regten Fall, deshalben das
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/372,1475,1135,131" n="N014"/>nöthige weiter gebührend
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/378,1561,1164,145" n="N015"/>verfügen. Davon gescheiht
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/390,1659,1168,123" n="N016"/>unsere Meynung. Datum
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/319,1735,1178,145" n="N017"/>Dreßden am 26. Jul. 1726.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/683,1901,851,171" n="N018"/>Jacob Friedrich Schilling.
+               <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/730,2039,821,179" n="N019"/>Johann Christoph Hölzel.</p>
+         </div>
+         <div type="commentary_back">
+         <p/>
+         </div>
+      </back>
+   </text>
+</TEI>

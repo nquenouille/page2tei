@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2024-07-02T11:29:57.878+02:00</Created>
+        <LastChange>2025-03-20T10:42:09.654+01:00</LastChange>
+        <TranskribusMetadata pageNr="5" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="d_lesa_0008_ratsstube_3369_00205.tif" imageWidth="1925" imageHeight="2846">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1742463729655" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="293,207 268,2524 1577,2534 1626,210"/>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:0;}">
+                <Coords points="436,341 461,427 608,388 573,441 683,396 1572,442 1578,357 1469,337 1291,325 1115,322 1058,289 944,345 790,292 665,364 540,298"/>
+                <Baseline points="468,385 585,377 636,380 687,382 739,382 790,384 841,385 893,392 944,395 995,393 1047,394 1098,396 1149,397 1200,398 1252,400 1303,405 1354,406 1406,406 1457,410 1508,413 1560,416"/>
+                <TextEquiv>
+                    <Unicode>ohne fernern Anstandt an uns</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:1;}">
+                <Coords points="403,503 772,494 1003,522 1089,493 1492,549 1581,538 1579,479 1539,447 1391,443 1045,427 849,433 681,416 575,443 577,418 542,436 459,429 399,426"/>
+                <Baseline points="410,466 466,463 523,464 580,466 636,468 693,474 750,477 806,482 863,482 920,486 977,488 1033,490 1090,494 1147,492 1203,496 1260,500 1317,501 1373,502 1430,507 1487,508 1564,537"/>
+                <TextEquiv>
+                    <Unicode>entrichten, auch alle verursach¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:2;}">
+                <Coords points="443,571 700,568 711,598 764,572 952,621 1037,596 1354,596 1360,633 1509,621 1508,549 1360,561 1152,514 945,544 772,494 444,507"/>
+                <Baseline points="454,558 506,554 559,555 612,555 665,556 718,558 770,561 823,566 876,568 929,571 982,572 1034,577 1087,576 1140,578 1193,583 1246,588 1298,590 1351,592 1404,592 1457,594 1510,598"/>
+                <TextEquiv>
+                    <Unicode>te Unkosten erstatten müße.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_2185" custom="readingOrder {index:3;}">
+                <Coords points="345,602 521,567 699,604 767,570 953,623 1035,601 1352,603 1370,629 1515,629 1549,631 1579,628 1598,715 1552,709 1455,702 1306,719 1270,690 677,646 348,696"/>
+                <Baseline points="453,643 517,640 559,641 600,642 642,642 684,644 725,642 767,645 808,646 850,648 892,650 933,652 975,657 1016,659 1058,662 1100,665 1141,667 1183,668 1224,674 1266,672 1307,683 1334,698 1361,698 1387,697 1413,694 1440,697 1478,697 1507,694 1536,694 1566,698"/>
+                <TextEquiv>
+                    <Unicode>Wir deveneriren diese hohe Ver¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:4;}">
+                <Coords points="271,870 521,738 564,779 663,735 726,802 839,751 1285,772 1311,796 1598,799 1582,745 1449,718 1313,730 1282,697 1154,690 1059,689 955,712 672,645 473,675"/>
+                <Baseline points="484,730 534,728 584,728 634,732 684,732 734,733 784,736 834,739 884,738 934,740 984,743 1034,747 1084,748 1134,750 1184,752 1234,754 1284,759 1334,761 1384,770 1510,776 1581,793"/>
+                <TextEquiv>
+                    <Unicode>fügung mit unterthäni¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_10" custom="readingOrder {index:5;}">
+                <Coords points="416,886 507,837 676,826 1135,846 1220,887 1361,853 1575,881 1576,832 1369,801 1257,814 1072,760 822,763 732,811 666,782 576,777 507,757 411,787"/>
+                <Baseline points="420,812 476,816 533,822 590,822 647,824 704,824 761,824 818,825 875,828 932,832 989,834 1045,836 1102,838 1159,841 1216,843 1273,850 1330,853 1387,853 1444,859 1501,864 1558,870"/>
+                <TextEquiv>
+                    <Unicode>gen Dancke, und verharren</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_11" custom="readingOrder {index:6;}">
+                <Coords points="417,924 541,918 658,924 991,981 1149,935 1550,972 1565,907 1351,864 1240,891 1081,877 843,840 531,858 416,897"/>
+                <Baseline points="424,916 479,911 535,908 591,910 647,910 703,916 759,916 815,919 871,920 927,923 983,922 1038,924 1094,926 1150,929 1206,931 1262,934 1318,935 1374,938 1430,944 1486,946 1542,946"/>
+                <TextEquiv>
+                    <Unicode>mit der devotesten Submis¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_12" custom="readingOrder {index:7;}">
+                <Coords points="341,1080 477,1015 495,1011 507,1018 518,1008 577,1034 584,1028 614,1038 618,940 602,934 579,944 548,918 471,921 427,933"/>
+                <Baseline points="432,1006 458,1005 485,1003 511,1001 538,1000 564,1000 591,1000 618,998"/>
+                <TextEquiv>
+                    <Unicode>sion</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:8;}">
+                <Coords points="785,1188 1270,1213 1308,1089 807,1085"/>
+                <Baseline points="833,1172 871,1178 957,1177 1019,1185 1074,1183 1123,1188 1149,1188 1174,1186 1200,1189 1226,1192"/>
+                <TextEquiv>
+                    <Unicode>P. P.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_14" custom="readingOrder {index:9;}">
+                <Coords points="746,1915 954,1908 994,1939 1076,1931 1129,1970 1244,1931 1293,1960 1373,1975 1562,1943 1559,1864 1512,1893 1496,1859 1382,1883 1295,1873 1199,1865 1115,1838 1048,1859 974,1824 836,1835 746,1882"/>
+                <Baseline points="754,1902 779,1904 805,1901 831,1900 856,1902 882,1903 908,1902 933,1904 959,1904 985,1906 1011,1906 1036,1906 1062,1906 1088,1906 1113,1906 1139,1908 1165,1908 1190,1909 1216,1911 1242,1913 1289,1920 1318,1929 1353,1923 1400,1930 1441,1934 1507,1943 1545,1941"/>
+                <TextEquiv>
+                    <Unicode>unterthänig-gehor¬</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_15" custom="readingOrder {index:10;}">
+                <Coords points="726,2086 964,1997 1023,2000 1018,2039 1074,2040 1162,2001 1245,1996 1259,1939 1176,1968 1132,1963 1091,1975 1087,1939 1042,1945 988,1948 949,1939"/>
+                <Baseline points="954,1986 981,1984 1009,1984 1036,1984 1064,1985 1091,1986 1119,1986 1146,1988 1174,1986 1200,1990 1240,1994"/>
+                <TextEquiv>
+                    <Unicode>samste</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:11;}">
+                <Coords points="611,2171 671,2191 806,2155 842,2131 1021,2143 1078,2121 1200,2130 1169,2174 1333,2133 1475,2173 1559,2166 1560,2072 1502,2059 1454,2096 1395,2097 1271,2050 1139,2077 1065,2052 814,2060"/>
+                <Baseline points="824,2122 859,2122 895,2121 931,2119 966,2118 1002,2118 1038,2118 1073,2119 1109,2119 1145,2120 1181,2122 1216,2122 1252,2125 1288,2127 1323,2129 1359,2130 1395,2134 1430,2136 1466,2137 1502,2140 1538,2144"/>
+                <TextEquiv>
+                    <Unicode>Joh. Sebast. Bach Dir. Mus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_18" custom="readingOrder {index:12;}">
+                <Coords points="798,2185 892,2209 967,2180 1027,2220 1111,2188 1186,2202 1270,2195 1444,2214 1468,2178 1320,2133 1238,2162 1175,2178 1151,2143 1069,2127 1014,2148 914,2127 831,2141 781,2164"/>
+                <Baseline points="818,2174 850,2174 883,2177 916,2178 948,2175 981,2176 1014,2178 1046,2180 1079,2182 1112,2182 1145,2181 1177,2181 1210,2185 1243,2190 1275,2191 1308,2190 1341,2190 1373,2192 1406,2194 1439,2196 1472,2194"/>
+                <TextEquiv>
+                    <Unicode>u. Cant. zu S. Thomae.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:13;}">
+                <Coords points="717,2292 756,2318 877,2258 881,2323 1005,2248 1185,2258 1183,2197 1170,2193 1111,2188 1031,2221 960,2180 864,2225 794,2184 736,2187"/>
+                <Baseline points="746,2234 771,2232 797,2233 823,2235 849,2236 875,2237 901,2238 927,2238 953,2240 978,2240 1004,2240 1030,2240 1056,2240 1082,2240 1108,2242 1134,2244 1160,2246 1186,2246"/>
+                <TextEquiv>
+                    <Unicode>Joh. Schneider</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_20" custom="readingOrder {index:14;}">
+                <Coords points="1013,2311 1081,2314 1120,2374 1219,2351 1270,2309 1382,2312 1472,2359 1521,2341 1563,2256 1495,2242 1419,2268 1263,2238 1166,2285 1054,2250 1012,2254"/>
+                <Baseline points="1020,2302 1045,2302 1070,2300 1095,2300 1120,2299 1145,2297 1170,2297 1195,2298 1220,2302 1245,2302 1271,2302 1296,2303 1321,2303 1346,2303 1371,2306 1396,2304 1421,2307 1446,2308 1471,2308 1496,2308 1522,2308"/>
+                <TextEquiv>
+                    <Unicode>Org. zu S. Nicol.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="l_8714" custom="readingOrder {index:15;}">
+                <Coords points="496,2424 531,2342 557,2332 606,2341 801,2336 1036,2324 1118,2374 1438,2363 1486,2382 1502,2436 1365,2417 1272,2430 1226,2413 1017,2411 750,2409"/>
+                <Baseline points="532,2406 565,2408 598,2398 604,2402 648,2399 692,2398 737,2396 781,2394 826,2394 870,2394 914,2395 959,2396 1003,2398 1048,2398 1092,2401 1136,2402 1181,2402 1225,2402 1270,2404 1314,2407 1358,2410 1403,2413 1447,2414 1492,2420"/>
+                <TextEquiv>
+                    <Unicode>M. Joh. Matthias Gesner wegen der</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:16;}">
+                <Coords points="846,2521 991,2504 1078,2467 1195,2539 1229,2511 1297,2516 1331,2483 1404,2497 1442,2482 1441,2442 1371,2419 1224,2453 1177,2419 841,2409"/>
+                <Baseline points="850,2458 879,2454 909,2456 939,2456 969,2456 999,2456 1028,2458 1058,2458 1088,2458 1118,2458 1148,2460 1177,2462 1207,2464 1237,2464 1267,2466 1297,2466 1326,2466 1356,2469 1386,2472 1416,2472 1446,2474"/>
+                <TextEquiv>
+                    <Unicode>Thomas-Schüler.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>ohne fernern Anstandt an unsentrichten, auch alle verursach¬te Unkosten erstatten müße.Wir deveneriren diese hohe Ver¬fügung mit unterthäni¬gen Dancken und verharrenmit der devotesten Submis¬sionP. P.unterthänig-gehor¬samsteJoh. Sebast. Bach Dir. Mus.u. Cant. zu S. Thomae.Joh. SchneiderOrg. zu S. Nicol.M. Joh. Matthias Gesner wegen derThomas-Schüler.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+    </Page>
+</PcGts>

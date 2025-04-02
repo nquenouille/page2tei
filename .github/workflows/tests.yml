@@ -38,3 +38,7 @@ jobs:
         run: |
           java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/front_body_back/mets.xml -o:test/front_body_back/front_body_back_test.xml
           diff -w --normal test/front_body_back/front_body_back_test.xml test/front_body_back/front_body_back.xml
+      - name: several back test
+        run: |
+          java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/several_back/mets.xml -o:test/several_back/several_back_test.xml
+          diff -w --normal test/several_back/several_back_test.xml test/several_back/several_back.xml
