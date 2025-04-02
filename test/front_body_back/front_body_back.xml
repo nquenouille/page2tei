@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+         <title type="main">Brief von Johann Sebastian Bach (24) an den Rat der Stadt Erfurt</title>
+         </titleStmt>
+         <publicationStmt/>
+         <sourceDesc>
+            <bibl>
+                  <title type="main">Brief von Johann Sebastian Bach (24) an den Rat der Stadt Erfurt</title><idno type="uuid">pyzde</idno></bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+      </profileDesc>
+   </teiHeader>
+   <facsimile xml:id="facs_1">
+      <surface ulx="0" uly="0" lrx="2738" lry="4407">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif" width="2738px" height="4407px" rend="facstab"/>
+         <zone ulx="510" uly="1027" lrx="2230" lry="3713" rendition="TextRegion" xml:id="facs_1_tr_1" subtype="front">
+            <zone ulx="500" uly="1231" lrx="1992" lry="1456" rendition="Line" xml:id="facs_1_tr_1_tl_4"/>
+            <zone ulx="798" uly="1401" lrx="1715" lry="1562" rendition="Line" xml:id="facs_1_tr_1_tl_5"/>
+            <zone ulx="683" uly="1562" lrx="2184" lry="1804" rendition="Line" xml:id="facs_1_tr_1_tl_6"/>
+            <zone ulx="705" uly="2066" lrx="2172" lry="2249" rendition="Line" xml:id="facs_1_tr_1_tl_7"/>
+            <zone ulx="783" uly="2180" lrx="2171" lry="2353" rendition="Line" xml:id="facs_1_tr_1_tl_8"/>
+            <zone ulx="802" uly="2292" lrx="2178" lry="2474" rendition="Line" xml:id="facs_1_tr_1_tl_9"/>
+            <zone ulx="809" uly="2386" lrx="2195" lry="2559" rendition="Line" xml:id="facs_1_tr_1_tl_10"/>
+            <zone ulx="817" uly="2481" lrx="2219" lry="2649" rendition="Line" xml:id="facs_1_tr_1_tl_11"/>
+            <zone ulx="805" uly="2578" lrx="2225" lry="2749" rendition="Line" xml:id="facs_1_tr_1_tl_12"/>
+            <zone ulx="815" uly="2678" lrx="2179" lry="2829" rendition="Line" xml:id="facs_1_tr_1_tl_13"/>
+            <zone ulx="805" uly="2768" lrx="2208" lry="2931" rendition="Line" xml:id="facs_1_tr_1_tl_14"/>
+            <zone ulx="820" uly="2861" lrx="2178" lry="3008" rendition="Line" xml:id="facs_1_tr_1_tl_15"/>
+            <zone ulx="837" uly="2950" lrx="2204" lry="3101" rendition="Line" xml:id="facs_1_tr_1_tl_16"/>
+            <zone ulx="828" uly="3032" lrx="2225" lry="3192" rendition="Line" xml:id="facs_1_tr_1_tl_17"/>
+            <zone ulx="843" uly="3119" lrx="2174" lry="3264" rendition="Line" xml:id="facs_1_tr_1_tl_18"/>
+            <zone ulx="839" uly="3214" lrx="2225" lry="3368" rendition="Line" xml:id="facs_1_tr_1_tl_19"/>
+            <zone ulx="839" uly="3313" lrx="2216" lry="3467" rendition="Line" xml:id="facs_1_tr_1_tl_20"/>
+            <zone ulx="850" uly="3402" lrx="2202" lry="3540" rendition="Line" xml:id="facs_1_tr_1_tl_21"/>
+            <zone ulx="850" uly="3491" lrx="2217" lry="3633" rendition="Line" xml:id="facs_1_tr_1_tl_22"/>
+            <zone ulx="857" uly="3584" lrx="2224" lry="3737" rendition="Line" xml:id="facs_1_tr_1_tl_23"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_2">
+      <surface ulx="0" uly="0" lrx="2738" lry="4407">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif" width="2738px" height="4407px" rend="facstab"/>
+         <zone ulx="659" uly="1997" lrx="2696" lry="4282" rendition="TextRegion" xml:id="facs_2_tr_1">
+            <zone ulx="1301" uly="1943" lrx="2694" lry="2138" rendition="Line" xml:id="facs_2_tr_1_tl_1"/>
+            <zone ulx="1315" uly="2048" lrx="2675" lry="2244" rendition="Line" xml:id="facs_2_tr_1_tl_2"/>
+            <zone ulx="1332" uly="2185" lrx="2642" lry="2344" rendition="Line" xml:id="facs_2_tr_1_tl_3"/>
+            <zone ulx="1323" uly="2277" lrx="2649" lry="2465" rendition="Line" xml:id="facs_2_tr_1_tl_4"/>
+            <zone ulx="1332" uly="2387" lrx="2682" lry="2578" rendition="Line" xml:id="facs_2_tr_1_tl_5"/>
+            <zone ulx="1349" uly="2509" lrx="2661" lry="2697" rendition="Line" xml:id="facs_2_tr_1_tl_6"/>
+            <zone ulx="1356" uly="2593" lrx="2649" lry="2752" rendition="Line" xml:id="facs_2_tr_1_tl_7"/>
+            <zone ulx="1356" uly="2687" lrx="2666" lry="2846" rendition="Line" xml:id="facs_2_tr_1_tl_8"/>
+            <zone ulx="1362" uly="2777" lrx="2661" lry="2939" rendition="Line" xml:id="facs_2_tr_1_tl_9"/>
+            <zone ulx="1358" uly="2872" lrx="2649" lry="3017" rendition="Line" xml:id="facs_2_tr_1_tl_10"/>
+            <zone ulx="1337" uly="2953" lrx="2643" lry="3104" rendition="Line" xml:id="facs_2_tr_1_tl_11"/>
+            <zone ulx="1355" uly="3045" lrx="2617" lry="3226" rendition="Line" xml:id="facs_2_tr_1_tl_12"/>
+            <zone ulx="1327" uly="3147" lrx="2607" lry="3309" rendition="Line" xml:id="facs_2_tr_1_tl_13"/>
+            <zone ulx="1360" uly="3239" lrx="2315" lry="3420" rendition="Line" xml:id="facs_2_tr_1_tl_14"/>
+            <zone ulx="1049" uly="3348" lrx="1796" lry="3614" rendition="Line" xml:id="facs_2_tr_1_tl_15"/>
+            <zone ulx="2048" uly="3873" lrx="2607" lry="4086" rendition="Line" xml:id="facs_2_tr_1_tl_17"/>
+            <zone ulx="2081" uly="4015" lrx="2583" lry="4149" rendition="Line" xml:id="facs_2_tr_1_tl_19"/>
+            <zone ulx="2123" uly="4105" lrx="2611" lry="4218" rendition="Line" xml:id="facs_2_tr_1_tl_20"/>
+            <zone ulx="2131" uly="4174" lrx="2624" lry="4318" rendition="Line" xml:id="facs_2_tr_1_tl_21"/>
+            <zone ulx="645" uly="3870" lrx="1317" lry="4059" rendition="Line" xml:id="facs_2_tr_1_tl_16"/>
+            <zone ulx="934" uly="4015" lrx="1291" lry="4147" rendition="Line" xml:id="facs_2_tr_1_tl_18"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_3">
+      <surface ulx="0" uly="0" lrx="2738" lry="4407">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00087.tif" width="2738px" height="4407px" rend="facstab"/>
+      </surface>
+   </facsimile>
+   <facsimile xml:id="facs_4">
+      <surface ulx="0" uly="0" lrx="4407" lry="2738">
+         <graphic url="https://iiif.saw-leipzig.de/iiif/3/fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif" width="4407px" height="2738px" rend="facstab"/>
+         <zone ulx="1577" uly="255" lrx="3382" lry="1963" rendition="TextRegion" xml:id="facs_4_r" subtype="back">
+            <zone ulx="1591" uly="359" lrx="1755" lry="705" rendition="Line" xml:id="facs_4_l"/>
+            <zone ulx="1923" uly="465" lrx="2065" lry="730" rendition="Line" xml:id="facs_4_l_8"/>
+            <zone ulx="3134" uly="1033" lrx="3353" lry="1156" rendition="Line" xml:id="facs_4_tr_1_tl_1"/>
+            <zone ulx="3104" uly="1055" lrx="3147" lry="1085" rendition="Line" xml:id="facs_4_l_125"/>
+            <zone ulx="1751" uly="1001" lrx="3378" lry="1286" rendition="Line" xml:id="facs_4_tr_1_tl_2"/>
+            <zone ulx="1875" uly="1187" lrx="3227" lry="1410" rendition="Line" xml:id="facs_4_tr_1_tl_3"/>
+            <zone ulx="1945" uly="1295" lrx="3345" lry="1492" rendition="Line" xml:id="facs_4_tr_1_tl_4"/>
+            <zone ulx="1855" uly="1425" lrx="3347" lry="1598" rendition="Line" xml:id="facs_4_tr_1_tl_5"/>
+            <zone ulx="1825" uly="1482" lrx="3357" lry="1718" rendition="Line" xml:id="facs_4_tr_1_tl_6"/>
+            <zone ulx="1912" uly="1626" lrx="2532" lry="1804" rendition="Line" xml:id="facs_4_tr_1_tl_7"/>
+            <zone ulx="2675" uly="1686" lrx="2819" lry="1886" rendition="Line" xml:id="facs_4_tr_1_tl_8"/>
+            <zone ulx="2795" uly="1808" lrx="3320" lry="2004" rendition="Line" xml:id="facs_4_tr_1_tl_10"/>
+            <zone ulx="1593" uly="1737" lrx="2158" lry="1941" rendition="Line" xml:id="facs_4_tr_1_tl_9"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <front>
+         <div type="original_front">
+            <pb facs="#facs_1" n="1"/>
+            <milestone unit="section" facs="#facs_1_tr_1"/>
+            <p>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/500,1231,1492,225" n="N001"/>HochEdle p. Veste und Hochgelahrte
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/798,1401,917,161" n="N002"/>auch Hochweise Herren,
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/683,1562,1501,242" n="N003"/>Insonders Hochgeehrteste Herren Patroni.
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/705,2066,1467,183" n="N004"/>Ew. HochEdl. ist albereit bekant, welcher
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/783,2180,1388,173" n="N005"/>gestalt ich und mein Bruder, Joh. Jacob
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/802,2292,1376,182" n="N006"/>Bach, (so in Königl. Schwedischen Diensten
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/809,2386,1386,173" n="N007"/>ist,) MitErben bey der Lemmerhirtischen
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/817,2481,1402,168" n="N008"/>Verlaßenschafft seynd. Weil ich nun eüßer<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/805,2578,1420,171" n="N009"/>lich vernehme, daß die andern Hrn. MitErben
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/815,2678,1364,151" n="N010"/>gesinnet seyn, einen proceß über solche
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/805,2768,1403,163" n="N011"/>Verlaßenschafft anzuspinnen, gleichwohl aber
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/820,2861,1358,147" n="N012"/>mir und meinem abwesendem Bruder
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/837,2950,1367,151" n="N013"/>damit nicht gedienet ist, indeme nicht ge<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/828,3032,1397,160" n="N014"/>sinnet bin das Lemmerhirtische Testament
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/843,3119,1331,145" n="N015"/>rechtlich anzufechten, sondern mit deme
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/839,3214,1386,154" n="N016"/>zufrieden bin, was mir und meinem Bruder
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/839,3313,1377,154" n="N017"/>darinne gegönnet und verordnet worden,
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/850,3402,1352,138" n="N018"/>maßen ich vor mich und sub cautione
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/850,3491,1367,142" n="N019"/>rati nomine meines Bruders hiermit
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/857,3584,1367,153" n="N020"/>allen proceß-wesen Krafft dieses re<span type="hyphen">-</span></p>
+         </div>
+         <div type="commentary_front">
+         <p/>
+         </div>
+      </front>
+      <body>
+         <div type="original">
+         <pb facs="#facs_2" n="2"/>
+         <milestone unit="section" facs="#facs_2_tr_1"/>
+         <p>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1301,1943,1393,195" n="N001"/>nunciiret und mit gewöhnlicher protestation
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1315,2048,1360,196" n="N002"/>verwahret haben will. So habe diesem nach
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1332,2185,1310,159" n="N003"/>es vor nöthig erachtet solches an Ew.
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1323,2277,1326,188" n="N004"/>HochEdl. dienstl. zu eröffnen, mit ge<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1332,2387,1350,191" n="N005"/>horsamster Bitte, diese meine respective
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1349,2509,1312,188" n="N006"/>renunciation und protestation hoch<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1356,2593,1293,159" n="N007"/>geneigt anzunehmen, und die mir und
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1356,2687,1310,159" n="N008"/>meinem Bruder noch zu kommenden Erb<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1362,2777,1299,162" n="N009"/>schaffts qvotas, so wohl von deme, was al<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1358,2872,1291,145" n="N010"/>bereit in deposito liegen als was noch
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1337,2953,1306,151" n="N011"/>künfftig deponiret werden möchte, hoch<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1355,3045,1262,181" n="N012"/>gütigst abfolgen zu laßen, welche hohe
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1327,3147,1280,162" n="N013"/>Faveur ich mit ergebensten Dancke
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1360,3239,955,181" n="N014"/>erkenne und dafür beharre
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/1049,3348,747,266" n="N015"/>Eu. HochEdl.
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/2048,3873,559,213" n="N016"/>ergebenster Diener
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/2081,4015,502,134" n="N017"/>Joh. Sebast. Bach.
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/2123,4105,488,113" n="N018"/>Hochf. Anhalt-Cö<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/2131,4174,493,144" n="N019"/>thenischer Capellmeister
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/645,3870,672,189" n="N020"/>Cöthen. d. 15. Martii
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/934,4015,357,132" n="N021"/>ao. 1722.
+            </p>
+         <pb facs="#facs_3" n="3"/>
+         </div>
+         <div type="commentary">
+         <p/>
+         </div>
+      </body>
+         <back>
+         <div type="original_back">
+            <pb facs="#facs_4" n="4"/>
+            <milestone unit="section" facs="#facs_4_r"/>
+            <p>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1591,359,164,346" n="N001"/><add xml:id="add4-1" place="above" type="addition">t-
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1923,465,142,265" n="N002"/>187</add>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/3134,1033,219,123" n="N003"/><add xml:id="add4-2" type="addition"><del rend="strikethrough" cause="correction">30.</del><anchor xml:id="a4-1"/></add>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/3104,1055,43,30" n="N004"/><add xml:id="ta4-1" type="correction">5</add>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1751,1001,1627,285" n="N005"/>Denen HochEdelen, Vesten, Hochge<span type="hyphen">-</span>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1875,1187,1352,223" n="N006"/>lahrten und Hochweisen Herren
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1945,1295,1400,197" n="N007"/>Stadt-Schultheisen, Bürgemeistern,
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1855,1425,1492,173" n="N008"/>Syndico und andern Raths-Collegen.
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1825,1482,1532,236" n="N009"/>Meinen insonders Hochgeneigten Herren
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1912,1626,620,178" n="N010"/>Patronis
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/2675,1686,144,200" n="N011"/>in
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/2795,1808,525,196" n="N012"/>Erffurth.
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1593,1737,565,204" n="N013"/>Franco. <add xml:id="add4-4" place="inspace" type="addition">2 g.</add></p>
+         </div>
+         <div type="commentary_back">
+         <p/>
+         </div>
+      </back>
+   </text>
+</TEI>

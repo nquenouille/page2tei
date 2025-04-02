@@ -38,3 +38,7 @@ jobs:
         run: |
           java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/marginalia_table/mets.xml -o:test/marginalia_table/marginalia_table_test.xml
           diff -w --normal test/marginalia_table/marginalia_table_test.xml test/marginalia_table/marginalia_table.xml
+      - name: front, body, back test
+        run: |
+          java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/front_body_back/mets.xml -o:test/front_body_back/front_body_back_test.xml
+          diff -w --normal test/front_body_back/front_body_back_test.xml test/front_body_back/front_body_back.xml

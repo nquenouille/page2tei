@@ -1168,12 +1168,30 @@
    <!-- Templates for PAGE, text -->
    <xsl:template match="p:Page" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
-      <!-- <pb facs="#facs_{$numCurr}" n="{$numCurr}"/> -->
+      <xsl:choose>
+      <xsl:when test="//p:TextRegion[contains(@custom, 'front')]">
       <xsl:apply-templates
          select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text">
          <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
             as="xs:double"/>
       </xsl:apply-templates>
+      </xsl:when>
+      <xsl:when test="//p:TextRegion[contains(@custom, 'back')]">
+      <xsl:apply-templates
+         select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text">
+         <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+      </xsl:apply-templates>
+      </xsl:when>
+      <xsl:otherwise>
+      <pb facs="#facs_{$numCurr}" n="{$numCurr}"/>
+      <xsl:apply-templates
+         select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion" mode="text">
+         <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
+            as="xs:double"/>
+      </xsl:apply-templates>
+      </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
 
    <xd:doc>
@@ -1627,9 +1645,6 @@
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
-         <xsl:text>
-            </xsl:text>
-            <pb facs="#facs_{$number}" n="{$number}" />
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
