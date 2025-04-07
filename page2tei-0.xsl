@@ -2498,10 +2498,7 @@
                   </xsl:if>
                   <xsl:if test="map:keys($custom) = 'extent'">
                      <xsl:attribute name="extent"><xsl:value-of select="map:get($custom, 'extent')"/></xsl:attribute>
-                  </xsl:if>
-                  <xsl:call-template name="elem">
-                     <xsl:with-param name="elem" select="$elem"/>
-                  </xsl:call-template>
+                  </xsl:if>                  
                </xsl:element>
                </xsl:otherwise>
             </xsl:choose>
