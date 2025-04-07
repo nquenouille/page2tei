@@ -2477,21 +2477,15 @@
          </xsl:when>
          <xsl:when test="@type = 'missing'">
             <xsl:choose>
-               <xsl:when test="$custom?extent = '5'">
+               <xsl:when test="$custom?reason = 'intentional'">
                   <ellipsis><metamark/></ellipsis>
                </xsl:when>
                <xsl:otherwise>
                <xsl:variable name="elName" select="'gap'"/>
                <xsl:element name="{$elName}">
-                  <xsl:if test="map:keys($custom) = 'unit'">
-                     <xsl:attribute name="unit"><xsl:value-of select="map:get($custom, 'unit')"/></xsl:attribute>
-                  </xsl:if>
                   <xsl:if test="map:keys($custom) = 'reason'">
                      <xsl:attribute name="reason"><xsl:value-of select="map:get($custom, 'reason')"/></xsl:attribute>
-                  </xsl:if>
-                  <xsl:if test="map:keys($custom) = 'extent'">
-                     <xsl:attribute name="extent"><xsl:value-of select="map:get($custom, 'extent')"/></xsl:attribute>
-                  </xsl:if>                  
+                  </xsl:if>              
                </xsl:element>
                </xsl:otherwise>
             </xsl:choose>
