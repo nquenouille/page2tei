@@ -1665,9 +1665,9 @@
         </xsl:text>
             <xsl:choose>
                <xsl:when test="@custom='structure {type:heading;}'">
-                  <head>
+                  <row n="{@row}" role="heading">
                      <xsl:apply-templates select="current-group()"/>
-                  </head>
+                  </row>
                </xsl:when>
                <xsl:when test="@custom='structure {type:subheading;}'">
                   <row n="{@row}" role="subheading">
@@ -1859,7 +1859,19 @@
           </xsl:text>
      
          <xsl:if test="@custom='structure {type:heading;}'">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'heading'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@topBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
+            </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
+            </cell>
          </xsl:if>
          <xsl:if test="@custom='structure {type:subheading;}'">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
