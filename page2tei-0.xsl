@@ -1663,63 +1663,9 @@
             <xsl:sort select="@col"/>
             <xsl:text>
         </xsl:text>
-            <xsl:choose>
-               <xsl:when test="@custom='structure {type:heading;}'">
-                  <row n="{@row}" role="heading">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:subheading;}'">
-                  <row n="{@row}" role="subheading">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-left-in;}'">
-                  <row n="{@row}" rend="'cbr-li'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-left-out;}'">
-                  <row n="{@row}" rend="'cbr-lo'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-right-in;}'">
-                  <row n="{@row}" rend="'cbr-ri'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-                <xsl:when test="@custom='structure {type:curly-bracket-right-out;}'">
-                  <row n="{@row}" rend="'cbr-ro'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-top-in;}'">
-                  <row n="{@row}" rend="'cbr-ti'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-top-out;}'">
-                  <row n="{@row}" rend="'cbr-to'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:when test="@custom='structure {type:curly-bracket-bottom-in;}'">
-                  <row n="{@row}" rend="'cbr-bi'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-                <xsl:when test="@custom='structure {type:curly-bracket-bottom-out;}'">
-                  <row n="{@row}" rend="'cbr-bo'">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:when>
-               <xsl:otherwise>
-               <row n="{@row}">
-                  <xsl:apply-templates select="current-group()"/>
-               </row>
-               </xsl:otherwise>
-            </xsl:choose>
+            <row n="{@row}">
+               <xsl:apply-templates select="current-group()"/>
+            </row>
          </xsl:for-each-group>
       </table>
    </xsl:template>

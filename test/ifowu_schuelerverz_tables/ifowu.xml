@@ -1423,20 +1423,20 @@
    <text>
       <body>
          <div type="original">
-            <pb facs="#facs_1" n="1"/>
-            <milestone unit="section" facs="#facs_1_tr_1"/>
-            <p>
+         <pb facs="#facs_1" n="1"/>
+         <milestone unit="section" facs="#facs_1_tr_1"/>
+         <p>
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/602,178,384,129" n="N001"/>CATALOGUS
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/539,280,530,69" n="N002"/>DISCIPULORUM
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/275,316,982,127" n="N003"/>post examen d. XX Julij MDCXCVI habitum,
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/667,387,237,78" n="N004"/>adornatus.
             </p>
-            <table facs="#facs_1_Table_1722425252858_112">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/564,491,428,94" n="N001"/>CLASSIS I.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/1571,555,161,74" n="N001"/>annus.</head>
+         <table facs="#facs_1_Table_1722425252858_112">
+        <row n="0">
+          <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00118.tif/67,478,1439,132" n="0" cols="4" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/564,491,428,94" n="N001"/>CLASSIS I.</cell>
+          <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00118.tif/1506,478,231,132" n="4" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/1571,555,161,74" n="N001"/>annus.</cell></row>
         <row n="1">
           <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00118.tif/67,610,125,63" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/132,613,47,55" n="N001"/>1.</cell>
@@ -1545,13 +1545,13 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/252,1798,1090,94" n="N001"/>Jo. Christian. Pfaff, WalwincKelensis.</cell>
           <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00118.tif/1506,1802,231,136" n="4" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00118.tif/1597,1841,68,50" n="N001"/>13.</cell></row></table>
-            <pb facs="#facs_2" n="2"/>
-            <table facs="#facs_2_Table_1723455177517_32">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/966,343,400,129" n="N001"/>CLASSIS II.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/1870,459,103,89" n="N001"/>annus.</head>
+         <pb facs="#facs_2" n="2"/>
+         <table facs="#facs_2_Table_1723455177517_32">
+        <row n="0">
+          <cell facs="iiif:69166906.tif/298,384,1436,150" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/966,343,400,129" n="N001"/>CLASSIS II.</cell>
+          <cell facs="iiif:69166906.tif/1734,384,280,163" n="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/1870,459,103,89" n="N001"/>annus.</cell></row>
         <row n="1">
           <cell facs="iiif:69166906.tif/298,487,115,113" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/332,477,84,103" n="N001"/>1.</cell>
@@ -1573,7 +1573,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/417,666,1051,135" n="N001"/>Io. Jacob. Füldner, Mechterstadensis.</cell>
           <cell facs="iiif:69166906.tif/1734,711,280,103" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/1852,726,81,90" n="N001"/>16.</cell></row>
-        <row n="4" role="subheading">
+        <row n="4">
           <cell facs="iiif:69166906.tif/298,789,1716,92" n="0" cols="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/878,791,232,96" n="N001"/>Novitij.</cell></row>
         <row n="5">
@@ -1625,10 +1625,10 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/420,1469,1075,175" n="N001"/>Jo. Justin. Zang. Ordreviensis.</cell>
           <cell facs="iiif:69166906.tif/1734,1497,280,173" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/1892,1521,86,87" n="N001"/>15.</cell></row></table>
-            <table facs="#facs_2_Table_1723455678866_370">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/695,1653,831,167" n="N001"/>Ad primam claßem translati</head>
+         <table facs="#facs_2_Table_1723455678866_370">
+        <row n="0">
+          <cell facs="iiif:69166906.tif/559,1690,1009,130" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/695,1653,831,167" n="N001"/>Ad primam claßem translati</cell></row>
         <row n="1">
           <cell facs="iiif:69166906.tif/559,1815,129,124" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/603,1823,63,91" n="N001"/>1.</cell>
@@ -1644,17 +1644,17 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/608,2011,92,85" n="N001"/>3.</cell>
           <cell facs="iiif:69166906.tif/698,1991,870,114" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/691,1983,668,126" n="N001"/>Johan Jacob Füldner.</cell></row></table>
-            <milestone unit="section" facs="#facs_2_tr_1"/>
-            <p>
+         <milestone unit="section" facs="#facs_2_tr_1"/>
+         <p>
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00119.tif/393,2089,1060,126" n="N001"/>Jo. Theod. Volckmar, dimißus est ad mechanica.
             </p>
-            <pb facs="#facs_3" n="3"/>
-            <table facs="#facs_3_Table_1723456052468_449">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/728,289,404,136" n="N001"/>CLASSIS III.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/1611,356,128,87" n="N001"/>annus.</head>
+         <pb facs="#facs_3" n="3"/>
+         <table facs="#facs_3_Table_1723456052468_449">
+        <row n="0">
+          <cell facs="iiif:69166907.tif/68,268,1398,169" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/728,289,404,136" n="N001"/>CLASSIS III.</cell>
+          <cell facs="iiif:69166907.tif/1466,268,302,173" n="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/1611,356,128,87" n="N001"/>annus.</cell></row>
         <row n="1">
           <cell facs="iiif:69166907.tif/68,417,102,142" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/116,474,64,82" n="N001"/>1.</cell>
@@ -1676,7 +1676,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/212,564,1036,135" n="N001"/>Georg. Caspar. Frobenius, Ordruviensis.</cell>
           <cell facs="iiif:69166907.tif/1466,605,302,83" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/1581,611,91,60" n="N001"/>13.</cell></row>
-        <row n="4" role="subheading">
+        <row n="4">
           <cell facs="iiif:69166907.tif/68,677,1700,79" n="0" cols="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/586,661,227,97" n="N001"/>Novitij.</cell></row>
         <row n="5">
@@ -1728,7 +1728,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/219,1239,965,127" n="N001"/>Georg. Frider. Mengs, Ordruviensis.</cell>
           <cell facs="iiif:69166907.tif/1466,1253,302,124" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/1609,1277,87,114" n="N001"/>13.</cell></row></table>
-            <table facs="#facs_3_Table_1723456829540_777">
+         <table facs="#facs_3_Table_1723456829540_777">
         <row n="0">
           <cell facs="iiif:69166907.tif/177,1385,690,81" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/251,1348,612,136" n="N001"/>Io. Ditericus Lorentz.</cell>
@@ -1743,14 +1743,14 @@
         <row n="3">
           <cell facs="iiif:69166907.tif/177,1618,690,72" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/236,1596,589,125" n="N001"/>Jo. Andr. Stertzing.</cell></row></table>
-            <table facs="#facs_3_Table_1726670914955_2476">
+         <table facs="#facs_3_Table_1726670914955_2476">
         <row n="0">
           <cell facs="iiif:69166907.tif/195,1680,1258,110" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/231,1669,759,137" n="N001"/>Wolffg. Gabriel Hack, abiit.</cell></row>
         <row n="1">
           <cell facs="iiif:69166907.tif/195,1779,1258,113" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/230,1767,1200,133" n="N001"/>Jo. Georg. Chrysander, insalutato praeceptore abiit.</cell></row></table>
-            <table facs="#facs_3_Table_1723456840030_781">
+         <table facs="#facs_3_Table_1723456840030_781">
         <row n="0">
           <cell facs="iiif:69166907.tif/205,1907,754,87" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/255,1872,629,141" n="N001"/>Melch. Immanuel Qvehl</cell>
@@ -1768,13 +1768,13 @@
         <row n="4">
           <cell facs="iiif:69166907.tif/205,2195,754,129" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00120.tif/258,2194,525,123" n="N001"/>Jo. Georg. Franck.</cell></row></table>
-            <pb facs="#facs_4" n="4"/>
-            <table facs="#facs_4_Table_1723460993534_200">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1000,339,426,119" n="N001"/>CLASSIS IV.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1897,454,126,71" n="N001"/>aetas.</head>
+         <pb facs="#facs_4" n="4"/>
+         <table facs="#facs_4_Table_1723460993534_200">
+        <row n="0">
+          <cell facs="iiif:69166908.tif/296,313,1142,149" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1000,339,426,119" n="N001"/>CLASSIS IV.</cell>
+          <cell facs="iiif:69166908.tif/1438,313,589,218" n="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1897,454,126,71" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:69166908.tif/296,441,95,114" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/332,474,56,63" n="N001"/>1.</cell>
@@ -1852,7 +1852,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/358,1120,385,84" n="N001"/>Jo. Philip. Syrbius.</cell>
           <cell facs="iiif:69166908.tif/1438,1149,589,111" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1885,1189,54,73" n="N001"/>11.</cell></row>
-        <row n="12" role="subheading">
+        <row n="12">
           <cell facs="iiif:69166908.tif/296,1196,1731,96" n="0" cols="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/681,1195,200,82" n="N001"/>Novitij.</cell></row>
         <row n="13">
@@ -1946,7 +1946,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/414,1960,540,103" n="N001"/>Bernhard Henrich Oschatz.</cell>
           <cell facs="iiif:69166908.tif/1438,1993,589,100" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1873,2024,82,58" n="N001"/>14.</cell></row>
-        <row n="26" role="subheading">
+        <row n="26">
           <cell facs="iiif:69166908.tif/296,2050,1731,113" n="0" cols="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/838,2062,221,96" n="N001"/>Germani.</cell></row>
         <row n="27">
@@ -1991,10 +1991,10 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/404,2410,419,103" n="N001"/>Gallus Steinmetz.</cell>
           <cell facs="iiif:69166908.tif/1438,2453,589,82" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1865,2489,76,62" n="N001"/>13.</cell></row></table>
-            <table facs="#facs_4_Table_1724683560516_13">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/881,2514,203,93" n="N001"/>Dimissi.</head>
+         <table facs="#facs_4_Table_1724683560516_13">
+        <row n="0">
+          <cell facs="iiif:69166908.tif/574,2500,528,112" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/881,2514,203,93" n="N001"/>Dimissi.</cell></row>
         <row n="1">
           <cell facs="iiif:69166908.tif/574,2577,53,91" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/598,2595,26,49" n="N001"/>1.</cell>
@@ -2025,7 +2025,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/573,2897,52,73" n="N001"/>6.</cell>
           <cell facs="iiif:69166908.tif/630,2901,472,101" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/655,2887,295,105" n="N001"/>Jo. Franck.</cell></row></table>
-            <table facs="#facs_4_Table_1724683577104_17">
+         <table facs="#facs_4_Table_1724683577104_17">
         <row n="0">
           <cell facs="iiif:69166908.tif/1372,2586,117,106" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1436,2610,52,86" n="N001"/>7.</cell>
@@ -2041,11 +2041,11 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1411,2779,49,78" n="N001"/>9.</cell>
           <cell facs="iiif:69166908.tif/1458,2772,554,83" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00121.tif/1480,2761,482,100" n="N001"/>Jo. Michael Braun.</cell></row></table>
-            <pb facs="#facs_5" n="5"/>
-            <table facs="#facs_5_Table_1724058079638_270">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/469,195,805,106" n="N001"/>Translati ad 3tiam classem.</head>
+         <pb facs="#facs_5" n="5"/>
+         <table facs="#facs_5_Table_1724058079638_270">
+        <row n="0">
+          <cell facs="iiif:69165246.tif/210,172,1171,147" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/469,195,805,106" n="N001"/>Translati ad 3tiam classem.</cell></row>
         <row n="1">
           <cell facs="iiif:69165246.tif/210,266,120,109" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/278,297,52,75" n="N001"/>1.</cell>
@@ -2096,12 +2096,12 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/250,1005,75,64" n="N001"/>10.</cell>
           <cell facs="iiif:69165246.tif/320,999,1061,134" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/341,994,567,104" n="N001"/>Christoph Ernst Jacob.</cell></row></table>
-            <table facs="#facs_5_Table_1724057839756_252">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/489,1329,595,105" n="N001"/>CLASSIS V.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/1495,1375,139,79" n="N001"/>aetas.</head>
+         <table facs="#facs_5_Table_1724057839756_252">
+        <row n="0">
+          <cell facs="iiif:69165246.tif/43,1295,1257,152" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/489,1329,595,105" n="N001"/>CLASSIS V.</cell>
+          <cell facs="iiif:69165246.tif/1300,1295,364,163" n="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/1495,1375,139,79" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:69165246.tif/43,1396,107,90" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/94,1401,49,69" n="N001"/>1.</cell>
@@ -2284,9 +2284,9 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/146,2883,500,104" n="N001"/>Jo. Christoph. Trabert.</cell>
           <cell facs="iiif:69165246.tif/1300,2914,364,96" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00122.tif/1474,2914,67,65" n="N001"/>18.</cell></row></table>
-            <pb facs="#facs_6" n="6"/>
-            <table facs="#facs_6_Table_1724060741429_1258">
-        <row n="0" role="subheading">
+         <pb facs="#facs_6" n="6"/>
+         <table facs="#facs_6_Table_1724060741429_1258">
+        <row n="0">
           <cell facs="iiif:69165247.tif/287,114,1347,102" n="0" cols="3" role="subheading" rend="0000"/>
           <cell facs="iiif:69165247.tif/1634,114,423,138" n="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/1874,161,119,67" n="N001"/>aetas.</cell></row>
@@ -2444,10 +2444,10 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/427,1860,513,114" n="N001"/>Johan Georg Barth.</cell>
           <cell facs="iiif:69165247.tif/1634,1920,423,125" n="3" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/1842,1938,98,105" n="N001"/>12½</cell></row></table>
-            <table facs="#facs_6_Table_1724061045308_1280">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/717,1953,561,103" n="N001"/>Novitij eiusd. classis.</head>
+         <table facs="#facs_6_Table_1724061045308_1280">
+        <row n="0">
+          <cell facs="iiif:69165247.tif/253,1970,1778,111" n="0" cols="3" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/717,1953,561,103" n="N001"/>Novitij eiusd. classis.</cell></row>
         <row n="1">
           <cell facs="iiif:69165247.tif/253,2061,129,107" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/343,2105,46,61" n="N001"/>1.</cell>
@@ -2532,9 +2532,9 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/416,2927,800,119" n="N001"/>Johan Christoph. Kellermann.</cell>
           <cell facs="iiif:69165247.tif/1532,2963,499,107" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00123.tif/1862,2992,69,77" n="N001"/>11.</cell></row></table>
-            <pb facs="#facs_7" n="7"/>
-            <table facs="#facs_7_Table_1724063208213_2405">
-        <row n="0" role="subheading">
+         <pb facs="#facs_7" n="7"/>
+         <table facs="#facs_7_Table_1724063208213_2405">
+        <row n="0">
           <cell facs="iiif:69165248.tif/32,80,1380,113" n="0" cols="3" role="subheading" rend="0000"/>
           <cell facs="iiif:69165248.tif/1412,80,332,117" n="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00124.tif/1541,99,148,74" n="N001"/>aetas.</cell></row>
@@ -2804,12 +2804,12 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00124.tif/186,2884,644,121" n="N001"/>Elias Philip Albrecht.</cell>
           <cell facs="iiif:69165248.tif/1412,2906,332,130" n="3" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00124.tif/1504,2905,58,63" n="N001"/>8.</cell></row></table>
-            <pb facs="#facs_8" n="8"/>
-            <table facs="#facs_8_Table_1724143667450_246">
-        <head>
-          
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/1871,173,150,80" n="N001"/>aetas.</head>
+         <pb facs="#facs_8" n="8"/>
+         <table facs="#facs_8_Table_1724143667450_246">
+        <row n="0">
+          <cell facs="iiif:69166909.tif/296,153,1542,104" n="0" cols="3" role="heading" rend="0000"/>
+          <cell facs="iiif:69166909.tif/1838,153,219,115" n="3" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/1871,173,150,80" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:69166909.tif/296,181,120,95" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/326,174,90,96" n="N001"/>51.</cell>
@@ -2869,10 +2869,10 @@
         <row n="9">
           <cell facs="iiif:69166909.tif/296,883,1761,105" n="0" cols="4" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/1023,793,238,101" n="N001"/>Summa. 106.</cell></row></table>
-            <table facs="#facs_8_Table_1724143676672_250">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/703,932,721,117" n="N001"/>Inscio praeceptore emanserunt.</head>
+         <table facs="#facs_8_Table_1724143676672_250">
+        <row n="0">
+          <cell facs="iiif:69166909.tif/526,913,941,137" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/703,932,721,117" n="N001"/>Inscio praeceptore emanserunt.</cell></row>
         <row n="1">
           <cell facs="iiif:69166909.tif/526,1022,100,105" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/563,1034,65,98" n="N001"/>1.</cell>
@@ -2908,7 +2908,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/544,1557,86,96" n="N001"/>7.</cell>
           <cell facs="iiif:69166909.tif/644,1540,823,105" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/686,1527,641,121" n="N001"/>Johan Christoph. Schreiber.</cell></row></table>
-            <table facs="#facs_8_Table_1736939592990_55">
+         <table facs="#facs_8_Table_1736939592990_55">
         <row n="0">
           <cell facs="iiif:69166909.tif/679,1668,119,125" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/707,1707,86,63" n="N001"/>1.</cell>
@@ -2919,10 +2919,10 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/703,1816,88,69" n="N001"/>2.</cell>
           <cell facs="iiif:69166909.tif/798,1793,1312,115" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/787,1767,1285,142" n="N001"/>Gotthold Helstreich Bode valed. d. 25 Junij 1696.</cell></row></table>
-            <table facs="#facs_8_Table_1736939613330_59">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/678,1914,1199,137" n="N001"/>Ad quartam claßem promoti sunt sequentes:</head>
+         <table facs="#facs_8_Table_1736939613330_59">
+        <row n="0">
+          <cell facs="iiif:69166909.tif/393,1896,1505,128" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/678,1914,1199,137" n="N001"/>Ad quartam claßem promoti sunt sequentes:</cell></row>
         <row n="1">
           <cell facs="iiif:69166909.tif/393,2024,148,118" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/480,2024,43,107" n="N001"/>1.</cell>
@@ -2983,8 +2983,8 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/475,2903,112,112" n="N001"/>12.</cell>
           <cell facs="iiif:69166909.tif/541,2919,1357,112" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00125.tif/577,2889,496,121" n="N001"/>Johan Georg Zang.</cell></row></table>
-            <pb facs="#facs_9" n="9"/>
-            <table facs="#facs_9_Table_1724074161118_4183">
+         <pb facs="#facs_9" n="9"/>
+         <table facs="#facs_9_Table_1724074161118_4183">
         <row n="0">
           <cell facs="iiif:69165249.tif/46,135,126,126" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/98,175,70,88" n="N001"/>13.</cell>
@@ -3045,12 +3045,12 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/86,1021,107,78" n="N001"/>24.</cell>
           <cell facs="iiif:69165249.tif/193,953,746,161" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/189,976,739,112" n="N001"/>Jacob Zacharias Von Hoff.</cell></row></table>
-            <table facs="#facs_9_Table_1724074571312_4440">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/426,1128,499,154" n="N001"/>CLASSIS VI.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/1594,1174,125,77" n="N001"/>aetas.</head>
+         <table facs="#facs_9_Table_1724074571312_4440">
+        <row n="0">
+          <cell facs="iiif:69165249.tif/56,1123,1472,131" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/426,1128,499,154" n="N001"/>CLASSIS VI.</cell>
+          <cell facs="iiif:69165249.tif/1528,1123,239,133" n="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/1594,1174,125,77" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:69165249.tif/56,1243,83,110" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/85,1286,56,67" n="N001"/>1.</cell>
@@ -3212,12 +3212,12 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/181,2853,568,120" n="N001"/>Joh. Christoph. <del rend="strikethrough" hand="Autor"><unclear reason="illegible"> </unclear></del><add xml:id="add9-1" place="inspace" hand="Autor" type="correction">Mengs</add>.</cell>
           <cell facs="iiif:69165249.tif/1528,2867,239,103" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00126.tif/1628,2860,75,72" n="N001"/>8.</cell></row></table>
-            <pb facs="#facs_10" n="10"/>
-            <table facs="#facs_10_Table_1724076059088_5244">
-        <head>
-          
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00127.tif/1824,170,152,62" n="N001"/>aetas.</head>
+         <pb facs="#facs_10" n="10"/>
+         <table facs="#facs_10_Table_1724076059088_5244">
+        <row n="0">
+          <cell facs="iiif:69166910.tif/308,148,1430,87" n="0" cols="3" role="heading" rend="0000"/>
+          <cell facs="iiif:69166910.tif/1738,148,273,104" n="3" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00127.tif/1824,170,152,62" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:69166910.tif/308,175,161,120" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00127.tif/364,206,127,73" n="N001"/>24.</cell>
@@ -3400,13 +3400,13 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00127.tif/482,2259,718,139" n="N001"/>Joh. Melchior Keysner.</cell>
           <cell facs="iiif:69166910.tif/1738,2282,273,126" n="3" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00127.tif/1838,2282,94,102" n="N001"/>9.</cell></row></table>
-            <pb facs="#facs_11" n="11"/>
-            <table facs="#facs_11_Table_1724079646243_6180">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00128.tif/630,192,447,127" n="N001"/>CLASSIS VII.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00128.tif/1591,306,161,72" n="N001"/>aetas.</head>
+         <pb facs="#facs_11" n="11"/>
+         <table facs="#facs_11_Table_1724079646243_6180">
+        <row n="0">
+          <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00128.tif/67,180,1398,186" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00128.tif/630,192,447,127" n="N001"/>CLASSIS VII.</cell>
+          <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00128.tif/1465,180,284,207" n="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00128.tif/1591,306,161,72" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00128.tif/67,338,127,156" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00128.tif/114,367,79,90" n="N001"/>1.</cell>
@@ -3623,9 +3623,9 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00128.tif/222,2835,675,132" n="N001"/>Melchior Sigmund Albrecht.</cell>
           <cell facs="iiif:d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00128.tif/1465,2858,284,110" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00128.tif/1606,2870,64,55" n="N001"/>6.</cell></row></table>
-            <pb facs="#facs_12" n="12"/>
-            <table facs="#facs_12_Table_1724082703769_7374">
-        <row n="0" role="subheading">
+         <pb facs="#facs_12" n="12"/>
+         <table facs="#facs_12_Table_1724082703769_7374">
+        <row n="0">
           <cell facs="iiif:69166911.tif/343,148,1450,102" n="0" cols="3" role="subheading" rend="0000"/>
           <cell facs="iiif:69166911.tif/1793,148,251,151" n="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00129.tif/1866,222,140,70" n="N001"/>aetas.</cell></row>
@@ -3832,9 +3832,9 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00129.tif/490,2858,591,136" n="N001"/>Joh. Georg Vollrath.</cell>
           <cell facs="iiif:69166911.tif/1793,2874,251,167" n="3" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00129.tif/1844,2895,134,110" n="N001"/>6½</cell></row></table>
-            <pb facs="#facs_13" n="13"/>
-            <table facs="#facs_13_Table_1724146600782_845">
-        <row n="0" role="subheading">
+         <pb facs="#facs_13" n="13"/>
+         <table facs="#facs_13_Table_1724146600782_845">
+        <row n="0">
           <cell facs="iiif:69166912.tif/61,106,1468,98" n="0" cols="3" role="subheading" rend="0000"/>
           <cell facs="iiif:69166912.tif/1529,105,219,118" n="3" role="subheading" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/1580,138,164,76" n="N001"/>aetas.</cell></row>
@@ -3890,7 +3890,7 @@
         <row n="8">
           <cell facs="iiif:69166912.tif/61,936,1661,75" n="0" cols="4" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/906,899,292,111" n="N001"/>Summa 116.</cell></row></table>
-            <table facs="#facs_13_Table_1724146609277_849">
+         <table facs="#facs_13_Table_1724146609277_849">
         <row n="0">
           <cell facs="iiif:69166912.tif/386,1023,110,151" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/432,1093,61,75" n="N001"/>1.</cell>
@@ -3908,7 +3908,7 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/428,1256,71,85" n="N001"/>3.</cell>
           <cell facs="iiif:69166912.tif/497,1241,634,114" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/492,1232,573,117" n="N001"/>Joh. Michael Erst.</cell></row></table>
-            <table facs="#facs_13_Table_1724146628203_853">
+         <table facs="#facs_13_Table_1724146628203_853">
         <row n="0">
           <cell facs="iiif:69166912.tif/389,1378,114,140" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/432,1418,63,105" n="N001"/>1.</cell>
@@ -3921,12 +3921,12 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/422,1526,90,75" n="N001"/>2.</cell>
           <cell facs="iiif:69166912.tif/503,1483,695,113" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/508,1478,688,129" n="N001"/>Joh. Jeremias Schram.</cell></row></table>
-            <table facs="#facs_13_Table_1724146659934_857">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/363,1602,356,127" n="N001"/>Incipientes.
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/1543,1711,173,83" n="N001"/>aetas.</head>
+         <table facs="#facs_13_Table_1724146659934_857">
+        <row n="0">
+          <cell facs="iiif:69166912.tif/119,1604,1352,184" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/363,1602,356,127" n="N001"/>Incipientes.</cell>
+          <cell facs="iiif:69166912.tif/1471,1604,261,200" n="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/1543,1711,173,83" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:69166912.tif/119,1742,121,97" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/178,1766,60,57" n="N001"/>1.</cell>
@@ -4032,12 +4032,12 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/235,2925,577,96" n="N001"/>Joh. Wilhelm Steyer.</cell>
           <cell facs="iiif:69166912.tif/1471,2951,261,69" n="2" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00130.tif/1561,2949,55,69" n="N001"/>5.</cell></row></table>
-            <pb facs="#facs_14" n="14"/>
-            <table facs="#facs_14_Table_1724148237341_1952">
-        <head>
-          
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/1828,167,163,115" n="N001"/>aetas.</head>
+         <pb facs="#facs_14" n="14"/>
+         <table facs="#facs_14_Table_1724148237341_1952">
+        <row n="0">
+          <cell facs="iiif:69166913.tif/314,143,1478,97" n="0" cols="3" role="heading" rend="0000"/>
+          <cell facs="iiif:69166913.tif/1792,143,225,131" n="3" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/1828,167,163,115" n="N001"/>aetas.</cell></row>
         <row n="1">
           <cell facs="iiif:69166913.tif/314,197,159,123" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/349,210,124,125" n="N001"/>16.</cell>
@@ -4136,10 +4136,10 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/467,1471,719,131" n="N001"/>Joh. Michael Starck.</cell>
           <cell facs="iiif:69166913.tif/1792,1520,225,117" n="3" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/1809,1531,94,90" n="N001"/>5½</cell></row></table>
-            <table facs="#facs_14_Table_1724148303719_1970">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/582,1641,890,139" n="N001"/>Ad qvintam claßem translati.</head>
+         <table facs="#facs_14_Table_1724148303719_1970">
+        <row n="0">
+          <cell facs="iiif:69166913.tif/347,1649,1160,159" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/582,1641,890,139" n="N001"/>Ad qvintam claßem translati.</cell></row>
         <row n="1">
           <cell facs="iiif:69166913.tif/347,1768,104,133" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/395,1765,55,105" n="N001"/>1.</cell>
@@ -4200,8 +4200,8 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/390,2918,78,59" n="N001"/>12.</cell>
           <cell facs="iiif:69166913.tif/472,2885,1035,118" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00131.tif/465,2871,573,117" n="N001"/>Joh. Philip Perlet.</cell></row></table>
-            <pb facs="#facs_15" n="15"/>
-            <table facs="#facs_15_Table_1724149973861_2708">
+         <pb facs="#facs_15" n="15"/>
+         <table facs="#facs_15_Table_1724149973861_2708">
         <row n="0">
           <cell facs="iiif:69166914.tif/44,188,127,141" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00132.tif/95,242,75,67" n="N001"/>13.</cell>
@@ -4342,11 +4342,11 @@
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00132.tif/133,2652,93,93" n="N001"/>40.</cell>
           <cell facs="iiif:69166914.tif/248,2631,845,116" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00132.tif/288,2604,697,140" n="N001"/>Joh. Melchior Keyßner.</cell></row></table>
-            <pb facs="#facs_16" n="16"/>
-            <table facs="#facs_16_Table_1724150776986_3302">
-        <head>
-          
-               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00133.tif/756,277,795,151" n="N001"/>Ad Sextam translati.</head>
+         <pb facs="#facs_16" n="16"/>
+         <table facs="#facs_16_Table_1724150776986_3302">
+        <row n="0">
+          <cell facs="iiif:69165251.tif/319,239,1295,196" n="0" cols="2" role="heading" rend="0000">
+               <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00133.tif/756,277,795,151" n="N001"/>Ad Sextam translati.</cell></row>
         <row n="1">
           <cell facs="iiif:69165251.tif/319,402,148,141" n="0" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00133.tif/370,404,75,100" n="N001"/>1.</cell>
