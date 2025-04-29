@@ -196,7 +196,7 @@
                >
                   <xsl:text>
          </xsl:text>
-              <div xmlns="http://www.tei-c.org/ns/1.0" type='original_front'>
+              <div xmlns="http://www.tei-c.org/ns/1.0" n='1' type='original_front'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -241,7 +241,7 @@
                </xsl:for-each-group>
                   <xsl:text>
          </xsl:text>
-                  <div type='commentary_front'>
+                  <div n='1' type='commentary_front'>
                      <xsl:text>
          </xsl:text>
                      <p/>
@@ -256,7 +256,7 @@
                >
                   <xsl:text>
          </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0" type='marginalia_front'>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" n='1' type='marginalia_front'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -314,7 +314,7 @@
                >
                   <xsl:text>
          </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0" type='original'>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" n='1' type='original'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -359,7 +359,7 @@
                </xsl:for-each-group>
                   <xsl:text>
          </xsl:text>
-                  <div type='commentary'>
+                  <div n='1' type='commentary'>
                      <xsl:text>
          </xsl:text>
                      <p/>
@@ -374,7 +374,7 @@
                >
                   <xsl:text>
          </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0" type='marginalia'>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" n='1' type='marginalia'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -433,7 +433,7 @@
                >
                   <xsl:text>
          </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0" type='original_back'>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" n='1' type='original_back'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -478,7 +478,7 @@
                </xsl:for-each-group>
                   <xsl:text>
          </xsl:text>
-                  <div type='commentary_back'>
+                  <div n='1' type='commentary_back'>
                      <xsl:text>
          </xsl:text>
                      <p/>
@@ -493,7 +493,7 @@
                >
                   <xsl:text>
          </xsl:text>
-                  <div xmlns="http://www.tei-c.org/ns/1.0" type='marginalia_back'>
+                  <div xmlns="http://www.tei-c.org/ns/1.0" n='1' type='marginalia_back'>
                      <xsl:variable name="combined">
                         <xsl:choose>
                            <xsl:when test="$combine">
@@ -1360,15 +1360,23 @@
             <xsl:text>
             </xsl:text>
             <xsl:choose>            
-            <xsl:when test="'textblock' = $regionType and following::p:TextRegion[1][contains($customAttr, 'curly-bracket-')]">
-            <ab rend="container">
+            <xsl:when test="'textblock' = $regionType and contains($customAttr, 'curly-bracket-left-in')">
+            <ab n="2" rend="container">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />            
             <xsl:text>
             </xsl:text>            
-            <ab rend="textblock">
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="textblock">
+            <xsl:text>
+            </xsl:text>
+               <p>
+                 <xsl:apply-templates select="p:TextLine"/>
+                 <xsl:text>
+            </xsl:text>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1378,8 +1386,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-li">        
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-li">  
+            <xsl:text>
+            </xsl:text>
+               <p>      
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1390,8 +1404,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-lo">       
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-lo"> 
+            <xsl:text>
+            </xsl:text>   
+               <p>   
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1402,8 +1422,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-ri">
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-ri">
+            <xsl:text>
+            </xsl:text>
+               <p>
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1414,8 +1440,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-ro">
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-ro">
+            <xsl:text>
+            </xsl:text>
+               <p>
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1426,8 +1458,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-ti">
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-ti">
+            <xsl:text>
+            </xsl:text>
+               <p>
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1438,8 +1476,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-to">
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-to">
+            <xsl:text>
+            </xsl:text>
+               <p>
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1450,8 +1494,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-bi">
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-bi">
+            <xsl:text>
+            </xsl:text>
+               <p>
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1462,8 +1512,14 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-bo">
-               <xsl:apply-templates select="p:TextLine"/>
+            <ab n="3" rend="tb cbr-bo">
+            <xsl:text>
+            </xsl:text>
+               <p>
+                  <xsl:apply-templates select="p:TextLine"/>
+               </p>
+               <xsl:text>
+            </xsl:text>
             </ab>
                <xsl:text>
             </xsl:text>
@@ -1474,7 +1530,7 @@
             </ab>            
          </xsl:when>
           <xsl:when test="'textblock' = $regionType and preceding::p:TextRegion[1][contains($preCustomAttr, 'curly-bracket-')]">
-            <ab rend="container">
+            <ab n="2" rend="container">
             <xsl:text>
             </xsl:text>
             <xsl:choose>            
@@ -1483,7 +1539,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-li">        
+            <ab n="3" rend="tb cbr-li">        
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1495,7 +1551,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-lo">       
+            <ab n="3" rend="tb cbr-lo">       
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1507,7 +1563,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-ri">
+            <ab n="3" rend="tb cbr-ri">
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1519,7 +1575,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-ro">
+            <ab n="3" rend="tb cbr-ro">
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1531,7 +1587,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-ti">
+            <ab n="3" rend="tb cbr-ti">
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1543,7 +1599,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-to">
+            <ab n="3" rend="tb cbr-to">
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1555,7 +1611,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-bi">
+            <ab n="3" rend="tb cbr-bi">
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1567,7 +1623,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <xsl:text>
             </xsl:text>
-            <ab rend="tb cbr-bo">
+            <ab n="3" rend="tb cbr-bo">
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
                <xsl:text>
@@ -1581,7 +1637,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />            
             <xsl:text>
             </xsl:text>            
-            <ab rend="textblock">
+            <ab n="3" rend="textblock">
                <xsl:apply-templates select="p:TextLine"/>
             </ab>
             <xsl:text>
@@ -1589,24 +1645,10 @@
             </ab>
             <xsl:text>
             </xsl:text>
-          </xsl:when>
-          <xsl:when test="'textblock' = $regionType and not(preceding::p:TextRegion[1][contains($preCustomAttr, 'curly-bracket-')] or following::p:TextRegion[1][contains($customAttr, 'curly-bracket-')])">">  
-            <ab>
-               <xsl:apply-templates select="p:TextLine"/>
-            </ab>
-            <xsl:text>
-            </xsl:text>
-            </xsl:when>
-         <xsl:when test="('curly-bracket-left-in' or 'curly-bracket-left-out' or 'curly-bracket-right-in' or 'curly-bracket-right-out' or 'curly-bracket-top-in' or 'curly-bracket-top-out' or 'curly-bracket-bottom-in' or 'curly-bracket-bottom-out' = $regionType) and not(preceding::p:TextRegion[1][contains($preCustomAttr, 'textblock')] or following::p:TextRegion[1][contains($customAttr, 'textblock')])">
-            <p>
-               <xsl:apply-templates select="p:TextLine"/>
-            </p>
-            <xsl:text>
-            </xsl:text>
-            </xsl:when>         
+          </xsl:when>   
          </xsl:choose>
          </xsl:when>
-         <xsl:when test="'paragraph' = $regionType">
+         <xsl:when test="'paragraph' = $regionType and not($regionType = 'textblock' or contains($regionType, 'curly-bracket'))">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
@@ -2641,59 +2683,93 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-   <xsl:template match="tei:ab[contains(@type, 'margin_')]" mode="remove-type">
-   <ab>
-      <!-- Copy content without type-attribute -->
-      <xsl:for-each select="@*">
-         <!-- Kopiere alle Attribute, außer 'type' -->
-         <xsl:if test="local-name() != 'type'">
-            <xsl:copy />
-         </xsl:if>
-      </xsl:for-each>
-      <xsl:copy-of select="node()"/>
-   </ab>
-</xsl:template>
-<xsl:template match="tei:p" mode="remove-type">
-   <p>
-     <xsl:for-each select="@*">
-         <!-- Kopiere alle Attribute, außer 'type' -->
-         <xsl:if test="local-name() != 'type'">
-            <xsl:copy />
-         </xsl:if>
-      </xsl:for-each>
-      
-      <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
-      <xsl:copy-of select="node()"/>
-   </p>
-</xsl:template>
-<xsl:template match="tei:pb" mode="remove-type">
-   <pb>
-      <xsl:for-each select="@*">
-         <!-- Kopiere alle Attribute, außer 'type' -->
-         <xsl:if test="local-name() != 'type'">
-            <xsl:copy />
-         </xsl:if>
-      </xsl:for-each>
-      
-      <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
-      <xsl:copy-of select="node()"/>
-   </pb>
-</xsl:template>
 
-<xsl:template match="tei:milestone" mode="remove-type">
-   <milestone>
-      <xsl:for-each select="@*">
-         <!-- Kopiere alle Attribute, außer 'type' -->
-         <xsl:if test="local-name() != 'type'">
-            <xsl:copy />
-         </xsl:if>
-      </xsl:for-each>
-      
-      <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
-      <xsl:copy-of select="node()"/>
-   </milestone>
-</xsl:template>
-<xsl:template match="tei:*" mode="remove-type">
-    <xsl:copy-of select="."/>
-</xsl:template>
+   <xd:desc>Text nodes to be copied without type attribute, and ab-Tags that have to be changed into p- or div-Tags</xd:desc>
+   <xsl:template match="tei:ab[contains(@type, 'margin_')]" mode="remove-type">
+      <p>
+         <!-- Copy content without type-attribute -->
+         <xsl:for-each select="@*">
+            <!-- Kopiere alle Attribute, außer 'type' -->
+            <xsl:if test="local-name() != 'type'">
+               <xsl:copy />
+            </xsl:if>
+         </xsl:for-each>
+         <xsl:copy-of select="node()"/>   
+      </p>
+   </xsl:template>
+
+   <xsl:template match="tei:ab[@rend]" mode="remove-type">
+      <div>
+         <xsl:copy-of select="@*"/>
+         <xsl:apply-templates select="node()" mode="remove-type"/>
+      </div>
+   </xsl:template>
+
+   <xsl:template match="tei:p" mode="remove-type">
+      <xsl:variable name="hasAbWithRend" as="xs:boolean"
+               select="exists(//tei:ab[@rend])"/>
+      <xsl:choose>
+         <xsl:when test="$hasAbWithRend and not(parent::tei:ab[@rend])">
+            <div n="2">
+               <xsl:text>
+            </xsl:text>
+               <p>
+               <xsl:for-each select="@*">
+                     <!-- Kopiere alle Attribute, außer 'type' -->
+                     <xsl:if test="local-name() != 'type'">
+                        <xsl:copy />
+                     </xsl:if>
+                  </xsl:for-each>      
+                  <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
+                  <xsl:copy-of select="node()"/>
+               </p>
+            <xsl:text>
+         </xsl:text>
+            </div>
+         </xsl:when>
+         <xsl:otherwise>
+            <p>
+               <xsl:for-each select="@*">
+                     <!-- Kopiere alle Attribute, außer 'type' -->
+                     <xsl:if test="local-name() != 'type'">
+                        <xsl:copy />
+                     </xsl:if>
+                  </xsl:for-each>      
+                  <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
+                  <xsl:copy-of select="node()"/>
+               </p>
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
+
+   <xsl:template match="tei:pb" mode="remove-type">
+      <pb>
+         <xsl:for-each select="@*">
+            <!-- Kopiere alle Attribute, außer 'type' -->
+            <xsl:if test="local-name() != 'type'">
+               <xsl:copy />
+            </xsl:if>
+         </xsl:for-each>
+         
+         <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
+         <xsl:copy-of select="node()"/>
+      </pb>
+   </xsl:template>
+
+   <xsl:template match="tei:milestone" mode="remove-type">
+      <milestone>
+         <xsl:for-each select="@*">
+            <!-- Kopiere alle Attribute, außer 'type' -->
+            <xsl:if test="local-name() != 'type'">
+               <xsl:copy />
+            </xsl:if>
+         </xsl:for-each>
+         
+         <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
+         <xsl:copy-of select="node()"/>
+      </milestone>
+   </xsl:template>
+   <xsl:template match="tei:*" mode="remove-type">
+      <xsl:copy-of select="."/>
+   </xsl:template>
 </xsl:stylesheet>
