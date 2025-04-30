@@ -96,7 +96,7 @@
    </facsimile>
    <text>
       <front>
-         <div type="original_front">
+         <div n="1" type="original_front">
             <pb facs="#facs_1" n="1"/>
             <milestone unit="section" facs="#facs_1_tr_1"/>
             <p>
@@ -121,7 +121,7 @@
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/850,3491,1367,142" n="N019"/>rati nomine meines Bruders hiermit
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00085.tif/857,3584,1367,153" n="N020"/>allen proceß-wesen Krafft dieses re<span type="hyphen">-</span></p>
          </div>
-         <div type="commentary_front">
+         <div n="1" type="commentary_front">
          <p/>
          </div>
       </front>
