@@ -235,7 +235,7 @@
    </facsimile>
    <text>
       <body>
-         <div type="original">
+         <div n="1" type="original">
          <pb facs="#facs_1" n="1"/>
          <milestone unit="section" facs="#facs_1_r"/>
          <p>
@@ -426,10 +426,10 @@
             </p>
          <pb facs="#facs_8" n="8"/>
          </div>
-         <div type="commentary">
+         <div n="1" type="commentary">
          <p/>
          </div>
-         <div type="marginalia">
+         <div n="1" type="marginalia">
             <ab>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00020.tif/653,1106,110,86" n="N001"/><note target="m2-1" place="margin-left" type="marginalia">1.</note>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00020.tif/575,2353,110,82" n="N002"/><note target="m2-2" place="margin-left" type="marginalia">2</note>

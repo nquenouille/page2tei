@@ -1422,7 +1422,7 @@
    </facsimile>
    <text>
       <body>
-         <div type="original">
+         <div n="1" type="original">
          <pb facs="#facs_1" n="1"/>
          <milestone unit="section" facs="#facs_1_tr_1"/>
          <p>
@@ -4478,7 +4478,7 @@
           <cell facs="iiif:69165251.tif/575,2807,1039,143" n="1" rend="0000">
                <lb facs="iiif:fpb%2FD-OHRsta%2F1gipq%2Fd_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686_1708_00133.tif/613,2776,561,144" n="N001"/>Joh. Andr. Pabst.</cell></row></table>
          </div>
-         <div type="commentary">
+         <div n="1" type="commentary">
          <p/>
          </div>
       </body>

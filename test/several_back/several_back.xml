@@ -219,7 +219,7 @@
    </facsimile>
    <text>
       <body>
-         <div type="original">
+         <div n="1" type="original">
          <pb facs="#facs_1" n="1"/>
          <milestone unit="section" facs="#facs_1_r_69"/>
          <p>
@@ -349,12 +349,12 @@
             </p>
          <pb facs="#facs_8" n="8"/>
          </div>
-         <div type="commentary">
+         <div n="1" type="commentary">
          <p/>
          </div>
       </body>
          <back>
-         <div type="original_back">
+         <div n="1" type="original_back">
             <pb facs="#facs_6" n="6"/>
             <milestone unit="section" facs="#facs_6_tr_1"/>
             <p>
@@ -404,7 +404,7 @@
                <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/683,1901,851,171" n="N018"/>Jacob Friedrich Schilling.
                <lb facs="iiif:fpb%2FD-LEsa%2Fraoa6%2Fd_lesa_0008_ratsstube_3369_00207.tif/730,2039,821,179" n="N019"/>Johann Christoph Hölzel.</p>
          </div>
-         <div type="commentary_back">
+         <div n="1" type="commentary_back">
          <p/>
          </div>
       </back>

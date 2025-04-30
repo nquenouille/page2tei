@@ -41,7 +41,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="original">
+            <div n="1" type="original">
                 <pb facs="#facs_1" n="1"/>
                 <milestone unit="section" facs="#facs_1_tr_1"/>
                 <p>
@@ -61,7 +61,7 @@
                 </p>
                 <pb facs="#facs_2" n="2"/>
             </div>
-            <div type="commentary">
+            <div n="1" type="commentary">
                 <p/>
             </div>
         </body>

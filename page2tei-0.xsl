@@ -32,6 +32,12 @@
    <xsl:param name="combine" select="false()"/>
    <xsl:include href="combine-continued.xsl" />
 
+   <xd:doc>
+      <xd:desc>Whether to run white space tokenization</xd:desc>
+   </xd:doc>
+   <xsl:param name="postprocessing" select="false()"/>
+   <xsl:include href="postprocessing.xsl" />
+
 
    <xd:doc>
       <xd:desc>If false(), region types that correspond to valid TEI elements will be returned as
@@ -233,7 +239,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:apply-templates select="." mode="remove-type" />
+                        <xsl:apply-templates select="." mode="postprocessing" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -293,7 +299,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:apply-templates select="." mode="remove-type" />
+                        <xsl:apply-templates select="." mode="postprocessing" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -351,7 +357,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
          </xsl:text>
-                        <xsl:apply-templates select="." mode="remove-type" />
+                        <xsl:apply-templates select="." mode="postprocessing" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -412,7 +418,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:apply-templates select="." mode="remove-type" />
+                        <xsl:apply-templates select="." mode="postprocessing" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -470,7 +476,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                         <xsl:apply-templates select="." mode="remove-type" />
+                         <xsl:apply-templates select="." mode="postprocessing" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -530,7 +536,7 @@
                      <xsl:for-each select="$tokenized/*">
                         <xsl:text>
             </xsl:text>
-                        <xsl:apply-templates select="." mode="remove-type" />
+                        <xsl:apply-templates select="." mode="postprocessing" />
             </xsl:for-each>
                         <xsl:text>
          </xsl:text>
@@ -2682,94 +2688,5 @@
             <xsl:value-of select="." />
          </xsl:otherwise>
       </xsl:choose>
-   </xsl:template>
-
-   <xd:desc>Text nodes to be copied without type attribute, and ab-Tags that have to be changed into p- or div-Tags</xd:desc>
-   <xsl:template match="tei:ab[contains(@type, 'margin_')]" mode="remove-type">
-      <p>
-         <!-- Copy content without type-attribute -->
-         <xsl:for-each select="@*">
-            <!-- Kopiere alle Attribute, außer 'type' -->
-            <xsl:if test="local-name() != 'type'">
-               <xsl:copy />
-            </xsl:if>
-         </xsl:for-each>
-         <xsl:copy-of select="node()"/>   
-      </p>
-   </xsl:template>
-
-   <xsl:template match="tei:ab[@rend]" mode="remove-type">
-      <div>
-         <xsl:copy-of select="@*"/>
-         <xsl:apply-templates select="node()" mode="remove-type"/>
-      </div>
-   </xsl:template>
-
-   <xsl:template match="tei:p" mode="remove-type">
-      <xsl:variable name="hasAbWithRend" as="xs:boolean"
-               select="exists(//tei:ab[@rend])"/>
-      <xsl:choose>
-         <xsl:when test="$hasAbWithRend and not(parent::tei:ab[@rend])">
-            <div n="2">
-               <xsl:text>
-            </xsl:text>
-               <p>
-               <xsl:for-each select="@*">
-                     <!-- Kopiere alle Attribute, außer 'type' -->
-                     <xsl:if test="local-name() != 'type'">
-                        <xsl:copy />
-                     </xsl:if>
-                  </xsl:for-each>      
-                  <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
-                  <xsl:copy-of select="node()"/>
-               </p>
-            <xsl:text>
-         </xsl:text>
-            </div>
-         </xsl:when>
-         <xsl:otherwise>
-            <p>
-               <xsl:for-each select="@*">
-                     <!-- Kopiere alle Attribute, außer 'type' -->
-                     <xsl:if test="local-name() != 'type'">
-                        <xsl:copy />
-                     </xsl:if>
-                  </xsl:for-each>      
-                  <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
-                  <xsl:copy-of select="node()"/>
-               </p>
-         </xsl:otherwise>
-      </xsl:choose>
-   </xsl:template>
-
-   <xsl:template match="tei:pb" mode="remove-type">
-      <pb>
-         <xsl:for-each select="@*">
-            <!-- Kopiere alle Attribute, außer 'type' -->
-            <xsl:if test="local-name() != 'type'">
-               <xsl:copy />
-            </xsl:if>
-         </xsl:for-each>
-         
-         <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
-         <xsl:copy-of select="node()"/>
-      </pb>
-   </xsl:template>
-
-   <xsl:template match="tei:milestone" mode="remove-type">
-      <milestone>
-         <xsl:for-each select="@*">
-            <!-- Kopiere alle Attribute, außer 'type' -->
-            <xsl:if test="local-name() != 'type'">
-               <xsl:copy />
-            </xsl:if>
-         </xsl:for-each>
-         
-         <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
-         <xsl:copy-of select="node()"/>
-      </milestone>
-   </xsl:template>
-   <xsl:template match="tei:*" mode="remove-type">
-      <xsl:copy-of select="."/>
    </xsl:template>
 </xsl:stylesheet>

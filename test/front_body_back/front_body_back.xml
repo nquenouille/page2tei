@@ -126,7 +126,7 @@
          </div>
       </front>
       <body>
-         <div type="original">
+         <div n="1" type="original">
          <pb facs="#facs_2" n="2"/>
          <milestone unit="section" facs="#facs_2_tr_1"/>
          <p>
@@ -154,12 +154,12 @@
             </p>
          <pb facs="#facs_3" n="3"/>
          </div>
-         <div type="commentary">
+         <div n="1" type="commentary">
          <p/>
          </div>
       </body>
          <back>
-         <div type="original_back">
+         <div n="1" type="original_back">
             <pb facs="#facs_4" n="4"/>
             <milestone unit="section" facs="#facs_4_r"/>
             <p>
@@ -177,7 +177,7 @@
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/2795,1808,525,196" n="N012"/>Erffurth.
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1593,1737,565,204" n="N013"/>Franco. <add xml:id="add4-4" place="inspace" type="addition">2 g.</add></p>
          </div>
-         <div type="commentary_back">
+         <div n="1" type="commentary_back">
          <p/>
          </div>
       </back>
