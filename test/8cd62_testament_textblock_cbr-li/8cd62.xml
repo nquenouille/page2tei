@@ -97,9 +97,10 @@
    </facsimile>
    <text>
       <body>
-         <div type="original">
-            <pb facs="#facs_1" n="1"/>
-            <milestone unit="section" facs="#facs_1_tr_1"/>
+         <div n="1" type="original">
+         <pb facs="#facs_1" n="1"/>
+         <milestone unit="section" facs="#facs_1_tr_1"/>
+         <div n="2">
             <p>
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/683,489,3884,409" n="N001"/>This is the last Will and Testament of me John
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/221,855,4028,285" n="N002"/>Christian Bach of the Parish of Saint Mary la
@@ -117,9 +118,11 @@
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/269,3077,4330,199" n="N014"/>have hereunto set my hand and Seal this Fourteenth
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/274,3249,1931,322" n="N015"/>Day of November 1781
             </p>
-            <ab rend="container">
+         </div>
+         <div n="2" rend="container">
             <milestone unit="section" facs="#facs_1_r"/>
-            <ab rend="textblock">
+            <div n="3" rend="textblock">
+            <p>
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/145,3394,2195,285" n="N001"/>Signed Sealed Published and
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/102,3604,2340,269" n="N002"/>Declared by the said John Chris<span type="hyphen">-</span>
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/151,3754,2151,275" n="N003"/>tian Bach as &amp; for his last
@@ -128,19 +131,26 @@
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/167,4195,2205,242" n="N006"/>Presence &amp; at his request and in
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/156,4351,2259,189" n="N007"/>the Presence of each other have
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/172,4464,2098,194" n="N008"/>subscribed our Names as
-               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/151,4593,1613,264" n="N009"/>Witnesses thereto</ab>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/151,4593,1613,264" n="N009"/>Witnesses thereto
+            </p>
+            </div>
             <milestone unit="section" facs="#facs_1_r_80"/>
-            <ab rend="tb cbr-li">
-               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/2738,3615,1016,322" n="N001"/>JCBach</ab>
-            </ab>
-            <milestone unit="section" facs="#facs_1_r_81"/>
+            <div n="3" rend="tb cbr-li">
+            <p>
+               <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/2738,3615,1016,322" n="N001"/>JCBach</p>
+            </div>
+            </div>
+         <milestone unit="section" facs="#facs_1_r_81"/>
+         <div n="2">
             <p>
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/199,4755,1329,360" n="N001"/>Mary Zoffany
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/199,5029,1210,285" n="N002"/>Francis Mecci
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00001.tif/285,5228,1490,339" n="N003"/>Augus Greenland
             </p>
-            <pb facs="#facs_2" n="2"/>
-            <milestone unit="section" facs="#facs_2_tr_1"/>
+         </div>
+         <pb facs="#facs_2" n="2"/>
+         <milestone unit="section" facs="#facs_2_tr_1"/>
+         <div n="2">
             <p>
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/1525,0,1547,378" n="N001"/>20<hi style="vertical-align: superscript;">th</hi> February 1782.
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/192,263,4399,357" n="N002"/>Cecilia Bach Widow the Relict of the Testator
@@ -158,9 +168,11 @@
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/675,3362,3861,395" n="N014"/>Adinon. was Granted having been first Sworn
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00002.tif/675,3593,1014,279" n="N015"/>duly to Adm.<hi style="vertical-align: superscript;">n</hi>
             </p>
-            <pb facs="#facs_3" n="3"/>
-            <pb facs="#facs_4" n="4"/>
-            <milestone unit="section" facs="#facs_4_tr_2"/>
+         </div>
+         <pb facs="#facs_3" n="3"/>
+         <pb facs="#facs_4" n="4"/>
+         <milestone unit="section" facs="#facs_4_tr_2"/>
+         <div n="2">
             <p>
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/1657,156,325,280" n="N001"/>Will
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/3174,174,400,218" n="N002"/>Midde
@@ -170,7 +182,8 @@
                <lb facs="iiif:fpb%2FGB-Lna%2Frvvvm%2Fgb_lna_prob10_prerogative_court_of_canterbury_and_other_probate_jurisdictions_2862_00004.tif/3168,1330,425,391" n="N006"/><add xml:id="add4-2" place="below" type="addition">Ex<hi style="vertical-align: superscript;">d.</hi></add>
             </p>
          </div>
-         <div type="commentary">
+         </div>
+         <div n="1" type="commentary">
          <p/>
          </div>
       </body>
