@@ -104,9 +104,9 @@
          <xd:p>Use tei:ab as fallback instead of tei:p</xd:p>
          <xd:p><xd:b>Contributor for Customized Adaptions</xd:b> Nadine Quenouille, quenouille@bach-leipzig.de</xd:p>
          <xd:p>Forschungsportal BACH, Sächsische Akademie der Wissenschaften zu Leipzig</xd:p>
-         <xd:p>Adaptions for TEI Publisher: Replace seriesStmt with PublicationStmt, add treat for tags add, del and missing, added div types 'original' and 'commentary', 
+         <xd:p>Adaptions for TEI Publisher: Replace seriesStmt with PublicationStmt, add treat for tags add, del, missing, note, supplied, anchor and unclear, added div types 'original' and 'commentary', 
             insert &lt;span type='hyphen'&gt;, add mimeType to graphic, encoding iiif coordinates for TextLines and Table cells, gave the table cells a head, add some tags 
-            and attributes, fix continued tags, split facsimilia.</xd:p>
+            and attributes, fix continued tags, split facsimilia, add treatment of structural tags (front, back, marginalia, heading, subheading, textblock, hidden, curly brackets), etc.</xd:p>
          <xd:p/>
       </xd:desc>
    </xd:doc>
@@ -1358,7 +1358,7 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-          <xsl:when test="'hidden' = $regionType" />
+         <xsl:when test="'hidden' = $regionType" />
          <!-- text block with another one side by side containing a curly bracket that should be displayed as grid -->
          <xsl:when test="'textblock' = $regionType or 'curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType">
             <xsl:variable name="customAttr" select="following::p:TextRegion[1]/@custom" />
@@ -1709,11 +1709,18 @@
       <table facs="#facs_{$numCurr}_{@id}">
          <xsl:for-each-group select="p:TableCell" group-by="@row">
             <xsl:sort select="@col"/>
+
+            <!-- If there is a cell (= not 'hidden') create a row -->
+            <xsl:variable name="cells">
+               <xsl:apply-templates select="current-group()"/>
+            </xsl:variable>
+            <xsl:if test="normalize-space($cells)">
             <xsl:text>
         </xsl:text>
             <row n="{@row}">
                <xsl:apply-templates select="current-group()"/>
             </row>
+         </xsl:if>
          </xsl:for-each-group>
       </table>
    </xsl:template>
@@ -1851,23 +1858,27 @@
       </xsl:variable>
       <xsl:text>
           </xsl:text>
-     
-         <xsl:if test="@custom='structure {type:heading;}'">
+      <xsl:choose>
+         <xsl:when test="contains(@custom, 'hidden')">
+         <xsl:choose>
+         <xsl:when test="preceding::p:TableCell[@row = @row] or following::p:TableCell[@row = @row]">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
-               <xsl:value-of select="'heading'"/>
+               <xsl:value-of select="'hidden'"/>
             </xsl:attribute>
             <xsl:attribute name="rend">
                <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@topBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
-            </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            </xsl:attribute>            
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:subheading;}'">
+         </xsl:when>
+         <xsl:otherwise/>
+         </xsl:choose>
+        </xsl:when>
+         <xsl:when test="contains(@custom, 'subheading')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1881,8 +1892,23 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-left-in;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'heading')">
+            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <xsl:apply-templates select="@rowSpan | @colSpan"/>
+            <xsl:attribute name="role">
+               <xsl:value-of select="'heading'"/>
+            </xsl:attribute>
+            <xsl:attribute name="rend">
+               <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@topBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
+               <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="p:TextLine"/>
+            </cell>
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-left-in')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1893,8 +1919,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-left-out;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-left-out')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1905,8 +1931,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-right-in;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-right-in')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1917,8 +1943,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-right-out;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-right-out')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1929,8 +1955,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-top-in;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-top-in')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1941,8 +1967,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-top-out;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-top-out')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1953,8 +1979,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-bottom-in;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-bottom-in')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1965,8 +1991,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="@custom='structure {type:curly-bracket-bottom-out;}'">
+         </xsl:when>
+         <xsl:when test="contains(@custom, 'curly-bracket-bottom-out')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
@@ -1977,8 +2003,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
             </cell>
-         </xsl:if>
-         <xsl:if test="not(@custom='structure {type:heading;}') and not(@custom='structure {type:subheading;}') and not(@custom='structure {type:curly-bracket-left-in;}') and not(@custom='structure {type:curly-bracket-left-out;}') and not(@custom='structure {type:curly-bracket-right-in;}') and not(@custom='structure {type:curly-bracket-right-out;}') and not(@custom='structure {type:curly-bracket-top-in;}') and not(@custom='structure {type:curly-bracket-top-out;}') and not(@custom='structure {type:curly-bracket-bottom-in;}') and not(@custom='structure {type:curly-bracket-bottom-out;}')">
+         </xsl:when>
+         <xsl:otherwise>
          <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="rend">
@@ -1989,7 +2015,8 @@
             </xsl:attribute>
             <xsl:apply-templates select="p:TextLine"/>
          </cell>
-         </xsl:if>
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
    <xd:doc>
       <xd:desc>rowspan -> rows</xd:desc>
