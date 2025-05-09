@@ -1651,7 +1651,19 @@
             </ab>
             <xsl:text>
             </xsl:text>
-          </xsl:when>   
+          </xsl:when> 
+          <xsl:when test="$regionType = 'textblock' and not('curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType)">  
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />            
+            <xsl:text>
+            </xsl:text>            
+            <ab n="2" rend="textblock">
+            <p>
+               <xsl:apply-templates select="p:TextLine"/>
+            </p>
+            </ab>
+            <xsl:text>
+            </xsl:text>
+          </xsl:when>
          </xsl:choose>
          </xsl:when>
          <xsl:when test="'paragraph' = $regionType and not($regionType = 'textblock' or contains($regionType, 'curly-bracket'))">
