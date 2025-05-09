@@ -1657,9 +1657,15 @@
             <xsl:text>
             </xsl:text>            
             <ab n="2" rend="textblock">
+            <xsl:text>
+            </xsl:text> 
             <p>
                <xsl:apply-templates select="p:TextLine"/>
+               <xsl:text>
+            </xsl:text> 
             </p>
+         <xsl:text>
+         </xsl:text> 
             </ab>
             <xsl:text>
             </xsl:text>
