@@ -97,7 +97,7 @@
       <milestone>
          <xsl:for-each select="@*">
             <!-- Kopiere alle Attribute, außer 'type' -->
-            <xsl:if test="local-name() != 'type'">
+            <xsl:if test="local-name() != 'type' or (local-name() = 'type' and . = 'unedited')">
                <xsl:copy />
             </xsl:if>
          </xsl:for-each>

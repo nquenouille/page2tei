@@ -106,7 +106,7 @@
          <xd:p>Forschungsportal BACH, Sächsische Akademie der Wissenschaften zu Leipzig</xd:p>
          <xd:p>Adaptions for TEI Publisher: Replace seriesStmt with PublicationStmt, add treat for tags add, del, missing, note, supplied, anchor and unclear, added div types 'original' and 'commentary', 
             insert &lt;span type='hyphen'&gt;, add mimeType to graphic, encoding iiif coordinates for TextLines and Table cells, gave the table cells a head, add some tags 
-            and attributes, fix continued tags, split facsimilia, add treatment of structural tags (front, back, marginalia, heading, subheading, textblock, hidden, curly brackets), etc.</xd:p>
+            and attributes, fix continued tags, split facsimilia, add treatment of structural tags (front, back, marginalia, heading, subheading, textblock, unedited, curly brackets), etc.</xd:p>
          <xd:p/>
       </xd:desc>
    </xd:doc>
@@ -1358,7 +1358,9 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'hidden' = $regionType" />
+         <xsl:when test="'unedited' = $regionType">
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="unedited" />
+         </xsl:when>
          <!-- text block with another one side by side containing a curly bracket that should be displayed as grid -->
          <xsl:when test="'textblock' = $regionType or 'curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType">
             <xsl:variable name="customAttr" select="following::p:TextRegion[1]/@custom" />
@@ -1675,7 +1677,7 @@
          <xsl:when test="'paragraph' = $regionType and not($regionType = 'textblock' or contains($regionType, 'curly-bracket'))">
             <xsl:text>
             </xsl:text>
-            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
+            <milestone unit="section" facs="#facs_{$numCurr}" />
             <p>
                <xsl:apply-templates select="p:TextLine"/>
             </p>
@@ -1722,23 +1724,49 @@
    </xd:doc>
    <xsl:template match="p:TableRegion" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
+      <xsl:variable name="zid" select="@id"/>
       <xsl:text>
       </xsl:text>
       <table facs="#facs_{$numCurr}_{@id}">
          <xsl:for-each-group select="p:TableCell" group-by="@row">
             <xsl:sort select="@col"/>
-
-            <!-- If there is a cell (= not 'hidden') create a row -->
-            <xsl:variable name="cells">
-               <xsl:apply-templates select="current-group()"/>
-            </xsl:variable>
-            <xsl:if test="normalize-space($cells)">
             <xsl:text>
         </xsl:text>
-            <row n="{@row}">
-               <xsl:apply-templates select="current-group()"/>
-            </row>
-         </xsl:if>
+            <xsl:variable name="isUnedited" select="every $cell in current-group() satisfies contains($cell/@custom, 'unedited')"/>
+            <xsl:variable name="cols" select="max(current-group()/@col)"/>
+            
+            <!-- Koordinatenpunkte sammeln -->
+      <xsl:variable name="points" as="xs:string*">
+        <xsl:for-each select="current-group()/p:Coords/@points">
+          <xsl:sequence select="tokenize(., '\s+')" />
+        </xsl:for-each>
+      </xsl:variable>
+
+      <!-- Alle x- und y-Werte extrahieren -->
+      <xsl:variable name="xs" select="for $p in $points return number(substring-before($p, ','))"/>
+      <xsl:variable name="ys" select="for $p in $points return number(substring-after($p, ','))"/>
+
+      <!-- Bounding Box berechnen -->
+      <xsl:variable name="ulx" select="min($xs)"/>
+      <xsl:variable name="uly" select="min($ys)"/>
+      <xsl:variable name="lrx" select="max($xs)"/>
+      <xsl:variable name="lry" select="max($ys)"/>
+      <xsl:variable name="w" select="$lrx - $ulx"/>
+      <xsl:variable name="h" select="$lry - $uly"/>
+    
+            
+            <xsl:choose>
+               <xsl:when test="$isUnedited">
+                  <row n="{@row}" role="unedited">
+                     <cell role="unedited" facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" cols="{$cols}"/>
+                  </row>
+               </xsl:when>
+               <xsl:otherwise>
+                  <row n="{@row}">
+                     <xsl:apply-templates select="current-group()"/>
+                  </row>
+               </xsl:otherwise>
+            </xsl:choose>
          </xsl:for-each-group>
       </table>
    </xsl:template>
@@ -1877,13 +1905,11 @@
       <xsl:text>
           </xsl:text>
       <xsl:choose>
-         <xsl:when test="contains(@custom, 'hidden')">
-         <xsl:choose>
-         <xsl:when test="preceding::p:TableCell[@row = @row] or following::p:TableCell[@row = @row]">
+         <xsl:when test="contains(@custom, 'unedited')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
-               <xsl:value-of select="'hidden'"/>
+               <xsl:value-of select="'unedited'"/>
             </xsl:attribute>
             <xsl:attribute name="rend">
                <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])"/>
@@ -1892,9 +1918,6 @@
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>            
             </cell>
-         </xsl:when>
-         <xsl:otherwise/>
-         </xsl:choose>
         </xsl:when>
          <xsl:when test="contains(@custom, 'subheading')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
