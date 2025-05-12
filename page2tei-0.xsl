@@ -1677,7 +1677,7 @@
          <xsl:when test="'paragraph' = $regionType and not($regionType = 'textblock' or contains($regionType, 'curly-bracket'))">
             <xsl:text>
             </xsl:text>
-            <milestone unit="section" facs="#facs_{$numCurr}" />
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <p>
                <xsl:apply-templates select="p:TextLine"/>
             </p>
