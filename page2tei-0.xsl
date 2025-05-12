@@ -1735,25 +1735,25 @@
             <xsl:variable name="isUnedited" select="every $cell in current-group() satisfies contains($cell/@custom, 'unedited')"/>
             <xsl:variable name="cols" select="max(current-group()/@col)"/>
             
-            <!-- Koordinatenpunkte sammeln -->
-      <xsl:variable name="points" as="xs:string*">
-        <xsl:for-each select="current-group()/p:Coords/@points">
-          <xsl:sequence select="tokenize(., '\s+')" />
-        </xsl:for-each>
-      </xsl:variable>
+            <!-- collect coords -->
+            <xsl:variable name="points" as="xs:string*">
+            <xsl:for-each select="current-group()/p:Coords/@points">
+               <xsl:sequence select="tokenize(., '\s+')" />
+            </xsl:for-each>
+            </xsl:variable>
 
-      <!-- Alle x- und y-Werte extrahieren -->
-      <xsl:variable name="xs" select="for $p in $points return number(substring-before($p, ','))"/>
-      <xsl:variable name="ys" select="for $p in $points return number(substring-after($p, ','))"/>
+            <!-- extract x and y values -->
+            <xsl:variable name="xs" select="for $p in $points return number(substring-before($p, ','))"/>
+            <xsl:variable name="ys" select="for $p in $points return number(substring-after($p, ','))"/>
 
-      <!-- Bounding Box berechnen -->
-      <xsl:variable name="ulx" select="min($xs)"/>
-      <xsl:variable name="uly" select="min($ys)"/>
-      <xsl:variable name="lrx" select="max($xs)"/>
-      <xsl:variable name="lry" select="max($ys)"/>
-      <xsl:variable name="w" select="$lrx - $ulx"/>
-      <xsl:variable name="h" select="$lry - $uly"/>
-    
+            <!-- calculate bounding box -->
+            <xsl:variable name="ulx" select="min($xs)"/>
+            <xsl:variable name="uly" select="min($ys)"/>
+            <xsl:variable name="lrx" select="max($xs)"/>
+            <xsl:variable name="lry" select="max($ys)"/>
+            <xsl:variable name="w" select="$lrx - $ulx"/>
+            <xsl:variable name="h" select="$lry - $uly"/>
+         
             
             <xsl:choose>
                <xsl:when test="$isUnedited">
