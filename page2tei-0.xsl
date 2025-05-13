@@ -1215,6 +1215,19 @@
    <xsl:template match="p:TextRegion" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
       <xsl:param name="center" tunnel="true" as="xs:double"/>
+      <xsl:variable name="points" as="xs:string*">
+                  <xsl:for-each select="./p:Coords/@points">
+                     <xsl:sequence select="tokenize(., '\s+')" />
+                  </xsl:for-each>
+               </xsl:variable>
+               <xsl:variable name="xs" select="for $p in $points return number(substring-before($p, ','))"/>
+               <xsl:variable name="ys" select="for $p in $points return number(substring-after($p, ','))"/>
+               <xsl:variable name="ulx" select="min($xs)"/>
+               <xsl:variable name="uly" select="min($ys)"/>
+               <xsl:variable name="lrx" select="max($xs)"/>
+               <xsl:variable name="lry" select="max($ys)"/>
+               <xsl:variable name="w" select="$lrx - $ulx"/>
+               <xsl:variable name="h" select="$lry - $uly"/>
       
       <xsl:variable name="custom" as="map(*)">
          <xsl:apply-templates select="@custom"/>
@@ -1360,6 +1373,9 @@
          </xsl:when>
          <xsl:when test="'unedited' = $regionType">
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="unedited" />
+            <xsl:text>
+         </xsl:text>
+            <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" type="unedited"/><note type="unedited">Nicht edierte Zeilen.</note>
          </xsl:when>
          <!-- text block with another one side by side containing a curly bracket that should be displayed as grid -->
          <xsl:when test="'textblock' = $regionType or 'curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType">
@@ -1723,53 +1739,87 @@
       <xd:param name="numCurr"/>
    </xd:doc>
    <xsl:template match="p:TableRegion" mode="text">
-      <xsl:param name="numCurr" tunnel="true"/>
-      <xsl:variable name="zid" select="@id"/>
-      <xsl:text>
-      </xsl:text>
-      <table facs="#facs_{$numCurr}_{@id}">
+   <xsl:param name="numCurr" tunnel="true"/>
+   <table facs="#facs_{$numCurr}_{@id}">
+
+      <!-- Group cells by rows -->
+      <xsl:variable name="rows" as="element()*">
          <xsl:for-each-group select="p:TableCell" group-by="@row">
-            <xsl:sort select="@col"/>
-            <xsl:text>
-        </xsl:text>
-            <xsl:variable name="isUnedited" select="every $cell in current-group() satisfies contains($cell/@custom, 'unedited')"/>
-            <xsl:variable name="cols" select="max(current-group()/@col)"/>
-            
-            <!-- collect coords -->
-            <xsl:variable name="points" as="xs:string*">
-            <xsl:for-each select="current-group()/p:Coords/@points">
-               <xsl:sequence select="tokenize(., '\s+')" />
-            </xsl:for-each>
-            </xsl:variable>
-
-            <!-- extract x and y values -->
-            <xsl:variable name="xs" select="for $p in $points return number(substring-before($p, ','))"/>
-            <xsl:variable name="ys" select="for $p in $points return number(substring-after($p, ','))"/>
-
-            <!-- calculate bounding box -->
-            <xsl:variable name="ulx" select="min($xs)"/>
-            <xsl:variable name="uly" select="min($ys)"/>
-            <xsl:variable name="lrx" select="max($xs)"/>
-            <xsl:variable name="lry" select="max($ys)"/>
-            <xsl:variable name="w" select="$lrx - $ulx"/>
-            <xsl:variable name="h" select="$lry - $uly"/>
-         
-            
-            <xsl:choose>
-               <xsl:when test="$isUnedited">
-                  <row n="{@row}" role="unedited">
-                     <cell role="unedited" facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" cols="{$cols}"/>
-                  </row>
-               </xsl:when>
-               <xsl:otherwise>
-                  <row n="{@row}">
-                     <xsl:apply-templates select="current-group()"/>
-                  </row>
-               </xsl:otherwise>
-            </xsl:choose>
+            <xsl:sort select="@row" data-type="number"/>
+            <row-group row="{current-grouping-key()}" unedited="{every $cell in current-group() satisfies contains($cell/@custom, 'unedited')}">
+               <xsl:copy-of select="current-group()"/>
+            </row-group>
          </xsl:for-each-group>
-      </table>
-   </xsl:template>
+      </xsl:variable>
+
+      <!-- Group blocks (on basis of unedited / not-unedited) -->
+      <xsl:for-each-group select="$rows" group-adjacent="@unedited">
+         <xsl:variable name="unedited" select="current-grouping-key()"/>
+         <xsl:variable name="block" select="current-group()"/>
+
+         <xsl:choose>
+            <!-- Group all unedited rows -->
+            <xsl:when test="$unedited = true()">
+               <!-- group all cells of this block -->
+               <xsl:variable name="allCells" select="$block/*"/>
+               <!-- Give back row start and end numbers -->
+               <xsl:variable name="rowStart" select="min($block/@row)"/>
+               <xsl:variable name="rowEnd" select="max($block/@row)"/>
+               <xsl:variable name="rowRange">
+                  <xsl:choose>
+                     <xsl:when test="$rowStart = $rowEnd">
+                        <xsl:value-of select="$rowStart"/>
+                     </xsl:when>
+                     <xsl:otherwise>
+                        <xsl:value-of select="concat($rowStart, '–', $rowEnd)"/>
+                     </xsl:otherwise>
+                  </xsl:choose>
+               </xsl:variable>
+
+               <!-- calculate coordinates of the bounding box -->
+               <xsl:variable name="points" as="xs:string*">
+                  <xsl:for-each select="$allCells/p:Coords/@points">
+                     <xsl:sequence select="tokenize(., '\s+')" />
+                  </xsl:for-each>
+               </xsl:variable>
+               <xsl:variable name="xs" select="for $p in $points return number(substring-before($p, ','))"/>
+               <xsl:variable name="ys" select="for $p in $points return number(substring-after($p, ','))"/>
+               <xsl:variable name="ulx" select="min($xs)"/>
+               <xsl:variable name="uly" select="min($ys)"/>
+               <xsl:variable name="lrx" select="max($xs)"/>
+               <xsl:variable name="lry" select="max($ys)"/>
+               <xsl:variable name="w" select="$lrx - $ulx"/>
+               <xsl:variable name="h" select="$lry - $uly"/>
+               <xsl:variable name="maxCols" select="max($allCells/@col) + 1"/>
+
+                  <!-- Output -->
+                        <xsl:text>
+            </xsl:text>
+                  <row n="{$rowRange}" role="unedited" rows="{count($block)}">
+                     <xsl:text>
+            </xsl:text>
+                     <cell role="unedited" cols="{$maxCols}">
+                        <xsl:text>
+            </xsl:text>
+                        <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Hier wurden <xsl:value-of select="count($block)"/> Zeilen nicht-edierter Zellen zusammengefaßt.</note>
+                     </cell>
+                  </row>
+            </xsl:when>
+
+            <!-- Normal Rows -->
+            <xsl:otherwise>
+               <xsl:for-each select="$block">
+                  <xsl:text>
+            </xsl:text>
+                  <row n="{@row}">
+                     <xsl:apply-templates select="*"/>
+                  </row>
+               </xsl:for-each>
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:for-each-group>
+   </table>
+</xsl:template>
 
    <xd:doc>
       <xd:desc>create table cells</xd:desc>
@@ -1916,7 +1966,8 @@
                <xsl:value-of select="number((xs:boolean(@topBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
-            </xsl:attribute>            
+            </xsl:attribute>
+            <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Nicht-edierte Zelle.</note>            
             </cell>
         </xsl:when>
          <xsl:when test="contains(@custom, 'subheading')">
