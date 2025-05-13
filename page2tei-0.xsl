@@ -1793,13 +1793,13 @@
                <xsl:variable name="maxCols" select="max($allCells/@col) + 1"/>
 
                   <!-- Output -->
-                        <xsl:text>
+                     <xsl:text>
             </xsl:text>
-                  <row n="{$rowRange}" role="unedited" rows="{count($block)}">
+                     <row n="{$rowRange}" role="unedited" rows="{count($block)}">
                      <xsl:text>
             </xsl:text>
                      <cell role="unedited" cols="{$maxCols}">
-                        <xsl:text>
+                     <xsl:text>
             </xsl:text>
                         <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Hier wurden <xsl:value-of select="count($block)"/> Zeilen nicht-edierter Zellen zusammengefaßt.</note>
                      </cell>
@@ -1952,8 +1952,8 @@
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
-      <xsl:text>
-          </xsl:text>
+         <xsl:text>
+            </xsl:text>
       <xsl:choose>
          <xsl:when test="contains(@custom, 'unedited')">
             <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
