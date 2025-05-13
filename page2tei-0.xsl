@@ -1210,10 +1210,12 @@
             TOC-entry ignored list-label ignored other observed </xd:p>
       </xd:desc>
       <xd:param name="numCurr"/>
+      <xd:param name="imgurl"/>
       <xd:param name="center"/>
    </xd:doc>
    <xsl:template match="p:TextRegion" mode="text">
       <xsl:param name="numCurr" tunnel="true"/>
+      <xsl:param name="imgurl" tunnel="true"/>
       <xsl:param name="center" tunnel="true" as="xs:double"/>
       <xsl:variable name="points" as="xs:string*">
                   <xsl:for-each select="./p:Coords/@points">
@@ -1375,7 +1377,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="unedited" />
             <xsl:text>
          </xsl:text>
-            <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" type="unedited"/><note type="unedited">Nicht edierte Zeilen.</note>
+            <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" type="unedited"/><note type="unedited">Nicht edierte Zeilen.</note>
          </xsl:when>
          <!-- text block with another one side by side containing a curly bracket that should be displayed as grid -->
          <xsl:when test="'textblock' = $regionType or 'curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType">
@@ -1737,9 +1739,12 @@
    <xd:doc>
       <xd:desc>create a table</xd:desc>
       <xd:param name="numCurr"/>
+      <xd:param name="imgurl"/>
    </xd:doc>
    <xsl:template match="p:TableRegion" mode="text">
    <xsl:param name="numCurr" tunnel="true"/>
+   <xsl:param name="imgurl" tunnel="true"/>
+
    <table facs="#facs_{$numCurr}_{@id}">
 
       <!-- Group cells by rows -->
@@ -1801,7 +1806,7 @@
                      <cell role="unedited" cols="{$maxCols}">
                      <xsl:text>
             </xsl:text>
-                        <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Hier wurden <xsl:value-of select="count($block)"/> Zeilen nicht-edierter Zellen zusammengefaßt.</note>
+                        <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Hier wurden <xsl:value-of select="count($block)"/> Zeilen nicht-edierter Zellen zusammengefaßt.</note>
                      </cell>
                   </row>
             </xsl:when>
@@ -1827,17 +1832,18 @@
    </xd:doc>
    <xsl:template match="p:TableCell">
       <xsl:param name="numCurr" tunnel="true"/>
+      <xsl:param name="imgurl" tunnel="true"/>
 
       <!-- Create ulx, uly, w and h by getting the coordinates's points, format and sort them and take the max and min values -->
       <xsl:variable name="x-string">
-         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+         <xsl:for-each select="tokenize(./p:Coords/@points, ' ')">
             <xsl:if test="position() > 1">,</xsl:if>
             <xsl:value-of select="substring-before(current(), ',')" />
          </xsl:for-each>
       </xsl:variable>
 
       <xsl:variable name="y-string">
-         <xsl:for-each select="tokenize(p:Coords/@points, ' ')">
+         <xsl:for-each select="tokenize(./p:Coords/@points, ' ')">
             <xsl:if test="position() > 1">,</xsl:if>
             <xsl:value-of select="substring-after(current(), ',')" />
          </xsl:for-each>
@@ -1956,7 +1962,7 @@
             </xsl:text>
       <xsl:choose>
          <xsl:when test="contains(@custom, 'unedited')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'unedited'"/>
@@ -1967,11 +1973,11 @@
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>
-            <lb facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Nicht-edierte Zelle.</note>            
+            <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Nicht-edierte Zelle.</note>            
             </cell>
         </xsl:when>
          <xsl:when test="contains(@custom, 'subheading')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'subheading'"/>
@@ -1986,7 +1992,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'heading')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'heading'"/>
@@ -2001,7 +2007,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-left-in')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-left-in'"/>
@@ -2013,7 +2019,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-left-out')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-left-out'"/>
@@ -2025,7 +2031,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-right-in')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-right-in'"/>
@@ -2037,7 +2043,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-right-out')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-right-out'"/>
@@ -2049,7 +2055,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-top-in')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-top-in'"/>
@@ -2061,7 +2067,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-top-out')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-top-out'"/>
@@ -2073,7 +2079,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-bottom-in')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-bottom-in'"/>
@@ -2085,7 +2091,7 @@
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-bottom-out')">
-            <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+            <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="role">
                <xsl:value-of select="'curly-bracket-bottom-out'"/>
@@ -2097,7 +2103,7 @@
             </cell>
          </xsl:when>
          <xsl:otherwise>
-         <cell facs="iiif:{encode-for-uri(ancestor::p:Page/@imageFilename)}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
+         <cell facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" n="{@col}">
             <xsl:apply-templates select="@rowSpan | @colSpan"/>
             <xsl:attribute name="rend">
                <xsl:value-of select="number((xs:boolean(@leftBorderVisible), false())[1])"/>
