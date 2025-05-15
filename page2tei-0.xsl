@@ -1377,7 +1377,7 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="unedited" />
             <xsl:text>
          </xsl:text>
-            <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" type="unedited"/><note type="unedited">Nicht edierterText.</note>
+            <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}" type="unedited"/><note type="unedited">Nicht edierter Text.</note>
          </xsl:when>
          <!-- text block with another one side by side containing a curly bracket that should be displayed as grid -->
          <xsl:when test="'textblock' = $regionType or 'curly-bracket-left-in' = $regionType or 'curly-bracket-left-out' = $regionType or 'curly-bracket-right-in' = $regionType or 'curly-bracket-right-out' = $regionType or 'curly-bracket-top-in' = $regionType or 'curly-bracket-top-out' = $regionType or 'curly-bracket-bottom-in' = $regionType or 'curly-bracket-bottom-out' = $regionType">
@@ -1806,7 +1806,7 @@
                      <cell role="unedited" cols="{$maxCols}">
                      <xsl:text>
             </xsl:text>
-                        <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Nicht edierterText.</note>
+                        <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Nicht edierter Text.</note>
                      </cell>
                   </row>
             </xsl:when>
