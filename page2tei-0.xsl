@@ -1689,25 +1689,17 @@
             </ab>
             <xsl:text>
             </xsl:text>
-          </xsl:when>
-          <xsl:when test="'paragraph' = $regionType and not($regionType = 'textblock' or contains($regionType, 'curly-bracket'))">
-            <xsl:text>
-            </xsl:text>
-            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
-            <p>
-               <xsl:apply-templates select="p:TextLine"/>
-            </p>
-         </xsl:when>
+          </xsl:when>          
          </xsl:choose>
          </xsl:when>    
-         <xsl:when test="'paragraph' = $regionType">
+         <xsl:when test="'paragraph' = $regionType and (not($regionType = 'textblock') or not(contains($regionType, 'curly-bracket')))">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <p>
                <xsl:apply-templates select="p:TextLine"/>
             </p>
-         </xsl:when>     
+         </xsl:when>    
          <xsl:when test="'front' = $regionType">
           <xsl:text>
             </xsl:text>
