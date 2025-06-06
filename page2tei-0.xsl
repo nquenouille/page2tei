@@ -653,7 +653,7 @@
       <xd:desc>Transkribus meta data: external ID</xd:desc>
    </xd:doc>
    <xsl:template match="externalId">
-      <idno type="uuid">
+      <idno type="pid">
          <xsl:value-of select="."/>
       </idno>
    </xsl:template>
