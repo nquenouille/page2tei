@@ -72,7 +72,7 @@
                         )[1]"
                   />
                   <xsl:try>
-                     <xsl:variable name="last" select="index-of(current-group(), $final)[1]"/>
+                     <xsl:variable name="last" select="index-of(current-group(), $final)[last()]"/>
                      
                   <xsl:element name="{local-name()}">
                      <xsl:apply-templates select="@*[name() != 'continued']" mode="continued" />
