@@ -38,6 +38,7 @@
                         normalize-space(preceding::text()[1]) != ''
                      or preceding::text()[1][not(preceding-sibling::*)]
                      or preceding-sibling::*[1][not(@continued = 'true') and not(self::tei:lb)]
+                      or preceding-sibling::*[not(local-name() = ('pb', 'cb', 'lb'))][1]/local-name() != local-name()
                   )
                ]">
 
