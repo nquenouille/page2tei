@@ -1208,6 +1208,7 @@
             ignored credit ignored floating ignored signature-mark observed catch-word observed
             marginalia observed footnote observed footnote-continued observed endnote ignored
             TOC-entry ignored list-label ignored other observed </xd:p>
+         <xd:p>milestone with attribute "unit='section'" and "facs='...'" indicates the text regions</xd:p>
       </xd:desc>
       <xd:param name="numCurr"/>
       <xd:param name="imgurl"/>
