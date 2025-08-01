@@ -1830,6 +1830,7 @@
    <xd:doc>
       <xd:desc>create table cells</xd:desc>
       <xd:param name="numCurr"/>
+      <xd:param name="imgurl"/>
    </xd:doc>
    <xsl:template match="p:TableCell">
       <xsl:param name="numCurr" tunnel="true"/>
