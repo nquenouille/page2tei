@@ -22,7 +22,7 @@
       </xd:desc>
    </xd:doc>
    
-    <xsl:template match="tei:ab[contains(@type, 'margin_')]" mode="postprocessing">
+    <xsl:template match="tei:ab[contains(@type, 'margin_') and not(contains(@type, 'margin_top')) and not(contains(@type, 'margin_bottom'))]" mode="postprocessing">
       <p>
          <!-- Copy content without type-attribute -->
          <xsl:for-each select="@*">
@@ -42,7 +42,7 @@
       </div>
    </xsl:template>
 
-   <xsl:template match="tei:p" mode="postprocessing">
+   <xsl:template match="tei:p | tei:ab[@type='margin_bottom'] | tei:ab[@type='margin_top']" mode="postprocessing">
       <xsl:variable name="hasAbWithRend" as="xs:boolean"
                select="exists(//tei:ab[@rend])"/>
       <xsl:choose>
