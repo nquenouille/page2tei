@@ -343,7 +343,7 @@
                      </xsl:variable>
                      <xsl:variable name="combining">
                         <xsl:apply-templates select="$combines" mode="continued" />
-                     </xsl:variable>                     
+                     </xsl:variable>                  
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
@@ -2622,6 +2622,29 @@
                </xsl:element>
                </xsl:otherwise>
             </xsl:choose>
+         </xsl:when>
+          <xsl:when test="@type = 'rdg'">
+            <xsl:variable name="elName" select="'rdg'"/>
+            <xsl:element name="{$elName}">
+               <xsl:if test="map:keys($custom) = 'n'">
+                  <xsl:attribute name="n"><xsl:value-of select="map:get($custom, 'n')"/></xsl:attribute>
+               </xsl:if>
+               <xsl:if test="map:keys($custom) = 'hand'">
+                  <xsl:attribute name="hand"><xsl:value-of select="map:get($custom, 'hand')"/></xsl:attribute>
+               </xsl:if>
+               <xsl:if test="map:keys($custom) = 'type'">
+                  <xsl:attribute name="type"><xsl:value-of select="map:get($custom, 'type')"/></xsl:attribute>
+               </xsl:if>
+               <xsl:if test="map:keys($custom) = 'varSeq'">
+                  <xsl:attribute name="varSeq"><xsl:value-of select="map:get($custom, 'varSeq')"/></xsl:attribute>
+               </xsl:if>
+               <xsl:if test="$custom?continued">
+                     <xsl:attribute name="continued" select="true()"/>
+               </xsl:if>             
+               <xsl:call-template name="elem">
+                  <xsl:with-param name="elem" select="$elem"/>
+               </xsl:call-template>
+            </xsl:element>
          </xsl:when>
          <xsl:when test="@type = 'sic'">
             <choice>

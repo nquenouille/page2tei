@@ -34,12 +34,10 @@
                group-starting-with="tei:*[
                   @continued eq 'true'
                   and normalize-space() != ''
-                  and (
-                        normalize-space(preceding::text()[1]) != ''
-                     or preceding::text()[1][not(preceding-sibling::*)]
-                     or preceding-sibling::*[1][not(@continued = 'true') and not(self::tei:lb)]
-                      or preceding-sibling::*[not(local-name() = ('pb', 'cb', 'lb'))][1]/local-name() != local-name()
-                  )
+                  and not(
+                           name() = name(preceding-sibling::tei:*[not(self::tei:lb)][1])
+                           and preceding-sibling::tei:*[not(self::tei:lb)][1][@continued = 'true']
+                        )
                ]">
 
             <xsl:choose>
@@ -131,4 +129,6 @@
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
    </xsl:template>
+
+
 </xsl:stylesheet>
