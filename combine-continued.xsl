@@ -205,7 +205,7 @@
       <xsl:choose>
          <xsl:when test="generate-id() = generate-id(key('lb-by-n', @n)[1])">
             <xsl:text>
-                        </xsl:text>
+             </xsl:text>
             <xsl:copy>
                <xsl:apply-templates select="@* | node()" mode="dedup-lb"/>
             </xsl:copy>
