@@ -1,0 +1,591 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2024-04-25T17:02:09.161+02:00</Created>
+        <LastChange>2025-02-10T14:52:48.504+01:00</LastChange>
+        <TranskribusMetadata pageNr="1" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00118.tif" imageWidth="1976" imageHeight="3134">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1739195568505" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="110,179 83,466 1451,466 1478,179"/>
+            <TextLine id="tr_1_tl_2" custom="readingOrder {index:0;}">
+                <Coords points="602,293 626,307 645,290 711,285 762,297 855,283 867,297 894,283 984,295 986,234 953,226 930,237 891,219 865,231 801,205 746,221 678,178 604,193"/>
+                <Baseline points="612,282 637,282 662,278 687,276 712,276 737,275 762,275 787,275 812,274 837,272 862,275 887,273 912,273 937,275 962,276 988,274"/>
+                <TextEquiv>
+                    <Unicode>CATALOGUS</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:1;}">
+                <Coords points="539,349 653,331 712,346 809,332 828,348 875,326 897,344 1055,341 1067,339 1069,285 1014,280 987,300 711,285 645,290 626,307 539,288"/>
+                <Baseline points="537,343 624,332 650,330 677,330 703,329 729,328 756,328 782,327 808,326 835,324 861,324 887,324 914,325 940,326 966,324 993,323 1019,324 1045,324 1072,320"/>
+                <TextEquiv>
+                    <Unicode>DISCIPULORUM</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_4" custom="readingOrder {index:2;}">
+                <Coords points="275,443 692,385 1064,424 1257,405 1257,355 1118,316 694,360 587,332 546,363 275,351"/>
+                <Baseline points="284,392 332,386 381,382 430,380 479,377 528,378 577,376 626,379 675,378 724,378 773,379 821,380 870,380 919,380 968,380 1017,382 1066,382 1115,382 1164,384 1213,384 1262,392"/>
+                <TextEquiv>
+                    <Unicode>post examen d. XX Julij MDCXCVI habitum,</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:3;}">
+                <Coords points="668,438 690,446 721,439 741,456 765,443 777,451 785,444 806,458 857,443 904,465 902,399 868,390 801,410 782,400 773,407 741,404 707,387 667,387"/>
+                <Baseline points="678,432 703,430 729,430 754,430 780,430 805,430 831,430 856,432 882,435 908,438"/>
+                <TextEquiv>
+                    <Unicode>adornatus.</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextEquiv>
+                <Unicode>CATALOGUS&#13;
+DISCIPULORUM&#13;
+post examen d. XX Julij MDCXCVI habitum,&#13;
+adornatus.</Unicode>
+            </TextEquiv>
+        </TextRegion>
+        <TableRegion id="Table_1722425252858_112" custom="readingOrder {index:1;}">
+            <Coords points="1737,1938 67,1938 67,478 1737,478"/>
+            <TableCell row="0" col="0" rowSpan="1" colSpan="4" leftBorderVisible="false" rightBorderVisible="false" topBorderVisible="false" bottomBorderVisible="false" type="heading" id="TableCell_1723542361985_639" custom="structure {type:heading;}">
+                <Coords points="67,478 67,610 192,610 1136,610 1506,610 1506,478 1146,478 1131,478 192,478"/>
+                <TextLine id="line_1722425731858_431" custom="readingOrder {index:0;}">
+                    <Coords points="567,491 992,496 989,585 564,580"/>
+                    <Baseline points="564,561 989,566"/>
+                    <TextEquiv>
+                        <Unicode>CLASSIS I.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 4 5</CornerPts>
+            </TableCell>
+            <TableCell row="0" col="4" rowSpan="1" colSpan="1" type="heading" id="TableCell_1722425571345_167" custom="structure {type:heading;}">
+                <Coords points="1506,478 1506,610 1737,610 1737,478"/>
+                <TextLine id="line_1722425749514_446" custom="readingOrder {index:0;}">
+                    <Coords points="1571,555 1728,555 1732,629 1571,605"/>
+                    <Baseline points="1571,600 1728,622"/>
+                    <TextEquiv>
+                        <Unicode>annus.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425574314_173">
+                <Coords points="67,610 67,673 192,673 192,610"/>
+                <TextLine id="line_1722425738522_436" custom="readingOrder {index:0;}">
+                    <Coords points="138,613 179,618 173,668 132,663"/>
+                    <Baseline points="133,658 174,663"/>
+                    <TextEquiv>
+                        <Unicode>1.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542385767_647">
+                <Coords points="192,610 192,673 1138,673 1506,673 1506,610 1136,610"/>
+                <TextLine id="line_1724671251704_2905" custom="readingOrder {index:0;}">
+                    <Coords points="207,618 1136,613 1245,613 1245,663 207,668"/>
+                    <Baseline points="207,663 1137,658 1245,658"/>
+                    <TextEquiv>
+                        <Unicode>Io. Martin Zang. Ordruviensis (chori praefectus)</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425574336_185">
+                <Coords points="1506,610 1506,673 1737,673 1737,610"/>
+                <TextLine id="line_1722425752315_451" custom="readingOrder {index:0;}">
+                    <Coords points="1552,616 1628,618 1627,668 1551,666"/>
+                    <Baseline points="1551,661 1627,663"/>
+                    <TextEquiv>
+                        <Unicode>21.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425575562_191">
+                <Coords points="67,673 67,742 192,742 192,673"/>
+                <TextLine id="line_1722425892901_526" custom="readingOrder {index:0;}">
+                    <Coords points="116,692 177,689 179,739 118,742"/>
+                    <Baseline points="118,737 179,734"/>
+                    <TextEquiv>
+                        <Unicode>2.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542399004_653">
+                <Coords points="192,673 192,742 1140,742 1506,742 1506,673 1138,673"/>
+                <TextLine id="line_1724671264584_2916" custom="readingOrder {index:0;}">
+                    <Coords points="209,688 1138,685 1378,685 1378,735 209,738"/>
+                    <Baseline points="209,733 1140,730 1378,730"/>
+                    <TextEquiv>
+                        <Unicode>Io. Wilh. Chrysel. Ordruviensis. (chori subpraefectus)</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425575587_203">
+                <Coords points="1506,673 1506,742 1737,742 1737,673"/>
+                <TextLine id="line_1722425754831_456" custom="readingOrder {index:0;}">
+                    <Coords points="1546,684 1647,684 1647,734 1546,734"/>
+                    <Baseline points="1546,729 1647,729"/>
+                    <TextEquiv>
+                        <Unicode>20.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425578891_209">
+                <Coords points="67,742 67,805 192,805 192,742"/>
+                <TextLine id="line_1722425896156_531" custom="readingOrder {index:0;}">
+                    <Coords points="117,753 178,755 177,805 116,803"/>
+                    <Baseline points="116,798 177,800"/>
+                    <TextEquiv>
+                        <Unicode>3.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542410279_658">
+                <Coords points="192,742 192,805 1143,805 1506,805 1506,742 1140,742"/>
+                <TextLine id="line_1724671284255_2927" custom="readingOrder {index:0;}">
+                    <Coords points="201,751 1141,753 1460,754 1464,824 201,801"/>
+                    <Baseline points="201,796 1142,798 1459,815"/>
+                    <TextEquiv>
+                        <Unicode>Anton. Marsil. Wolff. de TodenWarth. Wernshusanus.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425578914_221">
+                <Coords points="1506,742 1506,805 1737,805 1737,742"/>
+                <TextLine id="line_1722425757009_461" custom="readingOrder {index:0;}">
+                    <Coords points="1543,750 1632,750 1632,800 1543,800"/>
+                    <Baseline points="1543,795 1632,795"/>
+                    <TextEquiv>
+                        <Unicode>20.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425582122_227">
+                <Coords points="67,805 67,881 192,881 192,805"/>
+                <TextLine id="line_1722425898052_536" custom="readingOrder {index:0;}">
+                    <Coords points="109,826 177,826 177,894 109,894"/>
+                    <Baseline points="109,887 177,887"/>
+                    <TextEquiv>
+                        <Unicode>4.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="1" rowSpan="1" colSpan="1" id="TableCell_1723542342949_546">
+                <Coords points="192,805 192,881 1136,881 1143,805"/>
+                <TextLine id="line_1723542342965_549" custom="readingOrder {index:0;}">
+                    <Coords points="209,827 1143,830 1145,860 1137,880 209,877"/>
+                    <Baseline points="209,872 1138,875"/>
+                    <TextEquiv>
+                        <Unicode>Samuel Gottfrid Roth. Greüssensis</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="2" rowSpan="3" colSpan="2" id="TableCell_1724671412626_2969" custom="structure {type:curly-bracket-left-in;}">
+                <Coords points="1143,805 1136,881 1109,952 1097,1028 1506,1028 1506,952 1506,881 1506,805"/>
+                <TextLine id="line_1723542342965_548" custom="readingOrder {index:0;}">
+                    <Coords points="1143,830 1457,832 1459,904 1139,897 1145,860"/>
+                    <Baseline points="1173,890 1442,900"/>
+                    <TextEquiv>
+                        <Unicode>introducti d.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <TextLine id="line_1723542343012_556" custom="readingOrder {index:1;}">
+                    <Coords points="1128,902 1462,904 1461,981 1109,952"/>
+                    <Baseline points="1183,952 1460,968"/>
+                    <TextEquiv>
+                        <Unicode>30 Iunij 1696.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 3 4 7</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425582146_239">
+                <Coords points="1506,805 1506,881 1737,881 1737,805"/>
+                <TextLine id="line_1722425760201_466" custom="readingOrder {index:0;}">
+                    <Coords points="1541,831 1607,828 1623,900 1536,910"/>
+                    <Baseline points="1543,891 1605,889"/>
+                    <TextEquiv>
+                        <Unicode>19.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="5" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425584186_245">
+                <Coords points="67,881 67,952 192,952 192,881"/>
+                <TextLine id="line_1722425900117_541" custom="readingOrder {index:0;}">
+                    <Coords points="111,916 164,918 162,968 109,966"/>
+                    <Baseline points="115,956 168,958"/>
+                    <TextEquiv>
+                        <Unicode>5.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="5" col="1" rowSpan="1" colSpan="1" id="TableCell_1723542342996_554">
+                <Coords points="192,881 192,952 1109,952 1136,881"/>
+                <TextLine id="line_1723542343012_557" custom="readingOrder {index:0;}">
+                    <Coords points="204,897 1128,902 1109,952 204,947"/>
+                    <Baseline points="204,942 1111,947"/>
+                    <TextEquiv>
+                        <Unicode>Christian. Henr. Roth. Gehrensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="5" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425584212_257">
+                <Coords points="1506,881 1506,952 1737,952 1737,881"/>
+                <TextLine id="line_1722425762785_471" custom="readingOrder {index:0;}">
+                    <Coords points="1547,921 1638,918 1639,968 1548,971"/>
+                    <Baseline points="1551,959 1642,956"/>
+                    <TextEquiv>
+                        <Unicode>17.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="6" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425587995_263">
+                <Coords points="67,952 67,1028 192,1028 192,952"/>
+                <TextLine id="line_1722425903609_546" custom="readingOrder {index:0;}">
+                    <Coords points="109,976 174,980 171,1030 106,1026"/>
+                    <Baseline points="106,1021 171,1025"/>
+                    <TextEquiv>
+                        <Unicode>6.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="6" col="1" rowSpan="1" colSpan="1" id="TableCell_1723542343033_562">
+                <Coords points="192,952 192,1028 1097,1028 1109,952"/>
+                <TextLine id="line_1723542343059_564" custom="readingOrder {index:0;}">
+                    <Coords points="219,973 1101,972 1096,987 1097,1022 219,1023"/>
+                    <Baseline points="219,1018 1097,1017"/>
+                    <TextEquiv>
+                        <Unicode>Io. Gottfrid Roth, Jenensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="6" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425588023_275">
+                <Coords points="1506,952 1506,1028 1737,1028 1737,952"/>
+                <TextLine id="line_1722425766129_476" custom="readingOrder {index:0;}">
+                    <Coords points="1536,1004 1607,1004 1607,1054 1536,1054"/>
+                    <Baseline points="1536,1039 1607,1039"/>
+                    <TextEquiv>
+                        <Unicode>17.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="7" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425589732_281">
+                <Coords points="67,1028 67,1129 192,1129 192,1028"/>
+                <TextLine id="line_1722425906084_551" custom="readingOrder {index:0;}">
+                    <Coords points="117,1080 181,1078 182,1128 118,1130"/>
+                    <Baseline points="118,1125 182,1123"/>
+                    <TextEquiv>
+                        <Unicode>7.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="7" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542418580_663">
+                <Coords points="192,1028 192,1129 1100,1129 1506,1129 1506,1028 1097,1028"/>
+                <TextLine id="line_1722425972693_621" custom="readingOrder {index:0;}">
+                    <Coords points="214,1040 928,1034 933,1119 217,1119"/>
+                    <Baseline points="217,1114 933,1114"/>
+                    <TextEquiv>
+                        <Unicode>Io. Thilo, Cassellanus.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="7" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425589760_293">
+                <Coords points="1506,1028 1506,1129 1737,1129 1737,1028"/>
+                <TextLine id="line_1722425769663_481" custom="readingOrder {index:0;}">
+                    <Coords points="1528,1076 1614,1079 1612,1129 1526,1126"/>
+                    <Baseline points="1526,1121 1612,1124"/>
+                    <TextEquiv>
+                        <Unicode>18.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="8" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425591803_299">
+                <Coords points="67,1129 67,1223 192,1223 192,1129"/>
+                <TextLine id="line_1722425908367_556" custom="readingOrder {index:0;}">
+                    <Coords points="116,1172 175,1166 181,1216 122,1222"/>
+                    <Baseline points="121,1217 180,1211"/>
+                    <TextEquiv>
+                        <Unicode>8.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="8" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542424740_668">
+                <Coords points="192,1129 192,1223 1104,1223 1506,1223 1506,1129 1100,1129"/>
+                <TextLine id="line_1724671467906_3004" custom="readingOrder {index:0;}">
+                    <Coords points="214,1136 1098,1133 1318,1129 1317,1217 1104,1217 214,1217"/>
+                    <Baseline points="214,1212 1103,1212 1317,1212"/>
+                    <TextEquiv>
+                        <Unicode>Io. Christoph. Wechmar, Ordruviensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="8" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425591834_311">
+                <Coords points="1506,1129 1506,1223 1737,1223 1737,1129"/>
+                <TextLine id="line_1722425771728_486" custom="readingOrder {index:0;}">
+                    <Coords points="1539,1170 1638,1173 1637,1223 1538,1220"/>
+                    <Baseline points="1538,1215 1637,1218"/>
+                    <TextEquiv>
+                        <Unicode>20.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="9" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425593587_317">
+                <Coords points="67,1223 67,1314 192,1314 192,1223"/>
+                <TextLine id="line_1722425910588_561" custom="readingOrder {index:0;}">
+                    <Coords points="104,1260 179,1255 182,1305 107,1310"/>
+                    <Baseline points="107,1305 182,1300"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="9" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542436785_673">
+                <Coords points="192,1223 192,1314 1107,1314 1506,1314 1506,1223 1104,1223"/>
+                <TextLine id="line_1724671500158_3016" custom="readingOrder {index:0;}">
+                    <Coords points="229,1223 1103,1222 1351,1257 1351,1307 231,1301"/>
+                    <Baseline points="231,1296 1106,1300 1351,1302"/>
+                    <TextEquiv>
+                        <Unicode>Io. Georg. Heünisch, Ordruviensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="9" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425593614_329">
+                <Coords points="1506,1223 1506,1314 1737,1314 1737,1223"/>
+                <TextLine id="line_1722425773843_491" custom="readingOrder {index:0;}">
+                    <Coords points="1545,1261 1629,1256 1632,1306 1548,1311"/>
+                    <Baseline points="1548,1306 1632,1301"/>
+                    <TextEquiv>
+                        <Unicode>18.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="10" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425594828_335">
+                <Coords points="67,1314 67,1392 192,1392 192,1314"/>
+                <TextLine id="line_1722425912791_566" custom="readingOrder {index:0;}">
+                    <Coords points="107,1339 182,1336 184,1386 109,1389"/>
+                    <Baseline points="109,1384 184,1381"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="10" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542454968_678">
+                <Coords points="192,1314 192,1392 1110,1392 1506,1392 1506,1314 1107,1314"/>
+                <TextLine id="line_1724671524523_3027" custom="readingOrder {index:0;}">
+                    <Coords points="235,1314 1099,1306 1351,1330 1351,1380 236,1384"/>
+                    <Baseline points="236,1379 1109,1375 1351,1375"/>
+                    <TextEquiv>
+                        <Unicode>Io. Nicolaus Steüding. Bösneccensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="10" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425594862_347">
+                <Coords points="1506,1314 1506,1392 1737,1392 1737,1314"/>
+                <TextLine id="line_1722425776372_496" custom="readingOrder {index:0;}">
+                    <Coords points="1554,1335 1663,1342 1660,1392 1551,1385"/>
+                    <Baseline points="1551,1380 1660,1387"/>
+                    <TextEquiv>
+                        <Unicode>16.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="11" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425596908_353">
+                <Coords points="67,1392 67,1493 192,1493 192,1392"/>
+                <TextLine id="line_1722425922230_571" custom="readingOrder {index:0;}">
+                    <Coords points="108,1441 174,1436 177,1486 111,1491"/>
+                    <Baseline points="111,1486 177,1481"/>
+                    <TextEquiv>
+                        <Unicode>11.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="11" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542468704_684">
+                <Coords points="192,1392 192,1493 1113,1493 1506,1493 1506,1392 1110,1392"/>
+                <TextLine id="line_1724671544847_3038" custom="readingOrder {index:0;}">
+                    <Coords points="242,1411 1112,1396 1413,1413 1413,1491 1113,1491 243,1491"/>
+                    <Baseline points="243,1486 1113,1486 1413,1486"/>
+                    <TextEquiv>
+                        <Unicode>Io. Henricus Langefeld, Nienburgensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="11" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425596938_365">
+                <Coords points="1506,1392 1506,1493 1737,1493 1737,1392"/>
+                <TextLine id="line_1722425778292_501" custom="readingOrder {index:0;}">
+                    <Coords points="1563,1438 1669,1436 1670,1486 1564,1488"/>
+                    <Baseline points="1564,1483 1670,1481"/>
+                    <TextEquiv>
+                        <Unicode>13.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="12" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425598411_371">
+                <Coords points="67,1493 67,1605 192,1605 192,1493"/>
+                <TextLine id="line_1722425927819_576" custom="readingOrder {index:0;}">
+                    <Coords points="98,1550 192,1550 192,1600 98,1600"/>
+                    <Baseline points="98,1595 192,1595"/>
+                    <TextEquiv>
+                        <Unicode>12.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="12" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542475742_689">
+                <Coords points="192,1493 192,1605 1117,1605 1506,1605 1506,1493 1113,1493"/>
+                <TextLine id="line_1724671568076_3049" custom="readingOrder {index:0;}">
+                    <Coords points="249,1501 1119,1516 1372,1516 1374,1596 248,1594"/>
+                    <Baseline points="248,1589 1117,1590 1374,1591"/>
+                    <TextEquiv>
+                        <Unicode>Georg. Ernestus Creützburg, Ordruviensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="12" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425598445_383">
+                <Coords points="1506,1493 1506,1605 1737,1605 1737,1493"/>
+                <TextLine id="line_1722425780088_506" custom="readingOrder {index:0;}">
+                    <Coords points="1569,1550 1652,1550 1652,1600 1569,1600"/>
+                    <Baseline points="1569,1595 1652,1595"/>
+                    <TextEquiv>
+                        <Unicode>18.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="13" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425600179_389">
+                <Coords points="67,1605 67,1701 192,1701 192,1605"/>
+                <TextLine id="line_1722425932316_581" custom="readingOrder {index:0;}">
+                    <Coords points="108,1643 249,1643 249,1693 108,1693"/>
+                    <Baseline points="108,1688 238,1683"/>
+                    <TextEquiv>
+                        <Unicode>13.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="13" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542483340_694">
+                <Coords points="192,1605 192,1701 1121,1701 1506,1701 1506,1605 1117,1605"/>
+                <TextLine id="line_1724671594138_3060" custom="readingOrder {index:0;}">
+                    <Coords points="290,1602 1120,1612 1483,1647 1483,1697 1120,1697 289,1697"/>
+                    <Baseline points="289,1692 1120,1692 1483,1692"/>
+                    <TextEquiv>
+                        <Unicode>Christoph. Emanuel Hammer, Georgiovallensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="13" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425600208_401">
+                <Coords points="1506,1605 1506,1701 1737,1701 1737,1605"/>
+                <TextLine id="line_1722425782426_511" custom="readingOrder {index:0;}">
+                    <Coords points="1592,1646 1666,1648 1665,1698 1591,1696"/>
+                    <Baseline points="1591,1691 1665,1693"/>
+                    <TextEquiv>
+                        <Unicode>15.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="14" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425602523_407">
+                <Coords points="67,1701 67,1802 192,1802 192,1701"/>
+                <TextLine id="line_1722425935261_586" custom="readingOrder {index:0;}">
+                    <Coords points="111,1744 196,1740 196,1790 111,1794"/>
+                    <Baseline points="111,1789 190,1778"/>
+                    <TextEquiv>
+                        <Unicode>14.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="14" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542489349_699">
+                <Coords points="192,1701 192,1802 1124,1802 1506,1802 1506,1701 1121,1701"/>
+                <TextLine id="line_1724671613957_3071" custom="readingOrder {index:0;}">
+                    <Coords points="264,1711 1118,1700 1306,1737 1306,1787 268,1791"/>
+                    <Baseline points="268,1786 1123,1782 1306,1782"/>
+                    <TextEquiv>
+                        <Unicode>Jo. Simon Hock. Ordruviensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="14" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425602554_419">
+                <Coords points="1506,1701 1506,1802 1737,1802 1737,1701"/>
+                <TextLine id="line_1722425784570_516" custom="readingOrder {index:0;}">
+                    <Coords points="1581,1747 1655,1747 1655,1797 1581,1797"/>
+                    <Baseline points="1581,1792 1655,1792"/>
+                    <TextEquiv>
+                        <Unicode>15.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="15" col="0" rowSpan="1" colSpan="1" id="TableCell_1722425602523_405">
+                <Coords points="67,1802 67,1938 192,1938 192,1802"/>
+                <TextLine id="line_1722425937906_591" custom="readingOrder {index:0;}">
+                    <Coords points="108,1849 180,1849 180,1899 108,1899"/>
+                    <Baseline points="108,1894 180,1894"/>
+                    <TextEquiv>
+                        <Unicode>15.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="15" col="1" rowSpan="1" colSpan="3" id="TableCell_1723542496334_704">
+                <Coords points="192,1802 192,1938 1129,1938 1146,1938 1506,1938 1506,1802 1124,1802"/>
+                <TextLine id="line_1724671636007_3082" custom="readingOrder {index:0;}">
+                    <Coords points="255,1807 1134,1798 1342,1833 1342,1883 252,1892"/>
+                    <Baseline points="252,1887 1127,1879 1342,1878"/>
+                    <TextEquiv>
+                        <Unicode>Jo. Christian. Pfaff, WalwincKelensis.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 4 5</CornerPts>
+            </TableCell>
+            <TableCell row="15" col="4" rowSpan="1" colSpan="1" id="TableCell_1722425602554_417">
+                <Coords points="1506,1802 1506,1938 1737,1938 1737,1802"/>
+                <TextLine id="line_1722425786327_521" custom="readingOrder {index:0;}">
+                    <Coords points="1597,1841 1665,1841 1665,1891 1597,1891"/>
+                    <Baseline points="1597,1886 1665,1886"/>
+                    <TextEquiv>
+                        <Unicode>13.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+        </TableRegion>
+    </Page>
+</PcGts>

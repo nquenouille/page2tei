@@ -1,0 +1,1283 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>prov=READ-COOP:name=TrHtr:version=2.17.0:model_id=51170:date=28_08_2024_01:05</Creator>
+        <Created>2024-04-25T17:02:56.171+02:00</Created>
+        <LastChange>2025-02-03T16:27:31.265+01:00</LastChange>
+        <TranskribusMetadata pageNr="7" status="FINAL"/>
+    </Metadata>
+    <Page imageFilename="69165248.tif" imageWidth="1976" imageHeight="3134">
+        <TableRegion id="Table_1724063208213_2405" custom="readingOrder {index:0;}">
+            <Coords points="32,80 1744,80 1744,3036 32,3036"/>
+            <TableCell row="0" col="0" rowSpan="1" colSpan="3" type="heading" id="TableCell_1724680879267_4518" custom="structure {type:subheading;}">
+                <Coords points="32,80 32,193 140,175 1345,184 1412,186 1412,80 1345,80 140,80"/>
+                <CornerPts>0 1 4 5</CornerPts>
+            </TableCell>
+            <TableCell row="0" col="3" rowSpan="1" colSpan="1" type="heading" id="TableCell_1724680879267_4516" custom="structure {type:subheading;}">
+                <Coords points="1412,80 1412,186 1744,197 1744,80"/>
+                <TextLine id="line_1724072030484_3503" custom="readingOrder {index:0;}">
+                    <Coords points="1548,160 1562,165 1584,158 1605,165 1615,158 1643,173 1659,165 1689,171 1681,106 1668,103 1659,109 1647,102 1631,107 1619,99 1594,107 1588,114 1567,107 1541,110"/>
+                    <Baseline points="1550,140 1578,146 1606,149 1634,155 1662,157 1690,158"/>
+                    <TextEquiv>
+                        <Unicode>aetas.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="0" rowSpan="1" colSpan="1" id="TableCell_1724072030029_3482">
+                <Coords points="32,193 32,285 140,269 140,175"/>
+                <TextLine id="line_1724072013266_3453" custom="readingOrder {index:0;}">
+                    <Coords points="81,274 94,278 110,269 123,279 130,279 136,286 143,288 151,225 138,222 128,211 124,213 119,211 103,217 97,215 94,210 89,210"/>
+                    <Baseline points="88,252 115,247 142,245 150,243"/>
+                    <TextEquiv>
+                        <Unicode>13.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681252156_8">
+                <Coords points="140,175 140,269 1345,266 1412,270 1412,186 1345,184"/>
+                <TextLine id="line_1724072030233_3492" custom="readingOrder {index:0;}">
+                    <Coords points="144,251 170,265 205,259 255,226 332,228 352,244 406,217 518,237 572,216 628,216 630,190 558,150 457,141 397,163 319,140 260,169 230,162 150,182"/>
+                    <Baseline points="150,243 169,241 196,236 221,229 247,226 272,223 298,220 323,216 349,214 374,212 400,211 425,208 451,205 476,204 502,202 527,204 553,203 578,203 604,205 630,206"/>
+                    <TextEquiv>
+                        <Unicode>Johan Bernhard Langhaun.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="1" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680879377_4522">
+                <Coords points="1412,186 1412,270 1744,291 1744,197"/>
+                <TextLine id="line_1724063016469_2393" custom="readingOrder {index:0;}">
+                    <Coords points="1574,254 1595,249 1621,253 1629,249 1583,161 1576,165 1575,171 1563,183 1540,189"/>
+                    <Baseline points="1565,226 1596,227 1596,246 1627,246"/>
+                    <TextEquiv>
+                        <Unicode>10½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="0" rowSpan="1" colSpan="1" id="TableCell_1724072013219_3448">
+                <Coords points="32,285 32,339 140,321 140,269"/>
+                <TextLine id="line_1724072013266_3454" custom="readingOrder {index:0;}">
+                    <Coords points="82,333 89,334 95,342 101,338 105,340 109,336 123,348 127,346 134,347 139,307 128,305 123,301 105,279 101,278 99,280 96,276 94,278 89,277"/>
+                    <Baseline points="88,320 116,315 140,313"/>
+                    <TextEquiv>
+                        <Unicode>14.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681259548_13">
+                <Coords points="140,269 140,321 1345,346 1412,349 1412,270 1345,266"/>
+                <TextLine id="line_1724063326726_2441" custom="readingOrder {index:0;}">
+                    <Coords points="134,329 318,300 350,322 391,317 492,282 653,298 658,223 638,213 574,250 534,251 501,228 401,256 311,230 206,273 140,249"/>
+                    <Baseline points="140,313 144,313 173,308 201,305 230,302 258,299 286,292 315,285 343,284 372,283 400,281 428,280 457,279 485,276 514,275 542,274 570,274 599,274 627,276 656,276"/>
+                    <TextEquiv>
+                        <Unicode>Johan Christoph. Kranker.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="2" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680879487_4528">
+                <Coords points="1412,270 1412,349 1744,367 1744,291"/>
+                <TextLine id="line_1724072013880_3476" custom="readingOrder {index:0;}">
+                    <Coords points="1543,344 1553,348 1561,339 1575,346 1586,337 1602,349 1621,356 1619,285 1613,285 1602,277 1590,286 1583,286 1576,281 1568,287 1560,281 1542,284"/>
+                    <Baseline points="1548,330 1585,328 1622,332"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071990554_3422">
+                <Coords points="32,339 32,397 141,396 140,321"/>
+                <TextLine id="line_1724063326726_2442" custom="readingOrder {index:0;}">
+                    <Coords points="86,393 98,394 106,390 110,393 115,392 117,395 119,393 122,396 126,392 131,393 136,346 130,347 126,343 121,344 117,338 111,339 109,336 105,340 92,341"/>
+                    <Baseline points="92,382 123,379 135,377"/>
+                    <TextEquiv>
+                        <Unicode>15</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681265267_18">
+                <Coords points="140,321 141,396 1345,401 1412,406 1412,349 1345,346"/>
+                <TextLine id="line_1724063326726_2443" custom="readingOrder {index:0;}">
+                    <Coords points="129,397 272,357 379,365 445,349 466,362 591,333 680,363 712,352 715,309 601,291 467,316 372,307 350,322 322,306 231,335 185,316 134,329"/>
+                    <Baseline points="135,377 154,374 185,365 216,360 248,359 279,355 310,352 341,347 372,345 404,343 435,342 466,341 497,337 528,335 560,334 591,332 622,332 653,334 684,336 716,334"/>
+                    <TextEquiv>
+                        <Unicode>Johan Selastian Welner.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="3" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680879581_4534">
+                <Coords points="1412,349 1412,406 1744,431 1744,367"/>
+                <TextLine id="line_1724071991010_3442" custom="readingOrder {index:0;}">
+                    <Coords points="1555,409 1566,412 1576,406 1592,422 1602,416 1619,424 1646,426 1646,357 1638,358 1632,353 1617,357 1592,339 1575,346 1566,340 1555,340"/>
+                    <Baseline points="1560,402 1589,402 1618,404 1648,402"/>
+                    <TextEquiv>
+                        <Unicode>12.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071961857_3400">
+                <Coords points="32,397 32,469 142,454 141,396"/>
+                <TextLine id="line_1724071961919_3404" custom="readingOrder {index:0;}">
+                    <Coords points="76,473 84,475 95,470 98,472 107,465 112,469 117,467 119,470 128,472 137,408 127,405 114,392 108,393 96,401 87,398"/>
+                    <Baseline points="86,442 117,436 135,435"/>
+                    <TextEquiv>
+                        <Unicode>16.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681269951_23">
+                <Coords points="141,396 142,454 1345,470 1412,472 1412,406 1345,401"/>
+                <TextLine id="line_1724063326726_2445" custom="readingOrder {index:0;}">
+                    <Coords points="129,463 262,419 294,434 395,429 489,403 510,423 609,411 638,440 669,419 711,426 713,371 639,341 564,362 516,343 481,365 208,374 132,396"/>
+                    <Baseline points="135,435 148,435 180,428 211,420 243,417 274,415 305,411 337,408 368,406 400,404 431,404 462,404 494,401 525,401 557,402 588,402 619,402 651,402 682,404 714,404"/>
+                    <TextEquiv>
+                        <Unicode>Johan Wilhelm Albrecht.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="4" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680879675_4540">
+                <Coords points="1412,406 1412,472 1744,487 1744,431"/>
+                <TextLine id="tr_3_tl_4" custom="readingOrder {index:0;}">
+                    <Coords points="1559,470 1564,470 1569,475 1585,471 1593,475 1616,474 1629,481 1640,478 1640,437 1628,438 1620,435 1608,446 1603,443 1595,447 1589,443 1585,444 1570,427 1560,426"/>
+                    <Baseline points="1564,468 1590,467 1616,466 1642,466"/>
+                    <TextEquiv>
+                        <Unicode>12.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="5" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071937338_3374">
+                <Coords points="32,469 32,538 143,525 142,454"/>
+                <TextLine id="line_1724071937401_3380" custom="readingOrder {index:0;}">
+                    <Coords points="76,538 85,541 94,534 99,538 108,530 113,532 116,529 118,531 135,529 132,466 116,470 106,463 99,471 90,472 86,476 73,474"/>
+                    <Baseline points="80,504 110,506 136,507"/>
+                    <TextEquiv>
+                        <Unicode>17.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="5" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681275688_28">
+                <Coords points="142,454 143,525 1345,533 1412,536 1412,472 1345,470"/>
+                <TextLine id="line_1724071912064_3359" custom="readingOrder {index:0;}">
+                    <Coords points="131,511 151,521 178,499 202,511 250,494 283,513 452,482 480,500 540,477 577,487 625,473 629,412 520,427 497,410 446,431 366,419 305,450 261,418 206,457 172,444 135,457"/>
+                    <Baseline points="136,507 140,508 146,492 171,489 196,486 222,483 247,482 272,481 298,478 323,476 348,475 374,473 399,471 425,470 450,468 475,466 501,464 526,464 551,463 577,462 602,462 628,462"/>
+                    <TextEquiv>
+                        <Unicode>Johan Just Eckold.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="5" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680879785_4546">
+                <Coords points="1412,472 1412,536 1744,554 1744,487"/>
+                <TextLine id="line_1724071912299_3369" custom="readingOrder {index:0;}">
+                    <Coords points="1559,538 1564,537 1580,549 1582,547 1592,551 1600,549 1607,541 1613,541 1610,498 1605,498 1601,495 1595,498 1592,495 1585,503 1580,504 1570,498 1556,499"/>
+                    <Baseline points="1562,520 1588,523 1614,524"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="6" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071911765_3344">
+                <Coords points="32,538 32,597 144,595 143,525"/>
+                <TextLine id="line_1724071911815_3348" custom="readingOrder {index:0;}">
+                    <Coords points="77,588 82,588 88,595 94,591 101,595 124,594 127,597 135,597 137,533 129,534 126,531 119,531 116,534 108,531 98,539 78,540"/>
+                    <Baseline points="82,570 111,568 137,568"/>
+                    <TextEquiv>
+                        <Unicode>18.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="6" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681280384_33">
+                <Coords points="143,525 144,595 1345,616 1412,618 1412,536 1345,533"/>
+                <TextLine id="line_1724063326726_2449" custom="readingOrder {index:0;}">
+                    <Coords points="132,577 167,591 286,552 305,571 446,561 487,588 539,573 563,592 661,567 663,523 578,489 427,510 342,501 314,516 184,498 133,527"/>
+                    <Baseline points="137,568 140,568 169,564 198,560 227,553 256,552 285,550 314,549 343,547 373,545 402,545 431,545 460,545 489,545 518,544 547,544 576,544 605,545 634,547 664,546"/>
+                    <TextEquiv>
+                        <Unicode>Johan Valentin Treßler.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="6" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680879880_4552">
+                <Coords points="1412,536 1412,618 1744,632 1744,554"/>
+                <TextLine id="line_1724063008659_2388" custom="readingOrder {index:0;}">
+                    <Coords points="1563,623 1575,620 1580,615 1584,617 1585,614 1595,617 1607,611 1613,615 1623,616 1626,612 1633,612 1629,569 1618,569 1610,578 1600,573 1596,574 1587,566 1578,570 1572,567 1558,571"/>
+                    <Baseline points="1566,601 1635,608"/>
+                    <TextEquiv>
+                        <Unicode>12.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="7" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071881155_3322">
+                <Coords points="32,597 32,669 145,650 144,595"/>
+                <TextLine id="line_1724071881218_3326" custom="readingOrder {index:0;}">
+                    <Coords points="73,672 80,671 88,674 103,663 109,665 113,662 123,670 135,669 142,607 125,608 122,611 120,609 108,613 103,607 97,604 94,606 87,597 82,596"/>
+                    <Baseline points="82,640 108,636 134,634 141,632"/>
+                    <TextEquiv>
+                        <Unicode>19.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="7" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681285254_38">
+                <Coords points="144,595 145,650 1345,675 1412,679 1412,618 1345,616"/>
+                <TextLine id="line_1724063326726_2451" custom="readingOrder {index:0;}">
+                    <Coords points="135,637 220,633 247,649 271,631 368,618 398,636 441,610 511,643 552,626 554,583 536,573 481,589 459,570 423,584 366,581 331,559 274,594 222,599 179,581 137,597"/>
+                    <Baseline points="141,632 160,627 186,623 213,619 239,618 265,617 291,614 318,611 344,608 370,606 396,607 422,607 449,606 475,606 501,606 527,608 554,610"/>
+                    <TextEquiv>
+                        <Unicode>Georg Henrich Muth.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="7" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680879974_4558">
+                <Coords points="1412,618 1412,679 1744,703 1744,632"/>
+                <TextLine id="line_1724071857966_3313" custom="readingOrder {index:0;}">
+                    <Coords points="1558,702 1563,702 1573,708 1590,699 1608,680 1612,684 1625,685 1623,642 1616,644 1611,639 1602,641 1587,653 1576,645 1567,648 1562,644 1556,644"/>
+                    <Baseline points="1562,672 1594,674 1626,674"/>
+                    <TextEquiv>
+                        <Unicode>12.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="8" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071857527_3292">
+                <Coords points="32,669 32,712 146,709 145,650"/>
+                <TextLine id="line_1724071830439_3271" custom="readingOrder {index:0;}">
+                    <Coords points="79,717 87,718 96,712 106,721 119,713 123,715 135,709 141,711 144,671 139,670 134,673 129,668 122,670 113,663 109,665 100,663 89,674 83,673"/>
+                    <Baseline points="86,700 112,698 139,696 144,695"/>
+                    <TextEquiv>
+                        <Unicode>20.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="8" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681289884_43">
+                <Coords points="145,650 146,709 1345,740 1412,743 1412,679 1345,675"/>
+                <TextLine id="line_1724063326726_2453" custom="readingOrder {index:0;}">
+                    <Coords points="138,708 198,719 234,694 271,708 336,681 353,692 371,681 406,703 467,676 620,690 621,638 604,628 558,624 511,645 474,627 458,641 424,633 365,649 345,635 241,647 219,633 141,634"/>
+                    <Baseline points="144,695 166,694 193,690 220,684 246,681 273,679 300,677 327,676 354,674 380,674 407,672 434,672 461,673 488,673 514,672 541,673 568,674 595,676 622,674"/>
+                    <TextEquiv>
+                        <Unicode>Johan Friedrich von Hoff.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="8" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880068_4564">
+                <Coords points="1412,679 1412,743 1744,758 1744,703"/>
+                <TextLine id="line_1724071857966_3314" custom="readingOrder {index:0;}">
+                    <Coords points="1551,744 1559,743 1562,746 1570,748 1579,741 1584,744 1594,738 1598,740 1605,738 1605,699 1593,696 1579,706 1575,705 1572,708 1563,702 1551,701"/>
+                    <Baseline points="1556,730 1581,730 1606,730"/>
+                    <TextEquiv>
+                        <Unicode>11.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="9" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071830376_3266">
+                <Coords points="32,712 32,773 147,769 146,709"/>
+                <TextLine id="line_1724071803848_3237" custom="readingOrder {index:0;}">
+                    <Coords points="70,772 80,775 94,765 109,772 124,763 130,763 135,758 140,759 142,732 137,731 125,735 119,732 104,734 101,730 90,735 87,730 73,727"/>
+                    <Baseline points="76,760 101,758 126,756 141,756"/>
+                    <TextEquiv>
+                        <Unicode>21.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="9" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681296244_48">
+                <Coords points="146,709 147,769 1345,804 1412,807 1412,743 1345,740"/>
+                <TextLine id="line_1724063326726_2455" custom="readingOrder {index:0;}">
+                    <Coords points="134,773 191,754 214,764 258,741 304,752 338,733 379,763 464,738 503,736 533,754 558,738 576,747 580,688 553,683 505,704 474,693 444,719 398,698 359,711 320,692 270,708 231,698 198,719 138,717"/>
+                    <Baseline points="141,756 151,756 176,754 201,747 226,739 251,738 276,736 301,734 327,731 352,730 377,729 402,728 427,728 452,726 477,726 502,726 527,726 552,726 578,726"/>
+                    <TextEquiv>
+                        <Unicode>Johan Georg Mosch.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="9" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880162_4570">
+                <Coords points="1412,743 1412,807 1744,823 1744,758"/>
+                <TextLine id="line_1724071804347_3257" custom="readingOrder {index:0;}">
+                    <Coords points="1548,818 1562,817 1572,805 1587,810 1607,824 1635,820 1618,738 1595,738 1585,744 1579,741 1570,749 1556,752 1551,749 1545,758 1536,761"/>
+                    <Baseline points="1548,792 1594,791 1635,810"/>
+                    <TextEquiv>
+                        <Unicode>10½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="10" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071803785_3232">
+                <Coords points="32,773 32,836 148,832 147,769"/>
+                <TextLine id="line_1724071803848_3238" custom="readingOrder {index:0;}">
+                    <Coords points="63,841 68,841 73,846 84,840 89,845 95,843 100,847 102,845 118,848 128,839 137,838 138,782 132,782 124,775 121,777 114,774 109,777 100,769 94,775 87,773 83,776 64,771"/>
+                    <Baseline points="68,814 95,812 122,812 138,813"/>
+                    <TextEquiv>
+                        <Unicode>22.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="10" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681302269_53">
+                <Coords points="147,769 148,832 1345,855 1412,859 1412,807 1345,804"/>
+                <TextLine id="line_1724071768714_3213" custom="readingOrder {index:0;}">
+                    <Coords points="132,820 211,827 238,805 298,827 383,801 425,818 484,787 530,809 607,795 632,813 646,748 546,746 478,778 434,747 378,762 350,737 265,773 189,752 135,772"/>
+                    <Baseline points="138,813 149,814 176,812 178,802 204,799 230,796 256,798 282,796 308,793 334,791 360,788 386,786 412,786 438,784 464,784 490,784 516,781 542,781 568,784 594,787 620,788 646,790"/>
+                    <TextEquiv>
+                        <Unicode>Johan Friedrich Böttiger.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="10" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880272_4576">
+                <Coords points="1412,807 1412,859 1744,880 1744,823"/>
+                <TextLine id="line_1724071804347_3258" custom="readingOrder {index:0;}">
+                    <Coords points="1512,877 1533,882 1540,877 1545,882 1556,882 1581,864 1589,866 1595,811 1589,812 1586,808 1580,812 1575,808 1560,809 1553,805 1544,807 1539,812 1522,810"/>
+                    <Baseline points="1520,860 1556,853 1592,850"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="11" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071768416_3198">
+                <Coords points="32,836 32,899 149,886 148,832"/>
+                <TextLine id="line_1724063326726_2458" custom="readingOrder {index:0;}">
+                    <Coords points="72,888 88,895 90,893 94,897 102,893 114,907 119,904 125,910 142,905 145,852 124,847 117,850 109,846 103,850 89,841 75,842"/>
+                    <Baseline points="78,882 106,878 135,878 145,877"/>
+                    <TextEquiv>
+                        <Unicode>23.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="11" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681307125_58">
+                <Coords points="148,832 149,886 1345,905 1412,912 1412,859 1345,855"/>
+                <TextLine id="line_1724063326726_2459" custom="readingOrder {index:0;}">
+                    <Coords points="139,904 180,882 218,896 242,877 331,884 357,870 382,886 464,857 540,856 592,892 645,884 648,818 511,797 445,833 326,810 301,826 251,809 212,827 142,826"/>
+                    <Baseline points="145,877 163,876 192,871 220,864 249,859 277,858 306,857 334,855 363,853 391,852 420,852 448,852 477,852 505,852 534,852 562,852 591,850 619,852 648,852"/>
+                    <TextEquiv>
+                        <Unicode>Johan Christoph. Albrecht.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="11" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880366_4582">
+                <Coords points="1412,859 1412,912 1744,950 1744,880"/>
+                <TextLine id="line_1724071768934_3224" custom="readingOrder {index:0;}">
+                    <Coords points="1565,915 1573,911 1581,914 1591,912 1594,908 1604,908 1608,905 1623,910 1629,909 1619,858 1612,861 1610,859 1603,866 1595,862 1592,866 1580,864 1577,868 1569,870 1565,877 1558,878"/>
+                    <Baseline points="1566,895 1629,907"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="12" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071738612_3180">
+                <Coords points="32,899 32,980 150,963 149,886"/>
+                <TextLine id="line_1724071714466_3163" custom="readingOrder {index:0;}">
+                    <Coords points="73,974 85,973 97,978 110,970 118,976 132,971 148,981 154,905 138,904 126,910 122,907 112,909 106,914 103,909 93,914 79,909"/>
+                    <Baseline points="80,946 105,947 131,944 153,940"/>
+                    <TextEquiv>
+                        <Unicode>24.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="12" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681317553_63">
+                <Coords points="149,886 150,963 1345,995 1412,999 1412,912 1345,905"/>
+                <TextLine id="line_1724063326726_2461" custom="readingOrder {index:0;}">
+                    <Coords points="148,950 219,944 264,975 293,974 359,931 443,925 459,939 509,941 595,925 597,900 516,900 452,867 396,902 291,903 272,887 227,910 193,883 150,893"/>
+                    <Baseline points="153,940 157,940 183,939 209,934 235,932 261,930 287,927 313,925 339,923 364,922 390,922 416,920 442,920 468,919 494,918 520,917 546,917 572,918 598,920"/>
+                    <TextEquiv>
+                        <Unicode>Benjamin Braun.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="12" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880476_4588">
+                <Coords points="1412,912 1412,999 1744,1023 1744,950"/>
+                <TextLine id="line_1724062940788_2370" custom="readingOrder {index:0;}">
+                    <Coords points="1534,1005 1545,1005 1551,998 1561,1001 1565,995 1590,1005 1606,995 1585,912 1576,915 1561,935 1553,931 1540,946 1536,944 1533,949 1521,952"/>
+                    <Baseline points="1535,986 1611,1005"/>
+                    <TextEquiv>
+                        <Unicode>8¼</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="13" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071714404_3158">
+                <Coords points="32,980 32,1042 151,1038 150,963"/>
+                <TextLine id="line_1724063326726_2462" custom="readingOrder {index:0;}">
+                    <Coords points="59,1038 67,1035 71,1037 80,1032 87,1037 95,1032 109,1033 127,1021 144,1028 159,1029 161,1005 151,1002 136,1004 122,996 100,998 92,994 88,997 84,994 77,996 61,993"/>
+                    <Baseline points="64,1024 90,1021 116,1019 142,1018 162,1018"/>
+                    <TextEquiv>
+                        <Unicode>25.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="13" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681322558_68">
+                <Coords points="150,963 151,1038 1345,1055 1412,1059 1412,999 1345,995"/>
+                <TextLine id="line_1724063326726_2463" custom="readingOrder {index:0;}">
+                    <Coords points="156,1032 190,1040 224,1022 330,1008 404,1007 447,1027 522,1008 556,1020 558,951 525,954 485,935 419,960 389,945 318,985 278,981 221,946 170,991 158,987"/>
+                    <Baseline points="162,1018 168,1018 194,1016 220,1010 246,1007 272,1005 298,1003 324,1002 350,1002 376,1002 402,1004 428,1004 454,1003 480,1002 506,1001 532,1000 558,1002"/>
+                    <TextEquiv>
+                        <Unicode>Jeremias Lieck.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="13" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880555_4594">
+                <Coords points="1412,999 1412,1059 1744,1079 1744,1023"/>
+                <TextLine id="line_1724062937190_2365" custom="readingOrder {index:0;}">
+                    <Coords points="1531,1082 1540,1079 1543,1081 1547,1080 1555,1072 1573,1075 1568,1024 1561,1024 1558,1027 1549,1026 1547,1028 1543,1026 1534,1036 1527,1036"/>
+                    <Baseline points="1534,1058 1574,1062"/>
+                    <TextEquiv>
+                        <Unicode>11.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="14" col="0" rowSpan="1" colSpan="1" id="TableCell_1724071695336_3136">
+                <Coords points="32,1042 32,1104 152,1107 151,1038"/>
+                <TextLine id="line_1724071695383_3140" custom="readingOrder {index:0;}">
+                    <Coords points="64,1115 78,1117 89,1107 100,1106 110,1098 136,1100 141,1095 148,1099 157,1092 164,1098 170,1098 170,1065 165,1065 127,1038 117,1040 101,1052 85,1053 78,1046 65,1049"/>
+                    <Baseline points="70,1088 101,1087 132,1086 163,1086 172,1085"/>
+                    <TextEquiv>
+                        <Unicode>26.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="14" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681327261_73">
+                <Coords points="151,1038 152,1107 1345,1120 1412,1123 1412,1059 1345,1055"/>
+                <TextLine id="line_1724063326726_2465" custom="readingOrder {index:0;}">
+                    <Coords points="166,1093 243,1099 282,1075 326,1096 386,1080 442,1108 468,1088 510,1097 603,1074 667,1087 691,1078 691,1028 645,1035 579,1014 534,1018 495,1048 420,1049 373,1019 314,1039 272,1015 167,1054"/>
+                    <Baseline points="172,1085 194,1084 225,1077 256,1073 287,1072 318,1071 349,1070 381,1069 412,1068 443,1068 474,1068 505,1068 536,1068 567,1068 598,1068 629,1070 660,1074 692,1074"/>
+                    <TextEquiv>
+                        <Unicode>Johan Georg Herdel.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="14" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880664_4600">
+                <Coords points="1412,1059 1412,1123 1744,1143 1744,1079"/>
+                <TextLine id="tr_3_tl_10" custom="readingOrder {index:0;}">
+                    <Coords points="1539,1126 1546,1123 1556,1130 1558,1128 1564,1129 1569,1122 1576,1122 1585,1129 1589,1127 1605,1129 1604,1105 1589,1103 1573,1092 1563,1095 1554,1086 1546,1092 1544,1090 1538,1092"/>
+                    <Baseline points="1544,1114 1575,1116 1606,1116"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="15" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064473598_3102">
+                <Coords points="32,1104 32,1175 153,1173 152,1107"/>
+                <TextLine id="line_1724063326726_2466" custom="readingOrder {index:0;}">
+                    <Coords points="82,1175 97,1178 114,1178 123,1173 126,1176 141,1175 153,1173 161,1165 179,1170 180,1119 151,1115 137,1121 124,1114 114,1119 99,1106 84,1107"/>
+                    <Baseline points="88,1144 123,1148 158,1144 181,1143"/>
+                    <TextEquiv>
+                        <Unicode>27.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="15" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681334038_78">
+                <Coords points="152,1107 153,1173 1345,1195 1412,1198 1412,1123 1345,1120"/>
+                <TextLine id="line_1724063326726_2467" custom="readingOrder {index:0;}">
+                    <Coords points="176,1163 232,1147 256,1168 332,1174 489,1141 539,1166 635,1139 704,1176 788,1152 788,1102 690,1077 563,1117 468,1090 444,1106 386,1079 306,1101 282,1084 176,1096"/>
+                    <Baseline points="181,1143 193,1143 228,1140 263,1135 298,1136 333,1136 368,1135 403,1135 439,1135 474,1134 509,1134 544,1136 579,1135 614,1134 649,1134 684,1142 719,1137 754,1138 790,1142"/>
+                    <TextEquiv>
+                        <Unicode>Johan Valentin Keyser.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="15" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880759_4606">
+                <Coords points="1412,1123 1412,1198 1744,1214 1744,1143"/>
+                <TextLine id="line_1724064473975_3122" custom="readingOrder {index:0;}">
+                    <Coords points="1535,1197 1543,1196 1550,1200 1563,1191 1590,1194 1591,1123 1583,1125 1576,1121 1568,1123 1562,1129 1555,1130 1546,1124 1536,1126"/>
+                    <Baseline points="1540,1182 1566,1180 1592,1180"/>
+                    <TextEquiv>
+                        <Unicode>11.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="16" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064425794_3076">
+                <Coords points="32,1175 32,1251 154,1239 153,1173"/>
+                <TextLine id="line_1724064425857_3080" custom="readingOrder {index:0;}">
+                    <Coords points="75,1229 81,1229 92,1240 96,1239 101,1243 116,1237 125,1237 139,1246 146,1246 146,1174 137,1178 130,1174 127,1177 123,1173 114,1178 98,1178 93,1175 88,1180 75,1176"/>
+                    <Baseline points="80,1220 107,1220 135,1220 148,1220"/>
+                    <TextEquiv>
+                        <Unicode>28.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="16" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681338646_83">
+                <Coords points="153,1173 154,1239 1345,1284 1412,1289 1412,1198 1345,1195"/>
+                <TextLine id="line_1724063326726_2469" custom="readingOrder {index:0;}">
+                    <Coords points="143,1233 199,1237 240,1213 280,1229 431,1224 459,1239 493,1219 560,1213 585,1226 610,1209 633,1214 634,1167 579,1153 494,1170 440,1159 393,1182 287,1160 262,1176 231,1147 144,1172"/>
+                    <Baseline points="148,1220 163,1221 190,1220 218,1210 246,1208 273,1208 301,1208 329,1208 357,1210 384,1210 412,1208 440,1206 467,1205 495,1205 523,1205 550,1204 578,1204 606,1204 634,1210"/>
+                    <TextEquiv>
+                        <Unicode>Friedrich Scherber.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="16" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880846_4612">
+                <Coords points="1412,1198 1412,1289 1744,1319 1744,1214"/>
+                <TextLine id="line_1724064426185_3096" custom="readingOrder {index:0;}">
+                    <Coords points="1539,1289 1544,1288 1549,1279 1557,1285 1571,1283 1588,1293 1596,1288 1604,1292 1612,1289 1589,1194 1575,1197 1568,1208 1552,1204 1538,1222 1522,1220"/>
+                    <Baseline points="1538,1264 1575,1272 1612,1282"/>
+                    <TextEquiv>
+                        <Unicode>11½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="17" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064408059_3054">
+                <Coords points="32,1251 32,1323 155,1314 154,1239"/>
+                <TextLine id="line_1724064390467_3029" custom="readingOrder {index:0;}">
+                    <Coords points="77,1320 85,1322 87,1319 94,1324 99,1322 104,1326 109,1324 113,1328 119,1328 142,1314 149,1318 156,1317 155,1269 150,1269 131,1258 128,1261 120,1253 111,1257 92,1245 76,1245"/>
+                    <Baseline points="82,1298 158,1300"/>
+                    <TextEquiv>
+                        <Unicode>29.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="17" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681342927_88">
+                <Coords points="154,1239 155,1314 1345,1353 1412,1358 1412,1289 1345,1284"/>
+                <TextLine id="line_1724143398203_173" custom="readingOrder {index:0;}">
+                    <Coords points="163,1305 437,1281 547,1302 613,1287 658,1318 727,1301 727,1239 639,1235 602,1212 584,1228 559,1214 498,1225 454,1255 402,1226 326,1224 290,1258 163,1234"/>
+                    <Baseline points="168,1283 464,1280 728,1285"/>
+                    <TextEquiv>
+                        <Unicode>Johan Andr. Ludewig.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="17" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680880931_4618">
+                <Coords points="1412,1289 1412,1358 1744,1388 1744,1319"/>
+                <TextLine id="tr_3_tl_13" custom="readingOrder {index:0;}">
+                    <Coords points="1511,1349 1521,1347 1534,1356 1541,1350 1546,1352 1552,1348 1558,1354 1574,1359 1576,1309 1570,1307 1561,1309 1559,1306 1555,1309 1549,1303 1533,1302 1520,1310 1512,1309"/>
+                    <Baseline points="1516,1342 1546,1342 1576,1340"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="18" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064390403_3024">
+                <Coords points="32,1323 32,1393 156,1389 155,1314"/>
+                <TextLine id="line_1724064390482_3030" custom="readingOrder {index:0;}">
+                    <Coords points="86,1378 97,1380 102,1384 106,1380 114,1386 126,1382 142,1370 150,1377 160,1379 163,1343 155,1343 143,1350 138,1346 124,1344 116,1335 99,1337 94,1331 89,1331"/>
+                    <Baseline points="92,1370 118,1367 144,1366 162,1365"/>
+                    <TextEquiv>
+                        <Unicode>30.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="18" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681347945_93">
+                <Coords points="155,1314 156,1389 1345,1429 1412,1433 1412,1358 1345,1353"/>
+                <TextLine id="line_1724064374713_3009" custom="readingOrder {index:0;}">
+                    <Coords points="157,1380 220,1386 275,1361 327,1385 371,1362 431,1398 516,1371 566,1395 659,1397 762,1371 806,1380 806,1316 647,1321 591,1290 465,1331 354,1289 293,1322 211,1304 157,1331"/>
+                    <Baseline points="162,1365 170,1365 196,1360 222,1360 249,1358 275,1358 301,1358 327,1357 353,1356 379,1356 406,1360 430,1363 455,1364 480,1363 505,1363 530,1363 556,1362 581,1360 606,1360 631,1364 656,1362 682,1360 707,1360 732,1359 757,1359 782,1361 808,1362"/>
+                    <TextEquiv>
+                        <Unicode>Johan Christoph. Chrysander.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="18" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881025_4624">
+                <Coords points="1412,1358 1412,1433 1744,1456 1744,1388"/>
+                <TextLine id="tr_3_tl_14" custom="readingOrder {index:0;}">
+                    <Coords points="1503,1438 1509,1439 1526,1452 1530,1449 1538,1451 1553,1441 1558,1445 1563,1445 1571,1387 1563,1387 1554,1382 1546,1382 1539,1387 1531,1382 1527,1385 1522,1382 1517,1386 1509,1386"/>
+                    <Baseline points="1508,1432 1538,1428 1568,1424"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="19" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064374462_2994">
+                <Coords points="32,1393 32,1461 157,1453 156,1389"/>
+                <TextLine id="line_1724064361117_2965" custom="readingOrder {index:0;}">
+                    <Coords points="86,1465 99,1467 110,1460 112,1462 131,1448 135,1452 140,1447 151,1448 155,1444 162,1444 165,1409 153,1405 149,1407 142,1402 129,1404 122,1398 112,1401 101,1395 95,1400 90,1399"/>
+                    <Baseline points="92,1442 119,1440 146,1438 165,1437"/>
+                    <TextEquiv>
+                        <Unicode>31.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="19" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681352433_98">
+                <Coords points="156,1389 157,1453 1345,1517 1412,1523 1412,1433 1345,1429"/>
+                <TextLine id="line_1724064374713_3010" custom="readingOrder {index:0;}">
+                    <Coords points="161,1450 213,1443 267,1471 295,1453 453,1447 532,1473 609,1448 686,1480 765,1461 764,1429 595,1387 513,1417 457,1394 388,1406 343,1390 284,1412 218,1388 159,1397"/>
+                    <Baseline points="165,1437 174,1437 201,1434 229,1433 256,1430 284,1436 320,1438 346,1433 372,1433 398,1434 424,1435 451,1437 477,1438 503,1438 529,1440 556,1440 582,1440 608,1440 634,1440 661,1440 687,1441 713,1444 739,1448 766,1448"/>
+                    <TextEquiv>
+                        <Unicode>Georg Christian Frobenius.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="19" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881119_4630">
+                <Coords points="1412,1433 1412,1523 1744,1554 1744,1456"/>
+                <TextLine id="line_1724062932154_2360" custom="readingOrder {index:0;}">
+                    <Coords points="1510,1576 1524,1569 1552,1572 1565,1553 1578,1546 1549,1443 1536,1452 1522,1449 1509,1468 1499,1467 1489,1482 1483,1482"/>
+                    <Baseline points="1497,1512 1577,1535"/>
+                    <TextEquiv>
+                        <Unicode>8½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="20" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064361069_2960">
+                <Coords points="32,1461 32,1544 159,1533 157,1453"/>
+                <TextLine id="line_1724064333052_2943" custom="readingOrder {index:0;}">
+                    <Coords points="83,1543 97,1544 103,1541 109,1545 120,1544 125,1540 136,1548 142,1542 153,1540 160,1546 167,1545 167,1494 155,1495 146,1491 138,1496 111,1477 104,1479 95,1472 83,1476"/>
+                    <Baseline points="88,1516 117,1514 146,1515 169,1515"/>
+                    <TextEquiv>
+                        <Unicode>32.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="20" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681358242_103">
+                <Coords points="157,1453 159,1533 1345,1580 1412,1585 1412,1523 1345,1517"/>
+                <TextLine id="line_1724064361321_2976" custom="readingOrder {index:0;}">
+                    <Coords points="164,1543 218,1530 352,1546 392,1529 515,1542 583,1524 673,1544 673,1479 583,1456 562,1471 504,1461 482,1474 441,1451 357,1466 324,1452 268,1473 212,1443 164,1462"/>
+                    <Baseline points="169,1515 175,1516 205,1514 234,1509 263,1508 293,1507 322,1506 351,1506 381,1506 410,1506 439,1506 468,1508 498,1508 527,1508 556,1508 586,1508 615,1508 644,1510 674,1512"/>
+                    <TextEquiv>
+                        <Unicode>Johan Barthol. Heer.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="20" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881213_4636">
+                <Coords points="1412,1523 1412,1585 1744,1613 1744,1554"/>
+                <TextLine id="line_1724064361619_2988" custom="readingOrder {index:0;}">
+                    <Coords points="1461,1593 1473,1597 1475,1593 1489,1596 1499,1588 1506,1588 1516,1593 1531,1594 1536,1599 1546,1596 1543,1524 1531,1531 1522,1528 1511,1540 1504,1539 1497,1545 1478,1537 1471,1543 1459,1543"/>
+                    <Baseline points="1466,1586 1492,1584 1519,1587 1546,1588"/>
+                    <TextEquiv>
+                        <Unicode>9½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="21" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064332981_2938">
+                <Coords points="32,1544 32,1610 160,1609 159,1533"/>
+                <TextLine id="line_1724063326726_2478" custom="readingOrder {index:0;}">
+                    <Coords points="86,1604 100,1602 127,1612 142,1600 170,1611 173,1548 159,1546 153,1549 150,1545 134,1548 125,1539 121,1543 111,1544 99,1554 88,1554"/>
+                    <Baseline points="92,1592 126,1590 160,1589 173,1588"/>
+                    <TextEquiv>
+                        <Unicode>33.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="21" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681362921_108">
+                <Coords points="159,1533 160,1609 1345,1660 1412,1664 1412,1585 1345,1580"/>
+                <TextLine id="line_1724063326726_2479" custom="readingOrder {index:0;}">
+                    <Coords points="168,1588 267,1612 334,1586 368,1614 406,1594 486,1623 579,1594 648,1625 691,1595 772,1615 771,1525 631,1561 413,1546 391,1527 319,1551 276,1533 167,1540"/>
+                    <Baseline points="173,1588 194,1588 228,1584 262,1584 296,1584 330,1586 364,1586 398,1588 433,1585 467,1585 501,1586 535,1588 569,1588 603,1582 637,1584 671,1586 705,1588 739,1591 774,1600"/>
+                    <TextEquiv>
+                        <Unicode>Johan Christoph. Wächter.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="21" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881308_4642">
+                <Coords points="1412,1585 1412,1664 1744,1687 1744,1613"/>
+                <TextLine id="tr_3_tl_16" custom="readingOrder {index:0;}">
+                    <Coords points="1452,1665 1472,1668 1498,1656 1521,1669 1535,1668 1543,1674 1564,1670 1554,1601 1539,1602 1529,1594 1502,1588 1487,1608 1476,1611 1457,1628 1446,1628"/>
+                    <Baseline points="1456,1656 1485,1654 1566,1670"/>
+                    <TextEquiv>
+                        <Unicode>9½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="22" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064315923_2916">
+                <Coords points="32,1610 32,1692 162,1692 160,1609"/>
+                <TextLine id="line_1724064315970_2920" custom="readingOrder {index:0;}">
+                    <Coords points="92,1685 101,1689 107,1685 112,1688 119,1686 136,1692 150,1682 174,1681 176,1619 163,1619 159,1615 153,1620 128,1625 102,1603 94,1605"/>
+                    <Baseline points="98,1662 129,1664 161,1662 177,1660"/>
+                    <TextEquiv>
+                        <Unicode>34.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="22" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681367406_113">
+                <Coords points="160,1609 162,1692 1345,1725 1412,1731 1412,1664 1345,1660"/>
+                <TextLine id="line_1724063326726_2481" custom="readingOrder {index:0;}">
+                    <Coords points="172,1682 354,1664 536,1680 598,1656 623,1675 731,1653 732,1603 689,1595 645,1626 604,1601 549,1642 420,1600 330,1622 226,1600 173,1629"/>
+                    <Baseline points="177,1660 193,1660 224,1656 256,1652 288,1652 319,1650 351,1651 383,1651 415,1650 446,1650 478,1649 510,1650 541,1652 573,1652 605,1650 636,1648 668,1648 700,1648 732,1648"/>
+                    <TextEquiv>
+                        <Unicode>Johan Hieron. Franck.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="22" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881402_4648">
+                <Coords points="1412,1664 1412,1731 1744,1762 1744,1687"/>
+                <TextLine id="line_1724062925010_2355" custom="readingOrder {index:0;}">
+                    <Coords points="1470,1742 1482,1738 1494,1745 1508,1737 1522,1746 1526,1740 1545,1737 1539,1668 1526,1670 1516,1667 1507,1673 1500,1670 1486,1683 1472,1680 1465,1683"/>
+                    <Baseline points="1474,1727 1547,1734"/>
+                    <TextEquiv>
+                        <Unicode>11½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="23" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064292762_2898">
+                <Coords points="32,1692 32,1760 163,1751 162,1692"/>
+                <TextLine id="line_1724063326726_2482" custom="readingOrder {index:0;}">
+                    <Coords points="91,1751 98,1754 106,1752 122,1759 148,1740 155,1743 164,1739 178,1741 180,1713 167,1709 159,1714 152,1706 138,1710 128,1699 110,1710 105,1703 95,1703"/>
+                    <Baseline points="96,1742 127,1739 158,1737 180,1734"/>
+                    <TextEquiv>
+                        <Unicode>35.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="23" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681390638_118">
+                <Coords points="162,1692 163,1751 1345,1787 1412,1788 1412,1731 1345,1725"/>
+                <TextLine id="line_1724063326726_2483" custom="readingOrder {index:0;}">
+                    <Coords points="175,1742 241,1763 276,1748 315,1757 357,1731 426,1746 467,1732 501,1748 664,1730 714,1753 705,1672 623,1675 591,1659 509,1684 442,1664 176,1678"/>
+                    <Baseline points="180,1734 189,1734 220,1731 251,1729 282,1728 313,1727 344,1725 375,1723 406,1722 437,1721 468,1720 499,1722 530,1722 561,1725 592,1723 623,1722 654,1724 685,1726 716,1726"/>
+                    <TextEquiv>
+                        <Unicode>Johan Nicolaus Metz.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="23" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881496_4654">
+                <Coords points="1412,1731 1412,1788 1744,1793 1744,1762"/>
+                <TextLine id="tr_3_tl_17" custom="readingOrder {index:0;}">
+                    <Coords points="1467,1785 1474,1784 1478,1788 1487,1781 1503,1777 1510,1780 1515,1776 1523,1780 1537,1778 1539,1748 1531,1747 1519,1757 1502,1744 1488,1744 1482,1739 1469,1741"/>
+                    <Baseline points="1472,1772 1506,1770 1540,1768"/>
+                    <TextEquiv>
+                        <Unicode>12.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="24" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064275005_2876">
+                <Coords points="32,1760 32,1827 164,1822 163,1751"/>
+                <TextLine id="line_1724064275063_2880" custom="readingOrder {index:0;}">
+                    <Coords points="78,1818 88,1820 103,1816 115,1826 127,1817 154,1842 175,1841 176,1762 159,1753 137,1752 126,1758 118,1757 97,1774 79,1771"/>
+                    <Baseline points="84,1808 114,1808 145,1808 175,1807 178,1806"/>
+                    <TextEquiv>
+                        <Unicode>36.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="24" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681398496_123">
+                <Coords points="163,1751 164,1822 1345,1849 1412,1852 1412,1788 1345,1787"/>
+                <TextLine id="line_1724063326726_2485" custom="readingOrder {index:0;}">
+                    <Coords points="173,1823 252,1836 336,1800 434,1835 592,1791 654,1823 692,1808 693,1779 654,1779 587,1738 479,1770 357,1734 286,1766 174,1741"/>
+                    <Baseline points="178,1806 206,1802 236,1800 267,1797 297,1796 328,1794 358,1792 389,1790 419,1788 450,1790 480,1788 511,1790 541,1790 572,1790 602,1790 633,1790 663,1792 694,1794"/>
+                    <TextEquiv>
+                        <Unicode>Johan Georg Braun.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="24" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881575_4660">
+                <Coords points="1412,1788 1412,1852 1744,1870 1744,1793"/>
+                <TextLine id="line_1724062920314_2350" custom="readingOrder {index:0;}">
+                    <Coords points="1515,1877 1523,1875 1525,1871 1532,1873 1537,1878 1540,1875 1560,1875 1551,1806 1541,1806 1522,1799 1511,1806 1505,1806"/>
+                    <Baseline points="1514,1836 1558,1842"/>
+                    <TextEquiv>
+                        <Unicode>11.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="25" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064250858_2854">
+                <Coords points="32,1827 32,1918 166,1916 164,1822"/>
+                <TextLine id="line_1724064230430_2833" custom="readingOrder {index:0;}">
+                    <Coords points="79,1904 87,1906 96,1902 110,1916 139,1912 146,1904 171,1910 170,1834 161,1834 145,1846 131,1841 128,1845 103,1849 98,1845 89,1847 78,1843"/>
+                    <Baseline points="84,1880 116,1882 148,1882 173,1881"/>
+                    <TextEquiv>
+                        <Unicode>37.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="25" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681403400_128">
+                <Coords points="164,1822 166,1916 1345,1931 1412,1934 1412,1852 1345,1849"/>
+                <TextLine id="line_1724063326726_2487" custom="readingOrder {index:0;}">
+                    <Coords points="168,1898 264,1905 387,1873 450,1899 496,1885 535,1922 618,1876 653,1893 726,1875 727,1838 666,1818 627,1826 601,1801 453,1841 364,1810 296,1836 170,1825"/>
+                    <Baseline points="173,1881 180,1881 212,1876 245,1873 277,1871 309,1869 341,1867 373,1864 406,1862 438,1862 470,1864 502,1862 534,1862 567,1862 599,1863 631,1860 663,1859 695,1860 728,1858"/>
+                    <TextEquiv>
+                        <Unicode>Johan Georg Ushmann.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="25" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881669_4666">
+                <Coords points="1412,1852 1412,1934 1744,1950 1744,1870"/>
+                <TextLine id="line_1724064230729_2849" custom="readingOrder {index:0;}">
+                    <Coords points="1511,1942 1522,1943 1525,1946 1531,1940 1534,1943 1550,1944 1556,1943 1561,1938 1570,1937 1570,1893 1564,1893 1554,1883 1543,1877 1539,1880 1534,1876 1516,1887 1511,1887"/>
+                    <Baseline points="1516,1914 1544,1914 1572,1914"/>
+                    <TextEquiv>
+                        <Unicode>11.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="26" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064230367_2828">
+                <Coords points="32,1918 32,1996 168,1985 166,1916"/>
+                <TextLine id="line_1724063326726_2489" custom="readingOrder {index:0;}">
+                    <Coords points="77,1984 88,1983 102,1993 113,1983 120,1985 129,1975 152,1960 163,1961 162,1923 146,1921 141,1917 133,1919 127,1914 113,1921 106,1929 76,1929"/>
+                    <Baseline points="82,1970 108,1972 134,1972 160,1972 166,1972"/>
+                    <TextEquiv>
+                        <Unicode>38.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="26" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681408675_133">
+                <Coords points="166,1916 168,1985 1345,2003 1412,2005 1412,1934 1345,1931"/>
+                <TextLine id="line_1724064211879_2815" custom="readingOrder {index:0;}">
+                    <Coords points="191,1990 337,1966 393,1995 411,1983 448,1996 608,1965 637,1981 750,1971 749,1892 692,1908 643,1888 579,1890 536,1923 517,1911 494,1928 398,1889 320,1912 212,1891 190,1904"/>
+                    <Baseline points="196,1954 223,1954 251,1956 279,1954 307,1954 335,1952 362,1954 390,1957 418,1955 446,1954 474,1957 501,1962 529,1964 557,1963 585,1960 613,1960 640,1958 668,1958 696,1956 724,1958 752,1958"/>
+                    <TextEquiv>
+                        <Unicode>Johan Christoph. Zeüther.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="26" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881763_4672">
+                <Coords points="1412,1934 1412,2005 1744,2019 1744,1950"/>
+                <TextLine id="tr_3_tl_19" custom="readingOrder {index:0;}">
+                    <Coords points="1495,2007 1501,2009 1518,1998 1526,2001 1538,1996 1551,1995 1556,1968 1549,1968 1541,1961 1539,1962 1534,1956 1528,1958 1522,1956 1511,1962 1502,1961"/>
+                    <Baseline points="1502,1994 1528,1989 1554,1986"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="27" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064211722_2802">
+                <Coords points="32,1996 32,2073 170,2077 168,1985"/>
+                <TextLine id="line_1724063326741_2490" custom="readingOrder {index:0;}">
+                    <Coords points="64,2078 91,2074 104,2083 118,2073 129,2074 145,2063 160,2063 158,2017 142,2014 133,2020 124,2014 114,2021 81,2004 62,1999"/>
+                    <Baseline points="68,2046 124,2048 154,2048 161,2049"/>
+                    <TextEquiv>
+                        <Unicode>39.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="27" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681413494_138">
+                <Coords points="168,1985 170,2077 1345,2088 1412,2090 1412,2005 1345,2003"/>
+                <TextLine id="line_1724063326741_2491" custom="readingOrder {index:0;}">
+                    <Coords points="156,2054 239,2072 366,2044 437,2044 531,2072 583,2049 651,2060 697,2051 699,1967 638,1988 568,1974 511,2017 367,1976 301,2005 232,1978 194,1992 158,1979"/>
+                    <Baseline points="161,2049 184,2052 215,2042 245,2040 275,2038 306,2040 336,2040 366,2038 397,2038 427,2036 457,2036 487,2036 518,2036 548,2036 578,2034 609,2036 639,2034 669,2034 700,2034"/>
+                    <TextEquiv>
+                        <Unicode>Johan Andr. Eckold.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="27" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881858_4678">
+                <Coords points="1412,2005 1412,2090 1744,2103 1744,2019"/>
+                <TextLine id="tr_3_tl_20" custom="readingOrder {index:0;}">
+                    <Coords points="1502,2081 1508,2081 1516,2089 1531,2080 1538,2087 1551,2075 1556,2080 1566,2079 1569,2040 1561,2041 1553,2047 1551,2045 1539,2046 1534,2040 1531,2041 1527,2038 1517,2046 1505,2043"/>
+                    <Baseline points="1508,2076 1538,2074 1568,2072"/>
+                    <TextEquiv>
+                        <Unicode>11.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="28" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064194260_2780">
+                <Coords points="32,2073 32,2158 172,2150 170,2077"/>
+                <TextLine id="line_1724063326741_2492" custom="readingOrder {index:0;}">
+                    <Coords points="73,2153 85,2154 95,2145 101,2147 123,2142 130,2136 137,2139 148,2131 158,2134 161,2064 146,2062 130,2074 123,2072 88,2095 76,2090"/>
+                    <Baseline points="80,2128 110,2120 140,2122 161,2122"/>
+                    <TextEquiv>
+                        <Unicode>40.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="28" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681417843_143">
+                <Coords points="170,2077 172,2150 1345,2178 1412,2181 1412,2090 1345,2088"/>
+                <TextLine id="line_1724063326741_2493" custom="readingOrder {index:0;}">
+                    <Coords points="156,2145 209,2153 225,2137 259,2151 381,2125 445,2148 496,2122 570,2156 680,2140 680,2078 567,2057 483,2089 386,2069 327,2097 218,2061 156,2089"/>
+                    <Baseline points="161,2122 170,2122 200,2123 230,2116 260,2116 290,2116 320,2116 350,2116 381,2116 411,2114 441,2114 471,2116 501,2116 531,2118 561,2114 591,2114 621,2116 651,2120 682,2122"/>
+                    <TextEquiv>
+                        <Unicode>Johan Georg Lang.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="28" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680881948_4684">
+                <Coords points="1412,2090 1412,2181 1744,2201 1744,2103"/>
+                <TextLine id="line_1724064194520_2796" custom="readingOrder {index:0;}">
+                    <Coords points="1490,2176 1496,2177 1503,2171 1515,2172 1519,2168 1524,2170 1531,2166 1544,2176 1551,2176 1548,2134 1536,2133 1522,2125 1515,2128 1509,2124 1504,2127 1499,2122 1487,2121"/>
+                    <Baseline points="1494,2164 1523,2164 1552,2168"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="29" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064177155_2758">
+                <Coords points="32,2158 32,2222 173,2214 172,2150"/>
+                <TextLine id="line_1724064152598_2737" custom="readingOrder {index:0;}">
+                    <Coords points="72,2224 80,2227 90,2221 92,2224 109,2213 129,2225 148,2217 158,2218 164,2168 153,2168 138,2179 122,2164 108,2166 79,2162"/>
+                    <Baseline points="80,2202 110,2198 140,2196 163,2192"/>
+                    <TextEquiv>
+                        <Unicode>41.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="29" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681425179_148">
+                <Coords points="172,2150 173,2214 1345,2236 1412,2241 1412,2181 1345,2178"/>
+                <TextLine id="line_1724064177312_2768" custom="readingOrder {index:0;}">
+                    <Coords points="158,2219 229,2189 318,2198 381,2225 556,2194 604,2216 683,2216 700,2210 700,2145 652,2136 560,2161 537,2139 496,2154 422,2141 396,2163 359,2144 271,2162 225,2138 185,2173 158,2168"/>
+                    <Baseline points="163,2192 170,2192 206,2190 232,2188 258,2188 284,2188 310,2188 336,2189 362,2191 388,2194 414,2190 440,2190 467,2190 493,2190 519,2191 545,2192 571,2192 597,2190 623,2190 649,2192 675,2193 702,2192"/>
+                    <TextEquiv>
+                        <Unicode>Nicol Jacob Beck.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="29" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882045_4690">
+                <Coords points="1412,2181 1412,2241 1744,2271 1744,2201"/>
+                <TextLine id="tr_3_tl_22" custom="readingOrder {index:0;}">
+                    <Coords points="1515,2244 1521,2244 1529,2249 1544,2246 1547,2249 1565,2236 1579,2250 1589,2252 1589,2200 1561,2210 1542,2209 1533,2201 1515,2208"/>
+                    <Baseline points="1520,2234 1555,2233 1590,2234"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="30" col="0" rowSpan="1" colSpan="1" id="TableCell_1724064152536_2732">
+                <Coords points="32,2222 32,2313 175,2314 173,2214"/>
+                <TextLine id="line_1724063326741_2496" custom="readingOrder {index:0;}">
+                    <Coords points="80,2308 95,2307 100,2313 102,2311 126,2319 130,2317 139,2322 146,2319 155,2321 166,2258 153,2256 147,2248 143,2250 128,2236 124,2239 115,2228 94,2230"/>
+                    <Baseline points="88,2292 129,2284 164,2279"/>
+                    <TextEquiv>
+                        <Unicode>42.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="30" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681429634_153">
+                <Coords points="173,2214 175,2314 1345,2329 1412,2332 1412,2241 1345,2236"/>
+                <TextLine id="line_1724063326741_2497" custom="readingOrder {index:0;}">
+                    <Coords points="159,2310 276,2312 331,2281 455,2308 676,2272 913,2309 914,2236 862,2207 740,2235 664,2206 583,2237 457,2203 390,2233 241,2203 160,2219"/>
+                    <Baseline points="164,2279 170,2279 211,2273 253,2274 294,2273 335,2272 377,2272 418,2275 459,2272 501,2272 542,2272 583,2272 624,2269 666,2269 707,2268 748,2269 790,2268 831,2268 872,2269 914,2272"/>
+                    <TextEquiv>
+                        <Unicode>Caspar Christian Mackeldey.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="30" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882139_4696">
+                <Coords points="1412,2241 1412,2332 1744,2347 1744,2271"/>
+                <TextLine id="line_1724062903361_2345" custom="readingOrder {index:0;}">
+                    <Coords points="1497,2349 1517,2342 1524,2344 1528,2338 1534,2341 1537,2337 1543,2342 1550,2341 1553,2336 1557,2339 1578,2336 1587,2326 1594,2325 1587,2259 1575,2262 1531,2294 1518,2284 1490,2281"/>
+                    <Baseline points="1499,2316 1595,2327"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="31" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063579510_2710">
+                <Coords points="32,2313 32,2390 177,2385 175,2314"/>
+                <TextLine id="line_1724063579573_2714" custom="readingOrder {index:0;}">
+                    <Coords points="85,2393 103,2393 108,2398 119,2399 126,2394 135,2398 146,2395 161,2398 164,2352 159,2352 141,2337 136,2337 130,2329 117,2329 99,2319 89,2321"/>
+                    <Baseline points="92,2368 125,2364 158,2364 165,2363"/>
+                    <TextEquiv>
+                        <Unicode>43.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="31" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681434085_158">
+                <Coords points="175,2314 177,2385 1345,2406 1412,2411 1412,2332 1345,2329"/>
+                <TextLine id="line_1724063326741_2499" custom="readingOrder {index:0;}">
+                    <Coords points="159,2382 194,2394 282,2373 324,2393 378,2363 504,2372 519,2358 647,2384 730,2355 752,2364 753,2304 638,2293 557,2327 483,2297 436,2309 395,2291 294,2332 238,2311 160,2313"/>
+                    <Baseline points="165,2363 191,2361 224,2357 257,2356 290,2356 323,2357 356,2357 389,2356 423,2356 456,2356 489,2356 522,2354 555,2354 588,2353 621,2352 654,2351 687,2352 720,2352 754,2354"/>
+                    <TextEquiv>
+                        <Unicode>Georg Andr. Weber.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="31" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882218_4702">
+                <Coords points="1412,2332 1412,2411 1744,2441 1744,2347"/>
+                <TextLine id="line_1724062898720_2340" custom="readingOrder {index:0;}">
+                    <Coords points="1541,2440 1546,2439 1570,2456 1591,2463 1601,2461 1622,2435 1627,2434 1608,2337 1564,2336 1557,2346 1548,2347 1543,2354 1524,2354"/>
+                    <Baseline points="1539,2407 1628,2425"/>
+                    <TextEquiv>
+                        <Unicode>8½</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="32" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063565351_2692">
+                <Coords points="32,2390 32,2485 179,2476 177,2385"/>
+                <TextLine id="line_1724063326741_2500" custom="readingOrder {index:0;}">
+                    <Coords points="81,2466 96,2461 103,2469 115,2464 128,2471 152,2465 164,2470 165,2398 143,2394 135,2398 126,2394 121,2399 112,2399 94,2392 88,2396 81,2395"/>
+                    <Baseline points="86,2454 120,2456 155,2454 166,2453"/>
+                    <TextEquiv>
+                        <Unicode>44.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="32" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681438572_163">
+                <Coords points="177,2385 179,2476 1345,2504 1412,2506 1412,2411 1345,2406"/>
+                <TextLine id="line_1724063326741_2501" custom="readingOrder {index:0;}">
+                    <Coords points="161,2458 254,2456 276,2472 314,2445 409,2467 476,2449 524,2462 550,2444 628,2469 692,2435 763,2455 777,2390 686,2369 593,2411 478,2376 442,2384 416,2363 337,2413 298,2383 261,2404 220,2382 163,2387"/>
+                    <Baseline points="166,2453 189,2453 224,2451 259,2443 293,2438 328,2438 362,2438 397,2439 432,2437 466,2437 501,2436 535,2438 570,2438 605,2436 639,2434 674,2431 708,2432 743,2430 778,2432"/>
+                    <TextEquiv>
+                        <Unicode>Johan Christoph. Eckold.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="32" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882312_4708">
+                <Coords points="1412,2411 1412,2506 1744,2516 1744,2441"/>
+                <TextLine id="line_1724062894590_2335" custom="readingOrder {index:0;}">
+                    <Coords points="1483,2522 1492,2525 1499,2519 1513,2520 1547,2503 1556,2507 1565,2505 1588,2487 1600,2486 1602,2461 1595,2460 1590,2464 1581,2457 1572,2458 1550,2440 1541,2446 1525,2443 1501,2459 1487,2459"/>
+                    <Baseline points="1490,2505 1600,2498"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="33" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063551847_2670">
+                <Coords points="32,2485 32,2567 181,2565 179,2476"/>
+                <TextLine id="line_1724063535826_2649" custom="readingOrder {index:0;}">
+                    <Coords points="77,2571 90,2566 100,2569 123,2559 130,2561 135,2556 139,2561 152,2558 156,2562 164,2562 168,2516 163,2516 153,2506 139,2514 135,2512 127,2518 119,2518 113,2512 98,2514 89,2504 83,2504"/>
+                    <Baseline points="84,2550 125,2546 166,2543 168,2542"/>
+                    <TextEquiv>
+                        <Unicode>45.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="33" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681443865_168">
+                <Coords points="179,2476 181,2565 1345,2593 1412,2597 1412,2506 1345,2504"/>
+                <TextLine id="line_1724063326741_2503" custom="readingOrder {index:0;}">
+                    <Coords points="162,2554 270,2554 318,2578 377,2545 492,2574 771,2527 828,2554 905,2549 908,2466 775,2447 689,2459 626,2505 590,2486 525,2509 451,2478 367,2513 254,2471 164,2506"/>
+                    <Baseline points="168,2542 207,2537 248,2540 290,2534 331,2532 372,2528 413,2528 454,2528 496,2526 537,2526 578,2524 619,2525 660,2524 702,2520 743,2518 784,2518 825,2514 866,2515 908,2514"/>
+                    <TextEquiv>
+                        <Unicode>Johan Benjamin Vollrath.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="33" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882406_4714">
+                <Coords points="1412,2506 1412,2597 1744,2622 1744,2516"/>
+                <TextLine id="line_1724063552241_2686" custom="readingOrder {index:0;}">
+                    <Coords points="1534,2575 1543,2576 1553,2570 1558,2573 1569,2570 1580,2577 1598,2569 1596,2524 1572,2521 1561,2513 1554,2517 1545,2514 1532,2516"/>
+                    <Baseline points="1538,2556 1600,2559"/>
+                    <TextEquiv>
+                        <Unicode>8.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="34" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063535763_2644">
+                <Coords points="32,2567 32,2658 183,2650 181,2565"/>
+                <TextLine id="line_1724063521464_2623" custom="readingOrder {index:0;}">
+                    <Coords points="77,2662 92,2660 100,2654 107,2656 138,2635 148,2642 171,2643 178,2570 152,2582 132,2580 119,2587 98,2569 86,2566"/>
+                    <Baseline points="84,2640 117,2636 150,2632 174,2633"/>
+                    <TextEquiv>
+                        <Unicode>46.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="34" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681450829_173">
+                <Coords points="181,2565 183,2650 1345,2676 1412,2680 1412,2597 1345,2593"/>
+                <TextLine id="line_1724063536094_2659" custom="readingOrder {index:0;}">
+                    <Coords points="169,2634 231,2653 259,2633 275,2649 375,2649 422,2621 515,2656 641,2619 746,2625 748,2571 595,2558 464,2580 414,2557 372,2581 171,2569"/>
+                    <Baseline points="174,2633 183,2634 216,2633 250,2629 283,2627 316,2624 349,2622 382,2622 416,2618 449,2618 482,2616 515,2618 548,2617 582,2617 615,2618 648,2615 681,2614 714,2614 748,2612"/>
+                    <TextEquiv>
+                        <Unicode>Johan Christoph. Beck.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="34" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882500_4720">
+                <Coords points="1412,2597 1412,2680 1744,2704 1744,2622"/>
+                <TextLine id="line_1724062886460_2325" custom="readingOrder {index:0;}">
+                    <Coords points="1519,2686 1528,2686 1534,2681 1550,2693 1578,2691 1578,2644 1572,2644 1562,2634 1558,2635 1553,2631 1546,2637 1536,2635 1528,2642 1526,2640 1519,2641"/>
+                    <Baseline points="1524,2674 1580,2673"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="35" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063521401_2618">
+                <Coords points="32,2658 32,2749 185,2760 183,2650"/>
+                <TextLine id="line_1724063507976_2597" custom="readingOrder {index:0;}">
+                    <Coords points="92,2737 106,2741 123,2757 136,2757 143,2750 153,2748 157,2751 176,2750 177,2687 162,2688 145,2673 134,2670 123,2673 94,2657"/>
+                    <Baseline points="98,2724 134,2722 171,2722 179,2721"/>
+                    <TextEquiv>
+                        <Unicode>47.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="35" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681455075_178">
+                <Coords points="183,2650 185,2760 1345,2765 1412,2767 1412,2680 1345,2676"/>
+                <TextLine id="line_1724063521684_2632" custom="readingOrder {index:0;}">
+                    <Coords points="174,2733 244,2729 294,2751 361,2711 435,2732 554,2710 747,2740 826,2712 827,2676 719,2656 675,2669 608,2645 538,2680 368,2642 335,2665 175,2664"/>
+                    <Baseline points="179,2721 207,2719 244,2714 280,2712 317,2710 353,2710 390,2710 426,2708 463,2708 499,2708 536,2708 572,2708 609,2706 645,2706 682,2705 718,2703 755,2704 791,2706 828,2706"/>
+                    <TextEquiv>
+                        <Unicode>Johan Simon Ambling.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="35" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882594_4726">
+                <Coords points="1412,2680 1412,2767 1744,2782 1744,2704"/>
+                <TextLine id="tr_3_tl_23" custom="readingOrder {index:0;}">
+                    <Coords points="1520,2751 1532,2752 1534,2754 1538,2752 1543,2757 1546,2754 1552,2755 1557,2753 1566,2745 1570,2748 1575,2747 1573,2715 1562,2717 1543,2707 1537,2711 1531,2707 1528,2707 1526,2710 1517,2710"/>
+                    <Baseline points="1524,2738 1550,2741 1576,2742"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="36" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063507913_2592">
+                <Coords points="32,2749 32,2832 187,2824 185,2760"/>
+                <TextLine id="line_1724063507976_2598" custom="readingOrder {index:0;}">
+                    <Coords points="88,2816 98,2819 111,2831 125,2835 159,2812 169,2821 182,2821 184,2773 174,2774 164,2768 153,2769 144,2762 135,2759 126,2761 111,2754 104,2758 90,2758"/>
+                    <Baseline points="94,2806 123,2806 152,2806 181,2804 184,2803"/>
+                    <TextEquiv>
+                        <Unicode>48.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="36" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681463333_183">
+                <Coords points="185,2760 187,2824 1345,2847 1412,2849 1412,2767 1345,2765"/>
+                <TextLine id="line_1724063326741_2509" custom="readingOrder {index:0;}">
+                    <Coords points="179,2799 293,2809 348,2832 385,2797 444,2824 479,2809 528,2821 552,2809 674,2813 674,2760 601,2745 540,2762 416,2737 370,2763 304,2772 237,2742 179,2764"/>
+                    <Baseline points="184,2803 210,2802 239,2802 268,2801 297,2800 326,2800 355,2801 385,2803 414,2803 443,2802 472,2802 501,2800 530,2802 559,2802 588,2802 617,2804 646,2804 676,2802"/>
+                    <TextEquiv>
+                        <Unicode>Henrich Stetekorn.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="36" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882704_4732">
+                <Coords points="1412,2767 1412,2849 1744,2862 1744,2782"/>
+                <TextLine id="line_1724063494525_2587" custom="readingOrder {index:0;}">
+                    <Coords points="1481,2860 1498,2858 1505,2852 1513,2860 1525,2865 1537,2858 1545,2858 1548,2863 1556,2864 1563,2804 1550,2806 1540,2797 1499,2823 1486,2821"/>
+                    <Baseline points="1487,2850 1561,2841"/>
+                    <TextEquiv>
+                        <Unicode>9.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="37" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063493818_2558">
+                <Coords points="32,2832 32,2916 189,2913 187,2824"/>
+                <TextLine id="line_1724063493880_2564" custom="readingOrder {index:0;}">
+                    <Coords points="87,2911 93,2913 99,2909 118,2907 126,2917 159,2904 183,2909 190,2865 174,2858 165,2859 153,2845 149,2847 141,2840 134,2841 102,2824"/>
+                    <Baseline points="94,2900 131,2890 168,2888 182,2880 188,2882"/>
+                    <TextEquiv>
+                        <Unicode>49.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="37" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681468980_188">
+                <Coords points="187,2824 189,2913 1345,2904 1412,2906 1412,2849 1345,2847"/>
+                <TextLine id="line_1724063494258_2576" custom="readingOrder {index:0;}">
+                    <Coords points="182,2909 272,2893 344,2915 389,2895 486,2918 525,2894 682,2884 752,2916 844,2876 845,2832 663,2838 585,2811 473,2861 369,2819 184,2827"/>
+                    <Baseline points="188,2882 208,2888 234,2886 260,2882 286,2886 314,2884 342,2886 370,2885 398,2884 426,2884 454,2884 482,2885 510,2885 538,2883 566,2880 594,2880 622,2878 650,2878 678,2876 706,2874 734,2876 762,2874 790,2874 818,2875 846,2874"/>
+                    <TextEquiv>
+                        <Unicode>Just Christoph. Henneberger.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="37" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882782_4738">
+                <Coords points="1412,2849 1412,2906 1744,2916 1744,2862"/>
+                <TextLine id="line_1724062878340_2315" custom="readingOrder {index:0;}">
+                    <Coords points="1497,2909 1505,2909 1508,2906 1513,2909 1521,2906 1530,2908 1539,2901 1564,2904 1562,2859 1544,2866 1525,2865 1522,2862 1510,2863 1506,2867 1495,2864"/>
+                    <Baseline points="1501,2899 1566,2902"/>
+                    <TextEquiv>
+                        <Unicode>10.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="38" col="0" rowSpan="1" colSpan="1" id="TableCell_1724063479384_2532">
+                <Coords points="32,2916 32,3036 192,3036 189,2913"/>
+                <TextLine id="line_1724063479431_2538" custom="readingOrder {index:0;}">
+                    <Coords points="78,2983 103,2994 115,2994 123,3001 172,2987 184,2978 189,2979 192,2932 183,2930 175,2936 167,2933 152,2942 123,2923 81,2920"/>
+                    <Baseline points="84,2970 113,2966 143,2964 172,2964 192,2962"/>
+                    <TextEquiv>
+                        <Unicode>50.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+            <TableCell row="38" col="1" rowSpan="1" colSpan="2" id="TableCell_1724681478281_193">
+                <Coords points="189,2913 192,3036 1345,3036 1412,3036 1412,2906 1345,2904"/>
+                <TextLine id="line_1724063326741_2513" custom="readingOrder {index:0;}">
+                    <Coords points="186,2973 257,2998 342,2976 515,3005 649,2953 758,2990 828,2954 830,2885 746,2918 681,2884 612,2889 560,2919 456,2900 313,2919 272,2893 215,2916 188,2905"/>
+                    <Baseline points="192,2962 202,2962 232,2964 284,2960 309,2962 334,2961 359,2960 384,2963 411,2964 436,2960 462,2960 488,2960 515,2960 541,2959 567,2958 593,2958 620,2955 646,2952 672,2950 698,2950 725,2949 751,2947 777,2946 803,2946 830,2948"/>
+                    <TextEquiv>
+                        <Unicode>Elias Philip Albrecht.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 3 4</CornerPts>
+            </TableCell>
+            <TableCell row="38" col="3" rowSpan="1" colSpan="1" id="TableCell_1724680882877_4744">
+                <Coords points="1412,2906 1412,3036 1744,3036 1744,2916"/>
+                <TextLine id="tr_3_tl_24" custom="readingOrder {index:0;}">
+                    <Coords points="1504,2965 1515,2964 1521,2968 1525,2965 1530,2966 1542,2958 1549,2967 1558,2968 1562,2916 1552,2916 1547,2921 1532,2913 1528,2908 1520,2907 1517,2909 1513,2905 1508,2905"/>
+                    <Baseline points="1510,2958 1535,2954 1560,2954"/>
+                    <TextEquiv>
+                        <Unicode>8.</Unicode>
+                    </TextEquiv>
+                </TextLine>
+                <CornerPts>0 1 2 3</CornerPts>
+            </TableCell>
+        </TableRegion>
+    </Page>
+</PcGts>
