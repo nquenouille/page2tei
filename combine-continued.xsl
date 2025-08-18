@@ -14,7 +14,8 @@
          <xd:p>combine neighbouring tei:rs[@continued] separated by a tei:lb</xd:p>
       </xd:desc>
    </xd:doc>
-   <xsl:key name="lb-by-n" match="*" use="@n"/>
+   <xsl:strip-space elements="*"/>
+   <xsl:key name="lb-by-facs" match="tei:lb" use="@facs"/>
    <!--<xsl:template match="/">
       <xsl:apply-templates mode="continued" />
    </xsl:template>-->
@@ -128,5 +129,107 @@
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
+   </xsl:template>
+
+
+<xd:doc>
+      <xd:desc>put rdg tags together and wrap them with app; do not forget to get lb tags into the rdg, if applying</xd:desc>
+   </xd:doc>
+   <xsl:template match="tei:*" mode="continued">
+   <xsl:copy>
+      <xsl:apply-templates select="@*" mode="continued"/>
+      <xsl:for-each select="node()">
+         <xsl:choose>
+         <xsl:when test="self::tei:rdg">
+            <xsl:variable name="currentN" select="@n"/>
+            <xsl:variable name="precedingSameN" select="preceding-sibling::tei:rdg[@n = $currentN]"/>
+            <xsl:if test="not($precedingSameN)">
+               <app>
+               <xsl:for-each select="../*">
+                  <xsl:choose>
+                     <!-- (1) lb directly in front of the rdg[varSeq > 1] -->
+                     <xsl:when test="
+                     self::tei:lb 
+                     and following-sibling::*[1][self::tei:rdg[@n=$currentN and @varSeq and @varSeq != '1']]
+                     ">
+                     <!-- do not shwo – lb is processed in rdg -->
+                     </xsl:when>
+
+                     <!-- (2) rdg with current n and varSeq=1 (and no lb in front of it!) -->
+                     <xsl:when test="self::tei:rdg[@n=$currentN and (@varSeq='1' or not(@varSeq))]">
+                     <xsl:apply-templates select="." mode="continued"/>
+                     </xsl:when>
+
+                     <!-- (3) rdg with current n and varSeq≠1 (draws lb into rdg, if applying) -->
+                     <xsl:when test="self::tei:rdg[@n=$currentN and @varSeq and @varSeq != '1']">
+                     <xsl:apply-templates select="." mode="continued"/>
+                     </xsl:when>
+
+                     <!-- (4) otherwise do nothing -->
+                  </xsl:choose>
+               </xsl:for-each>
+               </app>
+            </xsl:if>
+         </xsl:when>
+
+         <!-- everything else -->
+         <xsl:otherwise>
+            <xsl:apply-templates select="." mode="continued"/>
+         </xsl:otherwise>
+         </xsl:choose>
+      </xsl:for-each>
+   </xsl:copy>
+   </xsl:template>
+
+   <xsl:template match="tei:rdg" mode="continued">
+   <xsl:variable name="prev-lb" select="preceding-sibling::*[1][self::tei:lb]"/>  
+   <xsl:copy>
+      <xsl:apply-templates select="@*" mode="continued"/>    
+      <!-- if lb directly in front of rdg, draw it inside -->
+      <xsl:if test="$prev-lb">
+         <xsl:apply-templates select="$prev-lb" mode="continued"/>
+      </xsl:if>
+      <xsl:apply-templates select="node()" mode="continued"/>
+   </xsl:copy>
+   </xsl:template>
+
+   <xd:doc>
+      <xd:desc>For double lb remove duplicates (see rdg template)</xd:desc>
+   </xd:doc>
+   <xsl:template match="tei:lb" mode="dedup-lb">   
+      <xsl:choose>               
+         <xsl:when test="generate-id() = generate-id(key('lb-by-facs', @facs)[1]) and ancestor::tei:rdg and (generate-id() = generate-id(ancestor::tei:rdg/descendant::tei:lb[1]))">
+           <xsl:text>
+               </xsl:text>
+            <xsl:copy>
+               <xsl:apply-templates select="@* | node()" mode="dedup-lb"/>
+            </xsl:copy>
+         </xsl:when>
+         <xsl:when test="generate-id() = generate-id(key('lb-by-facs', @facs)[1])">
+            <xsl:copy>
+               <xsl:apply-templates select="@* | node()" mode="dedup-lb"/>
+            </xsl:copy>
+         </xsl:when>
+      </xsl:choose>
+   </xsl:template>
+
+<!-- kill empty lines -->
+   <xsl:template match="text()[
+      not(normalize-space()) and
+      preceding-sibling::*[1][self::tei:lb] and
+      (following-sibling::*[1][self::tei:lb] or following-sibling::text()[1][matches(., '^\s+')])
+      ]" mode="dedup-lb"/>
+
+   <!-- Standard for all other elements -->
+   <xsl:template match="*" mode="dedup-lb">
+   <xsl:copy>
+      <xsl:apply-templates select="@* | node()" mode="dedup-lb"/>
+   </xsl:copy>
+   </xsl:template>
+   
+   <xsl:template match="@*" mode="dedup-lb">
+       <xsl:copy>
+      <xsl:apply-templates select="." mode="dedup-lb"/>
+   </xsl:copy>
    </xsl:template>
 </xsl:stylesheet>
