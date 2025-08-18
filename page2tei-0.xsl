@@ -226,13 +226,16 @@
                      <xsl:variable name="combining">
                         <xsl:apply-templates select="$combines" mode="continued" />
                      </xsl:variable>                     
+                     <xsl:variable name="dedup">
+                        <xsl:apply-templates select="$combining" mode="dedup-lb" />
+                     </xsl:variable>          
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combining" />
+                              <xsl:copy-of select="$dedup" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -286,13 +289,16 @@
                      <xsl:variable name="combining">
                         <xsl:apply-templates select="$combines" mode="continued" />
                      </xsl:variable>                     
+                     <xsl:variable name="dedup">
+                        <xsl:apply-templates select="$combining" mode="dedup-lb" />
+                     </xsl:variable>          
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combining" />
+                              <xsl:copy-of select="$dedup" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -407,13 +413,16 @@
                      <xsl:variable name="combining">
                         <xsl:apply-templates select="$combines" mode="continued" />
                      </xsl:variable>                     
+                     <xsl:variable name="dedup">
+                        <xsl:apply-templates select="$combining" mode="dedup-lb" />
+                     </xsl:variable>          
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combining" />
+                              <xsl:copy-of select="$dedup" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -466,13 +475,16 @@
                      <xsl:variable name="combining">
                         <xsl:apply-templates select="$combines" mode="continued" />
                      </xsl:variable>                     
+                     <xsl:variable name="dedup">
+                        <xsl:apply-templates select="$combining" mode="dedup-lb" />
+                     </xsl:variable>          
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combining" />
+                              <xsl:copy-of select="$dedup" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -526,13 +538,16 @@
                      <xsl:variable name="combining">
                         <xsl:apply-templates select="$combines" mode="continued" />
                      </xsl:variable>                     
+                     <xsl:variable name="dedup">
+                        <xsl:apply-templates select="$combining" mode="dedup-lb" />
+                     </xsl:variable>          
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$combining" mode="tokenize" />                             
+                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$combining" />
+                              <xsl:copy-of select="$dedup" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
