@@ -235,13 +235,16 @@
                      <xsl:variable name="dedup">
                         <xsl:apply-templates select="$combining" mode="dedup-lb" />
                      </xsl:variable>          
+                     <xsl:variable name="rmv-attr">
+                        <xsl:apply-templates select="$dedup" mode="remove-attributes" />
+                     </xsl:variable>         
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
+                              <xsl:apply-templates select="$rmv-attr" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$dedup" />
+                              <xsl:copy-of select="$rmv-attr" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -298,13 +301,16 @@
                      <xsl:variable name="dedup">
                         <xsl:apply-templates select="$combining" mode="dedup-lb" />
                      </xsl:variable>          
+                     <xsl:variable name="rmv-attr">
+                        <xsl:apply-templates select="$dedup" mode="remove-attributes" />
+                     </xsl:variable>         
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
+                              <xsl:apply-templates select="$rmv-attr" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$dedup" />
+                              <xsl:copy-of select="$rmv-attr" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -425,13 +431,16 @@
                      <xsl:variable name="dedup">
                         <xsl:apply-templates select="$combining" mode="dedup-lb" />
                      </xsl:variable>          
+                     <xsl:variable name="rmv-attr">
+                        <xsl:apply-templates select="$dedup" mode="remove-attributes" />
+                     </xsl:variable>         
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
+                              <xsl:apply-templates select="$rmv-attr" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$dedup" />
+                              <xsl:copy-of select="$rmv-attr" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -487,13 +496,16 @@
                      <xsl:variable name="dedup">
                         <xsl:apply-templates select="$combining" mode="dedup-lb" />
                      </xsl:variable>          
+                     <xsl:variable name="rmv-attr">
+                        <xsl:apply-templates select="$dedup" mode="remove-attributes" />
+                     </xsl:variable>         
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
+                              <xsl:apply-templates select="$rmv-attr" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$dedup" />
+                              <xsl:copy-of select="$rmv-attr" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
@@ -550,13 +562,16 @@
                      <xsl:variable name="dedup">
                         <xsl:apply-templates select="$combining" mode="dedup-lb" />
                      </xsl:variable>          
+                     <xsl:variable name="rmv-attr">
+                        <xsl:apply-templates select="$dedup" mode="remove-attributes" />
+                     </xsl:variable>         
                      <xsl:variable name="tokenized">
                         <xsl:choose>
                            <xsl:when test="$tokenize">
-                              <xsl:apply-templates select="$dedup" mode="tokenize" />                             
+                              <xsl:apply-templates select="$rmv-attr" mode="tokenize" />                             
                            </xsl:when>
                            <xsl:otherwise>
-                              <xsl:copy-of select="$dedup" />
+                              <xsl:copy-of select="$rmv-attr" />
                            </xsl:otherwise>
                         </xsl:choose>
                      </xsl:variable>
