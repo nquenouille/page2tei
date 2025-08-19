@@ -233,35 +233,4 @@
       <xsl:apply-templates select="." mode="dedup-lb"/>
    </xsl:copy>
    </xsl:template>
-
-
-   <xd:doc>
-      <xd:desc>Remove attributes from textual tags</xd:desc>
-   </xd:doc>
-   <!-- remove attribute 'n' from rdg tag -->
-   <xsl:template match="tei:rdg" mode="remove-attributes">
-      <rdg>
-         <xsl:for-each select="@*">
-            <xsl:if test="local-name() != 'n'">
-               <xsl:copy />
-            </xsl:if>
-         </xsl:for-each>
-         <xsl:copy-of select="node()"/>   
-      </rdg>
-   </xsl:template>
-
-    <xd:doc>
-      <xd:desc>Standard for all other elements</xd:desc>
-   </xd:doc>
-   <xsl:template match="*" mode="remove-attributes">
-   <xsl:copy>
-      <xsl:apply-templates select="@* | node()" mode="remove-attributes"/>
-   </xsl:copy>
-   </xsl:template>
-   
-   <xsl:template match="@*" mode="remove-attributes">
-       <xsl:copy>
-      <xsl:apply-templates select="." mode="remove-attributes"/>
-   </xsl:copy>
-   </xsl:template>
 </xsl:stylesheet>

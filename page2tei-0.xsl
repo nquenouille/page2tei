@@ -32,8 +32,14 @@
    <xsl:param name="combine" select="false()"/>
    <xsl:include href="combine-continued.xsl" />
 
+      <xd:doc>
+      <xd:desc>Whether to run attribute removing</xd:desc>
+   </xd:doc>
+   <xsl:param name="remove-attributes" select="false()"/>
+   <xsl:include href="remove-attributes.xsl" />
+
    <xd:doc>
-      <xd:desc>Whether to run white space tokenization</xd:desc>
+      <xd:desc>Whether to run postprocessing</xd:desc>
    </xd:doc>
    <xsl:param name="postprocessing" select="false()"/>
    <xsl:include href="postprocessing.xsl" />
