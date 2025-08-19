@@ -147,25 +147,20 @@
                <app>
                <xsl:for-each select="../*">
                   <xsl:choose>
-                     <!-- (1) lb directly in front of the rdg[varSeq > 1] -->
+                     <!-- lb directly in front of the rdg[varSeq > 1] has to be remain -->
                      <xsl:when test="
                      self::tei:lb 
                      and following-sibling::*[1][self::tei:rdg[@n=$currentN and @varSeq and @varSeq != '1']]
                      ">
-                     <!-- do not shwo – lb is processed in rdg -->
+                     <!-- do not show – lb is already processed in rdg -->
                      </xsl:when>
 
-                     <!-- (2) rdg with current n and varSeq=1 (and no lb in front of it!) -->
-                     <xsl:when test="self::tei:rdg[@n=$currentN and (@varSeq='1' or not(@varSeq))]">
-                     <xsl:apply-templates select="." mode="continued"/>
+                     <!-- rdg with current n and varSeq=1 (and no lb in front of it!) -->
+                     <xsl:when test="self::tei:rdg[@n=$currentN]">
+                        <xsl:apply-templates select="." mode="continued"/>
                      </xsl:when>
 
-                     <!-- (3) rdg with current n and varSeq≠1 (draws lb into rdg, if applying) -->
-                     <xsl:when test="self::tei:rdg[@n=$currentN and @varSeq and @varSeq != '1']">
-                     <xsl:apply-templates select="." mode="continued"/>
-                     </xsl:when>
-
-                     <!-- (4) otherwise do nothing -->
+                     <!-- otherwise do nothing -->
                   </xsl:choose>
                </xsl:for-each>
                </app>
@@ -194,10 +189,11 @@
    </xsl:template>
 
    <xd:doc>
-      <xd:desc>For double lb remove duplicates (see rdg template)</xd:desc>
+      <xd:desc>For double lb remove duplicates</xd:desc>
    </xd:doc>
    <xsl:template match="tei:lb" mode="dedup-lb">   
-      <xsl:choose>               
+      <xsl:choose>
+         <!-- if lb with attribute facs is the first in the document, copy node, if not ignore; if lb is the first lb after rdg, then put line break before -->          
          <xsl:when test="generate-id() = generate-id(key('lb-by-facs', @facs)[1]) and ancestor::tei:rdg and (generate-id() = generate-id(ancestor::tei:rdg/descendant::tei:lb[1]))">
            <xsl:text>
                </xsl:text>
@@ -205,6 +201,7 @@
                <xsl:apply-templates select="@* | node()" mode="dedup-lb"/>
             </xsl:copy>
          </xsl:when>
+         <!-- if lb with attribute facs is the first in the document, copy node, if not ignore -->
          <xsl:when test="generate-id() = generate-id(key('lb-by-facs', @facs)[1])">
             <xsl:copy>
                <xsl:apply-templates select="@* | node()" mode="dedup-lb"/>
@@ -213,14 +210,18 @@
       </xsl:choose>
    </xsl:template>
 
-<!-- kill empty lines -->
+   <xd:doc>
+      <xd:desc>Kill empty lines between lbs</xd:desc>
+   </xd:doc>
    <xsl:template match="text()[
       not(normalize-space()) and
       preceding-sibling::*[1][self::tei:lb] and
       (following-sibling::*[1][self::tei:lb] or following-sibling::text()[1][matches(., '^\s+')])
       ]" mode="dedup-lb"/>
 
-   <!-- Standard for all other elements -->
+   <xd:doc>
+      <xd:desc>Standard for all other elements</xd:desc>
+   </xd:doc>
    <xsl:template match="*" mode="dedup-lb">
    <xsl:copy>
       <xsl:apply-templates select="@* | node()" mode="dedup-lb"/>
@@ -230,6 +231,37 @@
    <xsl:template match="@*" mode="dedup-lb">
        <xsl:copy>
       <xsl:apply-templates select="." mode="dedup-lb"/>
+   </xsl:copy>
+   </xsl:template>
+
+
+   <xd:doc>
+      <xd:desc>Remove attributes from textual tags</xd:desc>
+   </xd:doc>
+   <!-- remove attribute 'n' from rdg tag -->
+   <xsl:template match="tei:rdg" mode="remove-attributes">
+      <rdg>
+         <xsl:for-each select="@*">
+            <xsl:if test="local-name() != 'n'">
+               <xsl:copy />
+            </xsl:if>
+         </xsl:for-each>
+         <xsl:copy-of select="node()"/>   
+      </rdg>
+   </xsl:template>
+
+    <xd:doc>
+      <xd:desc>Standard for all other elements</xd:desc>
+   </xd:doc>
+   <xsl:template match="*" mode="remove-attributes">
+   <xsl:copy>
+      <xsl:apply-templates select="@* | node()" mode="remove-attributes"/>
+   </xsl:copy>
+   </xsl:template>
+   
+   <xsl:template match="@*" mode="remove-attributes">
+       <xsl:copy>
+      <xsl:apply-templates select="." mode="remove-attributes"/>
    </xsl:copy>
    </xsl:template>
 </xsl:stylesheet>

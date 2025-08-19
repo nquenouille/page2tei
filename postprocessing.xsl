@@ -21,12 +21,12 @@
          <xd:p>Some attributes that were needed for getting elements are being removed. Also, some parts of the text will receive a structure element and attribute for structuring text.</xd:p>
       </xd:desc>
    </xd:doc>
-   
+
     <xsl:template match="tei:ab[contains(@type, 'margin_') and not(contains(@type, 'margin_top')) and not(contains(@type, 'margin_bottom'))]" mode="postprocessing">
       <p>
          <!-- Copy content without type-attribute -->
          <xsl:for-each select="@*">
-            <!-- Kopiere alle Attribute, außer 'type' -->
+            <!-- Copy all attributes, except 'type' -->
             <xsl:if test="local-name() != 'type'">
                <xsl:copy />
             </xsl:if>
@@ -52,12 +52,10 @@
             </xsl:text>
                <p>
                <xsl:for-each select="@*">
-                     <!-- Kopiere alle Attribute, außer 'type' -->
                      <xsl:if test="local-name() != 'type'">
                         <xsl:copy />
                      </xsl:if>
                   </xsl:for-each>      
-                  <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
                   <xsl:copy-of select="node()"/>
                </p>
             <xsl:text>
@@ -67,12 +65,10 @@
          <xsl:otherwise>
             <p>
                <xsl:for-each select="@*">
-                     <!-- Kopiere alle Attribute, außer 'type' -->
                      <xsl:if test="local-name() != 'type'">
                         <xsl:copy />
                      </xsl:if>
                   </xsl:for-each>      
-                  <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
                   <xsl:copy-of select="node()"/>
                </p>
          </xsl:otherwise>
@@ -82,13 +78,10 @@
    <xsl:template match="tei:pb" mode="postprocessing">
       <pb>
          <xsl:for-each select="@*">
-            <!-- Kopiere alle Attribute, außer 'type' -->
             <xsl:if test="local-name() != 'type'">
                <xsl:copy />
             </xsl:if>
          </xsl:for-each>
-         
-         <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
          <xsl:copy-of select="node()"/>
       </pb>
    </xsl:template>
@@ -96,13 +89,10 @@
    <xsl:template match="tei:milestone" mode="postprocessing">
       <milestone>
          <xsl:for-each select="@*">
-            <!-- Kopiere alle Attribute, außer 'type' -->
             <xsl:if test="local-name() != 'type' or (local-name() = 'type' and . = 'unedited')">
                <xsl:copy />
             </xsl:if>
          </xsl:for-each>
-         
-         <!-- Kopiere alle Knoten innerhalb des <p>-Tags -->
          <xsl:copy-of select="node()"/>
       </milestone>
    </xsl:template>
