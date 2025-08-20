@@ -140,11 +140,11 @@
       <xsl:apply-templates select="@*" mode="continued"/>
       <xsl:for-each select="node()">
          <xsl:choose>
-         <xsl:when test="self::tei:rdg">
+         <xsl:when test="self::tei:rdg and not(parent::tei:app)">
             <xsl:variable name="currentN" select="@n"/>
             <xsl:variable name="precedingSameN" select="preceding-sibling::tei:rdg[@n = $currentN]"/>
             <xsl:if test="not($precedingSameN)">
-               <app>
+             <app>
                <xsl:for-each select="../*">
                   <xsl:choose>
                      <!-- lb directly in front of the rdg[varSeq > 1] has to be remain -->
@@ -155,7 +155,7 @@
                      <!-- do not show – lb is already processed in rdg -->
                      </xsl:when>
 
-                     <!-- rdg with current n and varSeq=1 (and no lb in front of it!) -->
+                     <!-- rdg with current n (and no lb in front of it!) -->
                      <xsl:when test="self::tei:rdg[@n=$currentN]">
                         <xsl:apply-templates select="." mode="continued"/>
                      </xsl:when>
