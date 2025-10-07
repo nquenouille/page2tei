@@ -25,6 +25,7 @@
    <xd:doc>
       <xd:desc>Remove attributes from textual tags</xd:desc>
    </xd:doc>
+
    <!-- remove attribute 'n' from rdg tag -->
    <xsl:template match="tei:rdg" mode="remove-attributes">
       <rdg>

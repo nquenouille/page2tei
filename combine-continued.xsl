@@ -147,10 +147,10 @@
              <app>
                <xsl:for-each select="../*">
                   <xsl:choose>
-                     <!-- lb directly in front of the rdg[varSeq > 1] has to be remain -->
+                     <!-- lb directly in front of the rdg[change > 1] has to be remain -->
                      <xsl:when test="
                      self::tei:lb 
-                     and following-sibling::*[1][self::tei:rdg[@n=$currentN and @varSeq and @varSeq != '1']]
+                     and following-sibling::*[1][self::tei:rdg[@n=$currentN and @change and @change != '1']]
                      ">
                      <!-- do not show – lb is already processed in rdg -->
                      </xsl:when>

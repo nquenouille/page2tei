@@ -2677,8 +2677,8 @@
                <xsl:if test="map:keys($custom) = 'type'">
                   <xsl:attribute name="type"><xsl:value-of select="map:get($custom, 'type')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="map:keys($custom) = 'varSeq'">
-                  <xsl:attribute name="varSeq"><xsl:value-of select="map:get($custom, 'varSeq')"/></xsl:attribute>
+               <xsl:if test="map:keys($custom) = 'varSeq'"> <!-- @varSeq is deprecated and replaced by @change -->
+                  <xsl:attribute name="change"><xsl:value-of select="concat('#version', map:get($custom, 'varSeq'))"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom?continued">
                      <xsl:attribute name="continued" select="true()"/>
