@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+         <title type="main">Stundenpläne des Ohrdrufer Lyzeums</title>
+         </titleStmt>
+         <publicationStmt><publisher>Forschungsportal BACH</publisher></publicationStmt>
+         <sourceDesc>
+            <bibl>
+                  <title type="main">Stundenpläne des Ohrdrufer Lyzeums</title><idno type="pid">bt954</idno></bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+      </profileDesc>
+   </teiHeader>
+   <facsimile xml:id="facs_2">
+      <surface ulx="0" uly="0" lrx="3196" lry="2148">
+         <graphic url="0002_d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00363.tif" width="3196px" height="2148px" rend="facstab"/>
+         <zone ulx="154" uly="278" lrx="3175" lry="1973" rendition="Table" xml:id="facs_2_Table_1727094156588_891">
+            <zone ulx="989" uly="302" lrx="1768" lry="429" rendition="TableCell" xml:id="facs_2_line_1727087244419_656"/>
+            <zone ulx="330" uly="511" lrx="424" lry="580" rendition="TableCell" xml:id="facs_2_tr_1_tl_1"/>
+            <zone ulx="662" uly="504" lrx="736" lry="558" rendition="TableCell" xml:id="facs_2_line_1727087073716_614"/>
+            <zone ulx="1010" uly="498" lrx="1110" lry="577" rendition="TableCell" xml:id="facs_2_tr_2_tl_4"/>
+            <zone ulx="1323" uly="489" lrx="1415" lry="577" rendition="TableCell" xml:id="facs_2_tr_2_tl_5"/>
+            <zone ulx="1626" uly="489" lrx="1709" lry="556" rendition="TableCell" xml:id="facs_2_line_1727094386368_926"/>
+            <zone ulx="1995" uly="468" lrx="2085" lry="547" rendition="TableCell" xml:id="facs_2_line_1727094832867_1257"/>
+            <zone ulx="2351" uly="463" lrx="2455" lry="541" rendition="TableCell" xml:id="facs_2_line_1727094390733_931"/>
+            <zone ulx="174" uly="1018" lrx="225" lry="1212" rendition="TableCell" xml:id="facs_2_line_1727087084178_622"/>
+            <zone ulx="241" uly="997" lrx="528" lry="1071" rendition="TableCell" xml:id="facs_2_tr_1_tl_2"/>
+            <zone ulx="236" uly="1047" lrx="536" lry="1127" rendition="TableCell" xml:id="facs_2_line_1727094742075_1087"/>
+            <zone ulx="237" uly="1101" lrx="537" lry="1176" rendition="TableCell" xml:id="facs_2_tr_1_tl_4"/>
+            <zone ulx="263" uly="1150" lrx="448" lry="1215" rendition="TableCell" xml:id="facs_2_tr_1_tl_5"/>
+            <zone ulx="496" uly="683" lrx="547" lry="858" rendition="TableCell" xml:id="facs_2_line_1727087091835_627"/>
+            <zone ulx="557" uly="597" lrx="903" lry="663" rendition="TableCell" xml:id="facs_2_line_1727094715188_1068"/>
+            <zone ulx="603" uly="638" lrx="882" lry="705" rendition="TableCell" xml:id="facs_2_tr_2_tl_14"/>
+            <zone ulx="556" uly="681" lrx="900" lry="756" rendition="TableCell" xml:id="facs_2_line_1727094715188_1066"/>
+            <zone ulx="717" uly="676" lrx="800" lry="707" rendition="TableCell" xml:id="facs_2_line_1727087684239_695"/>
+            <zone ulx="555" uly="732" lrx="909" lry="814" rendition="TableCell" xml:id="facs_2_line_1727094715188_1064"/>
+            <zone ulx="599" uly="796" lrx="725" lry="855" rendition="TableCell" xml:id="facs_2_l_6"/>
+            <zone ulx="552" uly="836" lrx="904" lry="914" rendition="TableCell" xml:id="facs_2_line_1727094715188_1063"/>
+            <zone ulx="565" uly="877" lrx="873" lry="947" rendition="TableCell" xml:id="facs_2_tr_2_tl_41"/>
+            <zone ulx="725" uly="795" lrx="904" lry="855" rendition="TableCell" xml:id="facs_2_l_5"/>
+            <zone ulx="551" uly="927" lrx="896" lry="973" rendition="TableCell" xml:id="facs_2_line_1727094715188_1061"/>
+            <zone ulx="667" uly="962" lrx="775" lry="993" rendition="TableCell" xml:id="facs_2_line_1727087109760_637"/>
+            <zone ulx="926" uly="584" lrx="1249" lry="674" rendition="TableCell" xml:id="facs_2_line_1727094832553_1230"/>
+            <zone ulx="922" uly="659" lrx="1187" lry="737" rendition="TableCell" xml:id="facs_2_tr_2_tl_18"/>
+            <zone ulx="956" uly="709" lrx="1229" lry="793" rendition="TableCell" xml:id="facs_2_tr_2_tl_23"/>
+            <zone ulx="993" uly="750" lrx="1134" lry="810" rendition="TableCell" xml:id="facs_2_tr_2_tl_27"/>
+            <zone ulx="922" uly="763" lrx="1193" lry="853" rendition="TableCell" xml:id="facs_2_tr_2_tl_32"/>
+            <zone ulx="969" uly="834" lrx="1161" lry="909" rendition="TableCell" xml:id="facs_2_tr_2_tl_38"/>
+            <zone ulx="974" uly="886" lrx="1150" lry="957" rendition="TableCell" xml:id="facs_2_tr_2_tl_40"/>
+            <zone ulx="1248" uly="579" lrx="1530" lry="655" rendition="TableCell" xml:id="facs_2_line_1727094832679_1240"/>
+            <zone ulx="1310" uly="633" lrx="1480" lry="704" rendition="TableCell" xml:id="facs_2_tr_2_tl_15"/>
+            <zone ulx="1243" uly="668" lrx="1552" lry="769" rendition="TableCell" xml:id="facs_2_line_1727094647910_1014"/>
+            <zone ulx="1250" uly="745" lrx="1561" lry="847" rendition="TableCell" xml:id="facs_2_line_1727094647910_1012"/>
+            <zone ulx="1564" uly="585" lrx="1594" lry="636" rendition="TableCell" xml:id="facs_2_line_1727095582173_1669"/>
+            <zone ulx="1566" uly="657" lrx="1592" lry="708" rendition="TableCell" xml:id="facs_2_line_1727087635017_685"/>
+            <zone ulx="1599" uly="554" lrx="1898" lry="649" rendition="TableCell" xml:id="facs_2_tr_2_tl_9"/>
+            <zone ulx="1609" uly="576" lrx="1650" lry="609" rendition="TableCell" xml:id="facs_2_l"/>
+            <zone ulx="1603" uly="635" lrx="1868" lry="692" rendition="TableCell" xml:id="facs_2_tr_2_tl_13"/>
+            <zone ulx="1605" uly="666" lrx="1849" lry="745" rendition="TableCell" xml:id="facs_2_tr_2_tl_19"/>
+            <zone ulx="1639" uly="711" lrx="1772" lry="763" rendition="TableCell" xml:id="facs_2_tr_2_tl_22"/>
+            <zone ulx="1562" uly="745" lrx="1809" lry="819" rendition="TableCell" xml:id="facs_2_tr_2_tl_25"/>
+            <zone ulx="1657" uly="791" lrx="1883" lry="845" rendition="TableCell" xml:id="facs_2_tr_2_tl_31"/>
+            <zone ulx="1618" uly="830" lrx="1874" lry="883" rendition="TableCell" xml:id="facs_2_tr_2_tl_36"/>
+            <zone ulx="1614" uly="864" lrx="1880" lry="931" rendition="TableCell" xml:id="facs_2_tr_2_tl_39"/>
+            <zone ulx="1605" uly="909" lrx="1844" lry="999" rendition="TableCell" xml:id="facs_2_l_3"/>
+            <zone ulx="1716" uly="930" lrx="1812" lry="1002" rendition="TableCell" xml:id="facs_2_l_1"/>
+            <zone ulx="1917" uly="576" lrx="2268" lry="640" rendition="TableCell" xml:id="facs_2_tr_2_tl_8"/>
+            <zone ulx="2013" uly="628" lrx="2090" lry="664" rendition="TableCell" xml:id="facs_2_l_4"/>
+            <zone ulx="1961" uly="500" lrx="2261" lry="601" rendition="TableCell" xml:id="facs_2_tr_2_tl_6"/>
+            <zone ulx="2090" uly="628" lrx="2299" lry="665" rendition="TableCell" xml:id="facs_2_l_2"/>
+            <zone ulx="2167" uly="658" lrx="2222" lry="692" rendition="TableCell" xml:id="facs_2_line_1727087490148_673"/>
+            <zone ulx="1903" uly="654" lrx="2269" lry="750" rendition="TableCell" xml:id="facs_2_line_1727094630497_996"/>
+            <zone ulx="1904" uly="718" lrx="2278" lry="799" rendition="TableCell" xml:id="facs_2_line_1727094611279_981"/>
+            <zone ulx="1922" uly="776" lrx="2247" lry="840" rendition="TableCell" xml:id="facs_2_tr_2_tl_29"/>
+            <zone ulx="2284" uly="560" lrx="2652" lry="629" rendition="TableCell" xml:id="facs_2_tr_2_tl_7"/>
+            <zone ulx="2301" uly="607" lrx="2595" lry="664" rendition="TableCell" xml:id="facs_2_line_1727095792789_1750"/>
+            <zone ulx="2290" uly="646" lrx="2638" lry="724" rendition="TableCell" xml:id="facs_2_line_1727094611279_984"/>
+            <zone ulx="2271" uly="709" lrx="2647" lry="786" rendition="TableCell" xml:id="facs_2_line_1727094611279_982"/>
+            <zone ulx="2331" uly="752" lrx="2541" lry="830" rendition="TableCell" xml:id="facs_2_tr_2_tl_28"/>
+            <zone ulx="2269" uly="802" lrx="2642" lry="894" rendition="TableCell" xml:id="facs_2_line_1727088140754_732"/>
+            <zone ulx="2684" uly="1247" lrx="3134" lry="1353" rendition="TableCell" xml:id="facs_2_tr_3_tl_1"/>
+            <zone ulx="2714" uly="1308" lrx="3115" lry="1390" rendition="TableCell" xml:id="facs_2_tr_3_tl_2"/>
+            <zone ulx="2695" uly="1368" lrx="3109" lry="1446" rendition="TableCell" xml:id="facs_2_tr_3_tl_3"/>
+            <zone ulx="2699" uly="1420" lrx="3125" lry="1500" rendition="TableCell" xml:id="facs_2_tr_3_tl_4"/>
+            <zone ulx="2708" uly="1471" lrx="3119" lry="1547" rendition="TableCell" xml:id="facs_2_tr_3_tl_5"/>
+            <zone ulx="2700" uly="1517" lrx="3137" lry="1598" rendition="TableCell" xml:id="facs_2_tr_3_tl_6"/>
+            <zone ulx="2691" uly="1564" lrx="3113" lry="1635" rendition="TableCell" xml:id="facs_2_tr_3_tl_7"/>
+            <zone ulx="3006" uly="1557" lrx="3048" lry="1583" rendition="TableCell" xml:id="facs_2_line_1727093018368_844"/>
+            <zone ulx="2652" uly="1612" lrx="3118" lry="1689" rendition="TableCell" xml:id="facs_2_tr_3_tl_8"/>
+            <zone ulx="2717" uly="1668" lrx="3132" lry="1765" rendition="TableCell" xml:id="facs_2_tr_3_tl_9"/>
+            <zone ulx="2557" uly="1704" lrx="3105" lry="1818" rendition="TableCell" xml:id="facs_2_l_7"/>
+            <zone ulx="2712" uly="1782" lrx="3113" lry="1898" rendition="TableCell" xml:id="facs_2_tr_3_tl_12"/>
+            <zone ulx="492" uly="1223" lrx="550" lry="1463" rendition="TableCell" xml:id="facs_2_line_1727087099555_632"/>
+            <zone ulx="564" uly="1041" lrx="802" lry="1150" rendition="TableCell" xml:id="facs_2_tr_2_tl_50"/>
+            <zone ulx="558" uly="1131" lrx="912" lry="1249" rendition="TableCell" xml:id="facs_2_line_1727094697114_1042"/>
+            <zone ulx="565" uly="1213" lrx="908" lry="1290" rendition="TableCell" xml:id="facs_2_line_1727094697114_1040"/>
+            <zone ulx="556" uly="1256" lrx="849" lry="1340" rendition="TableCell" xml:id="facs_2_tr_2_tl_62"/>
+            <zone ulx="552" uly="1319" lrx="853" lry="1435" rendition="TableCell" xml:id="facs_2_line_1727094715188_1058"/>
+            <zone ulx="633" uly="1420" lrx="832" lry="1506" rendition="TableCell" xml:id="facs_2_tr_2_tl_70"/>
+            <zone ulx="924" uly="1032" lrx="1173" lry="1142" rendition="TableCell" xml:id="facs_2_tr_2_tl_48"/>
+            <zone ulx="929" uly="1107" lrx="1247" lry="1211" rendition="TableCell" xml:id="facs_2_tr_2_tl_53"/>
+            <zone ulx="941" uly="1176" lrx="1259" lry="1249" rendition="TableCell" xml:id="facs_2_tr_2_tl_57"/>
+            <zone ulx="906" uly="1230" lrx="1262" lry="1316" rendition="TableCell" xml:id="facs_2_line_1727094697114_1037"/>
+            <zone ulx="950" uly="1286" lrx="1200" lry="1370" rendition="TableCell" xml:id="facs_2_tr_2_tl_64"/>
+            <zone ulx="914" uly="1336" lrx="1204" lry="1418" rendition="TableCell" xml:id="facs_2_tr_2_tl_67"/>
+            <zone ulx="987" uly="1390" lrx="1122" lry="1454" rendition="TableCell" xml:id="facs_2_tr_2_tl_69"/>
+            <zone ulx="908" uly="1400" lrx="1230" lry="1514" rendition="TableCell" xml:id="facs_2_line_1727094697114_1035"/>
+            <zone ulx="1093" uly="1502" lrx="1159" lry="1533" rendition="TableCell" xml:id="facs_2_line_1727087158680_642"/>
+            <zone ulx="1568" uly="988" lrx="1840" lry="1094" rendition="TableCell" xml:id="facs_2_line_1727094802028_1184"/>
+            <zone ulx="1559" uly="1082" lrx="1910" lry="1181" rendition="TableCell" xml:id="facs_2_line_1727094647910_1010"/>
+            <zone ulx="1583" uly="1146" lrx="1846" lry="1260" rendition="TableCell" xml:id="facs_2_tr_2_tl_55"/>
+            <zone ulx="1562" uly="1222" lrx="1825" lry="1316" rendition="TableCell" xml:id="facs_2_tr_2_tl_61"/>
+            <zone ulx="1639" uly="1321" lrx="1875" lry="1402" rendition="TableCell" xml:id="facs_2_tr_2_tl_66"/>
+            <zone ulx="1911" uly="967" lrx="2202" lry="1058" rendition="TableCell" xml:id="facs_2_tr_2_tl_46"/>
+            <zone ulx="1922" uly="1077" lrx="2282" lry="1159" rendition="TableCell" xml:id="facs_2_tr_2_tl_51"/>
+            <zone ulx="1920" uly="1131" lrx="2216" lry="1209" rendition="TableCell" xml:id="facs_2_tr_2_tl_54"/>
+            <zone ulx="1976" uly="1047" lrx="2205" lry="1127" rendition="TableCell" xml:id="facs_2_tr_2_tl_49"/>
+            <zone ulx="1926" uly="1179" lrx="2243" lry="1278" rendition="TableCell" xml:id="facs_2_tr_2_tl_58"/>
+            <zone ulx="1941" uly="1250" lrx="2246" lry="1342" rendition="TableCell" xml:id="facs_2_tr_2_tl_63"/>
+            <zone ulx="1989" uly="1327" lrx="2188" lry="1415" rendition="TableCell" xml:id="facs_2_tr_2_tl_65"/>
+            <zone ulx="2312" uly="961" lrx="2519" lry="1062" rendition="TableCell" xml:id="facs_2_tr_2_tl_45"/>
+            <zone ulx="644" uly="1730" lrx="2229" lry="1846" rendition="TableCell" xml:id="facs_2_line_1727088781101_792"/>
+            <zone ulx="722" uly="1796" lrx="2217" lry="1880" rendition="TableCell" xml:id="facs_2_line_1727089047440_816"/>
+            <zone ulx="723" uly="1846" lrx="2287" lry="1940" rendition="TableCell" xml:id="facs_2_line_1727089083208_821"/>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div n="1" type="original">
+         <pb facs="#facs_2" n="2"/>
+         <table facs="#facs_2_Table_1727094156588_891">
+            <row n="0">
+            <cell facs="iiif:/154,278,3021,179" n="0" cols="11" role="heading" rend="0000">
+               <lb facs="iiif:/989,302,779,127" n="N001"/>Typus lectionum Classis 1.</cell></row>
+            <row n="1">
+            <cell facs="iiif:/154,454,126,144" n="0" rend="0000"/>
+            <cell facs="iiif:/276,447,280,147" n="1" cols="2" role="subheading" rend="0000">
+               <lb facs="iiif:/330,511,94,69" n="N001"/>☉</cell>
+            <cell facs="iiif:/2757,399,418,145" n="10" rend="0000"/>
+            <cell facs="iiif:/556,438,377,147" n="3" role="subheading" rend="0000">
+               <lb facs="iiif:/662,504,74,54" n="N001"/>☽</cell>
+            <cell facs="iiif:/932,431,321,153" n="4" role="subheading" rend="0000">
+               <lb facs="iiif:/1010,498,100,79" n="N001"/>♂</cell>
+            <cell facs="iiif:/1253,424,301,160" n="5" role="subheading" rend="0000">
+               <lb facs="iiif:/1323,489,92,88" n="N001"/>☿</cell>
+            <cell facs="iiif:/1552,417,346,161" n="6" cols="2" role="subheading" rend="0000">
+               <lb facs="iiif:/1626,489,83,67" n="N001"/>♃</cell>
+            <cell facs="iiif:/1895,411,377,137" n="8" role="subheading" rend="0000">
+               <lb facs="iiif:/1995,468,90,79" n="N001"/>♀</cell>
+            <cell facs="iiif:/2270,404,500,140" n="9" role="subheading" rend="0000">
+               <lb facs="iiif:/2351,463,104,78" n="N001"/>♄</cell></row>
+            <row n="2">
+            <cell facs="iiif:/154,594,122,1379" n="0" rows="3" rend="0000">
+               <lb facs="iiif:/174,1018,51,194" n="N001"/>HORAE</cell>
+            <cell facs="iiif:/244,587,274,1145" n="1" rows="2" rend="0000">
+               <lb facs="iiif:/241,997,287,74" n="N001"/>XII meridiana
+               <lb facs="iiif:/236,1047,300,80" n="N002"/>instituit <unclear>repetio</unclear>
+               <lb facs="iiif:/237,1101,300,75" n="N003"/>concionis <unclear>Dnicae</unclear>
+               <lb facs="iiif:/263,1150,185,65" n="N004"/>matutina</cell>
+            <cell facs="iiif:/2720,533,455,409" n="10" rend="0000"/>
+            <cell facs="iiif:/476,585,80,402" n="2" rend="0000">
+               <lb facs="iiif:/496,683,51,175" n="N001"/>matutinae.</cell>
+            <cell facs="iiif:/556,584,376,421" n="3" rend="0000">
+               <lb facs="iiif:/557,597,346,66" n="N001"/>I. <unclear>Repetio</unclear> concionis
+               <lb facs="iiif:/603,638,279,67" n="N002"/>pomerid. <unclear>Dnicae</unclear>.
+               <lb facs="iiif:/556,681,344,75" n="N003"/>Compendium <anchor xml:id="a2-1"/> Hutteri.
+               <lb facs="iiif:/717,676,83,31" n="N004"/><add xml:id="ta2-1" place="above" type="addition">Theol.</add>
+               <lb facs="iiif:/555,732,354,82" n="N005"/><unclear>II. Exhibitio exercitij
+               <lb facs="iiif:/599,796,126,59" n="N006"/><del rend="strikethrough">Graeci.</del></unclear>
+               <lb facs="iiif:/552,836,352,78" n="N007"/>III. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1"><unclear> 
+               
+               <lb facs="iiif:/565,877,308,70" n="N008"/>  </unclear><anchor xml:id="a2-2"/> Caesaris: et
+               <lb facs="iiif:/725,795,179,60" n="N009"/><add xml:id="ta2-2" place="above" type="correction">interpretao</add>
+               <lb facs="iiif:/551,927,345,46" n="N010"/>altero semestri: Cornelij
+               <lb facs="iiif:/667,962,108,31" n="N011"/>Nepotis.</rdg></app></cell>
+            <cell facs="iiif:/928,584,325,421" n="4" rend="0000">
+               <lb facs="iiif:/926,584,323,90" n="N001"/>I. Compend. Hutteri.
+               <lb facs="iiif:/922,659,265,78" n="N002"/>II. Orationes
+               <lb facs="iiif:/956,709,273,84" n="N003"/>Ciceronis edit.
+               <lb facs="iiif:/993,750,141,60" n="N004"/>Cellarij.
+               <lb facs="iiif:/922,763,271,90" n="N005"/>III. Logica
+               <lb facs="iiif:/969,834,192,75" n="N006"/><app><rdg hand="fpb-uuiod" type="alt1" change="#version1">(Reyheri)</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">
+               <lb facs="iiif:/974,886,176,71" n="N007"/>Gothana.</rdg></app>  
+               </cell>
+            <cell facs="iiif:/1253,578,304,420" n="5" rend="0000">
+               <lb facs="iiif:/1248,579,282,76" n="N001"/>I. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1">freqventatio
+               <lb facs="iiif:/1310,633,170,71" n="N002"/>templi.</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2"> </rdg></app>
+               <lb facs="iiif:/1243,668,309,101" n="N003"/><app><rdg hand="fpb-uuiod" type="alt1" change="#version1"> </rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">et</rdg></app> II. exercitium Latin.
+               <lb facs="iiif:/1250,745,311,102" n="N004"/>III. arithmetica.</cell>
+            <cell facs="iiif:/1554,573,61,412" n="6" rend="0000">
+               <lb facs="iiif:/1564,585,30,51" n="N001"/>I.
+               <lb facs="iiif:/1566,657,26,51" n="N002"/>II</cell>
+            <cell facs="iiif:/1615,548,292,435" n="7" rend="0000">
+               <lb facs="iiif:/1599,554,299,95" n="N001"/><anchor xml:id="a2-4"/> Testament. Graec.
+               <lb facs="iiif:/1609,576,41,33" n="N002"/><add xml:id="ta2-4" place="above" type="addition">N.</add>
+               <lb facs="iiif:/1603,635,265,57" n="N003"/>cum repetitione
+               <lb facs="iiif:/1605,666,244,79" n="N004"/>Grammat. Gr. <anchor xml:id="a2-5"/>
+               <lb facs="iiif:/1639,711,133,52" n="N005"/>Reyheri<app><rdg hand="fpb-uuiod" type="alt1" change="#version1">. </rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">
+               <lb facs="iiif:/1657,791,226,54" n="N007"/>et altero semetri
+               <lb facs="iiif:/1618,830,256,53" n="N008"/><del rend="strikethrough">it.</del> Homiliae
+               <lb facs="iiif:/1614,864,266,67" n="N009"/>VII Chrysostomi.
+               <lb facs="iiif:/1605,909,239,90" n="N010"/>edit. <del rend="strikethrough"><unclear reason="illegible"> </unclear></del>
+               <lb facs="iiif:/1716,930,96,72" n="N011"/>Tubing.</rdg></app>
+               <lb facs="iiif:/1562,745,247,74" n="N006"/>III) Logica.
+               </cell>
+            <cell facs="iiif:/1898,541,379,429" n="8" rend="0000">
+               <lb facs="iiif:/1917,576,351,64" n="N001"/>I.<app><rdg hand="fpb-uuiod" type="alt1" change="#version1">  
+               <lb facs="iiif:/2013,628,77,36" n="N002"/>  
+               <lb facs="iiif:/1961,500,300,101" n="N003"/> Paradigmata Εβρ. et
+               <lb facs="iiif:/2090,628,209,37" n="N004"/>Danzij Grammat.
+               <lb facs="iiif:/2167,658,55,34" n="N005"/>Ebr.</rdg></app>
+               <lb facs="iiif:/1903,654,366,96" n="N006"/>II. <unclear>frequentao</unclear> templi.
+               <lb facs="iiif:/1904,718,374,81" n="N007"/>III. <unclear>repetio</unclear> concionis et
+               <lb facs="iiif:/1922,776,325,64" n="N008"/>Historia Bunonis.</cell>
+            <cell facs="iiif:/2272,541,485,411" n="9" rend="0000">
+               <lb facs="iiif:/2284,560,368,69" n="N001"/>I. exercitium Latinum
+               <lb facs="iiif:/2301,607,294,57" n="N002"/>et Graecis dictat.
+               <lb facs="iiif:/2290,646,348,78" n="N003"/><unclear>Resoluo</unclear> Phocylidis.
+               <lb facs="iiif:/2271,709,376,77" n="N004"/>II. exercitium Latin.
+               <lb facs="iiif:/2331,752,210,78" n="N005"/>elaborat.
+               <lb facs="iiif:/2269,802,373,92" n="N006"/>III. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1">–</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">exhibet.</rdg></app> </cell></row>
+            <row n="3">
+            <cell facs="iiif:/2624,929,551,1044" n="10" rows="2" rend="0000">
+               <lb facs="iiif:/2684,1247,450,106" n="N001"/>NB Anno MDCCII finito
+               <lb facs="iiif:/2714,1308,401,82" n="N002"/>examine, Curtius cum
+               <lb facs="iiif:/2695,1368,414,78" n="N003"/>Caesare fuit commutatus:
+               <lb facs="iiif:/2699,1420,426,80" n="N004"/>Itemq ao MDCCIII Vir<span type="hyphen">-</span>
+               <lb facs="iiif:/2708,1471,411,76" n="N005"/>gilius cum Ovidio, et
+               <lb facs="iiif:/2700,1517,437,81" n="N006"/>quovis semestri spatio
+               <lb facs="iiif:/2691,1564,422,71" n="N007"/>Nov. Testamentum <anchor xml:id="a2-11"/> cum
+               <lb facs="iiif:/3006,1557,42,26" n="N008"/><add xml:id="ta2-11" place="above" type="addition">Gr.</add>
+               <lb facs="iiif:/2652,1612,466,77" n="N009"/><add xml:id="add2-2" place="inspace" type="addition">VII</add> homilijs Chrysostomi,
+               <lb facs="iiif:/2717,1668,415,97" n="N010"/>edit. Tubingensis: <del rend="strikethrough">itemq</del>
+               <lb facs="iiif:/2557,1704,548,114" n="N011"/><add xml:id="add2-3" place="inspace" type="correction">tandemq</add> Cornelius Nepos cum Cae<span type="hyphen">-</span>
+               <lb facs="iiif:/2712,1782,401,116" n="N012"/>saris commentariis.</cell>
+            <cell facs="iiif:/462,987,94,736" n="2" rend="0000">
+               <lb facs="iiif:/492,1223,58,240" n="N001"/>pomeridianae.</cell>
+            <cell facs="iiif:/556,987,372,733" n="3" rend="0000">
+               <lb facs="iiif:/564,1041,238,109" n="N001"/>I. Musica.
+               <lb facs="iiif:/558,1131,354,118" n="N002"/>II. resolutio Ebraica
+               <lb facs="iiif:/565,1213,343,77" n="N003"/><app><rdg hand="fpb-uuiod" type="alt1" change="#version1">e Genesi:</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">adhibito
+               
+               <lb facs="iiif:/556,1256,293,84" n="N004"/>compend. Ebr. Dantzij.</rdg></app> 
+               <lb facs="iiif:/552,1319,301,116" n="N005"/>III. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1">Virgilius.</rdg><rdg hand="fob-uuiod" type="alt2" change="#version2">
+               <lb facs="iiif:/633,1420,199,86" n="N006"/>Ovidius.</rdg></app>
+               </cell>
+            <cell facs="iiif:/922,998,331,710" n="4" rend="0000">
+               <lb facs="iiif:/924,1032,249,110" n="N001"/>I. Musica.
+               <lb facs="iiif:/929,1107,318,104" n="N002"/>II. epistolae Cicer.
+               <lb facs="iiif:/941,1176,318,73" n="N003"/>edit. Reyherianae
+               <lb facs="iiif:/906,1230,356,86" n="N004"/>cum eiusdem regulis
+               <lb facs="iiif:/950,1286,250,84" n="N005"/>elegantiar.
+               <lb facs="iiif:/914,1336,290,82" n="N006"/><del rend="strikethrough">it. repetitio Lo<span type="hyphen">-</span>
+               <lb facs="iiif:/987,1390,135,64" n="N007"/>gicae.</del>
+               <lb facs="iiif:/908,1400,322,114" n="N008"/>III. Oraoes Ciecero<span type="hyphen">-</span>
+               <lb facs="iiif:/1093,1502,66,31" n="N009"/>nis.</cell>
+            <cell facs="iiif:/1253,985,309,711" n="5" rend="0000"/>
+            <cell facs="iiif:/1557,970,365,721" n="6" cols="2" rend="0000">
+               <lb facs="iiif:/1568,988,272,106" n="N001"/>I. Musica.<del rend="strikethrough">.</del>
+               <lb facs="iiif:/1559,1082,351,99" n="N002"/>II. exhibitio ver<span type="hyphen">-</span>
+               <lb facs="iiif:/1583,1146,263,114" n="N003"/>suum Latinor.
+               <lb facs="iiif:/1562,1222,263,94" n="N004"/>III. <del rend="strikethrough">Virgilius.</del>
+               <lb facs="iiif:/1639,1321,236,81" n="N005"/><add xml:id="ta2-8" place="below" type="correction">Ovidius.</add></cell>
+            <cell facs="iiif:/1907,952,380,746" n="8" rend="0000">
+               <lb facs="iiif:/1911,967,291,91" n="N001"/>I. Musica.
+               <lb facs="iiif:/1922,1077,360,82" n="N002"/>II. <del rend="strikethrough">correctio exer<span type="hyphen">-</span>
+               <lb facs="iiif:/1920,1131,296,78" n="N003"/>citior Latin.</del><anchor xml:id="a2-9"/>
+               <lb facs="iiif:/1976,1047,229,80" n="N004"/><add xml:id="ta2-9" place="above" type="correction">Geograph.</add>
+               <lb facs="iiif:/1926,1179,317,99" n="N005"/>III. Rhetorica
+               <lb facs="iiif:/1941,1250,305,92" n="N006"/><del rend="strikethrough"><unclear reason="illegible">Aristernachti.</unclear></del><anchor xml:id="a2-10"/>
+               <lb facs="iiif:/1989,1327,199,88" n="N007"/><add xml:id="ta2-10" place="below" type="correction">Omeisij.</add></cell>
+            <cell facs="iiif:/2277,942,443,964" n="9" rend="0000">
+               <lb facs="iiif:/2312,961,207,101" n="N001"/>I. Vesper.</cell></row>
+            <row n="4">
+            <cell facs="iiif:/238,1687,2392,286" n="1" cols="9" rend="0000">
+               <lb facs="iiif:/644,1730,1585,116" n="N001"/><unclear>NB In Analysi et Febro regula Graatica tam etymologica tam Syntactica
+               <lb facs="iiif:/722,1796,1495,84" n="N002"/>exigerda S. a discipulis, ut memoriter iller reddant. Hinc certa hora edifienda
+               <lb facs="iiif:/723,1846,1564,94" n="N003"/>Graat. Gr. et Ebr. definata sunt. Id q m. Con-Rect. in analysi Lat. observet.</unclear></cell></row></table>
+         </div>
+         <div n="1" type="commentary">
+         <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

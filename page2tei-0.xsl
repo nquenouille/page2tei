@@ -2233,6 +2233,7 @@
                <!-- place end marker for all non-void elements that end here; we must not place void elements here
                   as this would mean closing a tei:gap before it was opened -->
                <xsl:for-each select="map:get($ends, .)">
+                  <xsl:sort select="contains(., 'continued:true;')" order="ascending"/>
                   <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
                      order="descending"/>
                   <xsl:sort select="substring(., 1, 3)" order="descending"/>
@@ -2245,6 +2246,7 @@
                   </xsl:if>
                </xsl:for-each>
                <xsl:for-each select="map:get($starts, .)">
+                  <xsl:sort select="contains(., 'continued:true;')" order="descending"/>
                   <xsl:sort select="
                         xs:int(substring-before(substring-after(., 'offset:'), ';'))
                         + xs:int(substring-before(substring-after(., 'length:'), ';'))"
@@ -2258,6 +2260,7 @@
                </xsl:for-each>
                <!-- place end marker for void elements such as tei:gap -->
                <xsl:for-each select="map:get($ends, .)">
+                  <xsl:sort select="contains(., 'continued:true;')" order="descending"/>
                   <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
                      order="descending"/>
                   <xsl:sort select="substring(., 1, 3)" order="descending"/>
@@ -2866,7 +2869,7 @@
          </xsl:for-each>
       </xsl:map>
    </xsl:template>
-
+   
    <xd:doc>
       <xd:desc>Text nodes to be copied without the hyphens that are taken care of in a span-tag; regex for getting word with hyphen and new line: (\S*[¬](\r\n|\r|\n)*)(\S*[a-zA-Z¬]+)</xd:desc>
    </xd:doc>
