@@ -38,6 +38,16 @@
       </rdg>
    </xsl:template>
 
+   <!-- <xsl:template match="tei:*[@continued]" mode="remove-attributes">
+   <xsl:element name="{local-name()}">
+         <xsl:for-each select="@*">
+            <xsl:if test="local-name() != 'continued'">
+               <xsl:copy />
+            </xsl:if>
+         </xsl:for-each>
+         <xsl:copy-of select="node()"/>  
+   </xsl:element> 
+   </xsl:template> -->
     <xd:doc>
       <xd:desc>Standard for all other elements</xd:desc>
    </xd:doc>
