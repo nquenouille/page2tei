@@ -2234,8 +2234,11 @@
                   as this would mean closing a tei:gap before it was opened -->
                <xsl:for-each select="map:get($ends, .)">
                   <xsl:sort select="contains(., 'continued:true;')" order="ascending"/>
+                  <xsl:sort select="substring-before(substring-after(., 'change:'), ';')"
+                     order="descending"/>
                   <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
                      order="descending"/>
+                  
                   <xsl:sort select="substring(., 1, 3)" order="descending"/>
                   <xsl:if test="substring-after(., 'length:') => substring-before(';') != '0'">
                      <xsl:element name="local:m">
@@ -2247,10 +2250,13 @@
                </xsl:for-each>
                <xsl:for-each select="map:get($starts, .)">
                   <xsl:sort select="contains(., 'continued:true;')" order="descending"/>
+                  <xsl:sort select="substring-before(substring-after(., 'change:'), ';')"
+                     order="descending"/>
                   <xsl:sort select="
                         xs:int(substring-before(substring-after(., 'offset:'), ';'))
                         + xs:int(substring-before(substring-after(., 'length:'), ';'))"
                      order="descending"/>
+                  
                   <xsl:sort select="substring(., 1, 3)" order="ascending"/>
                   <xsl:element name="local:m">
                      <xsl:attribute name="type" select="normalize-space(substring-before(., ' '))"/>
@@ -2260,9 +2266,12 @@
                </xsl:for-each>
                <!-- place end marker for void elements such as tei:gap -->
                <xsl:for-each select="map:get($ends, .)">
-                  <xsl:sort select="contains(., 'continued:true;')" order="descending"/>
+                  <xsl:sort select="contains(., 'continued:true;')" order="ascending"/>
+                  <xsl:sort select="substring-before(substring-after(., 'change:'), ';')"
+                     order="descending"/>
                   <xsl:sort select="substring-before(substring-after(., 'offset:'), ';')"
                      order="descending"/>
+                  
                   <xsl:sort select="substring(., 1, 3)" order="descending"/>
                   <xsl:if test="substring-after(., 'length:') => substring-before(';') = '0'">
                      <xsl:element name="local:m">
@@ -2677,11 +2686,8 @@
                <xsl:if test="map:keys($custom) = 'hand'">
                   <xsl:attribute name="hand"><xsl:value-of select="map:get($custom, 'hand')"/></xsl:attribute>
                </xsl:if>
-               <xsl:if test="map:keys($custom) = 'type'">
-                  <xsl:attribute name="type"><xsl:value-of select="map:get($custom, 'type')"/></xsl:attribute>
-               </xsl:if>
-               <xsl:if test="map:keys($custom) = 'varSeq'"> <!-- @varSeq is deprecated and replaced by @change -->
-                  <xsl:attribute name="change"><xsl:value-of select="concat('#version', map:get($custom, 'varSeq'))"/></xsl:attribute>
+               <xsl:if test="map:keys($custom) = 'change'"> <!-- @varSeq is deprecated and replaced by @change -->
+                  <xsl:attribute name="change"><xsl:value-of select="concat('#version', map:get($custom, 'change'))"/></xsl:attribute>
                </xsl:if>
                <xsl:if test="$custom?continued">
                      <xsl:attribute name="continued" select="true()"/>

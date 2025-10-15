@@ -171,9 +171,9 @@
                <lb facs="iiif:/717,676,83,31" n="N004"/><add xml:id="ta2-1" place="above" type="addition">Theol.</add>
                <lb facs="iiif:/555,732,354,82" n="N005"/><unclear>II. Exhibitio exercitij
                <lb facs="iiif:/599,796,126,59" n="N006"/><del rend="strikethrough">Graeci.</del></unclear>
-               <lb facs="iiif:/552,836,352,78" n="N007"/>III. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1"><unclear> 
+               <lb facs="iiif:/552,836,352,78" n="N007"/>III. <app><rdg hand="fpb-uuiod" change="#version1"><unclear continued="true"> </unclear>
+               <lb facs="iiif:/565,877,308,70" n="N008"/></rdg><rdg hand="someone" change="#version2"><anchor xml:id="a2-2"/> Caesaris: et
                
-               <lb facs="iiif:/565,877,308,70" n="N008"/>  </unclear><anchor xml:id="a2-2"/> Caesaris: et
                <lb facs="iiif:/725,795,179,60" n="N009"/><add xml:id="ta2-2" place="above" type="correction">interpretao</add>
                <lb facs="iiif:/551,927,345,46" n="N010"/>altero semestri: Cornelij
                <lb facs="iiif:/667,962,108,31" n="N011"/>Nepotis.</rdg></app></cell>
@@ -183,13 +183,13 @@
                <lb facs="iiif:/956,709,273,84" n="N003"/>Ciceronis edit.
                <lb facs="iiif:/993,750,141,60" n="N004"/>Cellarij.
                <lb facs="iiif:/922,763,271,90" n="N005"/>III. Logica
-               <lb facs="iiif:/969,834,192,75" n="N006"/><app><rdg hand="fpb-uuiod" type="alt1" change="#version1">(Reyheri)</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">
+               <lb facs="iiif:/969,834,192,75" n="N006"/><app><rdg hand="fpb-uuiod" change="#version1">(Reyheri)</rdg><rdg hand="fpb-uuiod" change="#version2">
                <lb facs="iiif:/974,886,176,71" n="N007"/>Gothana.</rdg></app>  
                </cell>
             <cell facs="iiif:/1253,578,304,420" n="5" rend="0000">
-               <lb facs="iiif:/1248,579,282,76" n="N001"/>I. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1">freqventatio
-               <lb facs="iiif:/1310,633,170,71" n="N002"/>templi.</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2"> </rdg></app>
-               <lb facs="iiif:/1243,668,309,101" n="N003"/><app><rdg hand="fpb-uuiod" type="alt1" change="#version1"> </rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">et</rdg></app> II. exercitium Latin.
+               <lb facs="iiif:/1248,579,282,76" n="N001"/>I. <app><rdg hand="fpb-uuiod" change="#version1">freqventatio
+               <lb facs="iiif:/1310,633,170,71" n="N002"/>templi.</rdg><rdg hand="fpb-uuiod" change="#version2"> </rdg></app>
+               <lb facs="iiif:/1243,668,309,101" n="N003"/><app><rdg hand="fpb-uuiod" change="#version1"> </rdg><rdg hand="fpb-uuiod" change="#version2">et</rdg></app> II. exercitium Latin.
                <lb facs="iiif:/1250,745,311,102" n="N004"/>III. arithmetica.</cell>
             <cell facs="iiif:/1554,573,61,412" n="6" rend="0000">
                <lb facs="iiif:/1564,585,30,51" n="N001"/>I.
@@ -199,7 +199,7 @@
                <lb facs="iiif:/1609,576,41,33" n="N002"/><add xml:id="ta2-4" place="above" type="addition">N.</add>
                <lb facs="iiif:/1603,635,265,57" n="N003"/>cum repetitione
                <lb facs="iiif:/1605,666,244,79" n="N004"/>Grammat. Gr. <anchor xml:id="a2-5"/>
-               <lb facs="iiif:/1639,711,133,52" n="N005"/>Reyheri<app><rdg hand="fpb-uuiod" type="alt1" change="#version1">. </rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">
+               <lb facs="iiif:/1639,711,133,52" n="N005"/>Reyheri<app><rdg hand="fpb-uuiod" change="#version1">. </rdg><rdg hand="fpb-uuiod" change="#version2">
                <lb facs="iiif:/1657,791,226,54" n="N007"/>et altero semetri
                <lb facs="iiif:/1618,830,256,53" n="N008"/><del rend="strikethrough">it.</del> Homiliae
                <lb facs="iiif:/1614,864,266,67" n="N009"/>VII Chrysostomi.
@@ -208,11 +208,11 @@
                <lb facs="iiif:/1562,745,247,74" n="N006"/>III) Logica.
                </cell>
             <cell facs="iiif:/1898,541,379,429" n="8" rend="0000">
-               <lb facs="iiif:/1917,576,351,64" n="N001"/>I.<app><rdg hand="fpb-uuiod" type="alt1" change="#version1">  
-               <lb facs="iiif:/2013,628,77,36" n="N002"/>  
-               <lb facs="iiif:/1961,500,300,101" n="N003"/> Paradigmata Εβρ. et
+               <lb facs="iiif:/1917,576,351,64" n="N001"/>I.<app><rdg hand="fpb-uuiod" change="#version1">  
+               <lb facs="iiif:/2013,628,77,36" n="N002"/> </rdg><rdg hand="fpb-uuiod" change="#version2">
+               <lb facs="iiif:/1961,500,300,101" n="N003"/>Paradigmata Εβρ. et
                <lb facs="iiif:/2090,628,209,37" n="N004"/>Danzij Grammat.
-               <lb facs="iiif:/2167,658,55,34" n="N005"/>Ebr.</rdg></app>
+               <lb facs="iiif:/2167,658,55,34" n="N005"/>Ebr.</rdg></app> 
                <lb facs="iiif:/1903,654,366,96" n="N006"/>II. <unclear>frequentao</unclear> templi.
                <lb facs="iiif:/1904,718,374,81" n="N007"/>III. <unclear>repetio</unclear> concionis et
                <lb facs="iiif:/1922,776,325,64" n="N008"/>Historia Bunonis.</cell>
@@ -222,7 +222,7 @@
                <lb facs="iiif:/2290,646,348,78" n="N003"/><unclear>Resoluo</unclear> Phocylidis.
                <lb facs="iiif:/2271,709,376,77" n="N004"/>II. exercitium Latin.
                <lb facs="iiif:/2331,752,210,78" n="N005"/>elaborat.
-               <lb facs="iiif:/2269,802,373,92" n="N006"/>III. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1">–</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">exhibet.</rdg></app> </cell></row>
+               <lb facs="iiif:/2269,802,373,92" n="N006"/>III. <app><rdg hand="fpb-uuiod" change="#version1">–</rdg><rdg hand="fpb-uuiod" change="#version2">exhibet.</rdg></app> </cell></row>
             <row n="3">
             <cell facs="iiif:/2624,929,551,1044" n="10" rows="2" rend="0000">
                <lb facs="iiif:/2684,1247,450,106" n="N001"/>NB Anno MDCCII finito
@@ -242,10 +242,10 @@
             <cell facs="iiif:/556,987,372,733" n="3" rend="0000">
                <lb facs="iiif:/564,1041,238,109" n="N001"/>I. Musica.
                <lb facs="iiif:/558,1131,354,118" n="N002"/>II. resolutio Ebraica
-               <lb facs="iiif:/565,1213,343,77" n="N003"/><app><rdg hand="fpb-uuiod" type="alt1" change="#version1">e Genesi:</rdg><rdg hand="fpb-uuiod" type="alt2" change="#version2">adhibito
+               <lb facs="iiif:/565,1213,343,77" n="N003"/><app><rdg hand="fpb-uuiod" change="#version1">e Genesi:</rdg><rdg hand="fpb-uuiod" change="#version2">adhibito
                
                <lb facs="iiif:/556,1256,293,84" n="N004"/>compend. Ebr. Dantzij.</rdg></app> 
-               <lb facs="iiif:/552,1319,301,116" n="N005"/>III. <app><rdg hand="fpb-uuiod" type="alt1" change="#version1">Virgilius.</rdg><rdg hand="fob-uuiod" type="alt2" change="#version2">
+               <lb facs="iiif:/552,1319,301,116" n="N005"/>III. <app><rdg hand="fpb-uuiod" change="#version1">Virgilius.</rdg><rdg hand="fob-uuiod" change="#version2">
                <lb facs="iiif:/633,1420,199,86" n="N006"/>Ovidius.</rdg></app>
                </cell>
             <cell facs="iiif:/922,998,331,710" n="4" rend="0000">

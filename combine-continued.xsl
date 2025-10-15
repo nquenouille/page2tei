@@ -38,7 +38,10 @@
                   and not(
                            name() = name(preceding-sibling::tei:*[not(self::tei:lb)][1])
                            and preceding-sibling::tei:*[not(self::tei:lb)][1][@continued = 'true']
-                        )
+                           and not(normalize-space(preceding::text()[1]) != ''
+                           or preceding::text()[1][not(preceding-sibling::*)]
+                           or preceding-sibling::*[1][not(@continued = 'true') and not(self::tei:lb)])
+                        )                 
                ]">
 
             <xsl:choose>
@@ -142,15 +145,15 @@
          <xsl:choose>
          <xsl:when test="self::tei:rdg and not(parent::tei:app)">
             <xsl:variable name="currentN" select="@n"/>
-            <xsl:variable name="precedingSameN" select="preceding-sibling::tei:rdg[@n = $currentN]"/>
+            <xsl:variable name="precedingSameN" select="preceding::tei:rdg[@n = $currentN]"/>
             <xsl:if test="not($precedingSameN)">
              <app>
-               <xsl:for-each select="../*">
+               <xsl:for-each select="../*">         
                   <xsl:choose>
                      <!-- lb directly in front of the rdg[change > 1] has to be remain -->
                      <xsl:when test="
                      self::tei:lb 
-                     and following-sibling::*[1][self::tei:rdg[@n=$currentN and @change and @change != '1']]
+                     and following-sibling::*[1][self::tei:rdg[@n=$currentN and contains(@change, '#version1')]]
                      ">
                      <!-- do not show – lb is already processed in rdg -->
                      </xsl:when>
@@ -164,9 +167,9 @@
                   </xsl:choose>
                </xsl:for-each>
                </app>
-            </xsl:if>
+            </xsl:if>    
          </xsl:when>
-
+         
          <!-- everything else -->
          <xsl:otherwise>
             <xsl:apply-templates select="." mode="continued"/>
@@ -177,7 +180,7 @@
    </xsl:template>
 
    <xsl:template match="tei:rdg" mode="continued">
-   <xsl:variable name="prev-lb" select="preceding-sibling::*[1][self::tei:lb]"/>  
+   <xsl:variable name="prev-lb" select="preceding-sibling::*[1][self::tei:lb]"/>
    <xsl:copy>
       <xsl:apply-templates select="@*" mode="continued"/>    
       <!-- if lb directly in front of rdg, draw it inside -->

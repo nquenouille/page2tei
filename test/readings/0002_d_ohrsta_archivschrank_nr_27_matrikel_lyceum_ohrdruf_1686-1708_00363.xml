@@ -207,35 +207,35 @@
                         <Unicode>Graeci.</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727094715188_1063" custom="readingOrder {index:6;} unclear {offset:5; length:1; continued:true;} rdg {offset:5; length:1; continued:true;varSeq:1; n:2-1; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="line_1727094715188_1063" custom="readingOrder {index:6;} unclear {offset:5; length:1; continued:true;} rdg {offset:5; length:1; continued:true;change:1; n:2-1; hand:fpb-uuiod; }">
                     <Coords points="554,839 586,836 614,862 648,842 676,855 702,840 711,851 785,849 802,858 829,847 892,853 904,882 864,894 840,886 823,894 797,877 780,890 758,881 717,898 687,886 670,912 601,886 569,914 552,907"/>
                     <Baseline points="563,886 588,883 614,883 640,882 665,881 691,878 717,874 742,872 768,871 794,871 819,872 845,873 871,875 897,877"/>
                     <TextEquiv>
                         <Unicode>III.  </Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_41" custom="readingOrder {index:7;} unclear {offset:0; length:1; continued:true;reason:illegible;} rdg {offset:0; length:1; continued:true;varSeq:1; n:2-1; hand:fpb-uuiod; type:alt1;} rdg {offset:2; length:14; varSeq:2; n:2-1; hand:someone; type:alt2; continued:true;} anchor {offset:2; length:1;xmlid:a2-2;}">
+                <TextLine id="tr_2_tl_41" custom="readingOrder {index:7;} unclear {offset:0; length:1; continued:true;reason:illegible;} rdg {offset:0; length:1; continued:true;change:1; n:2-1; hand:fpb-uuiod; } rdg {offset:2; length:14; change:2; n:2-1; hand:someone;  continued:true;} anchor {offset:2; length:1;xmlid:a2-2;}">
                     <Coords points="565,942 588,931 641,937 683,947 724,946 739,931 806,926 816,937 873,924 873,894 842,886 823,894 797,877 780,890 739,885 697,889 669,912 646,901 601,886 567,909"/>
                     <Baseline points="575,930 600,928 625,926 650,924 675,924 700,924 726,920 751,918 776,918 801,918 826,918 851,918 877,918"/>
                     <TextEquiv>
                         <Unicode>    Caesaris: et</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="l_5" custom="readingOrder {index:8;} add {offset:0; length:11;place:above; type:correction; xmlid:ta2-2;} rdg {offset:0; length:11; continued:true;varSeq:2; n:2-1; hand:someone; type:alt2;}">
+                <TextLine id="l_5" custom="readingOrder {index:8;} add {offset:0; length:11;place:above; type:correction; xmlid:ta2-2;} rdg {offset:0; length:11; continued:true;change:2; n:2-1; hand:someone; }">
                     <Coords points="725,797 741,797 765,817 816,825 844,821 886,795 904,846 804,855 790,850 770,851 733,850 725,848"/>
                     <Baseline points="725,838 740,840 765,844 791,847 817,845 843,844 869,844 895,844"/>
                     <TextEquiv>
                         <Unicode>interpretao</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727094715188_1061" custom="readingOrder {index:9;} rdg {offset:0; length:25; continued:true;varSeq:2; n:2-1; hand:someone; type:alt2;}">
+                <TextLine id="line_1727094715188_1061" custom="readingOrder {index:9;} rdg {offset:0; length:25; continued:true;change:2; n:2-1; hand:someone; }">
                     <Coords points="551,933 574,940 607,933 677,946 723,945 774,929 891,927 896,967 806,973 748,961 730,964 670,964 557,965 551,935"/>
                     <Baseline points="560,960 586,960 613,960 640,960 667,962 693,961 722,961 749,959 775,961 802,959 829,957 856,959 883,963"/>
                     <TextEquiv>
                         <Unicode>altero semestri: Cornelij</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727087109760_637" custom="readingOrder {index:10;} rdg {offset:0; length:8; continued:true;varSeq:2; n:2-1; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="line_1727087109760_637" custom="readingOrder {index:10;} rdg {offset:0; length:8; continued:true;change:2; n:2-1; hand:fpb-uuiod; }">
                     <Coords points="671,964 774,962 775,987 667,993"/>
                     <Baseline points="669,978 775,982"/>
                     <TextEquiv>
@@ -281,14 +281,14 @@
                         <Unicode>III. Logica</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_38" custom="readingOrder {index:5;} rdg {offset:0; length:9;varSeq:1; n:2-2; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="tr_2_tl_38" custom="readingOrder {index:5;} rdg {offset:0; length:9;change:1; n:2-2; hand:fpb-uuiod; }">
                     <Coords points="969,909 982,909 998,894 1018,891 1020,908 1035,907 1054,886 1086,892 1107,883 1122,886 1137,903 1159,901 1161,834 1137,836 1109,853 1054,840 1038,849 972,840"/>
                     <Baseline points="981,886 1006,884 1032,882 1057,879 1083,877 1108,877 1134,880 1160,883"/>
                     <TextEquiv>
                         <Unicode>(Reyheri)  </Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_40" custom="readingOrder {index:6;} rdg {offset:0; length:8;varSeq:2; n:2-2; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="tr_2_tl_40" custom="readingOrder {index:6;} rdg {offset:0; length:8;change:2; n:2-2; hand:fpb-uuiod; }">
                     <Coords points="974,941 1000,937 1015,948 1023,944 1032,954 1051,948 1064,957 1088,952 1107,935 1135,946 1150,941 1150,901 1137,903 1109,886 1069,894 1064,888 1043,894 1034,888 1015,900 1000,892 984,909 974,909"/>
                     <Baseline points="984,924 1012,922 1040,921 1069,921 1097,921 1125,921 1154,921"/>
                     <TextEquiv>
@@ -299,21 +299,21 @@
             </TableCell>
             <TableCell row="2" col="5" rowSpan="1" colSpan="1" id="TableCell_1727094832648_1236">
                 <Coords points="1253,584 1253,998 1557,985 1554,578"/>
-                <TextLine id="line_1727094832679_1240" custom="readingOrder {index:0;} rdg {offset:3; length:12; continued:true;varSeq:1; n:2-3; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="line_1727094832679_1240" custom="readingOrder {index:0;} rdg {offset:3; length:12; continued:true;change:1; n:2-3; hand:fpb-uuiod; }">
                     <Coords points="1248,584 1477,584 1530,579 1529,640 1423,636 1374,655 1341,647 1249,647"/>
                     <Baseline points="1249,634 1261,636 1290,636 1320,634 1349,632 1379,628 1408,626 1438,626 1467,626 1497,626 1527,626"/>
                     <TextEquiv>
                         <Unicode>I. freqventatio</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_15" custom="readingOrder {index:1;} rdg {offset:0; length:7; continued:true;varSeq:1; n:2-3; hand:fpb-uuiod; type:alt1;} rdg {offset:7; length:1;varSeq:2; n:2-3; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="tr_2_tl_15" custom="readingOrder {index:1;} rdg {offset:0; length:7; continued:true;change:1; n:2-3; hand:fpb-uuiod; } rdg {offset:7; length:1;change:2; n:2-3; hand:fpb-uuiod; }">
                     <Coords points="1310,683 1327,689 1340,681 1368,704 1433,679 1448,687 1461,681 1480,683 1480,642 1452,646 1413,633 1385,640 1368,636 1357,648 1333,642 1321,653 1310,653"/>
                     <Baseline points="1321,677 1348,677 1375,675 1403,674 1430,674 1457,674 1485,674"/>
                     <TextEquiv>
                         <Unicode>templi. </Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727094647910_1014" custom="readingOrder {index:2;} rdg {offset:0; length:1;varSeq:1; n:2-4; hand:fpb-uuiod; type:alt1;} rdg {offset:1; length:2;varSeq:2; n:2-4; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="line_1727094647910_1014" custom="readingOrder {index:2;} rdg {offset:0; length:1;change:1; n:2-4; hand:fpb-uuiod; } rdg {offset:1; length:2;change:2; n:2-4; hand:fpb-uuiod; }">
                     <Coords points="1249,679 1284,698 1312,689 1338,698 1349,687 1390,696 1418,681 1446,689 1472,683 1499,668 1512,681 1545,679 1552,701 1552,730 1497,735 1482,726 1413,746 1349,732 1308,760 1243,769"/>
                     <Baseline points="1255,733 1281,733 1308,729 1334,726 1361,725 1388,723 1414,721 1441,721 1468,720 1494,719 1521,720 1552,725"/>
                     <TextEquiv>
@@ -377,7 +377,7 @@
                         <Unicode>Grammat. Gr.  </Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_22" custom="readingOrder {index:4;} rdg {offset:7; length:2;varSeq:1; n:2-5; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="tr_2_tl_22" custom="readingOrder {index:4;} rdg {offset:7; length:2;change:1; n:2-5; hand:fpb-uuiod; }">
                     <Coords points="1640,763 1650,763 1683,742 1682,761 1693,761 1706,752 1730,752 1743,754 1772,752 1761,716 1749,711 1740,715 1728,719 1711,713 1696,719 1639,717"/>
                     <Baseline points="1649,745 1678,743 1707,743 1736,745 1766,745"/>
                     <TextEquiv>
@@ -391,35 +391,35 @@
                         <Unicode>III) Logica.</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_31" custom="readingOrder {index:6;} rdg {offset:0; length:17; continued:true;varSeq:2; n:2-5; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="tr_2_tl_31" custom="readingOrder {index:6;} rdg {offset:0; length:17; continued:true;change:2; n:2-5; hand:fpb-uuiod; }">
                     <Coords points="1657,840 1717,836 1762,845 1795,830 1823,844 1835,832 1844,842 1881,845 1883,804 1863,795 1836,806 1825,801 1814,810 1792,801 1779,808 1765,801 1745,804 1732,791 1696,808 1659,802"/>
                     <Baseline points="1667,835 1694,833 1722,831 1749,829 1777,829 1805,829 1832,829 1860,830 1888,832"/>
                     <TextEquiv>
                         <Unicode>et altero semetri</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_36" custom="readingOrder {index:7;} rdg {offset:0; length:12; continued:true;varSeq:2; n:2-5; hand:fpb-uuiod; type:alt2;} del {offset:0; length:3;}">
+                <TextLine id="tr_2_tl_36" custom="readingOrder {index:7;} rdg {offset:0; length:12; continued:true;change:2; n:2-5; hand:fpb-uuiod; } del {offset:0; length:3;}">
                     <Coords points="1618,870 1659,873 1667,883 1685,873 1704,881 1713,873 1752,877 1769,868 1801,868 1816,879 1848,868 1874,870 1874,844 1836,832 1818,844 1793,830 1764,845 1618,832"/>
                     <Baseline points="1628,865 1653,868 1678,868 1703,868 1728,866 1753,864 1778,863 1803,862 1828,862 1853,861 1879,859"/>
                     <TextEquiv>
                         <Unicode>it. Homiliae</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_39" custom="readingOrder {index:8;} rdg {offset:0; length:16; continued:true;varSeq:2; n:2-5; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="tr_2_tl_39" custom="readingOrder {index:8;} rdg {offset:0; length:16; continued:true;change:2; n:2-5; hand:fpb-uuiod; }">
                     <Coords points="1614,922 1637,931 1667,929 1680,918 1730,928 1780,911 1827,911 1842,920 1880,913 1870,870 1833,881 1786,868 1728,879 1713,873 1706,881 1685,873 1668,883 1616,864"/>
                     <Baseline points="1625,909 1652,912 1680,912 1707,910 1735,907 1762,904 1790,903 1817,903 1845,903 1873,903"/>
                     <TextEquiv>
                         <Unicode>VII Chrysostomi.</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="l_3" custom="readingOrder {index:9;} rdg {offset:0; length:7; continued:true;varSeq:2; n:2-5; hand:fpb-uuiod; type:alt2;} del {offset:6; length:1;} unclear {offset:6; length:1;reason:illegible;}">
+                <TextLine id="l_3" custom="readingOrder {index:9;} rdg {offset:0; length:7; continued:true;change:2; n:2-5; hand:fpb-uuiod; } del {offset:6; length:1;} unclear {offset:6; length:1;reason:illegible;}">
                     <Coords points="1605,928 1681,918 1823,909 1844,918 1842,952 1716,999 1605,997"/>
                     <Baseline points="1616,969 1641,966 1666,963 1691,961 1712,955 1727,950 1733,945 1761,942 1789,940 1817,940 1846,942"/>
                     <TextEquiv>
                         <Unicode>edit.  </Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="l_1" custom="readingOrder {index:10;} rdg {offset:0; length:7; continued:true;varSeq:2; n:2-5; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="l_1" custom="readingOrder {index:10;} rdg {offset:0; length:7; continued:true;change:2; n:2-5; hand:fpb-uuiod; }">
                     <Coords points="1716,930 1734,946 1812,948 1812,991 1765,982 1724,1002 1716,999"/>
                     <Baseline points="1716,961 1741,965 1766,967 1791,969 1816,969"/>
                     <TextEquiv>
@@ -430,35 +430,35 @@
             </TableCell>
             <TableCell row="2" col="8" rowSpan="1" colSpan="1" id="TableCell_1727094832836_1252">
                 <Coords points="1898,548 1907,970 2277,952 2272,541"/>
-                <TextLine id="tr_2_tl_8" custom="readingOrder {index:0;} rdg {offset:2; length:2; continued:true;varSeq:1; n:2-6; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="tr_2_tl_8" custom="readingOrder {index:0;} rdg {offset:2; length:2; continued:true;change:1; n:2-6; hand:fpb-uuiod; }">
                     <Coords points="1917,590 1921,631 2038,628 2100,625 2122,633 2215,625 2228,640 2268,632 2266,580 2208,585 2188,576 2134,584 2074,578 2055,584 2006,577 1981,597"/>
                     <Baseline points="1917,621 1996,617 2022,617 2048,617 2074,617 2100,617 2125,617 2151,615 2177,613 2203,611 2229,612 2263,616"/>
                     <TextEquiv>
                         <Unicode>I.  </Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="l_4" custom="readingOrder {index:1;} rdg {offset:0; length:1; continued:true;varSeq:1; n:2-6; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="l_4" custom="readingOrder {index:1;} rdg {offset:0; length:1; continued:true;change:1; n:2-6; hand:fpb-uuiod; }">
                     <Coords points="2090,664 2013,664 2013,628 2090,628"/>
                     <Baseline points="2013,661 2090,661"/>
                     <TextEquiv>
                         <Unicode>  </Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_6" custom="readingOrder {index:2;} rdg {offset:1; length:19; continued:true;varSeq:1; n:2-6; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="tr_2_tl_6" custom="readingOrder {index:2;} rdg {offset:0; length:19; continued:true;change:2; n:2-6; hand:fpb-uuiod; }">
                     <Coords points="1961,601 2005,579 2083,579 2111,581 2126,582 2191,577 2211,585 2260,579 2261,509 2217,500 2169,515 2154,530 2139,526 2103,551 2079,545 2019,558 1978,528 1963,528"/>
                     <Baseline points="1971,581 1997,577 2023,576 2049,575 2075,575 2101,575 2127,575 2153,575 2179,575 2205,575 2231,576 2258,578"/>
                     <TextEquiv>
-                        <Unicode> Paradigmata Εβρ. et</Unicode>
+                        <Unicode>Paradigmata Εβρ. et</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="l_2" custom="readingOrder {index:3;} rdg {offset:0; length:15; continued:true;varSeq:1; n:2-6; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="l_2" custom="readingOrder {index:3;} rdg {offset:0; length:15; continued:true;change:2; n:2-6; hand:fpb-uuiod; }">
                     <Coords points="2090,628 2298,628 2299,665 2090,664"/>
                     <Baseline points="2090,661 2299,662"/>
                     <TextEquiv>
                         <Unicode>Danzij Grammat.</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727087490148_673" custom="readingOrder {index:4;} rdg {offset:0; length:4; continued:true;varSeq:1; n:2-6; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="line_1727087490148_673" custom="readingOrder {index:4;} rdg {offset:0; length:4; continued:true;change:2; n:2-6; hand:fpb-uuiod; }">
                     <Coords points="2170,658 2222,672 2219,692 2167,688"/>
                     <Baseline points="2167,685 2217,688"/>
                     <TextEquiv>
@@ -525,7 +525,7 @@
                         <Unicode>elaborat.</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727088140754_732" custom="readingOrder {index:5;} rdg {offset:5; length:1;varSeq:1; n:2-7; hand:fpb-uuiod; type:alt1;} rdg {offset:7; length:8;varSeq:2; n:2-7; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="line_1727088140754_732" custom="readingOrder {index:5;} rdg {offset:5; length:1;change:1; n:2-7; hand:fpb-uuiod; } rdg {offset:7; length:8;change:2; n:2-7; hand:fpb-uuiod; }">
                     <Coords points="2269,821 2312,802 2511,820 2642,802 2642,890 2391,894 2314,894 2286,892 2271,888"/>
                     <Baseline points="2282,859 2310,857 2338,857 2366,859 2395,859 2464,862 2492,858 2521,855 2550,853 2579,855 2608,857 2637,859"/>
                     <TextEquiv>
@@ -649,28 +649,28 @@
                         <Unicode>II. resolutio Ebraica</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727094697114_1040" custom="readingOrder {index:2;} rdg {offset:0; length:9;varSeq:1; n:2-8; hand:fpb-uuiod; type:alt1;} rdg {offset:10; length:8; continued:true;varSeq:2; n:2-8; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="line_1727094697114_1040" custom="readingOrder {index:2;} rdg {offset:0; length:9;change:1; n:2-8; hand:fpb-uuiod; } rdg {offset:10; length:8; continued:true;change:2; n:2-8; hand:fpb-uuiod; }">
                     <Coords points="567,1245 607,1249 654,1249 682,1225 780,1227 806,1226 827,1213 857,1232 903,1228 908,1266 908,1269 875,1284 847,1267 791,1269 753,1284 704,1271 664,1290 649,1277 610,1290 565,1282"/>
                     <Baseline points="578,1279 603,1275 628,1274 653,1271 678,1268 704,1266 729,1264 754,1264 779,1264 805,1262 830,1261 855,1261 880,1261 906,1261"/>
                     <TextEquiv>
                         <Unicode>e Genesi: adhibito</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_62" custom="readingOrder {index:3;} rdg {offset:0; length:22; continued:true;varSeq:2; n:2-8; hand:fpb-uuiod; type:alt2;}">
+                <TextLine id="tr_2_tl_62" custom="readingOrder {index:3;} rdg {offset:0; length:22; continued:true;change:2; n:2-8; hand:fpb-uuiod; }">
                     <Coords points="556,1314 580,1328 620,1340 653,1331 696,1340 750,1319 760,1329 847,1340 849,1273 791,1269 747,1285 689,1271 666,1290 648,1277 616,1290 575,1284 556,1256"/>
                     <Baseline points="565,1309 576,1308 584,1306 611,1308 638,1308 665,1306 692,1306 718,1306 745,1304 772,1304 799,1306 826,1304 853,1303"/>
                     <TextEquiv>
                         <Unicode>compend. Ebr. Dantzij.</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="line_1727094715188_1058" custom="readingOrder {index:4;} rdg {offset:5; length:10;varSeq:1; n:2-9; hand:fpb-uuiod; type:alt1;}">
+                <TextLine id="line_1727094715188_1058" custom="readingOrder {index:4;} rdg {offset:5; length:10;change:1; n:2-9; hand:fpb-uuiod; }">
                     <Coords points="552,1343 588,1333 608,1351 625,1351 644,1333 666,1340 685,1329 696,1340 748,1319 836,1340 853,1404 777,1411 747,1408 724,1413 705,1416 685,1408 636,1407 577,1435 555,1429 555,1396"/>
                     <Baseline points="560,1405 585,1403 610,1400 635,1400 661,1402 686,1402 711,1402 736,1400 762,1399 787,1399 812,1398 838,1396"/>
                     <TextEquiv>
                         <Unicode>III. Virgilius.</Unicode>
                     </TextEquiv>
                 </TextLine>
-                <TextLine id="tr_2_tl_70" custom="readingOrder {index:5;} rdg {offset:0; length:8;varSeq:2; n:2-9; hand:fob-uuiod; type:alt2;}">
+                <TextLine id="tr_2_tl_70" custom="readingOrder {index:5;} rdg {offset:0; length:8;change:2; n:2-9; hand:fob-uuiod; }">
                     <Coords points="633,1482 655,1486 689,1476 722,1500 793,1486 827,1506 832,1426 806,1430 795,1424 776,1433 752,1420 735,1428 717,1422 691,1437 677,1422 659,1433 636,1433"/>
                     <Baseline points="644,1473 670,1472 697,1470 724,1466 751,1463 778,1462 805,1461 832,1461"/>
                     <TextEquiv>
