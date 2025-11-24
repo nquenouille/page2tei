@@ -2017,7 +2017,7 @@
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>
-            <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Nicht-edierte Zelle.</note>            
+            <lb facs="iiif:{replace($imgurl, 'https://iiif.saw-leipzig.de/iiif/3/', '')}/{$ulx},{$uly},{$w},{$h}"/><note type="unedited">Nicht edierter Text.</note>            
             </cell>
         </xsl:when>
          <xsl:when test="contains(@custom, 'subheading')">
