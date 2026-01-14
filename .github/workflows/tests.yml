@@ -42,3 +42,7 @@ jobs:
         run: |
           java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/several_back/mets.xml -o:test/several_back/several_back_test.xml
           diff -w --normal test/several_back/several_back_test.xml test/several_back/several_back.xml
+      - name: readings test
+        run: |
+          java -jar saxon-he-12.5.jar -xsl:page2tei-0.xsl -s:test/readings/mets.xml -o:test/readings/readings.xml
+          diff -w --normal test/readings/readings.xml test/readings/readings.xml
