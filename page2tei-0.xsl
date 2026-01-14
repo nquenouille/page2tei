@@ -2250,8 +2250,6 @@
                </xsl:for-each>
                <xsl:for-each select="map:get($starts, .)">
                   <xsl:sort select="contains(., 'continued:true;')" order="descending"/>
-                  <xsl:sort select="substring-before(substring-after(., 'change:'), ';')"
-                     order="descending"/>
                   <xsl:sort select="
                         xs:int(substring-before(substring-after(., 'offset:'), ';'))
                         + xs:int(substring-before(substring-after(., 'length:'), ';'))"

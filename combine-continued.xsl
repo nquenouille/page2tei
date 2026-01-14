@@ -179,17 +179,43 @@
    </xsl:copy>
    </xsl:template>
 
-   <xsl:template match="tei:rdg" mode="continued">
-   <xsl:variable name="prev-lb" select="preceding-sibling::*[1][self::tei:lb]"/>
-   <xsl:copy>
-      <xsl:apply-templates select="@*" mode="continued"/>    
-      <!-- if lb directly in front of rdg, draw it inside -->
-      <xsl:if test="$prev-lb">
-         <xsl:apply-templates select="$prev-lb" mode="continued"/>
-      </xsl:if>
+<xsl:template match="tei:rdg" mode="continued">
+  <!-- Original rdg ausgeben, aber verschachtelte rdg entpacken -->
+  <xsl:copy>
+    <xsl:apply-templates select="@*" mode="continued"/>
+    
+    <!-- Kinder, aber verschachtelte rdg nur deren Inhalt übernehmen -->
+    <xsl:apply-templates select="node()[not(self::tei:rdg)]" mode="continued"/>
+    <xsl:apply-templates select="tei:rdg/node()" mode="continued"/>
+  </xsl:copy>
+
+  <!-- Am Ende von app die verschachtelten rdg als eigenständige rdg ausgeben -->
+  <xsl:for-each select=".//tei:rdg">
+    <xsl:element name="rdg">
+      <xsl:apply-templates select="@*" mode="continued"/>
       <xsl:apply-templates select="node()" mode="continued"/>
-   </xsl:copy>
-   </xsl:template>
+    </xsl:element>
+  </xsl:for-each>
+</xsl:template>
+
+<xsl:template match="tei:rdg" mode="dedup-lb">
+  <!-- Original rdg ausgeben, aber verschachtelte rdg entpacken -->
+  <xsl:copy>
+    <xsl:apply-templates select="@*" mode="dedup-lb"/>
+    
+    <!-- Kinder, aber verschachtelte rdg nur deren Inhalt übernehmen -->
+    <xsl:apply-templates select="node()[not(self::tei:rdg)]" mode="dedup-lb"/>
+    <xsl:apply-templates select="tei:rdg/node()" mode="dedup-lb"/>
+  </xsl:copy>
+
+  <!-- Am Ende von app die verschachtelten rdg als eigenständige rdg ausgeben -->
+  <xsl:for-each select=".//tei:rdg">
+    <xsl:element name="rdg">
+      <xsl:apply-templates select="@*" mode="continued"/>
+      <xsl:apply-templates select="node()" mode="continued"/>
+    </xsl:element>
+  </xsl:for-each>
+</xsl:template>
 
    <xd:doc>
       <xd:desc>For double lb remove duplicates</xd:desc>
