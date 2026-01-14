@@ -198,11 +198,42 @@
          <x:expect label="." xml:space="preserve">
             <p>
                <lb/><w>Wenn</w> <w>ich</w> <w>aber</w> <w>auch</w> <w>jener</w> <hi style="letter-spacing: 5px;"><w>Nachtfeyer</w> <w>der</w> <w>Freundschaft</w></hi>
-               <lb/><w>beygewohnt</w> <w>hätte</w><pc>,</pc> <w>so</w> <w>würde</w> <w>es</w> <w>doch</w> <w>in</w> <w>Ansehung</w> <w>der</w> <hi style="letter-spacing: 5px;"><w>bewuß<pc>¬</pc><lb break="no" />ten</w> <w>Sache</w></hi> <w>schwerlich</w> <w>unter</w> <w>uns</w> <w>zu</w> <w>einer</w> <w>so</w> 
+               <lb/><w>beygewohnt</w> <w>hätte</w><pc>,</pc> <w>so</w> <w>würde</w> <w>es</w> <w>doch</w> <w>in</w> <w>Ansehung</w> <w>der</w> 
+               <hi style="letter-spacing: 5px;"><w>bewuß<pc>¬</pc><lb break="no" />ten</w> <w>Sache</w></hi> <w>schwerlich</w> <w>unter</w> <w>uns</w> <w>zu</w> <w>einer</w> <w>so</w> 
                <w>zusammenhängen<pc>¬</pc><lb break="no" />den</w> <w>und</w> <w>bestimmten</w> <w>Erklärung</w> <w>gekommen</w> <w>seyn</w><pc>,</pc> <w>als</w> <w>Sie</w> <w>mir</w>
                <lb/><w>zurückzulaßen</w> <w>beliebt</w> <w>haben</w><pc>.</pc>
             </p>
          </x:expect>
       </x:scenario>
+      <x:scenario label="T9.3">
+         <x:context mode="tokenize" xml:space="preserve">
+            <p>
+               <lb facs="#facs_136_tr_1749674503_tl_7" n="N007"/>oder unglückliche Zustand ist schlechthin unbestimmbar, und <hi style="font-style: italic;">indivi¬
+                  <lb facs="#facs_136_tr_1749674503_tl_8" n="N008"/>duel.</hi>.
+            </p>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+            <p>
+               <lb facs="#facs_136_tr_1749674503_tl_7" n="N007"/><w>oder</w> <w>unglückliche</w> <w>Zustand</w> <w>ist</w> <w>schlechthin</w> <w>unbestimmbar</w><pc>,</pc> <w>und</w> 
+                  <hi style="font-style: italic;"><w>indivi<pc>¬</pc><lb facs="#facs_136_tr_1749674503_tl_8" n="N008" break="no" />duel</w><pc>.</pc></hi><pc>.</pc>
+            </p>
+         </x:expect>
+      </x:scenario>
    </x:scenario>
+   
+   <x:scenario label="T10: pb + lb + hi">
+      <x:context mode="tokenize" xml:space="preserve">
+         <p>
+            <lb facs="#facs_2_r_1_1l28" n="N002"/>allerley noch wohl⸗
+            <lb facs="#facs_2_r_1_1l29" n="N003"/><hi style="font-family: antiqua;">conditioni</hi>rter Haußrath an
+         </p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p>
+            <lb facs="#facs_2_r_1_1l28" n="N002"/><w>allerley</w> <w>noch</w> 
+               <w>wohl<pc>⸗</pc><lb facs="#facs_2_r_1_1l29" n="N003" break="no"/><hi style="font-family: antiqua;">conditioni</hi>rter</w> <w>Haußrath</w> <w>an</w>
+         </p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

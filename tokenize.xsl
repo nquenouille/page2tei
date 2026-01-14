@@ -14,7 +14,7 @@
       </xd:desc>
    </xd:doc>
    
-   <xsl:variable name="hyphens" select="('=', '-', '¬', '⸗')" />
+   <xsl:variable name="hyphens" select="('=', '-', '¬', '⸗', '⌜', '⌝')" />
    <xsl:variable name="quotationMarks" select="('„', '“', '”', '‚', '‘', '’', '»', '«', '›', '‹')" />
    <xsl:variable name="punctuationCharacters"
       select="'[' || $hyphens => string-join() => replace('\-', '\\-') || string-join($quotationMarks) || '\.,;:–—\?!\[\]\(\)\*/〈〉¿…]'"/>
@@ -60,6 +60,14 @@
          </xsl:non-matching-substring>
       </xsl:analyze-string>
    </xsl:template>
+   <xd:doc>
+      <xd:desc>Exception: content of tei:ref, it is a URL</xd:desc>
+   </xd:doc>
+   <xsl:template match="tei:ref/text()[starts-with(normalize-space(), 'http')]" mode="doTokenize" priority="3">
+      <w>
+         <xsl:value-of select="."/>
+      </w>
+   </xsl:template>
    
    <xd:doc>
       <xd:desc>evaluate tei:w and its surroundings to see whether there is hyphenation</xd:desc>
@@ -80,6 +88,26 @@
       </xsl:variable>
       
       <xsl:choose>
+         <!-- Hyphenation: exactly one hyphen follows immediately, and after the breaks, there is a hi followed immediately by tei:w which starts with a
+            lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
+         <xsl:when test="following-sibling::node()[1] = $hyphens
+               and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
+               and following-sibling::tei:w[1][matches(., '^[a-zäöüß]') and . != 'und' and . != 'oder']
+               and following-sibling::tei:w[1]/preceding-sibling::node()[1][self::tei:hi]">
+            <xsl:sequence select="$preceding" />
+            <xsl:if test="preceding-sibling::node()[1][self::text()]">
+               <xsl:text>
+               </xsl:text>
+            </xsl:if>
+            <w>
+               <xsl:sequence select="node()" />
+               <xsl:apply-templates select="following-sibling::* intersect following-sibling::tei:hi[1]/preceding-sibling::*" mode="break" />
+               <hi>
+                  <xsl:sequence select="following-sibling::tei:hi[1]/@*, following-sibling::tei:hi[1]//text()" />
+               </hi>
+               <xsl:sequence select="following-sibling::tei:w[1]/node()" />
+            </w>
+         </xsl:when>
          <!-- Hyphenation: exactly one hyphen follows immediately, and after the breaks, the next tei:w starts with a
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
          <xsl:when test="following-sibling::node()[1] = $hyphens
@@ -131,11 +159,21 @@
                <xsl:sequence select="following-sibling::node()" />
             </xsl:if>
          </xsl:when>
+         <!-- second part of a hyphenated word with a hiighlight within the word. If this is the last word in its parent, restore the following nodes, if
+            any (so as to not lose punctuation) -->
+         <xsl:when test="preceding-sibling::node()[1][self::tei:hi]
+               and preceding-sibling::node()[2][self::tei:lb]
+               and preceding-sibling::tei:w[1]/following-sibling::node()[1] = $hyphens
+               and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 1">
+            <xsl:if test="not(following-sibling::tei:w)">
+               <xsl:sequence select="following-sibling::node()" />
+            </xsl:if>
+         </xsl:when>
          <xsl:otherwise>
             <xsl:sequence select="$preceding" />
             <xsl:sequence select="." />
             <xsl:if test="not(following-sibling::tei:w)">
-               <xsl:sequence select="following-sibling::node()" />
+               <xsl:apply-templates select="following-sibling::node()" mode="combine-tokens-hi" />
             </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
@@ -143,6 +181,7 @@
    
    
    <xsl:template match="tei:hi" mode="combine-tokens-hi">
+      <xsl:sequence select="tei:lb/preceding-sibling::node()[1][self::text()]" />
       <hi>
          <xsl:sequence select="@*" />
          <xsl:apply-templates mode="combine-tokens" />
@@ -177,7 +216,7 @@
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()" mode="doTokenize combine-tokens combine-tokens-hi break">
+   <xsl:template match="@* | node()" mode="doTokenize combine-tokens combine-tokens-hi break #default">
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
