@@ -6,7 +6,7 @@
    xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:map="http://www.w3.org/2005/xpath-functions/map" xmlns:local="local"
    xmlns:xstring="https://github.com/dariok/XStringUtils" exclude-result-prefixes="#all"
-   version="3.0">
+   version="4.0">
 
    <xsl:output indent="0"/>
    
@@ -970,21 +970,22 @@
 
    <xd:doc>
       <xd:desc>Starting milestones for (possibly nested) elements</xd:desc>
+      <xd:param name="numCurr"/>
    </xd:doc>
    <xsl:template match="local:m[@pos = 's']">
       <xsl:param name="numCurr" tunnel="true" />
       <xsl:variable name="o" select="@o"/>
       <xsl:variable name="custom" as="map(*)">
-         <xsl:map>
-            <xsl:variable name="t" select="tokenize(@o, ';')"/>
-            <xsl:if test="count($t) &gt; 1">
-               <xsl:for-each select="$t[. != '']">
+         <xsl:variable name="t" select="tokenize(@o, ';')"/>
+         <xsl:if test="count($t) &gt; 1">
+            <xsl:map>
+               <xsl:for-each select="$t[normalize-space() != '']">
                   <xsl:map-entry
-                     key="normalize-space(substring-before(., ':'))"
-                     select="normalize-space(substring-after(., ':'))"/>
+                     key="if ( contains(., ':') ) then normalize-space(substring-before(., ':')) else normalize-space(.)"
+                     select="if ( contains(., ':') ) then normalize-space(substring-after(., ':')) else 'true'"/>
                </xsl:for-each>
-            </xsl:if>
-         </xsl:map>
+            </xsl:map>
+         </xsl:if>
       </xsl:variable>
 
       <xsl:variable name="elem">
