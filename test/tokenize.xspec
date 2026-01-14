@@ -236,4 +236,19 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T11: hyphenation in quote with sign">
+      <x:context xml:space="preserve" mode="tokenize">
+         <p>
+            <lb facs="#facs_2_TextRegion_1589531276393_139l9" n="N009"/>Stands=Perſonen, un=
+            <lb facs="#facs_2_TextRegion_1589531276393_139l10" n="N010"/>„ zehlich=gluͤckliche Proben
+         </p>
+      </x:context>
+      <x:expect xml:space="preserve" label=".">
+         <p>
+            <lb facs="#facs_2_TextRegion_1589531276393_139l9" n="N009"/><w>Stands</w><pc>=</pc><w>Perſonen</w><pc>,</pc> 
+               <w>un<pc>=</pc><lb facs="#facs_2_TextRegion_1589531276393_139l10" n="N010" break="no"/><pc>„</pc>zehlich</w><pc>=</pc><w>gluͤckliche</w> <w>Proben</w>
+         </p>
+      </x:expect>
+   </x:scenario>
+   
 </x:description>

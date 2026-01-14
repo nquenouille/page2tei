@@ -159,12 +159,22 @@
                <xsl:sequence select="following-sibling::node()" />
             </xsl:if>
          </xsl:when>
-         <!-- second part of a hyphenated word with a hiighlight within the word. If this is the last word in its parent, restore the following nodes, if
+         <!-- second part of a hyphenated word with a highlight within the word. If this is the last word in its parent, restore the following nodes, if
             any (so as to not lose punctuation) -->
          <xsl:when test="preceding-sibling::node()[1][self::tei:hi]
                and preceding-sibling::node()[2][self::tei:lb]
                and preceding-sibling::tei:w[1]/following-sibling::node()[1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 1">
+            <xsl:if test="not(following-sibling::tei:w)">
+               <xsl:sequence select="following-sibling::node()" />
+            </xsl:if>
+         </xsl:when>
+         <!-- second part of a hyphenated word with a sign of a continued quote. If this is the last word in its parent, restore the following nodes, if
+            any (so as to not lose punctuation) -->
+         <xsl:when test="preceding-sibling::*[1][self::tei:pc[. = '„']]
+               and preceding-sibling::*[2][self::tei:lb]
+               and preceding-sibling::tei:w[1]/following-sibling::node()[1] = $hyphens
+               and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 2">
             <xsl:if test="not(following-sibling::tei:w)">
                <xsl:sequence select="following-sibling::node()" />
             </xsl:if>
@@ -216,7 +226,7 @@
    <xd:doc>
       <xd:desc>Default</xd:desc>
    </xd:doc>
-   <xsl:template match="@* | node()" mode="doTokenize combine-tokens combine-tokens-hi break #default">
+   <xsl:template match="@* | node()" mode="doTokenize combine-tokens combine-tokens-hi break">
       <xsl:copy>
          <xsl:apply-templates select="@* | node()" mode="#current" />
       </xsl:copy>
