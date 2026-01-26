@@ -92,7 +92,7 @@
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
          <xsl:when test="following-sibling::node()[1] = $hyphens
                and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
-               and following-sibling::tei:w[1][matches(., '^[a-zäöüß]') and . != 'und' and . != 'oder']
+               and following-sibling::tei:w[1][matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']
                and following-sibling::tei:w[1]/preceding-sibling::node()[1][self::tei:hi]">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
@@ -112,7 +112,7 @@
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
          <xsl:when test="following-sibling::node()[1] = $hyphens
                and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
-               and following-sibling::tei:w[1][matches(., '^[a-zäöüß]') and . != 'und' and . != 'oder']">
+               and following-sibling::tei:w[1][matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
                <xsl:text>
