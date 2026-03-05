@@ -1310,6 +1310,9 @@
             </fw>
          </xsl:when>
          <xsl:when test="'marginalia_front' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_bottom_front"/>
             <ab type='margin_bottom_front'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1317,6 +1320,12 @@
             </ab>
          </xsl:when>
          <xsl:when test="'marginalia_front' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
+           <xsl:text>
+            </xsl:text>
+            <pb facs="#facs_{$number}" n="{$number}" type="front"/>
+           <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_top_front"/>
             <ab type='margin_top_front'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1324,6 +1333,9 @@
             </ab>
          </xsl:when>
          <xsl:when test="'marginalia_front' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_front"/>
             <ab type='margin_front'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1331,6 +1343,9 @@
             </ab>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_bottom"/>
             <ab type='margin_bottom'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1338,6 +1353,12 @@
             </ab>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
+            <xsl:text>
+            </xsl:text>
+            <pb facs="#facs_{$number}" n="{$number}" type="body"/>
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_top"/>
             <ab type='margin_top'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1345,6 +1366,9 @@
             </ab>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_body"/>
             <ab type='margin_body'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1352,13 +1376,22 @@
             </ab>
          </xsl:when>
          <xsl:when test="'marginalia_back' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_bottom_back"/>
             <ab type='margin_bottom_back'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
             </ab>
          </xsl:when>
-          <xsl:when test="'marginalia_back' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
+         <xsl:when test="'marginalia_back' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
+            <xsl:text>
+            </xsl:text>
+            <pb facs="#facs_{$number}" n="{$number}" type="back"/>
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_top_back"/>
             <ab type='margin_top_back'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1366,6 +1399,9 @@
             </ab>
          </xsl:when>
          <xsl:when test="'marginalia_back' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
+            <xsl:text>
+            </xsl:text>
+            <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_back"/>
             <ab type='margin_back'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
@@ -1744,9 +1780,11 @@
             </p>
          </xsl:when>    
          <xsl:when test="'front' = $regionType">
-          <xsl:text>
+          <xsl:if test="not(preceding-sibling::p:TextRegion[contains(@custom, 'type:marginalia_front') and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]])">
+            <xsl:text>
             </xsl:text>
             <pb facs="#facs_{$number}" n="{$number}" type="front"/>
+         </xsl:if>
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$number}_{@id}" type="front"/>
@@ -1755,9 +1793,11 @@
             </p>
          </xsl:when>
          <xsl:when test="'back' = $regionType">
+          <xsl:if test="not(preceding-sibling::p:TextRegion[contains(@custom, 'type:marginalia_back') and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]])">
             <xsl:text>
             </xsl:text>
             <pb facs="#facs_{$number}" n="{$number}" type="back"/>
+         </xsl:if>
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$number}_{@id}" type="back"/>

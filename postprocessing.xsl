@@ -42,7 +42,7 @@
       </div>
    </xsl:template>
 
-   <xsl:template match="tei:p | tei:ab[@type='margin_bottom'] | tei:ab[@type='margin_top']" mode="postprocessing">
+   <xsl:template match="tei:p | tei:ab[contains(@type, 'margin_top')] | tei:ab[contains(@type, 'margin_bottom')]" mode="postprocessing">
       <xsl:variable name="hasAbWithRend" as="xs:boolean"
                select="exists(//tei:ab[@rend])"/>
       <xsl:choose>
