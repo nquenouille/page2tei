@@ -266,4 +266,51 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T13: unclear + supplied + hyphenation">
+      <x:context xml:space="preserve" mode="tokenize">
+         <p facs="#facs_76_r1">
+            <lb facs="#facs_76_r1l7" n="N007"/>cute erat ſolicitus, ne ſine cau<supplied reason="binding">sa</supplied>
+            <lb facs="#facs_76_r1l8" n="N008"/>ut postea ostendemus, Dum a<supplied reason="binding">r</supplied>⸗<lb
+               facs="#facs_76_r1l9" n="N009"/>cem petimus, populus, m̅x̅è iu<unclear>u</unclear><supplied reason="binding">en</supplied>⸗<lb
+               facs="#facs_76_r1l10" n="N010"/>tus iterum clamore, strepitu, co<unclear>n</unclear>⸗<lb
+               facs="#facs_76_r1l11" n="N011"/>uitijs nos ad arcem us perseꝗt<unclear>i</unclear>
+              <lb />tinc<unclear>tu</unclear><supplied>ra</supplied></p>
+      </x:context>
+      <x:expect xml:space="preserve" label=".">
+         <p facs="#facs_76_r1">
+            <lb facs="#facs_76_r1l7" n="N007"/><w>cute</w> <w>erat</w> <w>ſolicitus</w><pc>,</pc> <w>ne</w> <w>ſine</w> <w>cau<supplied reason="binding">sa</supplied></w>
+            <lb facs="#facs_76_r1l8" n="N008"/><w>ut</w> <w>postea</w> <w>ostendemus</w><pc>,</pc> <w>Dum</w> 
+               <w>a<supplied reason="binding">r</supplied><pc>⸗</pc><lb facs="#facs_76_r1l9" n="N009" break="no"/>cem</w> <w>petimus</w><pc>,</pc> <w>populus</w><pc>,</pc> <w>m̅x̅è</w> 
+               <w>iu<unclear>u</unclear><supplied reason="binding">en</supplied><pc>⸗</pc><lb facs="#facs_76_r1l10" n="N010" break="no"/>tus</w> <w>iterum</w> <w>clamore</w><pc>,</pc> <w>strepitu</w><pc>,</pc> 
+               <w>co<unclear>n</unclear><pc>⸗</pc><lb facs="#facs_76_r1l11" n="N011" break="no"/>uitijs</w> <w>nos</w> <w>ad</w> <w>arcem</w> <w>us</w> <w>perseꝗt<unclear>i</unclear></w>
+              <lb /><w>tinc<unclear>tu</unclear><supplied>ra</supplied></w></p>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T14: roman numerals">
+      <x:scenario label="T14.1: capital letters">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb/>Band Ⅻ, Kapitel Ⅽ und ↁ.
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb/><w>Band</w> <num value="12">Ⅻ</num><pc>,</pc> <w>Kapitel</w> <num value="100">Ⅽ</num> <w>und</w> <num value="5000">ↁ</num><pc>.</pc>
+            </p>
+         </x:expect>
+      </x:scenario>
+      <x:scenario label="T14.2: small letters">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb/>band ⅻ, kapitel ⅽ und ⅿ.
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb/><w>band</w> <num value="12">ⅻ</num><pc>,</pc> <w>kapitel</w> <num value="100">ⅽ</num> <w>und</w> <num value="1000">ⅿ</num><pc>.</pc>
+            </p>
+         </x:expect>
+      </x:scenario>
+   </x:scenario>
 </x:description>

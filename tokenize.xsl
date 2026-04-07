@@ -16,8 +16,92 @@
    
    <xsl:variable name="hyphens" select="('=', '-', '¬', '⸗', '⌜', '⌝')" />
    <xsl:variable name="quotationMarks" select="('„', '“', '”', '‚', '‘', '’', '»', '«', '›', '‹')" />
+   <xsl:variable name="romanNumeralCharacters"
+      select="'[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅬⅭⅮⅯⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻⅼⅽⅾⅿↀↁↂↅↆↇↈ]+'" />
+   <xsl:variable name="numberCharacters" select="'\d+|[Ⅰ-ↈ]+'" />
    <xsl:variable name="punctuationCharacters"
       select="'[' || $hyphens => string-join() => replace('\-', '\\-') || string-join($quotationMarks) || '\.,;:–—\?!\[\]\(\)\*/〈〉¿…]'"/>
+
+   <xsl:function name="tei:is-unicode-roman-numeral" as="xs:boolean">
+      <xsl:param name="token" as="xs:string" />
+      <xsl:sequence select="matches($token, '^' || $romanNumeralCharacters || '$')" />
+   </xsl:function>
+
+   <xsl:function name="tei:roman-numeral-value" as="xs:integer">
+      <xsl:param name="token" as="xs:string" />
+      <xsl:sequence
+         select="sum(for $character in string-to-codepoints($token)
+            return tei:roman-numeral-character-value(codepoints-to-string($character)))" />
+   </xsl:function>
+
+   <xsl:function name="tei:roman-numeral-character-value" as="xs:integer">
+      <xsl:param name="character" as="xs:string" />
+      <xsl:choose>
+         <xsl:when test="$character = ('Ⅰ', 'ⅰ')">
+            <xsl:sequence select="1" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅱ', 'ⅱ')">
+            <xsl:sequence select="2" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅲ', 'ⅲ')">
+            <xsl:sequence select="3" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅳ', 'ⅳ')">
+            <xsl:sequence select="4" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅴ', 'ⅴ')">
+            <xsl:sequence select="5" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅵ', 'ⅵ', 'ↅ')">
+            <xsl:sequence select="6" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅶ', 'ⅶ')">
+            <xsl:sequence select="7" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅷ', 'ⅷ')">
+            <xsl:sequence select="8" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅸ', 'ⅸ')">
+            <xsl:sequence select="9" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅹ', 'ⅹ')">
+            <xsl:sequence select="10" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅺ', 'ⅺ')">
+            <xsl:sequence select="11" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅻ', 'ⅻ')">
+            <xsl:sequence select="12" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅼ', 'ⅼ', 'ↆ')">
+            <xsl:sequence select="50" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅽ', 'ⅽ')">
+            <xsl:sequence select="100" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅾ', 'ⅾ')">
+            <xsl:sequence select="500" />
+         </xsl:when>
+         <xsl:when test="$character = ('Ⅿ', 'ⅿ', 'ↀ')">
+            <xsl:sequence select="1000" />
+         </xsl:when>
+         <xsl:when test="$character = 'ↁ'">
+            <xsl:sequence select="5000" />
+         </xsl:when>
+         <xsl:when test="$character = 'ↂ'">
+            <xsl:sequence select="10000" />
+         </xsl:when>
+         <xsl:when test="$character = 'ↇ'">
+            <xsl:sequence select="50000" />
+         </xsl:when>
+         <xsl:when test="$character = 'ↈ'">
+            <xsl:sequence select="100000" />
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:sequence select="0" />
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:function>
    
    <xd:doc>
       <xd:desc>Tokenize elements within a div if they contain text</xd:desc>
@@ -47,9 +131,14 @@
                   <pc><xsl:sequence select="." /></pc>
                </xsl:matching-substring>
                <xsl:non-matching-substring>
-                  <xsl:analyze-string select="." regex="\d+">
+                  <xsl:analyze-string select="." regex="{$numberCharacters}">
                      <xsl:matching-substring>
-                        <num><xsl:sequence select="." /></num>
+                        <num>
+                           <xsl:if test="tei:is-unicode-roman-numeral(.)">
+                              <xsl:attribute name="value" select="tei:roman-numeral-value(.)" />
+                           </xsl:if>
+                           <xsl:sequence select="." />
+                        </num>
                      </xsl:matching-substring>
                      <xsl:non-matching-substring>
                         <w><xsl:sequence select="." /></w>
@@ -78,22 +167,39 @@
       <xsl:variable name="preceding">
          <xsl:choose>
             <xsl:when test="preceding-sibling::tei:w">
-               <xsl:apply-templates select="preceding-sibling::node()
-                     intersect preceding-sibling::tei:w[1]/following-sibling::node()" mode="combine-tokens-hi" />
+               <xsl:variable name="first-after-previous-word"
+                  select="preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+               <xsl:apply-templates
+                  select="preceding-sibling::node()[. is $first-after-previous-word or . >> $first-after-previous-word]"
+                  mode="combine-tokens-hi" />
             </xsl:when>
             <xsl:otherwise>
                <xsl:apply-templates select="preceding-sibling::node()" mode="combine-tokens-hi" />
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
+      <xsl:variable name="next-delimiter"
+         select="following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+      <xsl:variable name="tail-inline-parts"
+         select="following-sibling::*[self::tei:supplied or self::tei:unclear]
+            [if ($next-delimiter) then . &lt;&lt; $next-delimiter else true()]" />
+      <xsl:variable name="next-word" select="following-sibling::tei:w[1]" />
+      <xsl:variable name="between-this-and-next-word"
+         select="$next-word/preceding-sibling::*[if (exists($tail-inline-parts))
+            then . >> $tail-inline-parts[last()]
+            else . >> current()]" />
+      <xsl:variable name="following-after-tail"
+         select="following-sibling::node()[if (exists($tail-inline-parts))
+            then . >> $tail-inline-parts[last()]
+            else true()]" />
       
       <xsl:choose>
          <!-- Hyphenation: exactly one hyphen follows immediately, and after the breaks, there is a hi followed immediately by tei:w which starts with a
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
-         <xsl:when test="following-sibling::node()[1] = $hyphens
-               and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
-               and following-sibling::tei:w[1][matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']
-               and following-sibling::tei:w[1]/preceding-sibling::node()[1][self::tei:hi]">
+         <xsl:when test="$next-delimiter = $hyphens
+               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+               and $next-word[matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']
+               and $next-word/preceding-sibling::node()[1][self::tei:hi]">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
                <xsl:text>
@@ -101,18 +207,22 @@
             </xsl:if>
             <w>
                <xsl:sequence select="node()" />
-               <xsl:apply-templates select="following-sibling::* intersect following-sibling::tei:hi[1]/preceding-sibling::*" mode="break" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+               <xsl:apply-templates
+                  select="$between-this-and-next-word except $next-word/preceding-sibling::tei:hi[1]"
+                  mode="break" />
                <hi>
-                  <xsl:sequence select="following-sibling::tei:hi[1]/@*, following-sibling::tei:hi[1]//text()" />
+                  <xsl:sequence select="$next-word/preceding-sibling::tei:hi[1]/@*" />
+                  <xsl:apply-templates select="$next-word/preceding-sibling::tei:hi[1]/node()" mode="word-part-content" />
                </hi>
-               <xsl:sequence select="following-sibling::tei:w[1]/node()" />
+               <xsl:sequence select="$next-word/node()" />
             </w>
          </xsl:when>
          <!-- Hyphenation: exactly one hyphen follows immediately, and after the breaks, the next tei:w starts with a
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
-         <xsl:when test="following-sibling::node()[1] = $hyphens
-               and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
-               and following-sibling::tei:w[1][matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']">
+         <xsl:when test="$next-delimiter = $hyphens
+               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+               and $next-word[matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
                <xsl:text>
@@ -120,40 +230,47 @@
             </xsl:if>
             <w>
                <xsl:sequence select="node()" />
-               <xsl:apply-templates select="following-sibling::* intersect following-sibling::tei:w[1]/preceding-sibling::*" mode="break" />
-               <xsl:sequence select="following-sibling::tei:w[1]/node()" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+               <xsl:apply-templates select="$between-this-and-next-word" mode="break" />
+               <xsl:sequence select="$next-word/node()" />
             </w>
          </xsl:when>
          <!-- after the breaks, the next tei:w starts with an upper case letter. This is not hyphenation but a long word
             with hyphens (e.g. German “Durchkoppelung”). We handle this separately so we can add some formatting. -->
-         <xsl:when test="following-sibling::node()[1] = $hyphens
-               and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
-               and following-sibling::tei:w[1][matches(., '^[A-ZÄÖÜ]')]">
+         <xsl:when test="$next-delimiter = $hyphens
+               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+               and $next-word[matches(., '^[A-ZÄÖÜ]')]">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
                <xsl:text>
                </xsl:text>
             </xsl:if>
-            <xsl:sequence select="." />
-            <xsl:sequence select="following-sibling::* intersect following-sibling::tei:w[1]/preceding-sibling::*" />
-            <xsl:sequence select="following-sibling::tei:w[1]" />
+            <w>
+               <xsl:sequence select="node()" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+            </w>
+            <xsl:sequence select="$between-this-and-next-word" />
+            <xsl:sequence select="$next-word" />
          </xsl:when>
          <!-- after the breaks, the next tei:w is „und“ or „oder“ -->
-         <xsl:when test="following-sibling::node()[1] = $hyphens
-               and following-sibling::*[2][local-name() = ('pb', 'cb', 'lb')]
-               and following-sibling::tei:w[1] = ('und', 'oder')">
+         <xsl:when test="$next-delimiter = $hyphens
+               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+               and $next-word = ('und', 'oder')">
             <xsl:sequence select="$preceding" />
-            <xsl:sequence select="." />
-            <xsl:sequence select="following-sibling::*[1]" />
+            <w>
+               <xsl:sequence select="node()" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+            </w>
+            <xsl:sequence select="$next-delimiter" />
             <xsl:text>
                </xsl:text>
-            <xsl:sequence select="following-sibling::*[1]/following-sibling::* intersect following-sibling::tei:w[1]/preceding-sibling::*" />
-            <xsl:sequence select="following-sibling::tei:w[1]" />
+            <xsl:sequence select="$between-this-and-next-word[. >> $next-delimiter]" />
+            <xsl:sequence select="$next-word" />
          </xsl:when>
          <!-- second part of a hyphenated word. If this is the last word in its parent, restore the following nodes, if
             any (so as to not lose punctuation) -->
          <xsl:when test="preceding-sibling::node()[1][self::tei:lb]
-               and preceding-sibling::tei:w[1]/following-sibling::node()[1] = $hyphens
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 1">
             <xsl:if test="not(following-sibling::tei:w)">
                <xsl:sequence select="following-sibling::node()" />
@@ -163,7 +280,7 @@
             any (so as to not lose punctuation) -->
          <xsl:when test="preceding-sibling::node()[1][self::tei:hi]
                and preceding-sibling::node()[2][self::tei:lb]
-               and preceding-sibling::tei:w[1]/following-sibling::node()[1] = $hyphens
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 1">
             <xsl:if test="not(following-sibling::tei:w)">
                <xsl:sequence select="following-sibling::node()" />
@@ -173,7 +290,7 @@
             any (so as to not lose punctuation) -->
          <xsl:when test="preceding-sibling::*[1][self::tei:pc[. = '„']]
                and preceding-sibling::*[2][self::tei:lb]
-               and preceding-sibling::tei:w[1]/following-sibling::node()[1] = $hyphens
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 2">
             <xsl:if test="not(following-sibling::tei:w)">
                <xsl:sequence select="following-sibling::node()" />
@@ -181,9 +298,12 @@
          </xsl:when>
          <xsl:otherwise>
             <xsl:sequence select="$preceding" />
-            <xsl:sequence select="." />
+            <w>
+               <xsl:sequence select="node()" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+            </w>
             <xsl:if test="not(following-sibling::tei:w)">
-               <xsl:apply-templates select="following-sibling::node()" mode="combine-tokens-hi" />
+               <xsl:apply-templates select="$following-after-tail" mode="combine-tokens-hi" />
             </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
@@ -196,6 +316,21 @@
          <xsl:sequence select="@*" />
          <xsl:apply-templates mode="combine-tokens" />
       </hi>
+   </xsl:template>
+
+   <xsl:template match="tei:supplied | tei:unclear" mode="word-part-content">
+      <xsl:copy>
+         <xsl:sequence select="@*" />
+         <xsl:apply-templates select="node()" mode="word-part-content" />
+      </xsl:copy>
+   </xsl:template>
+
+   <xsl:template match="tei:w" mode="word-part-content">
+      <xsl:sequence select="node()" />
+   </xsl:template>
+
+   <xsl:template match="text()" mode="word-part-content">
+      <xsl:sequence select="." />
    </xsl:template>
    
    <xd:doc>
