@@ -341,4 +341,19 @@
          </x:expect>
       </x:scenario>
    </x:scenario>
+   
+   <x:scenario label="T15: uppercase hyphenation">
+      <x:context xml:space="preserve" mode="tokenize">
+         <p>
+            <lb facs="#facs_277_r1l1" n="N001"/>DOMINI FRIDERICI PALATI⸗
+            <lb facs="#facs_277_r1l2" n="N002"/>NI RHENI, DUCIS BAVARIAE.
+         </p>
+      </x:context>
+      <x:expect xml:space="preserve" label=".">
+         <p>
+            <lb facs="#facs_277_r1l1" n="N001"/><w>DOMINI</w> <w>FRIDERICI</w> 
+               <w>PALATI<pc>⸗</pc><lb facs="#facs_277_r1l2" n="N002" break="no"/>NI</w> <w>RHENI</w><pc>,</pc> <w>DUCIS</w> <w>BAVARIAE</w><pc>.</pc>
+         </p>
+      </x:expect>
+   </x:scenario>
 </x:description>

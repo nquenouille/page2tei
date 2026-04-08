@@ -102,6 +102,11 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:function>
+
+   <xsl:function name="tei:is-uppercase-word" as="xs:boolean">
+      <xsl:param name="token" as="element()" />
+      <xsl:sequence select="matches(string-join($token//text(), ''), '^\p{Lu}+$')" />
+   </xsl:function>
    
    <xd:doc>
       <xd:desc>Tokenize elements within a div if they contain text</xd:desc>
@@ -201,6 +206,22 @@
          select="following-sibling::node()[if (exists($tail-inline-parts))
             then . >> $tail-inline-parts[last()]
             else true()]" />
+      <xsl:variable name="next-line-lb" select="$between-this-and-next-word[self::tei:lb][1]" />
+      <xsl:variable name="current-line-start-lb" select="preceding-sibling::tei:lb[1]" />
+      <xsl:variable name="next-line-end-lb" select="$next-line-lb/following-sibling::tei:lb[1]" />
+      <xsl:variable name="current-line-words"
+         select="if ($current-line-start-lb)
+            then $current-line-start-lb/following-sibling::tei:w[. &lt;&lt; $next-line-lb]
+            else preceding-sibling::tei:w[. &lt;&lt; $next-line-lb] | ." />
+      <xsl:variable name="next-line-words"
+         select="if ($next-line-end-lb)
+            then $next-line-lb/following-sibling::tei:w[. &lt;&lt; $next-line-end-lb]
+            else $next-line-lb/following-sibling::tei:w" />
+      <xsl:variable name="all-uppercase-hyphenation"
+         select="exists($next-line-lb)
+            and $next-word[tei:is-uppercase-word(.)]
+            and (every $token in $current-line-words satisfies tei:is-uppercase-word($token))
+            and (every $token in $next-line-words satisfies tei:is-uppercase-word($token))" />
       
       <xsl:choose>
          <!-- Hyphenation: exactly one hyphen follows immediately, and after the breaks, there is a hi followed immediately by tei:w which starts with a
@@ -233,6 +254,24 @@
          <xsl:when test="$next-delimiter = $hyphens
                and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
                and $next-word[matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']">
+            <xsl:sequence select="$preceding" />
+            <xsl:if test="preceding-sibling::node()[1][self::text()]">
+               <xsl:text>
+               </xsl:text>
+            </xsl:if>
+            <w>
+               <xsl:apply-templates select="$head-inline-parts" mode="word-part-content" />
+               <xsl:sequence select="node()" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+               <xsl:apply-templates select="$between-this-and-next-word" mode="break" />
+               <xsl:sequence select="$next-word/node()" />
+            </w>
+         </xsl:when>
+         <!-- Hyphenation in all-uppercase lines: conservative mode, only merge when both involved lines contain
+            uppercase-only words. -->
+         <xsl:when test="$next-delimiter = $hyphens
+               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+               and $all-uppercase-hyphenation">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
                <xsl:text>
