@@ -266,8 +266,9 @@
       </x:expect>
    </x:scenario>
    
-   <x:scenario label="T13: unclear + supplied + hyphenation">
-      <x:context xml:space="preserve" mode="tokenize">
+   <x:scenario label="T13: unclear and/or supplied">
+      <x:scenario label="T13.1: unclear + supplied + hyphenation">
+         <x:context xml:space="preserve" mode="tokenize">
          <p facs="#facs_76_r1">
             <lb facs="#facs_76_r1l7" n="N007"/>cute erat ſolicitus, ne ſine cau<supplied reason="binding">sa</supplied>
             <lb facs="#facs_76_r1l8" n="N008"/>ut postea ostendemus, Dum a<supplied reason="binding">r</supplied>⸗<lb
@@ -285,6 +286,33 @@
                <w>co<unclear>n</unclear><pc>⸗</pc><lb facs="#facs_76_r1l11" n="N011" break="no"/>uitijs</w> <w>nos</w> <w>ad</w> <w>arcem</w> <w>us</w> <w>perseꝗt<unclear>i</unclear></w>
               <lb /><w>tinc<unclear>tu</unclear><supplied>ra</supplied></w></p>
       </x:expect>
+      </x:scenario>
+      <x:scenario label="T13.2">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p facs="#facs_284_TextRegion_1625832986189_3494">
+               <lb facs="#facs_284_r1l5" n="N001"/><supplied reason=""><unclear>D</unclear></supplied>ieſe Fraw Amelia
+               <lb facs="#facs_284_r1l6" n="N002"/><supplied reason=""><unclear>v</unclear></supplied>on Newenar, weilandt
+               <lb facs="#facs_284_r1l7" n="N003"/><supplied reason=""><unclear>P</unclear></supplied>faltzgrauen Friederichs
+               <lb facs="#facs_284_r1l8" n="N004"/><supplied reason=""><unclear>d</unclear></supplied>es Ⅲ. Churfürſten ec. ge⸗
+               <lb facs="#facs_284_r1l9" n="N005"/><unclear>w</unclear>eſene Gemahlin, Iſt
+               <lb facs="#facs_284_r1l10" n="N006"/><unclear>d</unclear>en 10. Aprilis Anno <hi style="text-decoration: line-through;"><unclear>Je</unclear></hi>
+               <lb facs="#facs_284_r1l11" n="N007"/><unclear>16</unclear>02. zu Alpon in der
+               <lb facs="#facs_284_r1l12" n="N008"/><unclear>G</unclear>rafſchaft Mörsch ge⸗
+               <lb facs="#facs_284_r1l13" n="N009"/><unclear>ſt</unclear>orben.</p>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+            <p facs="#facs_284_TextRegion_1625832986189_3494">
+               <lb facs="#facs_284_r1l5" n="N001"/><w><supplied reason=""><unclear>D</unclear></supplied>ieſe</w> <w>Fraw</w> <w>Amelia</w>
+               <lb facs="#facs_284_r1l6" n="N002"/><w><supplied reason=""><unclear>v</unclear></supplied>on</w> <w>Newenar</w><pc>,</pc> <w>weilandt</w>
+               <lb facs="#facs_284_r1l7" n="N003"/><w><supplied reason=""><unclear>P</unclear></supplied>faltzgrauen</w> <w>Friederichs</w>
+               <lb facs="#facs_284_r1l8" n="N004"/><w><supplied reason=""><unclear>d</unclear></supplied>es</w> <num value="3">Ⅲ</num><pc>.</pc> <w>Churfürſten</w> <w>ec</w><pc>.</pc> 
+               <w>ge<pc>⸗</pc><lb facs="#facs_284_r1l9" n="N005" break="no"/><unclear>w</unclear>eſene</w> <w>Gemahlin</w><pc>,</pc> <w>Iſt</w>
+               <lb facs="#facs_284_r1l10" n="N006"/><w><unclear>d</unclear>en</w> <num>10</num><pc>.</pc> <w>Aprilis</w> <w>Anno</w> <hi style="text-decoration: line-through;"><w><unclear>Je</unclear></w></hi>
+               <lb facs="#facs_284_r1l11" n="N007"/><num><unclear>16</unclear>02</num><pc>.</pc> <w>zu</w> <w>Alpon</w> <w>in</w> <w>der</w>
+               <lb facs="#facs_284_r1l12" n="N008"/><w><unclear>G</unclear>rafſchaft</w> <w>Mörsch</w> 
+               <w>ge<pc>⸗</pc><lb facs="#facs_284_r1l13" n="N009" break="no"/><unclear>ſt</unclear>orben</w><pc>.</pc></p>
+         </x:expect>
+      </x:scenario>
    </x:scenario>
    
    <x:scenario label="T14: roman numerals">
