@@ -313,6 +313,18 @@
                <w>ge<pc>⸗</pc><lb facs="#facs_284_r1l13" n="N009" break="no"/><unclear>ſt</unclear>orben</w><pc>.</pc></p>
          </x:expect>
       </x:scenario>
+      <x:scenario label="T13.3">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p facs="#facs_297_TextRegion_1625222155870_1643">
+               <lb facs="#facs_297_r1l15" n="N001"/>Derowegen er dann vnnd ſonderli<unclear>ch</unclear>
+               <lb facs="#facs_297_r1l16" n="N002"/>auch weil er geſehen, das man Jhne <unclear>n</unclear><supplied reason="">icht</supplied></p>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+            <p facs="#facs_297_TextRegion_1625222155870_1643">
+               <lb facs="#facs_297_r1l15" n="N001"/><w>Derowegen</w> <w>er</w> <w>dann</w> <w>vnnd</w> <w>ſonderli<unclear>ch</unclear></w>
+               <lb facs="#facs_297_r1l16" n="N002"/><w>auch</w> <w>weil</w> <w>er</w> <w>geſehen</w><pc>,</pc> <w>das</w> <w>man</w> <w>Jhne</w> <w><unclear>n</unclear><supplied reason="">icht</supplied></w></p>
+         </x:expect>
+      </x:scenario>
    </x:scenario>
    
    <x:scenario label="T14: roman numerals">

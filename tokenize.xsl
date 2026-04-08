@@ -399,6 +399,10 @@
 
    <xsl:template match="tei:supplied | tei:unclear" mode="combine-tokens" priority="2.5">
       <xsl:choose>
+         <xsl:when test="preceding-sibling::node()[1][self::tei:supplied or self::tei:unclear]" />
+         <xsl:when test="preceding-sibling::node()[1][self::text()[normalize-space() = '']]
+               and preceding-sibling::tei:w[1]
+               and empty(following-sibling::node()[not(self::tei:supplied or self::tei:unclear)])" />
          <xsl:when test="preceding-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1][self::tei:w or self::tei:num]" />
          <xsl:when test="following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1][self::tei:w or self::tei:num]" />
          <xsl:when test="count(descendant::*[self::tei:w or self::tei:num]) = 1
@@ -422,6 +426,28 @@
          <xsl:sequence select="@*" />
          <xsl:apply-templates mode="combine-tokens" />
       </hi>
+   </xsl:template>
+
+   <xsl:template match="tei:supplied | tei:unclear" mode="combine-tokens-hi" priority="2">
+      <xsl:variable name="next-non-inline"
+         select="following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+      <xsl:variable name="inline-run"
+         select=".,
+            following-sibling::*[self::tei:supplied or self::tei:unclear]
+               [if ($next-non-inline) then . &lt;&lt; $next-non-inline else true()]" />
+      <xsl:choose>
+         <xsl:when test="preceding-sibling::node()[1][self::tei:supplied or self::tei:unclear]" />
+         <xsl:when test="exists($inline-run/descendant::tei:num) and empty($inline-run/descendant::tei:w)">
+            <num>
+               <xsl:apply-templates select="$inline-run" mode="word-part-content" />
+            </num>
+         </xsl:when>
+         <xsl:otherwise>
+            <w>
+               <xsl:apply-templates select="$inline-run" mode="word-part-content" />
+            </w>
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
 
    <xsl:template match="tei:supplied | tei:unclear" mode="word-part-content">
