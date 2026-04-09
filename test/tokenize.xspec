@@ -368,4 +368,26 @@
          </p>
       </x:expect>
    </x:scenario>
+   
+   <x:scenario label="T16: pb">
+      <x:scenario label="T16.1: pb with continuation sign on new page">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb facs="#facs_141_r2l17" n="N016"/>gangen, Auch man gewiß darfür
+               <lb facs="#facs_141_r2l18" n="N017"/>gehaltten, Vnnd nicht anderſt Ver⸗ 
+            <pb facs="#facs_142" n="142" xml:id="img_0142"/>
+               <lb facs="#facs_142_r1l1" n="N001"/>⸗ meint, dann das ſein Churf: Gꝺ:
+               <lb facs="#facs_142_r1l2" n="N002"/>vonn der Khayſerlichen Mayeſtät
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label="no doubling of pb">
+            <p>
+               <lb facs="#facs_141_r2l17" n="N016"/><w>gangen</w><pc>,</pc> <w>Auch</w> <w>man</w> <w>gewiß</w> <w>darfür</w>
+               <lb facs="#facs_141_r2l18" n="N017"/><w>gehaltten</w><pc>,</pc> <w>Vnnd</w> <w>nicht</w> <w>anderſt</w> 
+               <w>Ver<pc>⸗</pc><pb facs="#facs_142" n="142" xml:id="img_0142"/><lb facs="#facs_142_r1l1" n="N001" break="no"/><pc>⸗</pc>meint</w><pc>,</pc> <w>dann</w> <w>das</w> <w>ſein</w> <w>Churf</w><pc>:</pc> <w>Gꝺ</w><pc>:</pc>
+               <lb facs="#facs_142_r1l2" n="N002"/><w>vonn</w> <w>der</w> <w>Khayſerlichen</w> <w>Mayeſtät</w>
+            </p>
+         </x:expect>
+      </x:scenario>
+   </x:scenario>
 </x:description>

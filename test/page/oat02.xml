@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TextRegion xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
-      orientation="0.0" type="footnote" id="TextRegion_1665567326709_1170" custom="readingOrder {index:5;} structure {type:footer;}">
+      orientation="0.0" type="footnote" id="TextRegion_1665567326709_1170" custom="readingOrder {index:5;} structure {type:footnote;}">
    <Coords points="73,928 735,928 735,956 73,956"/>
    <TextLine id="line_1663938526292_2006" custom="readingOrder {index:0;} structure {type:annotation-mark;} textStyle {offset:0; length:1;fontSize:0.0; kerning:0; superscript:true;} comment {offset:0; length:1;}">
       <Coords points="92,948 105,948 106,947 112,947 112,930 92,930"/>

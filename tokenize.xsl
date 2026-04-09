@@ -348,6 +348,16 @@
                <xsl:sequence select="following-sibling::node()" />
             </xsl:if>
          </xsl:when>
+         <!-- second part of a hyphenated word after a page/column break where the new page repeats the continuation sign -->
+         <xsl:when test="preceding-sibling::*[1][self::tei:pc[. = $hyphens]]
+               and preceding-sibling::*[2][self::tei:lb]
+               and preceding-sibling::*[3][self::tei:pb or self::tei:cb]
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
+               and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 2">
+            <xsl:if test="not(following-sibling::tei:w or following-sibling::tei:num)">
+               <xsl:sequence select="following-sibling::node()" />
+            </xsl:if>
+         </xsl:when>
          <xsl:otherwise>
             <xsl:sequence select="$preceding" />
             <w>
