@@ -1299,6 +1299,28 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
+         <xsl:when test="'music' = $regionType and not($ab)">
+             <xsl:text>
+               </xsl:text>
+            <p>
+         <xsl:text>
+            </xsl:text>
+            <notatedMusic>
+         <xsl:text>
+               </xsl:text>
+               <ptr target=""/>
+            <xsl:text>
+               </xsl:text>
+               <label facs="#facs_{$numCurr}_{@id}">
+                  <xsl:apply-templates select="p:TextLine"/>
+               </label>
+         <xsl:text>
+            </xsl:text>
+            </notatedMusic>
+         <xsl:text>
+         </xsl:text>
+            </p>
+         </xsl:when>
          <xsl:when test="'catch-word' = $regionType and not($ab)">
             <fw type="catch" place="bottom" facs="#facs_{$numCurr}_{@id}">
                <xsl:apply-templates select="p:TextLine"/>
