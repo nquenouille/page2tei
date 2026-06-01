@@ -1278,7 +1278,7 @@
          <xsl:apply-templates select="@custom"/>
       </xsl:variable>
       <xsl:variable name="regionType" as="xs:string*" select="(@type, $custom?structure?type)" />
-
+      <xsl:variable name="target" select="(@target, $custom?structure?target)"/>
       <xsl:variable name="number" select="//ancestor::p:Metadata//p:TranskribusMetadata/@pageNr"/>
       <xsl:choose>
          <xsl:when test="not(p:TextLine or $withoutTextline)"/>
@@ -1308,7 +1308,7 @@
             <notatedMusic>
          <xsl:text>
                </xsl:text>
-               <ptr target=""/>
+               <ptr target="{$target}"/>
             <xsl:text>
                </xsl:text>
                <label facs="#facs_{$numCurr}_{@id}">
