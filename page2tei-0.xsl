@@ -460,8 +460,8 @@
             select="preceding-sibling::p:Metadata/*:TranskribusMetadata,
                     preceding-sibling::pc:Metadata/*:TranskribusMetadata"/>
          <xsl:apply-templates
-            select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion
-                  | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TableRegion"
+            select="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:ImageRegion | p:TableRegion
+                  | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:ImageRegion | pc:TableRegion"
             mode="facsimile"/>
          <xsl:text>
       </xsl:text>
@@ -473,8 +473,8 @@
       <xd:param name="numCurr">Numerus currens of the current page</xd:param>
    </xd:doc>
    <xsl:template
-      match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TextLine
-           | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TextLine"
+      match="p:PrintSpace | p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:ImageRegion | p:TextLine
+           | pc:PrintSpace | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | p:ImageRegion | pc:TextLine"
       mode="facsimile">
       <xsl:param name="numCurr" tunnel="true"/>
 
@@ -482,7 +482,7 @@
          <xsl:choose>
             <xsl:when test="local-name() = 'TextRegion'">TextRegion</xsl:when>
             <xsl:when test="local-name() = 'SeparatorRegion'">Separator</xsl:when>
-            <xsl:when test="local-name() = 'GraphicRegion'">Graphic</xsl:when>
+            <xsl:when test="local-name() = ('GraphicRegion', 'ImageRegion')">Graphic</xsl:when>
             <xsl:when test="local-name() = 'TextLine'">Line</xsl:when>
             <xsl:when test="local-name(parent::*) = 'TableCell'">TableCell</xsl:when>
             <xsl:otherwise>printspace</xsl:otherwise>
@@ -611,8 +611,8 @@
       <xsl:param name="numCurr" tunnel="true"/>
       <pb facs="#facs_{$numCurr}" n="{$numCurr}" xml:id="img_{format-number($numCurr, '0000')}"/>
       <xsl:apply-templates
-         select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:TableRegion
-               | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:TableRegion" mode="text">
+         select="p:TextRegion | p:SeparatorRegion | p:GraphicRegion | p:ImageRegion | p:TableRegion
+               | pc:TextRegion | pc:SeparatorRegion | pc:GraphicRegion | pc:ImageRegion | pc:TableRegion" mode="text">
          <xsl:with-param name="center" tunnel="true" select="number(@imageWidth) div 2"
             as="xs:double"/>
       </xsl:apply-templates>
@@ -637,7 +637,7 @@
       <xsl:variable name="custom" as="map(*)">
          <xsl:apply-templates select="@custom"/>
       </xsl:variable>
-      <xsl:variable name="regionType" as="xs:string*" select="(@type, $custom?structure?type)" />
+      <xsl:variable name="regionType" as="xs:string*" select="($custom?structure?type, @type)[1]" />
 
       <xsl:choose>
          <xsl:when test="not(p:TextLine or pc:TextLine or $withoutTextline)"/>
@@ -722,7 +722,8 @@
                <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'paragraph' = $regionType">
+         <xsl:when test="$custom?structure?type = 'paragraph'
+               or (@type = 'paragraph' and empty($custom?structure))">
             <xsl:text>
             </xsl:text>
             <p facs="#facs_{$numCurr}_{@id}">
@@ -733,7 +734,7 @@
          <xsl:otherwise>
             <xsl:text>
             </xsl:text>
-            <ab facs="#facs_{$numCurr}_{@id}" type="{(@type,$custom?structure?type)[normalize-space() != ''][1]}">
+            <ab facs="#facs_{$numCurr}_{@id}" type="{($custom?structure?type,@type)[normalize-space() != ''][1]}">
                <xsl:apply-templates select="p:TextLine | pc:TextLine"/>
                <xsl:text>
             </xsl:text>
@@ -809,7 +810,7 @@
          - changed to remove tei:graphic as there is no external image</xd:desc>
       <xd:param name="numCurr"/>
    </xd:doc>
-   <xsl:template match="p:GraphicRegion" mode="text">
+   <xsl:template match="p:GraphicRegion | p:ImageRegion" mode="text">
       <xsl:param name="numCurr" tunnel="true" />
       <xsl:text>
       </xsl:text>
@@ -978,7 +979,7 @@
          <xsl:variable name="t" select="tokenize(@o, ';')"/>
          <xsl:if test="count($t) &gt; 1">
             <xsl:map>
-               <xsl:for-each select="$t[normalize-space() != '']">
+               <xsl:for-each select="$t[normalize-space() != '' and not(normalize-space() castable as xs:int)]">
                   <xsl:map-entry
                      key="if ( contains(., ':') ) then normalize-space(substring-before(., ':')) else normalize-space(.)"
                      select="if ( contains(., ':') ) then normalize-space(substring-after(., ':')) else 'true'"/>
