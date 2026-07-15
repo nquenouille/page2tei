@@ -90,13 +90,14 @@
    <x:scenario label="T4">
       <x:context mode="tokenize" xml:space="preserve">
             <p facs="#P1_TB00054">
+               <lb/>be¬
                <lb facs="#P1_TL00250" break="no"/>gonnen. Unter dem Druck der Vietminh-
                <lb facs="#P1_TL00251"/>Angriffe mußten die Franzosen im Ost¬
                <lb facs="#P1_TL00252" break="no"/>teil ihrer Front die Forts Binhlieu und</p>
       </x:context>
       <x:expect label="no hyphenation" xml:space="preserve">
             <p facs="#P1_TB00054">
-               <lb facs="#P1_TL00250" break="no"/><w>gonnen</w><pc>.</pc> <w>Unter</w> <w>dem</w> <w>Druck</w> <w>der</w> 
+               <lb/><w>be<pc>¬</pc><lb facs="#P1_TL00250" break="no"/>gonnen</w><pc>.</pc> <w>Unter</w> <w>dem</w> <w>Druck</w> <w>der</w> 
                <w>Vietminh</w><pc>-</pc><lb facs="#P1_TL00251"/><w>Angriffe</w> <w>mußten</w> <w>die</w> <w>Franzosen</w> <w>im</w> 
                <w>Ost<pc>¬</pc><lb facs="#P1_TL00252" break="no"/>teil</w> <w>ihrer</w> <w>Front</w> <w>die</w> <w>Forts</w> <w>Binhlieu</w> <w>und</w></p>
       </x:expect>
@@ -115,7 +116,7 @@
          <p>
             <lb facs="#P1_TL00541"/><w>keiner</w> <w>amtlichen</w> <w>Verlautbarung</w> <w>den</w> 
                <w>Rus<pc>¬</pc><lb facs="#P1_TL00542" break="no"/>sen</w> <w>als</w> <w>den</w> <w>eigentlichen</w> <w>Angreifer</w> 
-               <w>be<pc>-</pc><pb n="2" facs="#IMG00002"/><cb break="no"/><lb facs="#P2_TL00001" break="no" />zeichnet</w> <w>haben</w><pc>.</pc> <w>Sie</w> <w>haben</w> <w>jedoch</w> <w>die</w>
+               <w>be<pc>-</pc><pb n="2" facs="#IMG00002" break="no"/><cb break="no"/><lb facs="#P2_TL00001" break="no" />zeichnet</w> <w>haben</w><pc>.</pc> <w>Sie</w> <w>haben</w> <w>jedoch</w> <w>die</w>
          </p>
       </x:expect>
    </x:scenario>
@@ -166,22 +167,20 @@
    
    <x:scenario label="T9: mixed content">
       <x:scenario label="T9.1">
-         <x:context mode="tokenize">
+         <x:context mode="tokenize" xml:space="preserve">
             <div>
                <pb facs="#facs_25" n="25" xml:id="img_0025" />
                <head facs="#facs_25_r2">
                   <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
-                     ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice><x:text
-                     > </x:text><choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head>
+                     ><choice><expan>Herr</expan><abbr>H&apos;r</abbr></choice> <choice><expan>von</expan><abbr>v̄</abbr></choice> Kuglern</rs>.</head>
             </div>
          </x:context>
-         <x:expect label=".">
+         <x:expect label="." xml:space="preserve">
             <div>
                <pb facs="#facs_25" n="25" xml:id="img_0025" />
                <head facs="#facs_25_r2">
                   <lb facs="#facs_25_r2l1" n="N001"/><rs type="person"
-                     ><choice><expan><w>Herr</w></expan><abbr><w>H&apos;r</w></abbr></choice><x:text
-                     > </x:text><choice><expan><w>von</w></expan><abbr><w>v̄</w></abbr></choice><x:text> </x:text><w>Kuglern</w></rs><pc>.</pc></head>
+                     ><choice><expan><w>Herr</w></expan><abbr><w>H&apos;r</w></abbr></choice> <choice><expan><w>von</w></expan><abbr><w>v̄</w></abbr></choice> <w>Kuglern</w></rs><pc>.</pc></head>
             </div>
          </x:expect>
       </x:scenario>
@@ -222,18 +221,20 @@
    </x:scenario>
    
    <x:scenario label="T10: pb + lb + hi">
-      <x:context mode="tokenize" xml:space="preserve">
-         <p>
-            <lb facs="#facs_2_r_1_1l28" n="N002"/>allerley noch wohl⸗
-            <lb facs="#facs_2_r_1_1l29" n="N003"/><hi style="font-family: antiqua;">conditioni</hi>rter Haußrath an
-         </p>
-      </x:context>
-      <x:expect label="." xml:space="preserve">
-         <p>
-            <lb facs="#facs_2_r_1_1l28" n="N002"/><w>allerley</w> <w>noch</w> 
+      <x:scenario label="T10.1">
+         <x:context mode="tokenize" xml:space="preserve">
+            <p>
+               <lb facs="#facs_2_r_1_1l28" n="N002"/>allerley noch wohl⸗
+               <lb facs="#facs_2_r_1_1l29" n="N003"/><hi style="font-family: antiqua;">conditioni</hi>rter Haußrath an
+            </p>
+         </x:context>
+         <x:expect label="." xml:space="preserve">
+            <p>
+               <lb facs="#facs_2_r_1_1l28" n="N002"/><w>allerley</w> <w>noch</w> 
                <w>wohl<pc>⸗</pc><lb facs="#facs_2_r_1_1l29" n="N003" break="no"/><hi style="font-family: antiqua;">conditioni</hi>rter</w> <w>Haußrath</w> <w>an</w>
-         </p>
-      </x:expect>
+            </p>
+         </x:expect>
+      </x:scenario>
    </x:scenario>
    
    <x:scenario label="T11: hyphenation in quote with sign">
@@ -252,18 +253,44 @@
    </x:scenario>
    
    <x:scenario label="T12: hyphenation with long s">
-      <x:context xml:space="preserve" mode="tokenize">
-         <p>
-            <lb />Stands=Perſonen, un=
-            <lb />ſichere Proben
-         </p>
-      </x:context>
-      <x:expect xml:space="preserve" label=".">
-         <p>
-            <lb /><w>Stands</w><pc>=</pc><w>Perſonen</w><pc>,</pc> 
+      <x:scenario label="T12.1">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb />Stands=Perſonen, un=
+               <lb />ſichere Proben
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb /><w>Stands</w><pc>=</pc><w>Perſonen</w><pc>,</pc> 
                <w>un<pc>=</pc><lb break="no"/>ſichere</w> <w>Proben</w>
-         </p>
-      </x:expect>
+            </p>
+         </x:expect>
+      </x:scenario>
+      <x:scenario label="T12.2">
+         <x:context xml:space="preserve" mode="tokenize">
+             <p facs="#facs_100_TextRegion_1625744546420_3198">
+               <lb facs="#facs_100_r2l14" n="N001"/>Ob nuhn dieſe oder die obige die rechte
+               <lb facs="#facs_100_r2l15" n="N002"/>verzeignüs ſey der ordenlichen ſuc⸗</p>
+            <pb facs="#facs_101" n="101" xml:id="img_0101"/>
+            <fw type="page-number" facs="#facs_101_region_1625132014858_681" place="top">
+               <lb facs="#facs_101_r1l1" n="N001"/>48</fw>
+            <p facs="#facs_101_TextRegion_1625744645601_3246">
+               <lb facs="#facs_101_r1l2" n="N001"/>ceſsion vnnd nachvolge der Pfalz⸗
+               <lb facs="#facs_101_r1l3" n="N002"/>grauen bey Rhein, vnnd Hertzog
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+             <p facs="#facs_100_TextRegion_1625744546420_3198 #facs_101_TextRegion_1625744645601_3246">
+               <lb facs="#facs_100_r2l14" n="N001"/><w>Ob</w> <w>nuhn</w> <w>dieſe</w> <w>oder</w> <w>die</w> <w>obige</w> <w>die</w> <w>rechte</w>
+               <lb facs="#facs_100_r2l15" n="N002"/><w>verzeignüs</w> <w>ſey</w> <w>der</w> <w>ordenlichen</w> 
+               <w>ſuc<pc>⸗</pc><pb facs="#facs_101" n="101" xml:id="img_0101" break="no"/><fw
+                   type="page-number" facs="#facs_101_region_1625132014858_681" place="top"><lb facs="#facs_101_r1l1" n="N001"/>48</fw><lb
+                   facs="#facs_101_r1l2" n="N001" break="no"/>ceſsion</w> <w>vnnd</w> <w>nachvolge</w> <w>der</w> 
+               <w>Pfalz<pc>⸗</pc><lb facs="#facs_101_r1l3" n="N002" break="no"/>grauen</w> <w>bey</w> <w>Rhein</w><pc>,</pc> <w>vnnd</w> <w>Hertzog</w>
+            </p>
+         </x:expect>
+      </x:scenario>
    </x:scenario>
    
    <x:scenario label="T13: unclear and/or supplied">
@@ -325,6 +352,48 @@
                <lb facs="#facs_297_r1l16" n="N002"/><w>auch</w> <w>weil</w> <w>er</w> <w>geſehen</w><pc>,</pc> <w>das</w> <w>man</w> <w>Jhne</w> <w><unclear>n</unclear><supplied reason="">icht</supplied></w></p>
          </x:expect>
       </x:scenario>
+      <x:scenario label="T13.4">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb facs="#facs_596_r1l11" n="N007"/>Johannes Caſimirus, qui DEI <supplied reason="binding">om</supplied>⸗
+               <lb facs="#facs_596_r1l12" n="N008"/>nipotentis Auxilio <hi style="text-decoration: underline;">profligat</hi>
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb facs="#facs_596_r1l11" n="N007"/><w>Johannes</w> <w>Caſimirus</w><pc>,</pc> <w>qui</w> <w>DEI</w> 
+               <w><supplied reason="binding">om</supplied><pc>⸗</pc><lb facs="#facs_596_r1l12" n="N008" break="no"/>nipotentis</w> <w>Auxilio</w> <hi style="text-decoration: underline;"><w>profligat</w></hi>
+            </p>
+         </x:expect>
+      </x:scenario>
+      <x:scenario label="T13.5">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb facs="#facs_596_r1l11" n="N007"/>Johannes Caſimirus, qui DEI <unclear reason="binding">om</unclear>⸗
+               <lb facs="#facs_596_r1l12" n="N008"/>nipotentis Auxilio <hi style="text-decoration: underline;">profligat</hi>
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb facs="#facs_596_r1l11" n="N007"/><w>Johannes</w> <w>Caſimirus</w><pc>,</pc> <w>qui</w> <w>DEI</w> 
+               <w><unclear reason="binding">om</unclear><pc>⸗</pc><lb facs="#facs_596_r1l12" n="N008" break="no"/>nipotentis</w> <w>Auxilio</w> <hi style="text-decoration: underline;"><w>profligat</w></hi>
+            </p>
+         </x:expect>
+      </x:scenario>
+      <x:scenario label="T13.6">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb facs="#facs_596_r1l11" n="N007"/>Johannes Caſimirus, qui DEI <supplied reason="binding">om⸗</supplied>
+               <lb facs="#facs_596_r1l12" n="N008"/>nipotentis Auxilio <hi style="text-decoration: underline;">profligat</hi>
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb facs="#facs_596_r1l11" n="N007"/><w>Johannes</w> <w>Caſimirus</w><pc>,</pc> <w>qui</w> <w>DEI</w> 
+               <w><supplied reason="binding">om</supplied><pc>⸗</pc><lb facs="#facs_596_r1l12" n="N008" break="no"/>nipotentis</w> <w>Auxilio</w> <hi style="text-decoration: underline;"><w>profligat</w></hi>
+            </p>
+         </x:expect>
+      </x:scenario>
    </x:scenario>
    
    <x:scenario label="T14: roman numerals">
@@ -384,8 +453,70 @@
             <p>
                <lb facs="#facs_141_r2l17" n="N016"/><w>gangen</w><pc>,</pc> <w>Auch</w> <w>man</w> <w>gewiß</w> <w>darfür</w>
                <lb facs="#facs_141_r2l18" n="N017"/><w>gehaltten</w><pc>,</pc> <w>Vnnd</w> <w>nicht</w> <w>anderſt</w> 
-               <w>Ver<pc>⸗</pc><pb facs="#facs_142" n="142" xml:id="img_0142"/><lb facs="#facs_142_r1l1" n="N001" break="no"/><pc>⸗</pc>meint</w><pc>,</pc> <w>dann</w> <w>das</w> <w>ſein</w> <w>Churf</w><pc>:</pc> <w>Gꝺ</w><pc>:</pc>
+               <w>Ver<pc>⸗</pc><pb facs="#facs_142" n="142" xml:id="img_0142" break="no"/><lb facs="#facs_142_r1l1" n="N001" break="no"/><pc>⸗</pc>meint</w><pc>,</pc> <w>dann</w> <w>das</w> <w>ſein</w> <w>Churf</w><pc>:</pc> <w>Gꝺ</w><pc>:</pc>
                <lb facs="#facs_142_r1l2" n="N002"/><w>vonn</w> <w>der</w> <w>Khayſerlichen</w> <w>Mayeſtät</w>
+            </p>
+         </x:expect>
+      </x:scenario>
+      <x:scenario label="T16.2: pb with catch-word">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb facs="#facs_74_r1l16" n="N015"/>Jlli ita diſcedunt, ut facile anima<unclear>d</unclear>⸗
+               <lb facs="#facs_74_line_1625741109228_2171" n="N016"/>verteremus in contumacia consta<unclear>n<supplied reason="">⸗</supplied></unclear>
+            <fw type="catch" place="bottom" facs="#facs_74_region_1625063923078_3113">
+               <lb facs="#facs_74_r1l18" n="N001"/>tes</fw>
+            <pb facs="#facs_75" n="75" xml:id="img_0075"/>
+            <fw type="page-number" facs="#facs_75_region_1625130096163_11" place="top">
+               <lb facs="#facs_75_r1l1" n="N001"/>35.</fw>
+               <lb facs="#facs_75_r1l2" n="N001"/>tes fore. Priusquam hi venerant,
+               <lb facs="#facs_75_r1l3" n="N002"/>D. Proprinceps Senatum compellans
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb facs="#facs_74_r1l16" n="N015"/><w>Jlli</w> <w>ita</w> <w>diſcedunt</w><pc>,</pc> <w>ut</w> <w>facile</w> 
+               <w>anima<unclear>d</unclear><pc>⸗</pc><lb facs="#facs_74_line_1625741109228_2171" n="N016" break="no"/>verteremus</w> <w>in</w> <w>contumacia</w> 
+               <w>consta<unclear>n<supplied reason="">⸗</supplied></unclear><fw type="catch" place="bottom" facs="#facs_74_region_1625063923078_3113"><lb facs="#facs_74_r1l18" n="N001" />tes</fw><pb facs="#facs_75" n="75" xml:id="img_0075" break="no"/><fw type="page-number" facs="#facs_75_region_1625130096163_11" place="top"><lb facs="#facs_75_r1l1" n="N001" />35.</fw><lb facs="#facs_75_r1l2" n="N001" break="no"/>tes</w> <w>fore</w><pc>.</pc> <w>Priusquam</w> <w>hi</w> <w>venerant</w><pc>,</pc>
+               <lb facs="#facs_75_r1l3" n="N002"/><w>D</w><pc>.</pc> <w>Proprinceps</w> <w>Senatum</w> <w>compellans</w>
+            </p>
+         </x:expect>
+      </x:scenario>
+      <x:scenario label="T16.2a: pb with catch-word">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb facs="#facs_74_r1l16" n="N015"/>Jlli ita diſcedunt, ut facile anima<unclear>d</unclear>⸗<lb facs="#facs_74_line_1625741109228_2171" n="N016"/>verteremus in contumacia consta<unclear>n</unclear>⸗
+            <fw type="catch" place="bottom" facs="#facs_74_region_1625063923078_3113">
+               <lb facs="#facs_74_r1l18" n="N001"/>tes</fw>
+            <pb facs="#facs_75" n="75" xml:id="img_0075"/>
+            <fw type="page-number" facs="#facs_75_region_1625130096163_11" place="top">
+               <lb facs="#facs_75_r1l1" n="N001"/>35.</fw>
+            
+               <lb facs="#facs_75_r1l2" n="N001"/>tes fore. Priusquam hi venerant,
+               <lb facs="#facs_75_r1l3" n="N002"/>D. Proprinceps Senatum compellans
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb facs="#facs_74_r1l16" n="N015"/><w>Jlli</w> <w>ita</w> <w>diſcedunt</w><pc>,</pc> <w>ut</w> <w>facile</w> 
+               <w>anima<unclear>d</unclear><pc>⸗</pc><lb facs="#facs_74_line_1625741109228_2171" n="N016" break="no"/>verteremus</w> <w>in</w> <w>contumacia</w> 
+               <w>consta<unclear>n</unclear><pc>⸗</pc><fw type="catch" place="bottom" facs="#facs_74_region_1625063923078_3113"><lb facs="#facs_74_r1l18" n="N001" />tes</fw><pb facs="#facs_75" n="75" xml:id="img_0075" break="no"/><fw type="page-number" facs="#facs_75_region_1625130096163_11" place="top"><lb facs="#facs_75_r1l1" n="N001" />35.</fw><lb facs="#facs_75_r1l2" n="N001" break="no"/>tes</w> <w>fore</w><pc>.</pc> <w>Priusquam</w> <w>hi</w> <w>venerant</w><pc>,</pc>
+               <lb facs="#facs_75_r1l3" n="N002"/><w>D</w><pc>.</pc> <w>Proprinceps</w> <w>Senatum</w> <w>compellans</w>
+            </p>
+         </x:expect>
+      </x:scenario>
+   </x:scenario>
+   
+   <x:scenario label="T17: hyphenation with choice">
+      <x:scenario label="T17.1">
+         <x:context xml:space="preserve" mode="tokenize">
+            <p>
+               <lb facs="#facs_614_r1l18" n="N016"/><unclear>u</unclear>m Contra leges amor irr<choice><corr>e</corr><sic>i</sic></choice>quie⸗
+               <lb facs="#facs_614_r1l19" n="N017"/>tus hortoris,
+            </p>
+         </x:context>
+         <x:expect xml:space="preserve" label=".">
+            <p>
+               <lb facs="#facs_614_r1l18" n="N016"/><w><unclear>u</unclear>m</w> <w>Contra</w> <w>leges</w> <w>amor</w> <w>irr<choice><corr>e</corr><sic>i</sic></choice>quie<pc>⸗</pc><lb facs="#facs_614_r1l19" n="N017" break="no"/>tus</w> <w>hortoris</w><pc>,</pc>
             </p>
          </x:expect>
       </x:scenario>

@@ -5,14 +5,14 @@
    stylesheet="../combine-hi.xsl">
    
    <x:scenario label="T1">
-      <x:context mode="combine-hi">
+      <x:context mode="combine-hi" xml:space="preserve">
          <p facs="#facs_108_TextRegion_1679295339003_2280">
             <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_1" n="N001"/>Ich denke zu dem ersten Stück folgendes zu geben, wobey ich Euch
-            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_2" n="N002"/>noch allerley um Rath zu fragen habe. Erstlich <hi style="font-style: italic;">vier <hi style="font-weight: bold;">Briefe</hi> über W[il¬</hi><x:text>
-            </x:text><lb facs="#facs_108_TextRegion_1679295339003_2280_tl_3" n="N003"/><hi style="font-style: italic;">helm] M[eister]</hi>, vielleicht auch nur <hi style="font-style: italic;">drey</hi><comment superscript="true"><hi style="vertical-align: superscript;">37</hi></comment>, nach Befinden der Um¬
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_2" n="N002"/>noch allerley um Rath zu fragen habe. Erstlich <hi style="font-style: italic;">vier <hi style="font-weight: bold;">Briefe</hi> über W[il¬</hi>
+            <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_3" n="N003"/><hi style="font-style: italic;">helm] M[eister]</hi>, vielleicht auch nur <hi style="font-style: italic;">drey</hi><comment superscript="true"><hi style="vertical-align: superscript;">37</hi></comment>, nach Befinden der Um¬
             <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_4" n="N004"/>stände.</p>
       </x:context>
-      <x:expect label=".">
+      <x:expect label="." xml:space="preserve">
          <p facs="#facs_108_TextRegion_1679295339003_2280">
             <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_1" n="N001"/>Ich denke zu dem ersten Stück folgendes zu geben, wobey ich Euch
             <lb facs="#facs_108_TextRegion_1679295339003_2280_tl_2" n="N002"/>noch allerley um Rath zu fragen habe. Erstlich <hi style="font-style: italic;">vier <hi style="font-weight: bold;">Briefe</hi> über W[il¬
@@ -92,4 +92,77 @@
       </x:expect>
    </x:scenario>
    
+   <x:scenario label="T7">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <p style="padding-left: 1em;">4. Bestetigts auch die Vorbitte <app type="to-be-modified" xml:id="n11528" resp="eh-commentary"><lem>Vorbitte</lem><hi rend="italic">Fürbitte. Vgl. Grimm, DWb 26, Sp. 919 f.</hi></app> vnsers <hi style="font-variant-caps: small-caps; letter-spacing: 2px;">Herren</hi> Jesu Christi. Wie hat der <hi style="font-variant-caps: small-caps;">Herr</hi> in den Tagen seines wandels auff Erden für seine Kirche vnnd für alle Gleubige gebeten? Wie befihlet Er sie seinem Himlischen Vater <note xml:id="n11529" type="marginal"><note resp="eh-app"><hi style="font-style: italic;">E, F, G marginal:</hi></note> Joh. 17.</note>? 1. Heiliger | <pb facs="#E_15" ed="#E" n="S. 438" xml:id="p4912"/> <pb facs="#F_15" ed="#F" xml:id="p4913"/> <pb facs="#G_15" ed="#G" xml:id="p4914"/> Vater erhalt sie in deinem Namen/ die du mir <app xml:id="n11530">
+               <!--#1 mir mir #2 mir-->
+               <lem>mir</lem>
+               <rdg resp="eh">mir<note resp="eh-app"><hi style="font-style: italic;">(gemäß G emendiert)</hi></note></rdg>
+               <rdg varSeq="01" wit="#E2 #F2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>mir mir</rdg>
+               <rdg varSeq="02" wit="#G2">mir</rdg>
+         </app> gegeben hast/ daß sie eins <app xml:id="n11531">
+            <!--#1 ein #2 eins-->
+            <lem>eins</lem>
+            <rdg resp="eh">eins<note resp="eh-app"><hi style="font-style: italic;">(gemäß E(Corr), F, G emendiert)</hi></note></rdg>
+            <rdg varSeq="01" wit="#E2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>ein</rdg>
+            <rdg varSeq="02" wit="#E2(Corr) #F2 #G2">eins</rdg>
+         </app> sein gleich wie wir <note type="commentary" resp="eh" xml:id="n11532">Joh 17,11</note>. 2. Heilige sie in deiner Warheit/ Dein Wort ist die Warheit <note type="commentary" resp="eh" xml:id="n11533">Joh 17,17</note>. 3. Jch bitte/ daß du sie/ weil sie in der Welt seyn/ für allem vbel bewahrest <note type="commentary" resp="eh" xml:id="n11534">Joh 17,15</note>. 4. Jch bitte für sie/ vnd für alle/ die durch jr Wort an mich gleuben werden <note type="commentary" resp="eh" xml:id="n11535">Joh 17,20</note>. 5. Vater ich will/ daß wo ich bin/ auch sein bey mir die du mir gegeben hast <note type="commentary" resp="eh" xml:id="n11536">Joh 17,24</note>. <app xml:id="n11537">
+            <!--#1 hast. #2 hast-->
+            <lem>hast.</lem>
+            <rdg varSeq="01" wit="#E2 #F2">hast.</rdg>
+            <rdg varSeq="02" wit="#G2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>hast<note resp="eh-app"><hi style="font-style: italic;">(Erratum)</hi></note></rdg>
+         </app> 6. Jch bitte für sie/ daß die Liebe/ damit du mich liebest/ sey in jhnen/ vnd ich in jhnen <note type="commentary" resp="eh" xml:id="n11538">Joh 17,26</note>. Nicht allein in dieser Welt hat er für vns gebeten/ sondern auch jtzo <app xml:id="n11539">
+            <!--#1 jtzo #2 jetzo-->
+            <lem>jtzo</lem>
+            <rdg varSeq="01" wit="#E2 #F2">jtzo</rdg>
+            <rdg varSeq="02" wit="#G2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>jetzo</rdg>
+         </app> zur rechten Hand Gottes<hi style="font-style: italic;">.</hi> Rom. 8. <note type="commentary" resp="eh" xml:id="n11540">Röm 8,34</note> Hebr. 5. <note type="commentary" resp="eh" xml:id="n11541">Hebr 5,5–10</note> Hebr. 7. <note type="commentary" resp="eh" xml:id="n11542">Hebr 7,25</note> Weil wir dann einen Hohenpriester haben/ Jesum den Sohn Gottes/ der gen Himmel gefahren ist/ so lasset vns hinzu treten mit freudigkeit zu den Gnadenstul/ auff daß wir Barmhertzigkeit empfahen <app type="to-be-modified" xml:id="n11543" resp="eh-commentary"><lem>empfahen</lem><hi rend="italic">empfangen. Vgl. Grimm, DWb 3, Sp. 420 f.</hi></app>/ vnd gnade finden auff die zeit/ wann vns hülffe noht sein wird <note type="commentary" resp="eh" xml:id="n11544">Hebr 4,14.16</note>
+            <note xml:id="n11545" type="marginal"><note resp="eh-app"><hi style="font-style: italic;">E, F, G marginal:</hi></note> Christi Gebet für vns ist vnsere erhaltung<app type="marginal">
+                  <!--#1 erhaltung #2 erkaltung-->
+                  <lem>erhaltung</lem>
+                  <rdg varSeq="01" wit="#E2">erhaltung</rdg>
+                  <rdg varSeq="02" wit="#F2 #G2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>erkaltung<note resp="eh-app"><hi style="font-style: italic;">(Erratum)</hi></note></rdg>
+            </app> stercke vnnd Sieg.</note>.</p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p style="padding-left: 1em;">4. Bestetigts auch die Vorbitte <app type="to-be-modified" xml:id="n11528" resp="eh-commentary"><lem>Vorbitte</lem><hi rend="italic">Fürbitte. Vgl. Grimm, DWb 26, Sp. 919 f.</hi></app> vnsers <hi style="font-variant-caps: small-caps; letter-spacing: 2px;">Herren</hi> Jesu Christi. Wie hat der <hi style="font-variant-caps: small-caps;">Herr</hi> in den Tagen seines wandels auff Erden für seine Kirche vnnd für alle Gleubige gebeten? Wie befihlet Er sie seinem Himlischen Vater <note xml:id="n11529" type="marginal"><note resp="eh-app"><hi style="font-style: italic;">E, F, G marginal:</hi></note> Joh. 17.</note>? 1. Heiliger | <pb facs="#E_15" ed="#E" n="S. 438" xml:id="p4912"/> <pb facs="#F_15" ed="#F" xml:id="p4913"/> <pb facs="#G_15" ed="#G" xml:id="p4914"/> Vater erhalt sie in deinem Namen/ die du mir <app xml:id="n11530">
+               <!--#1 mir mir #2 mir-->
+               <lem>mir</lem>
+               <rdg resp="eh">mir<note resp="eh-app"><hi style="font-style: italic;">(gemäß G emendiert)</hi></note></rdg>
+               <rdg varSeq="01" wit="#E2 #F2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>mir mir</rdg>
+               <rdg varSeq="02" wit="#G2">mir</rdg>
+         </app> gegeben hast/ daß sie eins <app xml:id="n11531">
+            <!--#1 ein #2 eins-->
+            <lem>eins</lem>
+            <rdg resp="eh">eins<note resp="eh-app"><hi style="font-style: italic;">(gemäß E(Corr), F, G emendiert)</hi></note></rdg>
+            <rdg varSeq="01" wit="#E2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>ein</rdg>
+            <rdg varSeq="02" wit="#E2(Corr) #F2 #G2">eins</rdg>
+         </app> sein gleich wie wir <note type="commentary" resp="eh" xml:id="n11532">Joh 17,11</note>. 2. Heilige sie in deiner Warheit/ Dein Wort ist die Warheit <note type="commentary" resp="eh" xml:id="n11533">Joh 17,17</note>. 3. Jch bitte/ daß du sie/ weil sie in der Welt seyn/ für allem vbel bewahrest <note type="commentary" resp="eh" xml:id="n11534">Joh 17,15</note>. 4. Jch bitte für sie/ vnd für alle/ die durch jr Wort an mich gleuben werden <note type="commentary" resp="eh" xml:id="n11535">Joh 17,20</note>. 5. Vater ich will/ daß wo ich bin/ auch sein bey mir die du mir gegeben hast <note type="commentary" resp="eh" xml:id="n11536">Joh 17,24</note>. <app xml:id="n11537">
+            <!--#1 hast. #2 hast-->
+            <lem>hast.</lem>
+            <rdg varSeq="01" wit="#E2 #F2">hast.</rdg>
+            <rdg varSeq="02" wit="#G2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>hast<note resp="eh-app"><hi style="font-style: italic;">(Erratum)</hi></note></rdg>
+         </app> 6. Jch bitte für sie/ daß die Liebe/ damit du mich liebest/ sey in jhnen/ vnd ich in jhnen <note type="commentary" resp="eh" xml:id="n11538">Joh 17,26</note>. Nicht allein in dieser Welt hat er für vns gebeten/ sondern auch jtzo <app xml:id="n11539">
+            <!--#1 jtzo #2 jetzo-->
+            <lem>jtzo</lem>
+            <rdg varSeq="01" wit="#E2 #F2">jtzo</rdg>
+            <rdg varSeq="02" wit="#G2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>jetzo</rdg>
+         </app> zur rechten Hand Gottes<hi style="font-style: italic;">.</hi> Rom. 8. <note type="commentary" resp="eh" xml:id="n11540">Röm 8,34</note> Hebr. 5. <note type="commentary" resp="eh" xml:id="n11541">Hebr 5,5–10</note> Hebr. 7. <note type="commentary" resp="eh" xml:id="n11542">Hebr 7,25</note> Weil wir dann einen Hohenpriester haben/ Jesum den Sohn Gottes/ der gen Himmel gefahren ist/ so lasset vns hinzu treten mit freudigkeit zu den Gnadenstul/ auff daß wir Barmhertzigkeit empfahen <app type="to-be-modified" xml:id="n11543" resp="eh-commentary"><lem>empfahen</lem><hi rend="italic">empfangen. Vgl. Grimm, DWb 3, Sp. 420 f.</hi></app>/ vnd gnade finden auff die zeit/ wann vns hülffe noht sein wird <note type="commentary" resp="eh" xml:id="n11544">Hebr 4,14.16</note>
+            <note xml:id="n11545" type="marginal"><note resp="eh-app"><hi style="font-style: italic;">E, F, G marginal:</hi></note> Christi Gebet für vns ist vnsere erhaltung<app type="marginal">
+                  <!--#1 erhaltung #2 erkaltung-->
+                  <lem>erhaltung</lem>
+                  <rdg varSeq="01" wit="#E2">erhaltung</rdg>
+                  <rdg varSeq="02" wit="#F2 #G2"><note resp="eh-app"><hi style="font-style: italic;">stattdessen</hi></note>erkaltung<note resp="eh-app"><hi style="font-style: italic;">(Erratum)</hi></note></rdg>
+            </app> stercke vnnd Sieg.</note>.</p>
+      </x:expect>
+   </x:scenario>
+   
+   <x:scenario label="T8">
+      <x:context mode="combine-hi" xml:space="preserve">
+         <p><quote>THE holy Apostle St. Paul, when meditating upon the tender mercies and compassions of our Heavenly Father to all afflicted and contrite sinners, breaks out into these words, full of the praise of God: <quote><hi style="font-style: italic;">Blessed</hi> <hi style="font-style: italic;">be</hi> <hi style="font-style: italic;">God</hi><hi style="font-style: italic;">,</hi> <hi style="font-style: italic;">even</hi> <hi style="font-style: italic;">the</hi> <hi style="font-style: italic;">Father</hi> <hi style="font-style: italic;">of</hi> <hi style="font-style: italic;">our</hi> <hi style="font-style: italic;">Lord</hi> <hi style="font-style: italic;">Jesus</hi> <hi style="font-style: italic;">Christ,</hi> <hi style="font-style: italic;">the</hi> <hi style="font-style: italic;">Father</hi> <hi style="font-style: italic;">of</hi> <hi style="font-style: italic;">mercies,</hi> <hi style="font-style: italic;">and</hi> <hi style="font-style: italic;">the</hi> <hi style="font-style: italic;">God</hi> <hi style="font-style: italic;">of</hi> <hi style="font-style: italic;">all</hi> <hi style="font-style: italic;">comfort</hi><hi style="font-style: italic;">;</hi> <hi style="font-style: italic;">who</hi> <hi style="font-style: italic;">comforteth</hi> <hi style="font-style: italic;">us</hi> <hi style="font-style: italic;">in</hi> <hi style="font-style: italic;">all</hi> <hi style="font-style: italic;">our</hi> <hi style="font-style: italic;">tribulation,</hi> <hi style="font-style: italic;">that</hi> <hi style="font-style: italic;">we</hi> <hi style="font-style: italic;">may</hi> <hi style="font-style: italic;">be</hi> <hi style="font-style: italic;">able</hi> <hi style="font-style: italic;">to</hi> <hi style="font-style: italic;">comfort</hi> <hi style="font-style: italic;">them</hi> <hi style="font-style: italic;">which</hi> <hi style="font-style: italic;">are</hi> <pb ed="#E" n="S. 565" facs="#E_2" xml:id="p1417"/> <hi style="font-style: italic;">in</hi> <hi style="font-style: italic;">any</hi> <hi style="font-style: italic;">trouble,</hi> <hi style="font-style: italic;">by</hi> <hi style="font-style: italic;">the</hi> <hi style="font-style: italic;">comfort</hi> <hi style="font-style: italic;">wherewith</hi> <hi style="font-style: italic;">we</hi> <hi style="font-style: italic;">ourselves</hi> <hi style="font-style: italic;">are</hi> <hi style="font-style: italic;">comforted</hi> <hi style="font-style: italic;">of</hi> <hi style="font-style: italic;">God.</hi> <hi style="font-style: italic;">For</hi> <hi style="font-style: italic;">as</hi> <hi style="font-style: italic;">the</hi> <hi style="font-style: italic;">sufferings</hi> <hi style="font-style: italic;">of</hi> <hi style="font-style: italic;">Christ</hi> <hi style="font-style: italic;">abound</hi> <hi style="font-style: italic;">in</hi> <hi style="font-style: italic;">us,</hi> <hi style="font-style: italic;">so</hi> <hi style="font-style: italic;">our</hi> <hi style="font-style: italic;">consolation</hi> <hi style="font-style: italic;">also</hi> <hi style="font-style: italic;">aboundeth</hi> <hi style="font-style: italic;">by</hi> <hi style="font-style: italic;">Christ</hi></quote> — <hi style="font-style: italic;">knowing</hi> <hi style="font-style: italic;">that</hi> <hi style="font-style: italic;">as</hi> <hi style="font-style: italic;">ye</hi> <hi style="font-style: italic;">are</hi> <hi style="font-style: italic;">partakers</hi> <hi style="font-style: italic;">of</hi> <hi style="font-style: italic;">the</hi> <hi style="font-style: italic;">sufferings,</hi> <hi style="font-style: italic;">so</hi> <hi style="font-style: italic;">shall</hi> <hi style="font-style: italic;">ye</hi> <hi style="font-style: italic;">be</hi> <hi style="font-style: italic;">also</hi> <hi style="font-style: italic;">of</hi> <hi style="font-style: italic;">the</hi> <hi style="font-style: italic;">consolation</hi>.</quote> 2 Cor. 1 : 3-7.</p>
+      </x:context>
+      <x:expect label="." xml:space="preserve">
+         <p><quote>THE holy Apostle St. Paul, when meditating upon the tender mercies and compassions of our Heavenly Father to all afflicted and contrite sinners, breaks out into these words, full of the praise of God: <quote><hi style="font-style: italic;">Blessed be God, even the Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort; who comforteth us in all our tribulation, that we may be able to comfort them which are <pb ed="#E" n="S. 565" facs="#E_2" xml:id="p1417"/> in any trouble, by the comfort wherewith we ourselves are comforted of God. For as the sufferings of Christ abound in us, so our consolation also aboundeth by Christ</hi></quote> — <hi style="font-style: italic;">knowing that as ye are partakers of the sufferings, so shall ye be also of the consolation</hi>.</quote> 2 Cor. 1 : 3-7.</p>
+      </x:expect>
+   </x:scenario>
 </x:description>

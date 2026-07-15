@@ -20,7 +20,7 @@
       select="'[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅬⅭⅮⅯⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻⅼⅽⅾⅿↀↁↂↅↆↇↈ]+'" />
    <xsl:variable name="numberCharacters" select="'\d+|[Ⅰ-ↈ]+'" />
    <xsl:variable name="punctuationCharacters"
-      select="'[' || $hyphens => string-join() => replace('\-', '\\-') || string-join($quotationMarks) || '\.,;:–—\?!\[\]\(\)\*/〈〉¿…]'"/>
+      select="'[' || $hyphens => string-join() => replace('\-', '\\-') || string-join($quotationMarks) || '\.,;:–—\?!\[\]\(\)\*/〈〉¿…\{\}]'"/>
 
    <xsl:function name="tei:is-unicode-roman-numeral" as="xs:boolean">
       <xsl:param name="token" as="xs:string" />
@@ -107,6 +107,35 @@
       <xsl:param name="token" as="element()" />
       <xsl:sequence select="matches(string-join($token//text(), ''), '^\p{Lu}+$')" />
    </xsl:function>
+
+   <xsl:function name="tei:is-inline-word-part-node" as="xs:boolean">
+      <xsl:param name="node" as="node()?" />
+      <xsl:sequence
+         select="exists($node[self::tei:supplied or self::tei:unclear or self::tei:choice[tei:corr or tei:sic]])" />
+   </xsl:function>
+
+   <xsl:function name="tei:mergeable-following-paragraph" as="element(tei:p)?">
+      <xsl:param name="paragraph" as="element(tei:p)" />
+      <xsl:variable name="next-paragraph"
+         select="$paragraph/following-sibling::*[not(self::tei:pb or self::tei:cb or self::tei:fw)][1][self::tei:p]" />
+      <xsl:variable name="between"
+         select="$paragraph/following-sibling::node()[if ($next-paragraph) then . &lt;&lt; $next-paragraph else false()]" />
+      <xsl:variable name="paragraph-string" select="normalize-space(string-join($paragraph//text(), ''))" />
+      <xsl:variable name="next-string" select="normalize-space(string-join($next-paragraph//text(), ''))" />
+      <xsl:sequence
+         select="if ($next-paragraph
+            and exists($between[self::tei:pb or self::tei:cb or self::tei:fw])
+            and empty($between[not(self::text()[normalize-space() = ''] or self::tei:pb or self::tei:cb or self::tei:fw)])
+            and string-length($paragraph-string) gt 0
+            and substring($paragraph-string, string-length($paragraph-string)) = $hyphens
+            and matches($next-string, '^[a-zäöüßſ]')
+            and not($next-string = 'und'
+               or starts-with($next-string, 'und ')
+               or $next-string = 'oder'
+               or starts-with($next-string, 'oder ')))
+            then $next-paragraph
+            else ()" />
+   </xsl:function>
    
    <xd:doc>
       <xd:desc>Tokenize elements within a div if they contain text</xd:desc>
@@ -120,6 +149,59 @@
          
          <xsl:apply-templates select="$content" mode="combine-tokens"/>
       </xsl:copy>
+   </xsl:template>
+
+   <xsl:template match="tei:p" mode="tokenize" priority="2">
+      <xsl:variable name="merged-next-p" select="tei:mergeable-following-paragraph(.)" />
+      <xsl:variable name="previous-p"
+         select="preceding-sibling::*[not(self::tei:pb or self::tei:cb or self::tei:fw)][1][self::tei:p]" />
+      <xsl:choose>
+         <xsl:when test="$previous-p and tei:mergeable-following-paragraph($previous-p) is ."/>
+         <xsl:when test="$merged-next-p">
+            <xsl:copy>
+               <xsl:sequence select="@* except @facs" />
+               <xsl:variable name="facs" select="string-join((string(@facs), string($merged-next-p/@facs))[. != ''], ' ')" />
+               <xsl:if test="$facs != ''">
+                  <xsl:attribute name="facs" select="$facs" />
+               </xsl:if>
+               <xsl:variable name="content">
+                  <xsl:apply-templates
+                     select="node(),
+                        following-sibling::node()[. &lt;&lt; $merged-next-p][not(self::text()[normalize-space() = ''])],
+                        $merged-next-p/node()"
+                     mode="doTokenize" />
+               </xsl:variable>
+               <xsl:apply-templates select="$content" mode="combine-tokens" />
+            </xsl:copy>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:next-match />
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
+
+   <xsl:template match="tei:pb | tei:cb | tei:fw" mode="tokenize" priority="2">
+      <xsl:variable name="previous-p"
+         select="preceding-sibling::*[not(self::tei:pb or self::tei:cb or self::tei:fw)][1][self::tei:p]" />
+      <xsl:choose>
+         <xsl:when test="$previous-p and tei:mergeable-following-paragraph($previous-p)" />
+         <xsl:otherwise>
+            <xsl:next-match />
+         </xsl:otherwise>
+         </xsl:choose>
+   </xsl:template>
+
+   <xsl:template match="text()[normalize-space() = '']" mode="tokenize" priority="2">
+      <xsl:variable name="previous-p"
+         select="preceding-sibling::tei:p[1]" />
+      <xsl:variable name="merged-next-p"
+         select="if ($previous-p) then tei:mergeable-following-paragraph($previous-p) else ()" />
+      <xsl:choose>
+         <xsl:when test="$merged-next-p and . &lt;&lt; $merged-next-p" />
+         <xsl:otherwise>
+            <xsl:sequence select="." />
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
    
    <xd:doc>
@@ -162,7 +244,14 @@
          <xsl:value-of select="."/>
       </w>
    </xsl:template>
-   
+
+   <xd:doc>
+      <xd:desc>Exception: content of tei:fw must remain untokenized</xd:desc>
+   </xd:doc>
+   <xsl:template match="tei:fw" mode="doTokenize" priority="3">
+      <xsl:sequence select="." />
+   </xsl:template>
+
    <xd:doc>
       <xd:desc>evaluate tei:w and its surroundings to see whether there is hyphenation</xd:desc>
    </xd:doc>
@@ -171,17 +260,28 @@
          words as the calling template only evaluates tei:w. -->
       <xsl:variable name="previous-token"
          select="../*[self::tei:w or self::tei:num][. &lt;&lt; current()][last()]" />
+      <xsl:variable name="previous-word" select="preceding-sibling::tei:w[1]" />
+      <xsl:variable name="previous-word-next-delimiter"
+         select="$previous-word/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
+      <xsl:variable name="previous-word-tail-inline-parts"
+         select="$previous-word/following-sibling::*[tei:is-inline-word-part-node(.)]
+            [if ($previous-word-next-delimiter) then . &lt;&lt; $previous-word-next-delimiter else true()]" />
+      <xsl:variable name="previous-word-tail-inline-string"
+         select="string-join($previous-word-tail-inline-parts//text(), '')" />
+      <xsl:variable name="previous-word-tail-ends-with-hyphen"
+         select="exists($previous-word-tail-inline-parts)
+            and substring($previous-word-tail-inline-string, string-length($previous-word-tail-inline-string)) = $hyphens" />
       <xsl:variable name="previous-non-inline"
-         select="preceding-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+         select="preceding-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
       <xsl:variable name="head-inline-parts"
-         select="../node()[self::tei:supplied or self::tei:unclear]
+         select="../node()[tei:is-inline-word-part-node(.)]
             [. &lt;&lt; current()
              and (if ($previous-non-inline) then . >> $previous-non-inline else true())]" />
       <xsl:variable name="preceding">
          <xsl:choose>
             <xsl:when test="$previous-token">
                <xsl:variable name="first-after-previous-token"
-                  select="$previous-token/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+                  select="$previous-token/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
                <xsl:apply-templates
                   select="(preceding-sibling::node()[. is $first-after-previous-token or . >> $first-after-previous-token])
                      except $head-inline-parts"
@@ -193,10 +293,14 @@
          </xsl:choose>
       </xsl:variable>
       <xsl:variable name="next-delimiter"
-         select="following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+         select="following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
       <xsl:variable name="tail-inline-parts"
-         select="following-sibling::*[self::tei:supplied or self::tei:unclear]
+         select="following-sibling::*[tei:is-inline-word-part-node(.)]
             [if ($next-delimiter) then . &lt;&lt; $next-delimiter else true()]" />
+      <xsl:variable name="tail-inline-string" select="string-join($tail-inline-parts//text(), '')" />
+      <xsl:variable name="tail-inline-ends-with-hyphen"
+         select="exists($tail-inline-parts)
+            and substring($tail-inline-string, string-length($tail-inline-string)) = $hyphens" />
       <xsl:variable name="next-word" select="following-sibling::tei:w[1]" />
       <xsl:variable name="between-this-and-next-word"
          select="$next-word/preceding-sibling::*[if (exists($tail-inline-parts))
@@ -222,12 +326,64 @@
             and $next-word[tei:is-uppercase-word(.)]
             and (every $token in $current-line-words satisfies tei:is-uppercase-word($token))
             and (every $token in $next-line-words satisfies tei:is-uppercase-word($token))" />
+      <xsl:variable name="hyphenation-bridge"
+         select="($next-delimiter = $hyphens
+            and (
+               $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+               or $next-delimiter/following-sibling::node()
+                  [not(self::text()[normalize-space() = ''])][1]
+                  [self::tei:fw or self::tei:pb or self::tei:cb or self::tei:lb]
+               or (exists($between-this-and-next-word[self::tei:lb])
+                  and (every $node in $between-this-and-next-word
+                     satisfies ($node/self::tei:fw or $node/self::tei:pb or $node/self::tei:cb or $node/self::tei:lb)))
+            ))
+            or ($tail-inline-ends-with-hyphen
+               and exists($between-this-and-next-word[self::tei:lb])
+               and (every $node in $between-this-and-next-word
+                  satisfies ($node/self::tei:fw or $node/self::tei:pb or $node/self::tei:cb or $node/self::tei:lb)))" />
       
       <xsl:choose>
+         <!-- A word interrupted only by inline editorial markup remains one word. -->
+         <xsl:when test="exists($tail-inline-parts)
+               and $next-delimiter[self::tei:w]
+               and $next-word/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1] = $hyphens" />
+         <xsl:when test="exists($tail-inline-parts)
+               and $next-delimiter[self::tei:w]
+               and not($next-word/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1] = $hyphens)
+               and empty($between-this-and-next-word)">
+            <xsl:sequence select="$preceding" />
+            <w>
+               <xsl:apply-templates select="$head-inline-parts" mode="word-part-content" />
+               <xsl:sequence select="node()" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+               <xsl:sequence select="$next-word/node()" />
+            </w>
+            <xsl:if test="not($next-word/following-sibling::tei:w or $next-word/following-sibling::tei:num)">
+               <xsl:apply-templates select="$next-word/following-sibling::node()" mode="combine-tokens-hi" />
+            </xsl:if>
+         </xsl:when>
+         <!-- A word interrupted by inline editorial markup and then hyphenated on the next line still forms one word. -->
+         <xsl:when test="exists($head-inline-parts)
+               and $previous-token[self::tei:w]
+               and empty(preceding-sibling::node()[. >> $previous-token and . &lt;&lt; current()][not(tei:is-inline-word-part-node(.))])
+               and $hyphenation-bridge
+               and $next-word[matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']">
+            <xsl:sequence select="$previous-token/preceding-sibling::node()[1][self::text()]" />
+            <w>
+               <xsl:sequence select="$previous-token/node()" />
+               <xsl:apply-templates select="$head-inline-parts" mode="word-part-content" />
+               <xsl:sequence select="node()" />
+               <xsl:apply-templates select="$tail-inline-parts" mode="word-part-content" />
+               <xsl:apply-templates select="$between-this-and-next-word" mode="break" />
+               <xsl:sequence select="$next-word/node()" />
+            </w>
+            <xsl:if test="not($next-word/following-sibling::tei:w or $next-word/following-sibling::tei:num)">
+               <xsl:apply-templates select="$following-after-tail" mode="combine-tokens-hi" />
+            </xsl:if>
+         </xsl:when>
          <!-- Hyphenation: exactly one hyphen follows immediately, and after the breaks, there is a hi followed immediately by tei:w which starts with a
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
-         <xsl:when test="$next-delimiter = $hyphens
-               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+         <xsl:when test="$hyphenation-bridge
                and $next-word[matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']
                and $next-word/preceding-sibling::node()[1][self::tei:hi]">
             <xsl:sequence select="$preceding" />
@@ -251,8 +407,7 @@
          </xsl:when>
          <!-- Hyphenation: exactly one hyphen follows immediately, and after the breaks, the next tei:w starts with a
             lower case letter; to avoid errors with a German speciality, this word must not be “und” or “oder” -->
-         <xsl:when test="$next-delimiter = $hyphens
-               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+         <xsl:when test="$hyphenation-bridge
                and $next-word[matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
@@ -269,8 +424,7 @@
          </xsl:when>
          <!-- Hyphenation in all-uppercase lines: conservative mode, only merge when both involved lines contain
             uppercase-only words. -->
-         <xsl:when test="$next-delimiter = $hyphens
-               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+         <xsl:when test="$hyphenation-bridge
                and $all-uppercase-hyphenation">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
@@ -287,8 +441,7 @@
          </xsl:when>
          <!-- after the breaks, the next tei:w starts with an upper case letter. This is not hyphenation but a long word
             with hyphens (e.g. German “Durchkoppelung”). We handle this separately so we can add some formatting. -->
-         <xsl:when test="$next-delimiter = $hyphens
-               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+         <xsl:when test="$hyphenation-bridge
                and $next-word[matches(., '^[A-ZÄÖÜ]')]">
             <xsl:sequence select="$preceding" />
             <xsl:if test="preceding-sibling::node()[1][self::text()]">
@@ -304,8 +457,7 @@
             <xsl:sequence select="$next-word" />
          </xsl:when>
          <!-- after the breaks, the next tei:w is „und“ or „oder“ -->
-         <xsl:when test="$next-delimiter = $hyphens
-               and $next-delimiter/following-sibling::*[1][local-name() = ('pb', 'cb', 'lb')]
+         <xsl:when test="$hyphenation-bridge
                and $next-word = ('und', 'oder')">
             <xsl:sequence select="$preceding" />
             <w>
@@ -319,10 +471,13 @@
             <xsl:sequence select="$between-this-and-next-word[. >> $next-delimiter]" />
             <xsl:sequence select="$next-word" />
          </xsl:when>
+         <xsl:when test="exists($head-inline-parts)
+               and $previous-token[self::tei:w]
+               and empty(preceding-sibling::node()[. >> $previous-token and . &lt;&lt; current()][not(tei:is-inline-word-part-node(.))])" />
          <!-- second part of a hyphenated word. If this is the last word in its parent, restore the following nodes, if
             any (so as to not lose punctuation) -->
          <xsl:when test="$previous-non-inline[self::tei:lb]
-               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 1">
             <xsl:if test="not(following-sibling::tei:w or following-sibling::tei:num)">
                <xsl:sequence select="following-sibling::node()" />
@@ -332,7 +487,7 @@
             any (so as to not lose punctuation) -->
          <xsl:when test="preceding-sibling::node()[1][self::tei:hi]
                and preceding-sibling::node()[2][self::tei:lb]
-               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 1">
             <xsl:if test="not(following-sibling::tei:w or following-sibling::tei:num)">
                <xsl:sequence select="following-sibling::node()" />
@@ -342,8 +497,33 @@
             any (so as to not lose punctuation) -->
          <xsl:when test="preceding-sibling::*[1][self::tei:pc[. = '„']]
                and preceding-sibling::*[2][self::tei:lb]
-               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 2">
+            <xsl:if test="not(following-sibling::tei:w or following-sibling::tei:num)">
+               <xsl:sequence select="following-sibling::node()" />
+            </xsl:if>
+         </xsl:when>
+         <!-- second part of a hyphenated word where the first part consists only of supplied/unclear -->
+         <xsl:when test="preceding-sibling::node()[not(self::text()[normalize-space() = ''])][1][self::tei:lb]
+               and (
+                  (preceding-sibling::node()[not(self::text()[normalize-space() = ''])][2][self::tei:pc[. = $hyphens]]
+                     and preceding-sibling::node()[not(self::text()[normalize-space() = ''])][3][tei:is-inline-word-part-node(.)])
+                  or (preceding-sibling::node()[not(self::text()[normalize-space() = ''])][2][tei:is-inline-word-part-node(.)]
+                     and (
+                        substring(string-join(preceding-sibling::node()[not(self::text()[normalize-space() = ''])][2]//text(), ''),
+                           string-length(string-join(preceding-sibling::node()[not(self::text()[normalize-space() = ''])][2]//text(), ''))) = $hyphens
+                        or exists(preceding-sibling::node()[not(self::text()[normalize-space() = ''])][2]/descendant::tei:pc[. = $hyphens][not(following-sibling::node())])
+                     ))
+               )">
+            <xsl:if test="not(following-sibling::tei:w or following-sibling::tei:num)">
+               <xsl:sequence select="following-sibling::node()" />
+            </xsl:if>
+         </xsl:when>
+         <!-- second part of a hyphenated word after catch-word / page-number apparatus -->
+         <xsl:when test="$previous-non-inline[self::tei:lb]
+               and $previous-word-tail-ends-with-hyphen
+               and preceding-sibling::tei:pb
+               and preceding-sibling::tei:fw">
             <xsl:if test="not(following-sibling::tei:w or following-sibling::tei:num)">
                <xsl:sequence select="following-sibling::node()" />
             </xsl:if>
@@ -352,7 +532,7 @@
          <xsl:when test="preceding-sibling::*[1][self::tei:pc[. = $hyphens]]
                and preceding-sibling::*[2][self::tei:lb]
                and preceding-sibling::*[3][self::tei:pb or self::tei:cb]
-               and preceding-sibling::tei:w[1]/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1] = $hyphens
+               and preceding-sibling::tei:w[1]/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1] = $hyphens
                and count(preceding-sibling::tei:pc intersect preceding-sibling::tei:w[1]/following-sibling::*) = 2">
             <xsl:if test="not(following-sibling::tei:w or following-sibling::tei:num)">
                <xsl:sequence select="following-sibling::node()" />
@@ -376,16 +556,16 @@
       <xsl:variable name="previous-token"
          select="../*[self::tei:w or self::tei:num][. &lt;&lt; current()][last()]" />
       <xsl:variable name="previous-non-inline"
-         select="preceding-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+         select="preceding-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
       <xsl:variable name="head-inline-parts"
-         select="../node()[self::tei:supplied or self::tei:unclear]
+         select="../node()[tei:is-inline-word-part-node(.)]
             [. &lt;&lt; current()
              and (if ($previous-non-inline) then . >> $previous-non-inline else true())]" />
       <xsl:variable name="preceding">
          <xsl:choose>
             <xsl:when test="$previous-token">
                <xsl:variable name="first-after-previous-token"
-                  select="$previous-token/following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+                  select="$previous-token/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
                <xsl:apply-templates
                   select="(preceding-sibling::node()[. is $first-after-previous-token or . >> $first-after-previous-token])
                      except $head-inline-parts"
@@ -407,14 +587,80 @@
       </xsl:if>
    </xsl:template>
 
-   <xsl:template match="tei:supplied | tei:unclear" mode="combine-tokens" priority="2.5">
+   <xsl:template match="tei:supplied | tei:unclear | tei:choice[tei:corr or tei:sic]" mode="combine-tokens" priority="2.5">
+      <xsl:variable name="previous-token"
+         select="../*[self::tei:w or self::tei:num][. &lt;&lt; current()][last()]" />
+      <xsl:variable name="next-non-inline"
+         select="following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
+      <xsl:variable name="next-significant-non-inline"
+         select="following-sibling::node()
+            [not(self::tei:supplied
+               or self::tei:unclear
+               or self::text()[normalize-space() = ''])][1]" />
+      <xsl:variable name="inline-run"
+         select=".,
+            following-sibling::*[tei:is-inline-word-part-node(.)]
+               [if ($next-non-inline) then . &lt;&lt; $next-non-inline else true()]" />
+      <xsl:variable name="preceding">
+         <xsl:choose>
+            <xsl:when test="$previous-token">
+               <xsl:variable name="first-after-previous-token"
+                  select="$previous-token/following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
+               <xsl:apply-templates
+                  select="(preceding-sibling::node()[. is $first-after-previous-token or . >> $first-after-previous-token])
+                     except $inline-run"
+                  mode="combine-tokens-hi" />
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:apply-templates select="preceding-sibling::node() except $inline-run" mode="combine-tokens-hi" />
+            </xsl:otherwise>
+         </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="inline-run-string" select="string-join($inline-run//text(), '')" />
+      <xsl:variable name="inline-run-ends-with-hyphen"
+         select="substring($inline-run-string, string-length($inline-run-string)) = $hyphens
+            or exists($inline-run[last()]/descendant::tei:pc[. = $hyphens][not(following-sibling::node())])" />
+      <xsl:variable name="post-hyphen-node"
+         select="if ($next-non-inline[self::tei:pc[. = $hyphens]])
+            then $next-non-inline/following-sibling::node()[not(self::text()[normalize-space() = ''])][1]
+            else $next-significant-non-inline" />
+      <xsl:variable name="continued-word"
+         select="if ($post-hyphen-node[self::tei:lb])
+            then $post-hyphen-node/following-sibling::tei:w[1]
+            else ()" />
       <xsl:choose>
-         <xsl:when test="preceding-sibling::node()[1][self::tei:supplied or self::tei:unclear]" />
+         <xsl:when test="preceding-sibling::node()[1][tei:is-inline-word-part-node(.)]" />
+         <xsl:when test="(
+               ($next-non-inline[self::tei:pc[. = $hyphens]] and $post-hyphen-node[self::tei:lb])
+               or ($inline-run-ends-with-hyphen and $post-hyphen-node[self::tei:lb])
+            )
+            and not(preceding-sibling::node()[not(tei:is-inline-word-part-node(.))][1][self::tei:w or self::tei:num])
+            and $continued-word[matches(., '^[a-zäöüßſ]') and . != 'und' and . != 'oder']">
+            <xsl:sequence select="$preceding" />
+            <xsl:if test="preceding-sibling::node()[1][self::text()]">
+               <xsl:text>
+               </xsl:text>
+            </xsl:if>
+            <w>
+               <xsl:apply-templates select="$inline-run" mode="word-part-content-trim-final-hyphen" />
+               <pc>
+                  <xsl:value-of
+                     select="if ($next-non-inline[self::tei:pc[. = $hyphens]])
+                        then $next-non-inline
+                        else substring($inline-run-string, string-length($inline-run-string))" />
+               </pc>
+               <xsl:apply-templates select="$post-hyphen-node" mode="break" />
+               <xsl:sequence select="$continued-word/node()" />
+            </w>
+            <xsl:if test="not($continued-word/following-sibling::tei:w or $continued-word/following-sibling::tei:num)">
+               <xsl:apply-templates select="$continued-word/following-sibling::node()" mode="combine-tokens-hi" />
+            </xsl:if>
+         </xsl:when>
          <xsl:when test="preceding-sibling::node()[1][self::text()[normalize-space() = '']]
                and preceding-sibling::tei:w[1]
-               and empty(following-sibling::node()[not(self::tei:supplied or self::tei:unclear)])" />
-         <xsl:when test="preceding-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1][self::tei:w or self::tei:num]" />
-         <xsl:when test="following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1][self::tei:w or self::tei:num]" />
+               and empty(following-sibling::node()[not(tei:is-inline-word-part-node(.))])" />
+         <xsl:when test="preceding-sibling::node()[not(tei:is-inline-word-part-node(.))][1][self::tei:w or self::tei:num]" />
+         <xsl:when test="following-sibling::node()[not(tei:is-inline-word-part-node(.))][1][self::tei:w or self::tei:num]" />
          <xsl:when test="count(descendant::*[self::tei:w or self::tei:num]) = 1
                and empty(descendant::*[self::tei:w or self::tei:num][1]/preceding-sibling::node())
                and empty(descendant::*[self::tei:w or self::tei:num][1]/following-sibling::node())">
@@ -438,15 +684,15 @@
       </hi>
    </xsl:template>
 
-   <xsl:template match="tei:supplied | tei:unclear" mode="combine-tokens-hi" priority="2">
+   <xsl:template match="tei:supplied | tei:unclear | tei:choice[tei:corr or tei:sic]" mode="combine-tokens-hi" priority="2">
       <xsl:variable name="next-non-inline"
-         select="following-sibling::node()[not(self::tei:supplied or self::tei:unclear)][1]" />
+         select="following-sibling::node()[not(tei:is-inline-word-part-node(.))][1]" />
       <xsl:variable name="inline-run"
          select=".,
-            following-sibling::*[self::tei:supplied or self::tei:unclear]
+            following-sibling::*[tei:is-inline-word-part-node(.)]
                [if ($next-non-inline) then . &lt;&lt; $next-non-inline else true()]" />
       <xsl:choose>
-         <xsl:when test="preceding-sibling::node()[1][self::tei:supplied or self::tei:unclear]" />
+         <xsl:when test="preceding-sibling::node()[1][tei:is-inline-word-part-node(.)]" />
          <xsl:when test="exists($inline-run/descendant::tei:num) and empty($inline-run/descendant::tei:w)">
             <num>
                <xsl:apply-templates select="$inline-run" mode="word-part-content" />
@@ -460,25 +706,46 @@
       </xsl:choose>
    </xsl:template>
 
-   <xsl:template match="tei:supplied | tei:unclear" mode="word-part-content">
+   <xsl:template match="tei:supplied | tei:unclear | tei:choice | tei:corr | tei:sic | tei:expan | tei:abbr" mode="word-part-content">
       <xsl:copy>
          <xsl:sequence select="@*" />
          <xsl:apply-templates select="node()" mode="word-part-content" />
       </xsl:copy>
    </xsl:template>
 
-   <xsl:template match="tei:w" mode="word-part-content">
-      <xsl:sequence select="node()" />
-   </xsl:template>
-
-   <xsl:template match="tei:num" mode="word-part-content">
+   <xsl:template match="tei:w | tei:num" mode="word-part-content">
       <xsl:sequence select="node()" />
    </xsl:template>
 
    <xsl:template match="text()" mode="word-part-content">
       <xsl:sequence select="." />
    </xsl:template>
-   
+
+   <xsl:template match="tei:supplied | tei:unclear | tei:choice | tei:corr | tei:sic | tei:expan | tei:abbr" mode="word-part-content-trim-final-hyphen">
+      <xsl:copy>
+         <xsl:sequence select="@*" />
+         <xsl:apply-templates select="node()" mode="word-part-content-trim-final-hyphen" />
+      </xsl:copy>
+   </xsl:template>
+
+   <xsl:template match="tei:w | tei:num" mode="word-part-content-trim-final-hyphen">
+      <xsl:apply-templates select="node()" mode="word-part-content-trim-final-hyphen" />
+   </xsl:template>
+
+   <xsl:template match="tei:pc[. = $hyphens][empty(following-sibling::node())]" mode="word-part-content-trim-final-hyphen" />
+
+   <xsl:template match="text()[empty(following-sibling::node())]" mode="word-part-content-trim-final-hyphen">
+      <xsl:variable name="text" select="." />
+      <xsl:sequence
+         select="if (substring($text, string-length($text)) = $hyphens)
+            then substring($text, 1, string-length($text) - 1)
+            else $text" />
+   </xsl:template>
+
+   <xsl:template match="text()" mode="word-part-content-trim-final-hyphen">
+      <xsl:sequence select="." />
+   </xsl:template>
+
    <xd:doc>
       <xd:desc>If a node has a sibling tei:w, it is handled by the previous template</xd:desc>
    </xd:doc>
@@ -504,10 +771,23 @@
       </cb>
    </xsl:template>
 
-   <xsl:template match="tei:supplied | tei:unclear" mode="break">
+   <xsl:template match="tei:pb" mode="break">
+      <pb>
+         <xsl:sequence select="@*" />
+         <xsl:attribute name="break">no</xsl:attribute>
+      </pb>
+   </xsl:template>
+
+   <xsl:template match="tei:supplied | tei:unclear | tei:choice | tei:corr | tei:sic | tei:expan | tei:abbr" mode="break">
       <xsl:copy>
          <xsl:sequence select="@*" />
          <xsl:apply-templates select="node()" mode="word-part-content" />
+      </xsl:copy>
+   </xsl:template>
+
+   <xsl:template match="tei:fw" mode="break">
+      <xsl:copy>
+         <xsl:sequence select="@* | node()[not(self::text()[normalize-space() = ''])]" />
       </xsl:copy>
    </xsl:template>
    
