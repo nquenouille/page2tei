@@ -52,7 +52,7 @@
             </ns3:fileGrp>
             <ns3:fileGrp ID="PAGEXML">
                 <ns3:file ID="PAGEXML_2" SEQ="2" MIMETYPE="application/xml" CREATED="2025-09-08T16:41:20.069+02:00" CHECKSUM="e1775f2835617fd74b56beada829d0d1" CHECKSUMTYPE="MD5">
-                    <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="page/0002_d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00363.xml"/>
+                    <ns3:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" ns2:type="simple" ns2:href="0002_d_ohrsta_archivschrank_nr_27_matrikel_lyceum_ohrdruf_1686-1708_00363.xml"/>
                 </ns3:file>
             </ns3:fileGrp>
         </ns3:fileGrp>
