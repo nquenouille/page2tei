@@ -727,9 +727,9 @@
       <xd:desc>Create tei:facsimile with @xml:id</xd:desc>
    </xd:doc>
    <xsl:template match="mets:file" mode="facsimile">
-      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), /)"/>
+      <xsl:variable name="file" select="document(ancestor::mets:fileGrp[@ID='MASTER']/mets:fileGrp[@ID='PAGEXML']/mets:file[@SEQ = current()/@SEQ]/mets:FLocat/@xlink:href)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
-      <xsl:variable name="imageurl" select="mets:FLocat/@xlink:href"/>
+      <xsl:variable name="imageurl" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
 
       <xsl:apply-templates select="$file//p:Page" mode="facsimile">
          <xsl:with-param name="imageName" select="substring-after(mets:FLocat/@xlink:href, '/')" tunnel="true"/>
@@ -742,7 +742,7 @@
       <xd:desc>Apply by-page</xd:desc>
    </xd:doc>
    <xsl:template match="mets:file" mode="text">
-      <xsl:variable name="file" select="document(replace(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], substring-after(tokenize(mets:FLocat/@xlink:href, '%2F')[last()], '.'), 'xml'), .)"/>
+      <xsl:variable name="file" select="document(ancestor::mets:fileGrp[@ID='MASTER']/mets:fileGrp[@ID='PAGEXML']/mets:file[@SEQ = current()/@SEQ]/mets:FLocat/@xlink:href)"/>
       <xsl:variable name="numCurr" select="@SEQ"/>
       <xsl:variable name="imgurl" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
 
