@@ -1446,7 +1446,7 @@
             </fw>
          </xsl:when>
          <xsl:when test="'addition' = $regionType and not($ab)">
-            <ab type='addition'>
+            <ab type='add-tags'>
                <xsl:apply-templates select="p:TextLine"/>
                <xsl:text>
             </xsl:text>
