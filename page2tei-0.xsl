@@ -1449,8 +1449,8 @@
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <ab type='add-tags'>
                <xsl:apply-templates select="p:TextLine"/>
-               <xsl:text>
-            </xsl:text>
+            <xsl:text>
+         </xsl:text>
             </ab>
          </xsl:when>
          <xsl:when test="'page-number' = $regionType and not($ab)">
