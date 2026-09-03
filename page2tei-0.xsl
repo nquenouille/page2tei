@@ -1445,7 +1445,7 @@
                <xsl:apply-templates select="p:TextLine"/>
             </fw>
          </xsl:when>
-         <xsl:when test="'addition' = $regionType and not($ab)">
+         <xsl:when test="'additions_corrections' = $regionType and not($ab)">
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <ab type='add-tags'>
                <xsl:apply-templates select="p:TextLine"/>
