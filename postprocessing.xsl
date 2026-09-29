@@ -118,6 +118,8 @@
                      </xsl:if>
                   </xsl:for-each>      
                   <xsl:copy-of select="node()"/>
+               <xsl:text>
+            </xsl:text>
                </p>
          </xsl:otherwise>
       </xsl:choose>
