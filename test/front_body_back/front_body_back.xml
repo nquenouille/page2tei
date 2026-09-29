@@ -150,8 +150,7 @@
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/2123,4105,488,113" n="N018"/>Hochf. Anhalt-Cö<span type="hyphen">-</span>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/2131,4174,493,144" n="N019"/>thenischer Capellmeister
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/645,3870,672,189" n="N020"/>Cöthen. d. 15. Martii
-               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/934,4015,357,132" n="N021"/>ao. 1722.
-            </p>
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00086.tif/934,4015,357,132" n="N021"/>ao. 1722.</p>
          <pb facs="#facs_3" n="3"/>
          </div>
          <div n="1" type="commentary">
@@ -176,8 +175,11 @@
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/2795,1808,525,196" n="N012"/>Erffurth.
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1593,1737,565,204" n="N013"/>Franco. <add xml:id="add4-4" place="inspace" type="addition">2 g.</add></p>
             <ab type="add-tags">
-               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/3104,1055,43,30" n="N004"/><add xml:id="ta4-1" type="correction">5</add>
+            <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/3104,1055,43,30" n="N004"/><add xml:id="ta4-1" type="correction">5</add>
             </ab>
+         </div>
+         <div n="1" type="commentary_back">
+         <p/>
          </div>
       </back>
    </text>
