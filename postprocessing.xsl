@@ -22,7 +22,7 @@
       </xd:desc>
    </xd:doc>
 
-    <xsl:template match="tei:ab[contains(@type, 'margin_') and not(contains(@type, 'margin_top')) and not(contains(@type, 'margin_bottom'))]" mode="postprocessing">
+    <xsl:template match="tei:ab[contains(@type, 'margin_') and not(contains(@type, 'margin_top')) and not(contains(@type, 'margin_bottom')) and not(contains(@type, 'additions'))]" mode="postprocessing">
       <p>
          <!-- Copy content without type-attribute -->
          <xsl:for-each select="@*">
@@ -41,6 +41,52 @@
          <xsl:apply-templates select="node()" mode="postprocessing"/>
       </div>
    </xsl:template>
+
+   <!-- Template for the addition-region -->
+   <xsl:template match="tei:ab[contains(@type, 'additions')]" mode="postprocessing">
+      <ab type='add-tags'>
+         <xsl:for-each select="@*">
+            <xsl:if test="local-name() != 'type'">
+               <xsl:copy />
+            </xsl:if>
+         </xsl:for-each> 
+        <xsl:apply-templates select="node()" mode="postprocessing-add-tags"/>
+      </ab>
+   </xsl:template>
+
+   <!-- do not keep add without a preceding lb -->
+   <xsl:template match="tei:add" mode="postprocessing-add-tags">
+      <xsl:if test="not(@xml:id = preceding::tei:add/@xml:id)">
+         <xsl:copy>
+            <xsl:apply-templates select="@*|node()" mode="postprocessing-add-tags"/>
+         </xsl:copy>
+      </xsl:if>
+   </xsl:template>
+
+   <!-- get rid of rdg in additions region -->
+   <xsl:template match="tei:rdg" mode="postprocessing-add-tags">
+      <xsl:apply-templates select="node()" mode="postprocessing-add-tags"/>
+   </xsl:template>
+
+   <!-- copy everything else in the additions region -->
+   <xsl:template match="@*|node()" mode="postprocessing-add-tags">
+      <xsl:copy>
+         <xsl:apply-templates select="@*|node()" mode="postprocessing-add-tags"/>
+      </xsl:copy>
+   </xsl:template>
+
+   <!-- get rid of white lines inbetween the tags -->
+   <xsl:template match="tei:lb" mode="postprocessing-add-tags">
+                     <xsl:text>
+            </xsl:text>
+      <xsl:copy>
+         <xsl:apply-templates
+            select="@*|node()"
+            mode="postprocessing-add-tags"/>
+      </xsl:copy>
+   </xsl:template>
+
+   <xsl:template match="text()[not(normalize-space(.)) and following-sibling::tei:add]" mode="postprocessing-add-tags"/>
 
    <xsl:template match="tei:p | tei:ab[contains(@type, 'margin_top')] | tei:ab[contains(@type, 'margin_bottom')]" mode="postprocessing">
       <xsl:variable name="hasAbWithRend" as="xs:boolean"

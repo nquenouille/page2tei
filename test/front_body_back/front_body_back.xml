@@ -166,7 +166,6 @@
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1591,359,164,346" n="N001"/><add xml:id="add4-1" place="above" type="addition">t-
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1923,465,142,265" n="N002"/>187</add>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/3134,1033,219,123" n="N003"/><add xml:id="add4-2" type="addition"><del rend="strikethrough" cause="correction">30.</del><anchor xml:id="a4-1"/></add>
-               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/3104,1055,43,30" n="N004"/><add xml:id="ta4-1" type="correction">5</add>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1751,1001,1627,285" n="N005"/>Denen HochEdelen, Vesten, Hochge<span type="hyphen">-</span>
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1875,1187,1352,223" n="N006"/>lahrten und Hochweisen Herren
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1945,1295,1400,197" n="N007"/>Stadt-Schultheisen, Bürgemeistern,
@@ -176,9 +175,9 @@
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/2675,1686,144,200" n="N011"/>in
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/2795,1808,525,196" n="N012"/>Erffurth.
                <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/1593,1737,565,204" n="N013"/>Franco. <add xml:id="add4-4" place="inspace" type="addition">2 g.</add></p>
-         </div>
-         <div n="1" type="commentary_back">
-         <p/>
+            <ab type="add-tags">
+               <lb facs="iiif:fpb%2FD-EFsa%2Fou19v%2Fd_efsa_1_1_staedtische_akten_bis_1871_4_116_00088.tif/3104,1055,43,30" n="N004"/><add xml:id="ta4-1" type="correction">5</add>
+            </ab>
          </div>
       </back>
    </text>

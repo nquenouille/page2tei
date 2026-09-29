@@ -1284,8 +1284,19 @@
          <xsl:when test="not(p:TextLine or $withoutTextline)"/>
          <xsl:when test="'heading' = $regionType">
             <head facs="#facs_{$numCurr}_{@id}">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </head>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'caption' = $regionType and not($ab)">
             <figure>
@@ -1336,10 +1347,21 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_bottom_front"/>
             <ab type='margin_bottom_front'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_front">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia_front' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
            <xsl:text>
@@ -1349,30 +1371,63 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_top_front"/>
             <ab type='margin_top_front'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_front">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia_front' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_front"/>
             <ab type='margin_front'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_front">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_bottom"/>
             <ab type='margin_bottom'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
             <xsl:text>
@@ -1382,30 +1437,63 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_top"/>
             <ab type='margin_top'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_body"/>
             <ab type='margin_body'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia_back' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_bottom_back"/>
             <ab type='margin_bottom_back'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_back">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia_back' = $regionType and not($ab) and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]">
             <xsl:text>
@@ -1415,20 +1503,42 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_top_back"/>
             <ab type='margin_top_back'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_back">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'marginalia_back' = $regionType and not($ab) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:bottom')]) and not(p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')])">
             <xsl:text>
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" type="margin_back"/>
             <ab type='margin_back'>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                <xsl:text>
             </xsl:text>
             </ab>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_margin_back">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'footnote-continued' = $regionType and not($ab)">
             <note place="foot" n="[footnote-continued reference]" facs="#facs_{$numCurr}_{@id}">
@@ -1499,10 +1609,21 @@
             <xsl:text>
             </xsl:text>
                <p>
-                 <xsl:apply-templates select="p:TextLine"/>
+                 <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
                  <xsl:text>
             </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1518,8 +1639,21 @@
             <xsl:text>
             </xsl:text>
                <p>      
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+                  <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1536,8 +1670,21 @@
             <xsl:text>
             </xsl:text>   
                <p>   
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1554,8 +1701,21 @@
             <xsl:text>
             </xsl:text>
                <p>
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1572,8 +1732,21 @@
             <xsl:text>
             </xsl:text>
                <p>
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1590,8 +1763,21 @@
             <xsl:text>
             </xsl:text>
                <p>
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1608,8 +1794,21 @@
             <xsl:text>
             </xsl:text>
                <p>
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1626,8 +1825,21 @@
             <xsl:text>
             </xsl:text>
                <p>
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1644,8 +1856,21 @@
             <xsl:text>
             </xsl:text>
                <p>
-                  <xsl:apply-templates select="p:TextLine"/>
+                  <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
                </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </ab>
@@ -1668,8 +1893,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-li">        
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1680,8 +1918,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-lo">       
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1692,8 +1943,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-ri">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1704,8 +1968,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-ro">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1716,8 +1993,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-ti">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1728,8 +2018,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-to">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1740,8 +2043,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-bi">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1752,8 +2068,21 @@
             <xsl:text>
             </xsl:text>
             <ab n="3" rend="tb cbr-bo">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
                <xsl:text>
             </xsl:text>
             </xsl:for-each>
@@ -1766,8 +2095,21 @@
             <xsl:text>
             </xsl:text>            
             <ab n="3" rend="textblock">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </ab>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+               <xsl:text>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
             </ab>
+            </xsl:if>
             <xsl:text>
             </xsl:text>
             </ab>
@@ -1782,10 +2124,21 @@
             <xsl:text>
             </xsl:text> 
             <p>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
+                 <xsl:text>
+            </xsl:text>
+               </p>
+               <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
                <xsl:text>
-            </xsl:text> 
-            </p>
+            </xsl:text>
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          <xsl:text>
          </xsl:text> 
             </ab>
@@ -1799,8 +2152,17 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <p>
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </p>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+            <ab type="additions_body">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+               </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>    
          <xsl:when test="'front' = $regionType">
           <xsl:if test="not(preceding-sibling::p:TextRegion[contains(@custom, 'type:marginalia_front') and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]])">
@@ -1812,8 +2174,17 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$number}_{@id}" type="front"/>
             <p type="front">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </p>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+            <ab type="additions_front">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+               </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <xsl:when test="'back' = $regionType">
           <xsl:if test="not(preceding-sibling::p:TextRegion[contains(@custom, 'type:marginalia_back') and p:TextLine[contains(@custom, 'note {') and contains(@custom, 'place:top')]])">
@@ -1825,8 +2196,17 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$number}_{@id}" type="back"/>
             <p type="back">
-               <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </p>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+            <ab type="additions_back">
+               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+            </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:when>
          <!-- the fallback option should be a semantically open element such as <ab> -->
          <xsl:otherwise>
@@ -1834,10 +2214,17 @@
             </xsl:text>
             <milestone unit="section" facs="#facs_{$numCurr}_{@id}" />
             <p>
-               <xsl:apply-templates select="p:TextLine"/>
-               <xsl:text>
-            </xsl:text>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </p>
+            <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
+            <ab type="additions_body">
+              <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+               </xsl:for-each>
+               <xsl:text>
+               </xsl:text>
+            </ab>
+            </xsl:if>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
@@ -1930,6 +2317,17 @@
          </xsl:choose>
       </xsl:for-each-group>
    </table>
+   <xsl:if test="..//p:TextLine[contains(@custom, 'xmlid:ta')]/parent::p:TableCell[not(contains(@custom, 'unedited;'))]">
+         <xsl:text>
+      </xsl:text>
+      <ab type="additions_body">
+         <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
+            <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+         </xsl:for-each>
+         <xsl:text>
+      </xsl:text>
+      </ab>
+   </xsl:if>
 </xsl:template>
 
    <xd:doc>
@@ -2095,7 +2493,7 @@
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'heading')">
@@ -2110,7 +2508,7 @@
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+               <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-left-in')">
@@ -2122,7 +2520,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-li'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-left-out')">
@@ -2134,7 +2532,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-lo'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-right-in')">
@@ -2146,7 +2544,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-ri'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-right-out')">
@@ -2158,7 +2556,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-ro'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-top-in')">
@@ -2170,7 +2568,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-ti'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-top-out')">
@@ -2182,7 +2580,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-to'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-bottom-in')">
@@ -2194,7 +2592,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-bi'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:when test="contains(@custom, 'curly-bracket-bottom-out')">
@@ -2206,7 +2604,7 @@
             <xsl:attribute name="rend">
                <xsl:value-of select="'cbr-bo'"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
             </cell>
          </xsl:when>
          <xsl:otherwise>
@@ -2218,7 +2616,7 @@
                <xsl:value-of select="number((xs:boolean(@rightBorderVisible), false())[1])"/>
                <xsl:value-of select="number((xs:boolean(@bottomBorderVisible), false())[1])"/>
             </xsl:attribute>
-            <xsl:apply-templates select="p:TextLine"/>
+            <xsl:apply-templates select="p:TextLine[not(contains(@custom, 'xmlid:ta'))]"/>
          </cell>
          </xsl:otherwise>
       </xsl:choose>
