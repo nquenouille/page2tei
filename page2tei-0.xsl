@@ -1291,7 +1291,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1356,7 +1356,7 @@
             </xsl:text>
             <ab type="additions_margin_front">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1380,7 +1380,7 @@
             </xsl:text>
             <ab type="additions_margin_front">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1401,7 +1401,7 @@
             </xsl:text>
             <ab type="additions_margin_front">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1422,7 +1422,7 @@
             </xsl:text>
             <ab type="additions_margin_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1446,7 +1446,7 @@
             </xsl:text>
             <ab type="additions_margin_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1467,7 +1467,7 @@
             </xsl:text>
             <ab type="additions_margin_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1488,7 +1488,7 @@
             </xsl:text>
             <ab type="additions_margin_back">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1512,7 +1512,7 @@
             </xsl:text>
             <ab type="additions_margin_back">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1533,7 +1533,7 @@
             </xsl:text>
             <ab type="additions_margin_back">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1618,7 +1618,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1648,7 +1648,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1679,7 +1679,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1710,7 +1710,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1741,7 +1741,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1772,7 +1772,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1803,7 +1803,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1834,7 +1834,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1865,7 +1865,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1902,7 +1902,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1927,7 +1927,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1952,7 +1952,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -1977,7 +1977,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2002,7 +2002,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2027,7 +2027,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2052,7 +2052,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2077,7 +2077,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2104,7 +2104,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2133,7 +2133,7 @@
             </xsl:text>
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2157,7 +2157,7 @@
             <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
             <ab type="additions_body">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
                </xsl:text>
@@ -2179,7 +2179,7 @@
             <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
             <ab type="additions_front">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
                </xsl:text>
@@ -2201,7 +2201,7 @@
             <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
             <ab type="additions_back">
                <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
             </xsl:text>
@@ -2219,7 +2219,7 @@
             <xsl:if test="p:TextLine[contains(@custom, 'xmlid:ta')]">
             <ab type="additions_body">
               <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-                  <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+                  <xsl:apply-templates select="."/>
                </xsl:for-each>
                <xsl:text>
                </xsl:text>
@@ -2322,7 +2322,7 @@
       </xsl:text>
       <ab type="additions_body">
          <xsl:for-each select="..//p:TextLine[contains(@custom, 'xmlid:ta')]">
-            <xsl:apply-templates select="..//p:TextLine[contains(@custom, 'xmlid:ta')]"/>
+            <xsl:apply-templates select="."/>
          </xsl:for-each>
          <xsl:text>
       </xsl:text>

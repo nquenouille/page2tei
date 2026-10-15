@@ -38,6 +38,12 @@
                   and not(
                            name() = name(preceding-sibling::tei:*[not(self::tei:lb)][1])
                            and preceding-sibling::tei:*[not(self::tei:lb)][1][@continued = 'true']
+                           and (
+                              not(@xml:id)
+                              or not(preceding-sibling::tei:*[not(self::tei:lb)][1]/@xml:id)
+                              or @xml:id
+                                 = preceding-sibling::tei:*[not(self::tei:lb)][1]/@xml:id
+                           )
                            and not(normalize-space(preceding::text()[1]) != ''
                            or preceding::text()[1][not(preceding-sibling::*)]
                            or preceding-sibling::*[1][not(@continued = 'true') and not(self::tei:lb)])
